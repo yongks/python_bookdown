@@ -3,15 +3,10 @@ title:          "Python Bookdown"
 author:         "Yong Keh Soon"
 date:           "`r Sys.Date()`"
 site:           bookdown::bookdown_site
-output:         bookdown::gitbook
-documentclass:  nook
-colorlinks:     yes
-bibliography:   [book.bib, packages.bib]
-biblio-style:   apalike
-link-citations: yes
-url:            'https\://github.com/yongks/python_bookdown'
+output:         bookdown::bs4_book
+url:            https://github.com/yongks/python_bookdown
 github-repo:    yongks/python_bookdown
-description: "This is a python cookbook, written using RMarkdown Notebook. It is made possible by using reticulate R library as the bridge between R and Python."
+description:    This is a python cookbook, written using RMarkdown Notebook.
 ---
 
 ```{r, include=FALSE}
@@ -34,8 +29,50 @@ knitr::opts_chunk$set(echo=TRUE,
 ```
 
 
-
 ```{r include=FALSE}
 library(reticulate)
 use_condaenv('base')
 ```
+
+
+# About This Book {-}
+
+## Motivation {-}
+
+This is a a python cookbook, serving as a quick reference to python and its popular library. The content covers python fundamentals, data manipulation, plotting, machine learning and sentiment analysis.
+
+The main motivation of the book is for my personal reference. Therefore, it is written in a manner according to my thinking process. If you are like me who work on python as part-time basis, this book may help you refresh your memories quickly.
+
+## Building The Book {-}
+
+Although this book is written for python code, it is written using Bookdown tool (a R library). This is made possible with **reticulate** R library Python for R integration with Python. All content pages of the book are written as **RMarkdown** files, rendered by **Bookdown** in **BS4** (bootstrap 4, with 3 columns layout) output format.
+
+The output of the renders goes into "/doc" folder. When uploaded to github, **/doc** folder will be served as Github Pages, which you are reading right now.
+
+### Ingridients {-}
+
+Here are the key ingredients used to build this book.
+
+- [R Language](https://www.r-project.org/)
+- [RMarkown](https://https://www.markdownguide.org/basic-syntax/)
+- [Bookdown](https://bookdown.org/yihui/bookdown/get-started.html)
+- [RStudio IDE](https://posit.co/downloads/)
+- [Github Pages](https://docs.github.com/en/pages/quickstart)
+
+### Environment {-}
+
+The book is build on below Python environment:
+
+- Anaconda with "base" environment
+- Python 3.9.13
+- pandas (1.4.4)
+- numpy (1.23.4)
+- scipy (1.9.3)
+- scikit-learn (1.1.3)
+- seaborn (0.12.1)
+- matplotlib (3.6.2)
+- plotnine (0.10.1)
+- nltk (3.7)
+- statsmodel (0.13.2)
+- nlpia (0.5.2)
+- bs4 (4.11.1)

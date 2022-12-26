@@ -8,11 +8,10 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Python Bookdown</a></li>
       after:
-       after:
         <li><a href="https://github.com/yongks/python_bookdown" target="blank">This Github Repo</a></li>
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     toolbar:
-      position: static
+      position: fixed
     edit: null
     download: null
     search: yes
@@ -30,3 +29,24 @@ bookdown::gitbook:
       vk: no
   split_by: chapter
   highlight: tango
+
+
+bookdown::bs4_book:
+  ## default values, customize here: https://pkgs.rstudio.com/bookdown/reference/bs4_book.html
+  footnotes_inline: true
+  template: default
+  lib_dir: "libs"
+  pandoc_args: null
+  extra_dependencies: null
+  split_bib: false
+  ## customize here: https://rstudio.github.io/bslib/reference/bs_theme.html
+  theme:
+    ## bootswatch styling: https://bootswatch.com/
+    bootswatch: darkly
+  #  primary: "#3c99ca"
+  #  fg: "#2b2121"
+  #  bg: "#ffffff"
+  ## show up link to repo at the right most column
+  repo:
+    base: https://github.com/yongks/python_bookdown
+    branch: master

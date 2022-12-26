@@ -2,7 +2,7 @@
 
 ```{r include=FALSE}
 library(reticulate)
-use_condaenv('Anaconda3')    #conda_list() - to find out the name of conda environment
+use_condaenv('base')    #conda_list() - to find out the name of conda environment
 ```
 
 ```{python include=FALSE, results='hide'}

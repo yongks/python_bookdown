@@ -43,9 +43,6 @@ bookdown::bs4_book:
   theme:
     ## bootswatch styling: https://bootswatch.com/
     bootswatch: darkly
-  #  primary: "#3c99ca"
-  #  fg: "#2b2121"
-  #  bg: "#ffffff"
   ## show up link to repo at the right most column
   repo:
     base: https://github.com/yongks/python_bookdown

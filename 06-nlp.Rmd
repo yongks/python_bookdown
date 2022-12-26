@@ -3,10 +3,10 @@ Natural Language Processing
 
 ```{r include=FALSE}
 library(reticulate)
-use_condaenv('base')   #conda_list() - to find out the name of conda environment
+use_condaenv('base')
 ```
 
-```{python include=FALSE, results='hide'}
+```{python include=FALSE}
 import numpy as np
 import pandas as pd
 from IPython.core.display import display, HTML
@@ -239,9 +239,7 @@ Pattern is used to match **delimters**.
 #### Use `re.split()`
 
 ```{python}
-print( re.split('@',  "aa@bb @ cc "), '\n',
-       re.split('\|', "aa|bb | cc "), '\n',
-       re.split('\n', "sentence1\nsentence2\nsentence3") )
+print( re.split('@',  "aa@bb@cc "), '\n',  re.split('\|', "aa|bb | cc "), '\n', re.split('\n', "sentence1\nsentence2\nsentence3"))
 ```
 
 #### Use `re.compile().split()`
@@ -415,7 +413,7 @@ Vanila tokenizer splits sentences on period `.`, which is not desirable
 
 ```{python}
 from nltk.tokenize.punkt import PunktSentenceTokenizer, PunktTrainer
-#nltk.download('punkt')
+nltk.download('punkt')
 tokenizer = PunktSentenceTokenizer()
 tokenized_text = tokenizer.tokenize(text) 
 for x in tokenized_text:

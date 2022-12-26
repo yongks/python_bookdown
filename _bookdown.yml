@@ -1,1 +1,24 @@
+## output of rendering to this folder, git pages default using /doc
 output_dir: docs
+book_filename: _main
+
+delete_merged_file: true
+#before_chapter_script: ["before-each-chapter.R"]
+
+## Knit and Merge (KM), rather than default Merge and Knit (MK)
+new_session: yes
+
+language:
+  ui:
+    chapter_name: 'Chapter '
+
+rmd_files:
+- index.Rmd
+- 00-about.Rmd
+- 01-fundamental.Rmd
+- 02-numpy.Rmd
+- 03-pandas.Rmd
+- 04-visualization.Rmd
+- 05-sklearn.Rmd
+- 07-web_scrapping.Rmd
+#- 08-finance.Rmd

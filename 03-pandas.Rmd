@@ -1,7 +1,7 @@
 
 # pandas
 
-```{r include=FALSE}
+```{r,setup, include=FALSE}
 library(reticulate)
 use_condaenv('base')    #conda_list() - to find out the name of conda environment
 ```
@@ -237,7 +237,6 @@ tb/tb.loc['All']
 s1 = pd.Series(['A1','A2','A3','A4'])
 s2 = pd.Series(['B1','B2','B3','B4'], name='B')
 s3 = pd.Series(['C1','C2','C3','C4'], name='C')
-df
 ```
 
 #### Column-Wise
@@ -821,7 +820,7 @@ print( s.loc['c'], '\n',
 
 If index is not found, it will return **NaN**
 
-```{python}
+```{python, error=TRUE}
 s.loc[['k','c']]
 ```
 
@@ -1203,10 +1202,6 @@ s.dt.dayofweek
 
 ```{python}
 s.dt.weekday
-```
-
-```{python}
-s.dt.weekday_name
 ```
 
 ```{python}
@@ -1657,8 +1652,8 @@ df.filter(regex='\d')  ## default axis=1 if DataFrame
 
 #### Data Type (.select_dtypes)
 
-```
-df.select_dtypes(include=None, exclude=None)
+```{python}
+df.select_dtypes( exclude='bool')
 ```
 Always return **panda::DataFrame**, even though only single column matches.  
 Allowed types are:
@@ -1669,7 +1664,7 @@ Allowed types are:
 - category  
 
 ```{python}
-df.get_dtype_counts()
+df.dtypes.value_counts()
 ```
 
 ```{python}
@@ -1948,7 +1943,7 @@ print("Original DataFrame:\n", my_df,
 
 **Appending Items Containing None** results in **ERROR**
 
-```{python}
+```{python, error=TRUE}
 my_df.append( [new_item1, None] )
 ```
 
@@ -2129,7 +2124,7 @@ df.info()  # return text output
 ```
 
 ```{python}
-df.get_dtype_counts() # return Series
+df.dtypes.value_counts() # return Series
 ```
 
 
@@ -2465,10 +2460,6 @@ temp_cat
 ```
 
 ```{python}
-temp_cat.get_values()
-```
-
-```{python}
 temp_cat.codes
 ```
 
@@ -2601,7 +2592,7 @@ temp_cat.value_counts()
 Since actual value stored by categorical object are integer **codes**, get_values() function return values translated from *.codes** property
 
 ```{python}
-temp_cat.get_values()  #array
+temp_cat#array
 ```
 
 

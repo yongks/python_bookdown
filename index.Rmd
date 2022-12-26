@@ -1,20 +1,22 @@
 --- 
-title: "Python Bookdown"
-author: "Yong Keh Soon"
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-output: bookdown::gitbook
-documentclass: book
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
+title:          "Python Bookdown"
+author:         "Yong Keh Soon"
+date:           "`r Sys.Date()`"
+site:           bookdown::bookdown_site
+output:         bookdown::gitbook
+documentclass:  nook
+colorlinks:     yes
+bibliography:   [book.bib, packages.bib]
+biblio-style:   apalike
 link-citations: yes
-github-repo: yongks/python_bookdown
+url:            'https\://github.com/yongks/python_bookdown'
+github-repo:    yongks/python_bookdown
 description: "This is a python cookbook, written using RMarkdown Notebook. It is made possible by using reticulate R library as the bridge between R and Python."
 ---
 
-# Prerequisites {-}
-
-```{r, setup, include=FALSE}
+```{r, include=FALSE}
+## This is always the FIRST file when building the book
+set.seed(2020)
 
 ## Global environment  setting for entire book
 ## further look and feel setting, refer to file: _output.yml
@@ -27,5 +29,13 @@ knitr::opts_chunk$set(echo=TRUE,
                       fig.show='hold', 
                       error=TRUE, 
                       results='hold',
-                      collapse=FALSE) 
+                      collapse=FALSE,
+                      cache=TRUE) 
+```
+
+
+
+```{r include=FALSE}
+library(reticulate)
+use_condaenv('base')
 ```

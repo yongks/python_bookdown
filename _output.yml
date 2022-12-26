@@ -7,10 +7,13 @@ bookdown::gitbook:
       scroll_highlight: yes
       before: |
         <li><a href="./">Python Bookdown</a></li>
-      after: null
+      after:
+       after:
+        <li><a href="https://github.com/yongks/python_bookdown" target="blank">This Github Repo</a></li>
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     toolbar:
-      position: fixed
-    edit: https://github.com/yongks/python_bookdown/edit/master/%s
+      position: static
+    edit: null
     download: null
     search: yes
     fontsettings:
@@ -18,12 +21,12 @@ bookdown::gitbook:
       family: sans
       size: 2
     sharing:
+      github: yes
       facebook: no
       twitter: no
       google: no
       weibo: no
       instapper: no
       vk: no
-      all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper']
   split_by: chapter
   highlight: tango

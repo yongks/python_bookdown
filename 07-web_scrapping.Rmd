@@ -48,7 +48,7 @@ link2 = 'http://mamamia777.com.au'
 
 
 ```{python}
-print (page1.status_code)
+#print (page1.status_code)
 ```
 
 ### Rotating Broswer

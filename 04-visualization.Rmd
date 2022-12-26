@@ -1,18 +1,6 @@
 ```{r include=FALSE}
 library(reticulate)
-use_condaenv('base')    #conda_list() - to find out the name of conda environment
-```
-
-```{python include=FALSE, results='hide'}
-from IPython.core.display import display, HTML
-display(HTML("<style>.container { width:75% !important; margin-left:350px; }</style>"))
-pd.set_option( 'display.notebook_repr_html', False)  # render Series and DataFrame as text, not HTML
-pd.set_option( 'display.max_column', 10)    # number of columns
-pd.set_option( 'display.max_rows', 10)      # number of rows
-pd.set_option( 'display.width', 90)         # number of characters per row
-
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "C:\ProgramData\Anaconda3\Library\plugins\platforms"
+use_condaenv('base')
 ```
 
 # matplotlib
@@ -29,6 +17,19 @@ import numpy as np
 from plydata import define, query, select, group_by, summarize, arrange, head, rename
 import plotnine
 from plotnine import *
+
+import os
+os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "C:\ProgramData\Anaconda3\Library\plugins\platforms"
+```
+
+
+```{python include=FALSE}
+from IPython.core.display import display, HTML
+display(HTML("<style>.container { width:75% !important; margin-left:350px; }</style>"))
+pd.set_option( 'display.notebook_repr_html', False)  # render Series and DataFrame as text, not HTML
+pd.set_option( 'display.max_column', 10)    # number of columns
+pd.set_option( 'display.max_rows', 10)      # number of rows
+pd.set_option( 'display.width', 90)         # number of characters per row
 
 import os
 os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "C:\ProgramData\Anaconda3\Library\plugins\platforms"
@@ -411,15 +412,15 @@ plt.show()
 #### size
 size: **height** in inch for each facet
 
-```{python}
-sns.lmplot(x='value1', y='value2', col='comp',hue='grp', size=3,fit_reg=False, data=mydf)
+```{python, error=TRUE}
+sns.lmplot(x='value1', y='value2', col='comp',hue='grp', fit_reg=False, data=mydf)
 plt.show()
 ```
 
 Observe that even **size is very large**, lmplot will **fit (shrink) everything into one row** by deafult. See example below.
 
 ```{python}
-sns.lmplot(x='value1', y='value2', col='comp',hue='grp', size=5,fit_reg=False, data=mydf)
+sns.lmplot(x='value1', y='value2', col='comp',hue='grp',fit_reg=False, data=mydf)
 plt.show()
 ```
 
@@ -429,7 +430,7 @@ To avoid lmplot from shrinking the chart, we use **col_wrap=<col_number** to wra
 Compare the size (height of each facet) with the above **without** col_wrap. Below chart is larger.
 
 ```{python}
-sns.lmplot(x='value1', y='value2', col='comp',hue='grp', size=5, col_wrap=2, fit_reg=False, data=mydf)
+sns.lmplot(x='value1', y='value2', col='comp',hue='grp', col_wrap=2, fit_reg=False, data=mydf)
 plt.show()
 ```
 

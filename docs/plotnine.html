@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 12 plotnine | Python Bookdown</title>
+<title>Chapter 13 plotnine | Python Bookdown</title>
 <meta name="author" content="Yong Keh Soon">
-<meta name="description" content="12.1 Histogram  12.1.1 1xNumeric plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 ) plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )...">
+<meta name="description" content="13.1 Histogram  13.1.1 1xNumeric plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 ) plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )...">
 <meta name="generator" content="bookdown 0.31 with bs4_book()">
-<meta property="og:title" content="Chapter 12 plotnine | Python Bookdown">
+<meta property="og:title" content="Chapter 13 plotnine | Python Bookdown">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/yongks/python_bookdown/plotnine.html">
-<meta property="og:description" content="12.1 Histogram  12.1.1 1xNumeric plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 ) plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )...">
+<meta property="og:description" content="13.1 Histogram  13.1.1 1xNumeric plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 ) plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 12 plotnine | Python Bookdown">
-<meta name="twitter:description" content="12.1 Histogram  12.1.1 1xNumeric plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 ) plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )...">
+<meta name="twitter:title" content="Chapter 13 plotnine | Python Bookdown">
+<meta name="twitter:description" content="13.1 Histogram  13.1.1 1xNumeric plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 ) plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -50,17 +50,18 @@
 <li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
 <li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
 <li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
-<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
-<li><a class="active" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
-<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
-<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
+<li><a class="" href="built-in-functions-1.html"><span class="header-section-number">7</span> Built-in Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">8</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">9</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">10</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">11</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></li>
+<li><a class="active" href="plotnine.html"><span class="header-section-number">13</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">14</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">15</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">16</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -68,186 +69,161 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="plotnine" class="section level1" number="12">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="plotnine" class="section level1" number="13">
 <h1>
-<span class="header-section-number">12</span> plotnine<a class="anchor" aria-label="anchor" href="#plotnine"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13</span> plotnine<a class="anchor" aria-label="anchor" href="#plotnine"><i class="fas fa-link"></i></a>
 </h1>
-<div id="histogram-2" class="section level2" number="12.1">
+<div id="histogram-2" class="section level2" number="13.1">
 <h2>
-<span class="header-section-number">12.1</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.1</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram-2"><i class="fas fa-link"></i></a>
 </h2>
-<div id="xnumeric" class="section level3" number="12.1.1">
+<div id="xnumeric" class="section level3" number="13.1.1">
 <h3>
-<span class="header-section-number">12.1.1</span> 1xNumeric<a class="anchor" aria-label="anchor" href="#xnumeric"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.1.1</span> 1xNumeric<a class="anchor" aria-label="anchor" href="#xnumeric"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 )
 plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</code></pre>
-<div class="sourceCode" id="cb636"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb636-1"><a href="plotnine.html#cb636-1" aria-hidden="true" tabindex="-1"></a>plotnine.options.figure_size <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb636-2"><a href="plotnine.html#cb636-2" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram()  <span class="co"># default bins = 10</span></span></code></pre></div>
-<pre><code>## &lt;ggplot: (139328809635)&gt;
+<div class="sourceCode" id="cb543"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb543-1"><a href="plotnine.html#cb543-1" aria-hidden="true" tabindex="-1"></a>plotnine.options.figure_size <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb543-2"><a href="plotnine.html#cb543-2" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram()  <span class="co"># default bins = 10</span></span></code></pre></div>
+<pre><code>## &lt;ggplot: (102580639278)&gt;
 ## 
-## C:\PROGRA~3\Anaconda3\lib\site-packages\plotnine\stats\stat_bin.py:95: PlotnineWarning: 'stat_bin()' using 'bins = 13'. Pick better value with 'binwidth'.</code></pre>
+## C:\PROGRA~3\Anaconda3\lib\site-packages\plotnine\stats\stat_bin.py:95: PlotnineWarning: 'stat_bin()' using 'bins = 10'. Pick better value with 'binwidth'.</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-50-103.png" width="288"></div>
-<div class="sourceCode" id="cb638"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb638-1"><a href="plotnine.html#cb638-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(bins <span class="op">=</span> <span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139328530887)&gt;</code></pre>
+<div class="sourceCode" id="cb545"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb545-1"><a href="plotnine.html#cb545-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(bins <span class="op">=</span> <span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102575217333)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-51-105.png" width="288"></div>
-<div class="sourceCode" id="cb640"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb640-1"><a href="plotnine.html#cb640-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(binwidth <span class="op">=</span> <span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139325624549)&gt;</code></pre>
+<div class="sourceCode" id="cb547"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb547-1"><a href="plotnine.html#cb547-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(binwidth <span class="op">=</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102581042613)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-52-107.png" width="288"></div>
 </div>
-<div id="xnumeric-1xcategorical" class="section level3" number="12.1.2">
+<div id="xnumeric-1xcategorical" class="section level3" number="13.1.2">
 <h3>
-<span class="header-section-number">12.1.2</span> 1xNumeric + 1xCategorical<a class="anchor" aria-label="anchor" href="#xnumeric-1xcategorical"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.1.2</span> 1xNumeric + 1xCategorical<a class="anchor" aria-label="anchor" href="#xnumeric-1xcategorical"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>plotnine.ggplot( dataframe, 
                     aes(x='colName'), 
                     fill='categorical-alike-colName') 
 + geom_histogram()</code></pre>
-<div class="sourceCode" id="cb643"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb643-1"><a href="plotnine.html#cb643-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_histogram(bins<span class="op">=</span><span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139323305177)&gt;</code></pre>
+<div class="sourceCode" id="cb550"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb550-1"><a href="plotnine.html#cb550-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_histogram(bins<span class="op">=</span><span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102578950006)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-53-109.png" width="288"></div>
 </div>
 </div>
-<div id="scatter-plot-2" class="section level2" number="12.2">
+<div id="scatter-plot-2" class="section level2" number="13.2">
 <h2>
-<span class="header-section-number">12.2</span> Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.2</span> Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot-2"><i class="fas fa-link"></i></a>
 </h2>
-<div id="x-numeric-2" class="section level3" number="12.2.1">
+<div id="x-numeric-2" class="section level3" number="13.2.1">
 <h3>
-<span class="header-section-number">12.2.1</span> 2x Numeric<a class="anchor" aria-label="anchor" href="#x-numeric-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.2.1</span> 2x Numeric<a class="anchor" aria-label="anchor" href="#x-numeric-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb645"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb645-1"><a href="plotnine.html#cb645-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139325300279)&gt;</code></pre>
+<div class="sourceCode" id="cb552"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb552-1"><a href="plotnine.html#cb552-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102581030388)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-54-111.png" width="288"></div>
 </div>
-<div id="x-numeric-1x-categorical" class="section level3" number="12.2.2">
+<div id="x-numeric-1x-categorical" class="section level3" number="13.2.2">
 <h3>
-<span class="header-section-number">12.2.2</span> 2x Numeric + 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.2.2</span> 2x Numeric + 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical"><i class="fas fa-link"></i></a>
 </h3>
 <pre><code>ggplot( DataFrame, aes(x='colName1',y='colName2')) 
     + geom_point( aes(
         color='categorical-alike-colName',
         size='numberColName'
     ))</code></pre>
-<div class="sourceCode" id="cb648"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb648-1"><a href="plotnine.html#cb648-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point(aes(color<span class="op">=</span><span class="st">'grp'</span>))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139328574766)&gt;
-## 
-## Traceback (most recent call last):
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\backends\backend_qt.py", line 454, in _draw_idle
-##     self.draw()
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py", line 405, in draw
-##     self.figure.draw(self.renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\artist.py", line 74, in draw_wrapper
-##     result = draw(artist, renderer, *args, **kwargs)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\artist.py", line 51, in draw_wrapper
-##     return draw(artist, renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\figure.py", line 3071, in draw
-##     mimage._draw_list_compositing_images(
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\image.py", line 131, in _draw_list_compositing_images
-##     a.draw(renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\artist.py", line 51, in draw_wrapper
-##     return draw(artist, renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axes\_base.py", line 3071, in draw
-##     self._update_title_position(renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axes\_base.py", line 3004, in _update_title_position
-##     if (ax.xaxis.get_ticks_position() in ['top', 'unknown']
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axis.py", line 2399, in get_ticks_position
-##     self._get_ticks_position()]
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axis.py", line 2112, in _get_ticks_position
-##     minor = self.minorTicks[0]
-## IndexError: list index out of range</code></pre>
+<div class="sourceCode" id="cb555"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb555-1"><a href="plotnine.html#cb555-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point(aes(color<span class="op">=</span><span class="st">'grp'</span>))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102575220429)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-55-113.png" width="288"></div>
-<div class="sourceCode" id="cb650"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb650-1"><a href="plotnine.html#cb650-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>,color<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139329051721)&gt;</code></pre>
+<div class="sourceCode" id="cb557"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb557-1"><a href="plotnine.html#cb557-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>,color<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102580707675)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-56-115.png" width="288"></div>
-<div class="sourceCode" id="cb652"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb652-1"><a href="plotnine.html#cb652-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb652-2"><a href="plotnine.html#cb652-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes(</span>
-<span id="cb652-3"><a href="plotnine.html#cb652-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span></span>
-<span id="cb652-4"><a href="plotnine.html#cb652-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139325294312)&gt;</code></pre>
+<div class="sourceCode" id="cb559"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb559-1"><a href="plotnine.html#cb559-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb559-2"><a href="plotnine.html#cb559-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes(</span>
+<span id="cb559-3"><a href="plotnine.html#cb559-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span></span>
+<span id="cb559-4"><a href="plotnine.html#cb559-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102580609347)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-57-117.png" width="288"></div>
 </div>
-<div id="x-numeric-1x-numeric-1x-categorical" class="section level3" number="12.2.3">
+<div id="x-numeric-1x-numeric-1x-categorical" class="section level3" number="13.2.3">
 <h3>
-<span class="header-section-number">12.2.3</span> 2x Numeric + 1x Numeric + 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-numeric-1x-categorical"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.2.3</span> 2x Numeric + 1x Numeric + 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-numeric-1x-categorical"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb654"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb654-1"><a href="plotnine.html#cb654-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb654-2"><a href="plotnine.html#cb654-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes( </span>
-<span id="cb654-3"><a href="plotnine.html#cb654-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span>, size<span class="op">=</span><span class="st">'value3'</span></span>
-<span id="cb654-4"><a href="plotnine.html#cb654-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139329027789)&gt;</code></pre>
+<div class="sourceCode" id="cb561"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb561-1"><a href="plotnine.html#cb561-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb561-2"><a href="plotnine.html#cb561-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes( </span>
+<span id="cb561-3"><a href="plotnine.html#cb561-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span>, size<span class="op">=</span><span class="st">'value3'</span></span>
+<span id="cb561-4"><a href="plotnine.html#cb561-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102580602862)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-58-119.png" width="288"></div>
 </div>
-<div id="overlay-smooth-line" class="section level3" number="12.2.4">
+<div id="overlay-smooth-line" class="section level3" number="13.2.4">
 <h3>
-<span class="header-section-number">12.2.4</span> Overlay Smooth Line<a class="anchor" aria-label="anchor" href="#overlay-smooth-line"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.2.4</span> Overlay Smooth Line<a class="anchor" aria-label="anchor" href="#overlay-smooth-line"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb656"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb656-1"><a href="plotnine.html#cb656-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb656-2"><a href="plotnine.html#cb656-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb656-3"><a href="plotnine.html#cb656-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth()          <span class="co"># default method='loess'</span></span></code></pre></div>
-<pre><code>## &lt;ggplot: (139323762890)&gt;
+<div class="sourceCode" id="cb563"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb563-1"><a href="plotnine.html#cb563-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb563-2"><a href="plotnine.html#cb563-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb563-3"><a href="plotnine.html#cb563-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth()          <span class="co"># default method='loess'</span></span></code></pre></div>
+<pre><code>## &lt;ggplot: (102574876703)&gt;
 ## 
 ## C:\PROGRA~3\Anaconda3\lib\site-packages\plotnine\stats\smoothers.py:321: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-59-121.png" width="288"></div>
-<div class="sourceCode" id="cb658"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb658-1"><a href="plotnine.html#cb658-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>,fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb658-2"><a href="plotnine.html#cb658-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb658-3"><a href="plotnine.html#cb658-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth(</span>
-<span id="cb658-4"><a href="plotnine.html#cb658-4" aria-hidden="true" tabindex="-1"></a>        se<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb658-5"><a href="plotnine.html#cb658-5" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'red'</span>,</span>
-<span id="cb658-6"><a href="plotnine.html#cb658-6" aria-hidden="true" tabindex="-1"></a>        method<span class="op">=</span><span class="st">'lm'</span>, </span>
-<span id="cb658-7"><a href="plotnine.html#cb658-7" aria-hidden="true" tabindex="-1"></a>        level<span class="op">=</span><span class="fl">0.75</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139323592614)&gt;</code></pre>
+<div class="sourceCode" id="cb565"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb565-1"><a href="plotnine.html#cb565-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>,fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb565-2"><a href="plotnine.html#cb565-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb565-3"><a href="plotnine.html#cb565-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth(</span>
+<span id="cb565-4"><a href="plotnine.html#cb565-4" aria-hidden="true" tabindex="-1"></a>        se<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb565-5"><a href="plotnine.html#cb565-5" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'red'</span>,</span>
+<span id="cb565-6"><a href="plotnine.html#cb565-6" aria-hidden="true" tabindex="-1"></a>        method<span class="op">=</span><span class="st">'lm'</span>, </span>
+<span id="cb565-7"><a href="plotnine.html#cb565-7" aria-hidden="true" tabindex="-1"></a>        level<span class="op">=</span><span class="fl">0.75</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102579149855)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-60-123.png" width="288"></div>
 </div>
 </div>
-<div id="line-chart" class="section level2" number="12.3">
+<div id="line-chart" class="section level2" number="13.3">
 <h2>
-<span class="header-section-number">12.3</span> Line Chart<a class="anchor" aria-label="anchor" href="#line-chart"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.3</span> Line Chart<a class="anchor" aria-label="anchor" href="#line-chart"><i class="fas fa-link"></i></a>
 </h2>
-<div id="x-numeric-data" class="section level3" number="12.3.1">
+<div id="x-numeric-data" class="section level3" number="13.3.1">
 <h3>
-<span class="header-section-number">12.3.1</span> 2x Numeric Data<a class="anchor" aria-label="anchor" href="#x-numeric-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.3.1</span> 2x Numeric Data<a class="anchor" aria-label="anchor" href="#x-numeric-data"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb660"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb660-1"><a href="plotnine.html#cb660-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139329791543)&gt;</code></pre>
+<div class="sourceCode" id="cb567"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb567-1"><a href="plotnine.html#cb567-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102580742807)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-61-125.png" width="288"></div>
 </div>
-<div id="x-numeric-1x-categorical-1" class="section level3" number="12.3.2">
+<div id="x-numeric-1x-categorical-1" class="section level3" number="13.3.2">
 <h3>
-<span class="header-section-number">12.3.2</span> 1x Numeric, 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.3.2</span> 1x Numeric, 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical-1"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb662"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb662-1"><a href="plotnine.html#cb662-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139329860045)&gt;</code></pre>
+<div class="sourceCode" id="cb569"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb569-1"><a href="plotnine.html#cb569-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102580277209)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-62-127.png" width="288"></div>
-<div class="sourceCode" id="cb664"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb664-1"><a href="plotnine.html#cb664-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">30</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line( aes(group<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139328883017)&gt;</code></pre>
+<div class="sourceCode" id="cb571"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb571-1"><a href="plotnine.html#cb571-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">30</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line( aes(group<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102580710973)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-63-129.png" width="288"></div>
 </div>
-<div id="x-numeric-1x-categorical-2" class="section level3" number="12.3.3">
+<div id="x-numeric-1x-categorical-2" class="section level3" number="13.3.3">
 <h3>
-<span class="header-section-number">12.3.3</span> 2x Numeric, 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.3.3</span> 2x Numeric, 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb666"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb666-1"><a href="plotnine.html#cb666-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line( aes(color<span class="op">=</span><span class="st">'grp'</span>),size<span class="op">=</span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139328866061)&gt;</code></pre>
+<div class="sourceCode" id="cb573"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb573-1"><a href="plotnine.html#cb573-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line( aes(color<span class="op">=</span><span class="st">'grp'</span>),size<span class="op">=</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102581481614)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-64-131.png" width="288"></div>
 </div>
 </div>
-<div id="bar-chart-2" class="section level2" number="12.4">
+<div id="bar-chart-2" class="section level2" number="13.4">
 <h2>
-<span class="header-section-number">12.4</span> Bar Chart<a class="anchor" aria-label="anchor" href="#bar-chart-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.4</span> Bar Chart<a class="anchor" aria-label="anchor" href="#bar-chart-2"><i class="fas fa-link"></i></a>
 </h2>
-<div id="x-categorical" class="section level4" number="12.4.0.1">
+<div id="x-categorical" class="section level4" number="13.4.0.1">
 <h4>
-<span class="header-section-number">12.4.0.1</span> 1x Categorical<a class="anchor" aria-label="anchor" href="#x-categorical"><i class="fas fa-link"></i></a>
+<span class="header-section-number">13.4.0.1</span> 1x Categorical<a class="anchor" aria-label="anchor" href="#x-categorical"><i class="fas fa-link"></i></a>
 </h4>
 <p>Single categorical variable produces frequency chart.</p>
-<div class="sourceCode" id="cb668"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb668-1"><a href="plotnine.html#cb668-1" aria-hidden="true" tabindex="-1"></a>tmpdf <span class="op">=</span> mydf.groupby([<span class="st">'comp'</span>],as_index<span class="op">=</span><span class="va">False</span>).count()</span>
-<span id="cb668-2"><a href="plotnine.html#cb668-2" aria-hidden="true" tabindex="-1"></a>tmpdf</span></code></pre></div>
+<div class="sourceCode" id="cb575"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb575-1"><a href="plotnine.html#cb575-1" aria-hidden="true" tabindex="-1"></a>tmpdf <span class="op">=</span> mydf.groupby([<span class="st">'comp'</span>],as_index<span class="op">=</span><span class="va">False</span>).count()</span>
+<span id="cb575-2"><a href="plotnine.html#cb575-2" aria-hidden="true" tabindex="-1"></a>tmpdf</span></code></pre></div>
 <pre><code>##   comp  dept  grp  value1  value2  value3
-## 0   C1    33   33      33      33      33
+## 0   C1    38   38      38      38      38
 ## 1   C2    32   32      32      32      32
-## 2   C3    35   35      35      35      35</code></pre>
-<div class="sourceCode" id="cb670"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb670-1"><a href="plotnine.html#cb670-1" aria-hidden="true" tabindex="-1"></a>tmpdf.info()</span></code></pre></div>
+## 2   C3    30   30      30      30      30</code></pre>
+<div class="sourceCode" id="cb577"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb577-1"><a href="plotnine.html#cb577-1" aria-hidden="true" tabindex="-1"></a>tmpdf.info()</span></code></pre></div>
 <pre><code>## &lt;class 'pandas.core.frame.DataFrame'&gt;
 ## RangeIndex: 3 entries, 0 to 2
 ## Data columns (total 6 columns):
@@ -261,8 +237,8 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 ##  5   value3  3 non-null      int64 
 ## dtypes: int64(5), object(1)
 ## memory usage: 272.0+ bytes</code></pre>
-<div class="sourceCode" id="cb672"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb672-1"><a href="plotnine.html#cb672-1" aria-hidden="true" tabindex="-1"></a>ggplot (tmpdf, aes(x<span class="op">=</span><span class="st">'comp'</span>, y<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span>geom_col()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (139324993844)&gt;</code></pre>
+<div class="sourceCode" id="cb579"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb579-1"><a href="plotnine.html#cb579-1" aria-hidden="true" tabindex="-1"></a>ggplot (tmpdf, aes(x<span class="op">=</span><span class="st">'comp'</span>, y<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span>geom_col()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (102575281902)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-67-133.png" width="288"></div>
 
 <!-- jupyter_markdown -->
@@ -270,34 +246,34 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></div>
-<div class="next"><a href="numpy.html"><span class="header-section-number">13</span> numpy</a></div>
+<div class="prev"><a href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></div>
+<div class="next"><a href="numpy.html"><span class="header-section-number">14</span> numpy</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#plotnine"><span class="header-section-number">12</span> plotnine</a></li>
+<li><a class="nav-link" href="#plotnine"><span class="header-section-number">13</span> plotnine</a></li>
 <li>
-<a class="nav-link" href="#histogram-2"><span class="header-section-number">12.1</span> Histogram</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#xnumeric"><span class="header-section-number">12.1.1</span> 1xNumeric</a></li>
-<li><a class="nav-link" href="#xnumeric-1xcategorical"><span class="header-section-number">12.1.2</span> 1xNumeric + 1xCategorical</a></li>
+<a class="nav-link" href="#histogram-2"><span class="header-section-number">13.1</span> Histogram</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#xnumeric"><span class="header-section-number">13.1.1</span> 1xNumeric</a></li>
+<li><a class="nav-link" href="#xnumeric-1xcategorical"><span class="header-section-number">13.1.2</span> 1xNumeric + 1xCategorical</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#scatter-plot-2"><span class="header-section-number">12.2</span> Scatter Plot</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#x-numeric-2"><span class="header-section-number">12.2.1</span> 2x Numeric</a></li>
-<li><a class="nav-link" href="#x-numeric-1x-categorical"><span class="header-section-number">12.2.2</span> 2x Numeric + 1x Categorical</a></li>
-<li><a class="nav-link" href="#x-numeric-1x-numeric-1x-categorical"><span class="header-section-number">12.2.3</span> 2x Numeric + 1x Numeric + 1x Categorical</a></li>
-<li><a class="nav-link" href="#overlay-smooth-line"><span class="header-section-number">12.2.4</span> Overlay Smooth Line</a></li>
+<a class="nav-link" href="#scatter-plot-2"><span class="header-section-number">13.2</span> Scatter Plot</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#x-numeric-2"><span class="header-section-number">13.2.1</span> 2x Numeric</a></li>
+<li><a class="nav-link" href="#x-numeric-1x-categorical"><span class="header-section-number">13.2.2</span> 2x Numeric + 1x Categorical</a></li>
+<li><a class="nav-link" href="#x-numeric-1x-numeric-1x-categorical"><span class="header-section-number">13.2.3</span> 2x Numeric + 1x Numeric + 1x Categorical</a></li>
+<li><a class="nav-link" href="#overlay-smooth-line"><span class="header-section-number">13.2.4</span> Overlay Smooth Line</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#line-chart"><span class="header-section-number">12.3</span> Line Chart</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#x-numeric-data"><span class="header-section-number">12.3.1</span> 2x Numeric Data</a></li>
-<li><a class="nav-link" href="#x-numeric-1x-categorical-1"><span class="header-section-number">12.3.2</span> 1x Numeric, 1x Categorical</a></li>
-<li><a class="nav-link" href="#x-numeric-1x-categorical-2"><span class="header-section-number">12.3.3</span> 2x Numeric, 1x Categorical</a></li>
+<a class="nav-link" href="#line-chart"><span class="header-section-number">13.3</span> Line Chart</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#x-numeric-data"><span class="header-section-number">13.3.1</span> 2x Numeric Data</a></li>
+<li><a class="nav-link" href="#x-numeric-1x-categorical-1"><span class="header-section-number">13.3.2</span> 1x Numeric, 1x Categorical</a></li>
+<li><a class="nav-link" href="#x-numeric-1x-categorical-2"><span class="header-section-number">13.3.3</span> 2x Numeric, 1x Categorical</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#bar-chart-2"><span class="header-section-number">12.4</span> Bar Chart</a></li>
+<li><a class="nav-link" href="#bar-chart-2"><span class="header-section-number">13.4</span> Bar Chart</a></li>
 </ul>
 
       <div class="book-extra">
@@ -315,7 +291,7 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

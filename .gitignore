@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.md
+*.rds
+*cache*/
+*_files/
+.pynb_checkpoints
+
+## Except These Files
+!README.md

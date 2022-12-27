@@ -1,177 +1,148 @@
 
 # Library and Functions
-Library are group of functions
 
+Library are group of functions
 
 ## Package Source
 
-
 ### Conda
+
 - Package manager for any language  
 - Install binaries
 
-
 ### PIP
+
 - Package manager python only  
 - Compile from source  
 - Stands for Pip Installs Packages  
 - Python's officially-sanctioned package manager, and is most commonly used to install packages published on the **Python Package Index (PyPI)**  
 - Both pip and PyPI are governed and supported by the Python Packaging Authority (PyPA).
 
-
 ## Importing Library
 
 There are two methods to import library functions:  
 
-**Standalone Namespace**
+### Standalone Namespace
+
 ```
-- import <libName>                        # access function through: libName.functionName
-- import <libName> as <shortName>         # access function through: shortName.functionName
-```
-**Global Namespace**
-```
-- from   <libName> import *               # all functions available at global namespace
-- from   <libName> import <functionName>  # access function through: functionName    
-- from   <libName> import <functionName> as <shortFunctionName>  # access function through shortFunctionName
+# access function through: libName.functionName
+- import <libName>                        
+
+# access function through: shortName.functionName
+- import <libName> as <shortName>         
 ```
 
+Use **`as`** for aliasing library name. This is useful if you have conflicting library name
 
-### Import Entire Library
-
-
-#### Import Into Standalone Namespace
-
-```{python}
+```{python, results='hold'}
 import math
 math.sqrt(9)
-```
 
-
-Use **as** for aliasing library name. This is useful if you have conflicting library name
-
-```{python}
-import math as m
+import math as m   ## use library shortname
 m.sqrt(9)
 ```
 
+### Global Namespace
 
-#### Import Into Global Name Space
-All functions in the library accessible through global namespace
 ```
-from <libName> import *
+# all functions available at global namespace
+- from   <libName> import *
+
+# access function through original names
+- from   <libName> import <functionName>      
+
+# access function through custom names
+- from   <libName> import <functionName> as <shortFunctionName>  
 ```
 
-
-### Import Specific Function
-
-```{python}
+```{python, results='hold'}
 from math import sqrt
-print (sqrt(9))
-```
+sqrt(9)
 
-
-Use **as** for aliasing function name
-
-```{python}
 from math import sqrt as sq
-print (sq(9))
+sq(9)
 ```
 
+## Functions
 
-### Machine Learning Packages
+### Define
 
-![alt text](img/ml_libraries.jpg)
+By default, arguments are assigned to function left to right. However, you can also specify the argument assignment during function call. Function can have **default args value**.
 
-
-## Define Function
-
-### Function Arguments
-By default, arguments are assigned to function left to right
-
-```{python}
-def myfun(x,y):
+```{python, results='hold'}
+def myfun(x,y=3):
     print ('x:',x)
     print ('y:',y)
-    
-myfun(5,8)
+
+myfun(5,8)      ## default function read args from left to right
+myfun (y=8,x=5) ## but we can specific as well
+myfun (x=5)     ## args x not specified, function assume default=
 ```
-
-However, you can also specify the argument assigment during function call
-
-```{python}
-myfun (y=8,x=5)
-```
-
-
-Function can have **default argement value**
-
-```{python}
-def myfun(x=1,y=1):  # default argument value is 1
-    print ('x:',x)
-    print ('y:',y)
-    
-myfun(5)  # pass only one argument
-```
-
 
 ### List Within Function
 
-Consider a function is an object, its variable (some_list) is immutable and hence its reference won't change, even data changes
+Consider a function is an object, its variable (some_list) is a reference. Hence its value is remembered when no parameter is passed over. it is **counter intuitive**, always ensure to pass the arguments to function, even though it is a an empty list.
 
-```{python}
+```{python, results='hold'}
 def spam (elem, some_list=[]):
     some_list.append(elem)
     return some_list
 
 print (spam(1))
-print (spam(2))
+print (spam(2,[6]))
 print (spam(3))
+print (spam(2,[7]))
+print (spam(4, []))
 ```
-
 
 ### Return Statement
 
-```{python}
+Multiple value is returned as **tuple**. Use multiple assignment to assign to multiple variable
+
+```{python, results='hold'}
 def bigger(x,y):
     if (x>y):
         return x
     else:
         return y
-    
-print (bigger(5,8))
-```
 
-
-### No Return Statement
-if no **return** statement, python return **None**
-
-```{python}
-def dummy():
-    print ('This is a dummy function, return no value')
-
-dummy()
-```
-
-
-### Return Multiple Value
-Multiple value is returned as **tuple**. Use multiple assignment to assign to multiple variable
-
-```{python}
 def minmax(x,y,z):
     return min(x,y,z), max(x,y,z)
 
-a,b = minmax(7,8,9)     # multiple assignment
-c   = minmax(7,8,9)     # tuple
+big   = bigger(5,8)
+a,b   = minmax(7,8,9)     # multiple assignment
+c     = minmax(7,8,9)     # tuple
 
-print (a,b)
-print (c)    
+print (big)  ## noolean
+print (a,b)  ## integer
+print (c)    ## tuple
 ```
 
+if no **return** statement, python return **None**
 
-### Passing Function as Argument 
-You can pass a function name as an argument to a function
+```{python, results='hold'}
+def dummy():
+    print ('This is a dummy function, return no value')
 
-```{python}
+dummy() == None
+```
+### Argument
+
+Passing **too many** arguments will result in an error.
+Passing **too little** arguments **without default** value defined will also result in error.
+For dynamic number of arguments, see **`args`** in the next section.
+
+```{python, results='hold',error=TRUE}
+def myfun(x,y):
+    print (x)
+    print (y)
+
+myfun(1,2,3,4,5)
+myfun(1)
+```
+**Function as Argument**
+
+```{python, results='hold'}
 def myfun(x,y,f):
     f(x,y)
 
@@ -179,43 +150,38 @@ myfun('hello',54,print)
 ```
 
 
-### Arguments
+**Breaking Dict as Argument**
 
-args is a **tuple**
+Below example break **`dict`** to a function. However, be careful not to pass extra key to the function, which will result in error.
 
+```{python, results='hold', error=TRUE}
+def foo(a,b,c,d=1):
+    print(a, b, c, d)
 
-#### Example 1
-Error example, too many parameters passed over to function
-
-
-#### Example 2
-First argument goes to x, remaining goes to args as tuple
-
-```{python}
-def myfun(x,*args):
-    print (x)
-    print (args)     #tuple
-    
-myfun(1,2,3,4,5,'abc')
+foo(**{"a":2,"b":3,"c":4})          ## ok
+foo(**{"a":2,"b":3,"c":4, "z":100}) ## Error, 'z' not recognized
 ```
 
+### Argument: args
 
-#### Example 3
-First argument goes to x, second argument goest to y, remaining goes to args
+All dynamic length of argumens not captured in the defined argument will overflow into **`args`**, which is a tuple.
 
-```{python}
+**Example 1 - All tails overflow to args**
+
+First argument goes to x, second argument goes to y, remaining overflow to args.
+
+```{python, results='hold'}
 def myfun(x,y,*args):
     print (x)
     print (y)
     print (args)     #tuple
     
-myfun(1,2,3)
+myfun(1,2,3,4,5,'any')
 ```
 
+**Example 2 - Middle overflow to args**
 
-#### Example 4
-
-```{python}
+```{python, results='hold'}
 def myfun(x,*args, y=9):
     print (x)
     print (y)
@@ -224,11 +190,9 @@ def myfun(x,*args, y=9):
 myfun(1,2,3,4,5)
 ```
 
+**Example 3 - All goes to args**
 
-#### Example 5
-All goes to args
-
-```{python}
+```{python, results='hold'}
 def myfun(*args):
     print (args)     #tuple
     
@@ -236,9 +200,9 @@ myfun(1,2,3,4,5)
 ```
 
 
-#### Example 6 Empty args
+**Example 4 - Empty args**
 
-```{python}
+```{python, results='hold'}
 def myfun(x,y,*args):
     print (x)
     print (y)
@@ -247,73 +211,68 @@ def myfun(x,y,*args):
 myfun(1,2)
 ```
 
+### Argument: kwargs
 
-### keyword arguments
 kwargs is a **dictionary**
 
+**Example 1 - All goes into kwargs**
 
-#### Example 1
-
-```{python}
+```{python, results='hold'}
 def foo(**kwargs):
     print(kwargs)
     
 foo(a=1,b=2,c=3)
 ```
 
+**Example 2 - Tails overflow to kwargs**
 
-#### Example 2
+First param goes to x, the rest goes to kwargs.
 
-```{python}
+```{python, results='hold'}
 def foo(x,**kwargs):
     print(x)
     print(kwargs)
     
 foo(9,a=1,b=2,c=3)
+foo(9)              ## empty kwargs dictionary
 ```
 
-```{python}
-foo(9) #empty dictionary
-```
+**Mixing args, kwargs**
 
+Always put `args` **before** `kwargs`, otherwise there will be an Error.
 
-#### Example 3
-
-```{python}
-def foo(a,b,c,d=1):
-    print(a)
-    print(b)
-    print(c)
-    print(d)
-    
-foo(**{"a":2,"b":3,"c":4})
-```
-
-
-### Mixing *args, **kwargs
-
-Always put args **before** kwargs
-
-#### Example 1
-
-```{python}
-def foo(x,y=1,**kwargs):
-    print (x)
-    print (y)
-    print (kwargs)
-    
-foo(1,2,c=3,d=4)
-```
-
-
-#### Example 2
-
-```{python}
+```{python, results='hold', error=TRUE}
 def foo(x,y=2,*args,**kwargs):
-    print (x)
-    print (y)
-    print (args)
-    print (kwargs)
+    print (x,y, args, kwargs)
     
-foo(1,2,3,4,5,c=6,d=7)
+foo(1,2,3,4,5,c=6,d=7)  ## ok
+foo(1,2,3,c=6,4,5,d=7)  ## ERROR, always puts args before kwargs
+```
+
+# Built-in Functions
+
+## range
+**range(X)** generates sequence of integer object
+```
+range (lower_bound, upper_bound, step_size)  
+# lower bound is optional, default = 0
+# upper bound is not included in result
+# step is optional, default = 1
+```
+
+**Use list() to convert in order to view actual sequence of data**
+
+```{python}
+r = range(10)     # default lower bound =0, step =1
+print (type (r))
+print (r)
+print (list(r))
+```
+
+
+**More Examples**
+
+```{python}
+print (list(range(2,8)))    # step not specified, default 1
+print ('Odds Number : ' , list(range(1,10,2))) # generate odds number
 ```

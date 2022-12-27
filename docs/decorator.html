@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 9 Decorator | Python Bookdown</title>
+<title>Chapter 10 Decorator | Python Bookdown</title>
 <meta name="author" content="Yong Keh Soon">
-<meta name="description" content="9.1 Definition  Decorator is a function that accept callable as the only argument The main purpose of decarator is to enhance the program of the decorated function It returns a callable   9.2...">
+<meta name="description" content="10.1 Definition  Decorator is a function that accept callable as the only argument The main purpose of decarator is to enhance the program of the decorated function It returns a callable   10.2...">
 <meta name="generator" content="bookdown 0.31 with bs4_book()">
-<meta property="og:title" content="Chapter 9 Decorator | Python Bookdown">
+<meta property="og:title" content="Chapter 10 Decorator | Python Bookdown">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/yongks/python_bookdown/decorator.html">
-<meta property="og:description" content="9.1 Definition  Decorator is a function that accept callable as the only argument The main purpose of decarator is to enhance the program of the decorated function It returns a callable   9.2...">
+<meta property="og:description" content="10.1 Definition  Decorator is a function that accept callable as the only argument The main purpose of decarator is to enhance the program of the decorated function It returns a callable   10.2...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 9 Decorator | Python Bookdown">
-<meta name="twitter:description" content="9.1 Definition  Decorator is a function that accept callable as the only argument The main purpose of decarator is to enhance the program of the decorated function It returns a callable   9.2...">
+<meta name="twitter:title" content="Chapter 10 Decorator | Python Bookdown">
+<meta name="twitter:description" content="10.1 Definition  Decorator is a function that accept callable as the only argument The main purpose of decarator is to enhance the program of the decorated function It returns a callable   10.2...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -50,17 +50,18 @@
 <li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
 <li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
 <li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
-<li><a class="active" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
-<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
-<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
-<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
+<li><a class="" href="built-in-functions-1.html"><span class="header-section-number">7</span> Built-in Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">8</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">9</span> Object Oriented Programming</a></li>
+<li><a class="active" href="decorator.html"><span class="header-section-number">10</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">11</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">13</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">14</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">15</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">16</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -68,13 +69,13 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="decorator" class="section level1" number="9">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="decorator" class="section level1" number="10">
 <h1>
-<span class="header-section-number">9</span> Decorator<a class="anchor" aria-label="anchor" href="#decorator"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10</span> Decorator<a class="anchor" aria-label="anchor" href="#decorator"><i class="fas fa-link"></i></a>
 </h1>
-<div id="definition" class="section level2" number="9.1">
+<div id="definition" class="section level2" number="10.1">
 <h2>
-<span class="header-section-number">9.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>
@@ -85,13 +86,13 @@
 </li>
 </ul>
 </div>
-<div id="examples" class="section level2" number="9.2">
+<div id="examples" class="section level2" number="10.2">
 <h2>
-<span class="header-section-number">9.2</span> Examples<a class="anchor" aria-label="anchor" href="#examples"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.2</span> Examples<a class="anchor" aria-label="anchor" href="#examples"><i class="fas fa-link"></i></a>
 </h2>
-<div id="example-1---plain-decorator-function" class="section level3" number="9.2.1">
+<div id="example-1---plain-decorator-function" class="section level3" number="10.2.1">
 <h3>
-<span class="header-section-number">9.2.1</span> Example 1 - Plain decorator function<a class="anchor" aria-label="anchor" href="#example-1---plain-decorator-function"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.2.1</span> Example 1 - Plain decorator function<a class="anchor" aria-label="anchor" href="#example-1---plain-decorator-function"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>Many times, it is useful to register a function elsewhere - for example, registering a task in a task runner, or a functin with signal handler</li>
@@ -100,90 +101,90 @@
 <li>foo() and bar() are the <strong>decorated function</strong> of <strong>register</strong>
 </li>
 </ul>
-<div class="sourceCode" id="cb543"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb543-1"><a href="decorator.html#cb543-1" aria-hidden="true" tabindex="-1"></a>registry <span class="op">=</span> []</span>
-<span id="cb543-2"><a href="decorator.html#cb543-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb543-3"><a href="decorator.html#cb543-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> register(decorated):</span>
-<span id="cb543-4"><a href="decorator.html#cb543-4" aria-hidden="true" tabindex="-1"></a>    registry.append(decorated)</span>
-<span id="cb543-5"><a href="decorator.html#cb543-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> decorated</span>
-<span id="cb543-6"><a href="decorator.html#cb543-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb543-7"><a href="decorator.html#cb543-7" aria-hidden="true" tabindex="-1"></a><span class="at">@register</span></span>
-<span id="cb543-8"><a href="decorator.html#cb543-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo():</span>
-<span id="cb543-9"><a href="decorator.html#cb543-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span></span>
-<span id="cb543-10"><a href="decorator.html#cb543-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb543-11"><a href="decorator.html#cb543-11" aria-hidden="true" tabindex="-1"></a><span class="at">@register</span></span>
-<span id="cb543-12"><a href="decorator.html#cb543-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bar():</span>
-<span id="cb543-13"><a href="decorator.html#cb543-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">5</span></span></code></pre></div>
-<div class="sourceCode" id="cb544"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb544-1"><a href="decorator.html#cb544-1" aria-hidden="true" tabindex="-1"></a>registry</span></code></pre></div>
-<pre><code>## [&lt;function foo at 0x0000023FF7BD8700&gt;, &lt;function bar at 0x0000023FF7C175E0&gt;]</code></pre>
-<div class="sourceCode" id="cb546"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb546-1"><a href="decorator.html#cb546-1" aria-hidden="true" tabindex="-1"></a>registry[<span class="dv">0</span>]()</span></code></pre></div>
+<div class="sourceCode" id="cb449"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb449-1"><a href="decorator.html#cb449-1" aria-hidden="true" tabindex="-1"></a>registry <span class="op">=</span> []</span>
+<span id="cb449-2"><a href="decorator.html#cb449-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb449-3"><a href="decorator.html#cb449-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> register(decorated):</span>
+<span id="cb449-4"><a href="decorator.html#cb449-4" aria-hidden="true" tabindex="-1"></a>    registry.append(decorated)</span>
+<span id="cb449-5"><a href="decorator.html#cb449-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> decorated</span>
+<span id="cb449-6"><a href="decorator.html#cb449-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb449-7"><a href="decorator.html#cb449-7" aria-hidden="true" tabindex="-1"></a><span class="at">@register</span></span>
+<span id="cb449-8"><a href="decorator.html#cb449-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo():</span>
+<span id="cb449-9"><a href="decorator.html#cb449-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span></span>
+<span id="cb449-10"><a href="decorator.html#cb449-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb449-11"><a href="decorator.html#cb449-11" aria-hidden="true" tabindex="-1"></a><span class="at">@register</span></span>
+<span id="cb449-12"><a href="decorator.html#cb449-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bar():</span>
+<span id="cb449-13"><a href="decorator.html#cb449-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb450"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb450-1"><a href="decorator.html#cb450-1" aria-hidden="true" tabindex="-1"></a>registry</span></code></pre></div>
+<pre><code>## [&lt;function foo at 0x00000215FFB68700&gt;, &lt;function bar at 0x00000215FFBA75E0&gt;]</code></pre>
+<div class="sourceCode" id="cb452"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb452-1"><a href="decorator.html#cb452-1" aria-hidden="true" tabindex="-1"></a>registry[<span class="dv">0</span>]()</span></code></pre></div>
 <pre><code>## 3</code></pre>
-<div class="sourceCode" id="cb548"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb548-1"><a href="decorator.html#cb548-1" aria-hidden="true" tabindex="-1"></a>registry[<span class="dv">1</span>]()</span></code></pre></div>
+<div class="sourceCode" id="cb454"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb454-1"><a href="decorator.html#cb454-1" aria-hidden="true" tabindex="-1"></a>registry[<span class="dv">1</span>]()</span></code></pre></div>
 <pre><code>## 5</code></pre>
 </div>
-<div id="example-2---decorator-with-class" class="section level3" number="9.2.2">
+<div id="example-2---decorator-with-class" class="section level3" number="10.2.2">
 <h3>
-<span class="header-section-number">9.2.2</span> Example 2 - Decorator with Class<a class="anchor" aria-label="anchor" href="#example-2---decorator-with-class"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.2.2</span> Example 2 - Decorator with Class<a class="anchor" aria-label="anchor" href="#example-2---decorator-with-class"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>Extending the use case above</li>
 <li>register is the <strong>decarator</strong>, it has only one argument</li>
 </ul>
-<div class="sourceCode" id="cb550"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb550-1"><a href="decorator.html#cb550-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Registry(<span class="bu">object</span>):</span>
-<span id="cb550-2"><a href="decorator.html#cb550-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb550-3"><a href="decorator.html#cb550-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._functions <span class="op">=</span> []</span>
-<span id="cb550-4"><a href="decorator.html#cb550-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> register(<span class="va">self</span>,decorated):</span>
-<span id="cb550-5"><a href="decorator.html#cb550-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._functions.append(decorated)</span>
-<span id="cb550-6"><a href="decorator.html#cb550-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> decorated</span>
-<span id="cb550-7"><a href="decorator.html#cb550-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> run_all(<span class="va">self</span>,<span class="op">*</span>args,<span class="op">**</span>kwargs):</span>
-<span id="cb550-8"><a href="decorator.html#cb550-8" aria-hidden="true" tabindex="-1"></a>        return_values <span class="op">=</span> []</span>
-<span id="cb550-9"><a href="decorator.html#cb550-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> func <span class="kw">in</span> <span class="va">self</span>._functions:</span>
-<span id="cb550-10"><a href="decorator.html#cb550-10" aria-hidden="true" tabindex="-1"></a>            return_values.append(func(<span class="op">*</span>args,<span class="op">**</span>kwargs))</span>
-<span id="cb550-11"><a href="decorator.html#cb550-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> return_values</span></code></pre></div>
+<div class="sourceCode" id="cb456"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb456-1"><a href="decorator.html#cb456-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Registry(<span class="bu">object</span>):</span>
+<span id="cb456-2"><a href="decorator.html#cb456-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb456-3"><a href="decorator.html#cb456-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._functions <span class="op">=</span> []</span>
+<span id="cb456-4"><a href="decorator.html#cb456-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> register(<span class="va">self</span>,decorated):</span>
+<span id="cb456-5"><a href="decorator.html#cb456-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._functions.append(decorated)</span>
+<span id="cb456-6"><a href="decorator.html#cb456-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> decorated</span>
+<span id="cb456-7"><a href="decorator.html#cb456-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> run_all(<span class="va">self</span>,<span class="op">*</span>args,<span class="op">**</span>kwargs):</span>
+<span id="cb456-8"><a href="decorator.html#cb456-8" aria-hidden="true" tabindex="-1"></a>        return_values <span class="op">=</span> []</span>
+<span id="cb456-9"><a href="decorator.html#cb456-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> func <span class="kw">in</span> <span class="va">self</span>._functions:</span>
+<span id="cb456-10"><a href="decorator.html#cb456-10" aria-hidden="true" tabindex="-1"></a>            return_values.append(func(<span class="op">*</span>args,<span class="op">**</span>kwargs))</span>
+<span id="cb456-11"><a href="decorator.html#cb456-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> return_values</span></code></pre></div>
 <p>The decorator will decorate two functions, for both object <strong>a</strong> and <strong>b</strong></p>
-<div class="sourceCode" id="cb551"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb551-1"><a href="decorator.html#cb551-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> Registry()</span>
-<span id="cb551-2"><a href="decorator.html#cb551-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> Registry()</span>
-<span id="cb551-3"><a href="decorator.html#cb551-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb551-4"><a href="decorator.html#cb551-4" aria-hidden="true" tabindex="-1"></a><span class="at">@a.register</span></span>
-<span id="cb551-5"><a href="decorator.html#cb551-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(x<span class="op">=</span><span class="dv">3</span>):</span>
-<span id="cb551-6"><a href="decorator.html#cb551-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
-<span id="cb551-7"><a href="decorator.html#cb551-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb551-8"><a href="decorator.html#cb551-8" aria-hidden="true" tabindex="-1"></a><span class="at">@b.register</span></span>
-<span id="cb551-9"><a href="decorator.html#cb551-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bar(x<span class="op">=</span><span class="dv">5</span>):</span>
-<span id="cb551-10"><a href="decorator.html#cb551-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
-<span id="cb551-11"><a href="decorator.html#cb551-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb551-12"><a href="decorator.html#cb551-12" aria-hidden="true" tabindex="-1"></a><span class="at">@a.register</span></span>
-<span id="cb551-13"><a href="decorator.html#cb551-13" aria-hidden="true" tabindex="-1"></a><span class="at">@b.register</span></span>
-<span id="cb551-14"><a href="decorator.html#cb551-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bax(x<span class="op">=</span><span class="dv">7</span>):</span>
-<span id="cb551-15"><a href="decorator.html#cb551-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code></pre></div>
+<div class="sourceCode" id="cb457"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb457-1"><a href="decorator.html#cb457-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> Registry()</span>
+<span id="cb457-2"><a href="decorator.html#cb457-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> Registry()</span>
+<span id="cb457-3"><a href="decorator.html#cb457-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb457-4"><a href="decorator.html#cb457-4" aria-hidden="true" tabindex="-1"></a><span class="at">@a.register</span></span>
+<span id="cb457-5"><a href="decorator.html#cb457-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(x<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb457-6"><a href="decorator.html#cb457-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
+<span id="cb457-7"><a href="decorator.html#cb457-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb457-8"><a href="decorator.html#cb457-8" aria-hidden="true" tabindex="-1"></a><span class="at">@b.register</span></span>
+<span id="cb457-9"><a href="decorator.html#cb457-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bar(x<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb457-10"><a href="decorator.html#cb457-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span>
+<span id="cb457-11"><a href="decorator.html#cb457-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb457-12"><a href="decorator.html#cb457-12" aria-hidden="true" tabindex="-1"></a><span class="at">@a.register</span></span>
+<span id="cb457-13"><a href="decorator.html#cb457-13" aria-hidden="true" tabindex="-1"></a><span class="at">@b.register</span></span>
+<span id="cb457-14"><a href="decorator.html#cb457-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bax(x<span class="op">=</span><span class="dv">7</span>):</span>
+<span id="cb457-15"><a href="decorator.html#cb457-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code></pre></div>
 <p>Observe the result</p>
-<div class="sourceCode" id="cb552"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb552-1"><a href="decorator.html#cb552-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a._functions)</span></code></pre></div>
-<pre><code>## [&lt;function foo at 0x0000023FF7C17670&gt;, &lt;function bax at 0x0000023FF7C17940&gt;]</code></pre>
-<div class="sourceCode" id="cb554"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb554-1"><a href="decorator.html#cb554-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (b._functions)</span></code></pre></div>
-<pre><code>## [&lt;function bar at 0x0000023FF7C178B0&gt;, &lt;function bax at 0x0000023FF7C17940&gt;]</code></pre>
-<div class="sourceCode" id="cb556"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb556-1"><a href="decorator.html#cb556-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a.run_all())</span></code></pre></div>
+<div class="sourceCode" id="cb458"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb458-1"><a href="decorator.html#cb458-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a._functions)</span></code></pre></div>
+<pre><code>## [&lt;function foo at 0x00000215FFBA7670&gt;, &lt;function bax at 0x00000215FFBA7940&gt;]</code></pre>
+<div class="sourceCode" id="cb460"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb460-1"><a href="decorator.html#cb460-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (b._functions)</span></code></pre></div>
+<pre><code>## [&lt;function bar at 0x00000215FFBA78B0&gt;, &lt;function bax at 0x00000215FFBA7940&gt;]</code></pre>
+<div class="sourceCode" id="cb462"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb462-1"><a href="decorator.html#cb462-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a.run_all())</span></code></pre></div>
 <pre><code>## [3, 7]</code></pre>
-<div class="sourceCode" id="cb558"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb558-1"><a href="decorator.html#cb558-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (b.run_all())</span></code></pre></div>
+<div class="sourceCode" id="cb464"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb464-1"><a href="decorator.html#cb464-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (b.run_all())</span></code></pre></div>
 <pre><code>## [5, 7]</code></pre>
-<div class="sourceCode" id="cb560"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb560-1"><a href="decorator.html#cb560-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> ( a.run_all(x<span class="op">=</span><span class="dv">9</span>) )</span></code></pre></div>
+<div class="sourceCode" id="cb466"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb466-1"><a href="decorator.html#cb466-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> ( a.run_all(x<span class="op">=</span><span class="dv">9</span>) )</span></code></pre></div>
 <pre><code>## [9, 9]</code></pre>
-<div class="sourceCode" id="cb562"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb562-1"><a href="decorator.html#cb562-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> ( b.run_all(x<span class="op">=</span><span class="dv">9</span>) )</span></code></pre></div>
+<div class="sourceCode" id="cb468"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb468-1"><a href="decorator.html#cb468-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> ( b.run_all(x<span class="op">=</span><span class="dv">9</span>) )</span></code></pre></div>
 <pre><code>## [9, 9]</code></pre>
 
 </div>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></div>
-<div class="next"><a href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></div>
+<div class="prev"><a href="object-oriented-programming.html"><span class="header-section-number">9</span> Object Oriented Programming</a></div>
+<div class="next"><a href="matplotlib.html"><span class="header-section-number">11</span> matplotlib</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#decorator"><span class="header-section-number">9</span> Decorator</a></li>
-<li><a class="nav-link" href="#definition"><span class="header-section-number">9.1</span> Definition</a></li>
+<li><a class="nav-link" href="#decorator"><span class="header-section-number">10</span> Decorator</a></li>
+<li><a class="nav-link" href="#definition"><span class="header-section-number">10.1</span> Definition</a></li>
 <li>
-<a class="nav-link" href="#examples"><span class="header-section-number">9.2</span> Examples</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#example-1---plain-decorator-function"><span class="header-section-number">9.2.1</span> Example 1 - Plain decorator function</a></li>
-<li><a class="nav-link" href="#example-2---decorator-with-class"><span class="header-section-number">9.2.2</span> Example 2 - Decorator with Class</a></li>
+<a class="nav-link" href="#examples"><span class="header-section-number">10.2</span> Examples</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#example-1---plain-decorator-function"><span class="header-section-number">10.2.1</span> Example 1 - Plain decorator function</a></li>
+<li><a class="nav-link" href="#example-2---decorator-with-class"><span class="header-section-number">10.2.2</span> Example 2 - Decorator with Class</a></li>
 </ul>
 </li>
 </ul>
@@ -203,7 +204,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

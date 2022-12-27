@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 10 matplotlib | Python Bookdown</title>
+<title>Chapter 11 matplotlib | Python Bookdown</title>
 <meta name="author" content="Yong Keh Soon">
-<meta name="description" content="10.1 Library import matplotlib import matplotlib.pyplot as plt import seaborn as sns import pandas as pd import numpy as np from plydata import define, query, select, group_by, summarize, arrange,...">
+<meta name="description" content="11.1 Library import matplotlib import matplotlib.pyplot as plt import seaborn as sns import pandas as pd import numpy as np from plydata import define, query, select, group_by, summarize, arrange,...">
 <meta name="generator" content="bookdown 0.31 with bs4_book()">
-<meta property="og:title" content="Chapter 10 matplotlib | Python Bookdown">
+<meta property="og:title" content="Chapter 11 matplotlib | Python Bookdown">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/yongks/python_bookdown/matplotlib.html">
-<meta property="og:description" content="10.1 Library import matplotlib import matplotlib.pyplot as plt import seaborn as sns import pandas as pd import numpy as np from plydata import define, query, select, group_by, summarize, arrange,...">
+<meta property="og:description" content="11.1 Library import matplotlib import matplotlib.pyplot as plt import seaborn as sns import pandas as pd import numpy as np from plydata import define, query, select, group_by, summarize, arrange,...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 10 matplotlib | Python Bookdown">
-<meta name="twitter:description" content="10.1 Library import matplotlib import matplotlib.pyplot as plt import seaborn as sns import pandas as pd import numpy as np from plydata import define, query, select, group_by, summarize, arrange,...">
+<meta name="twitter:title" content="Chapter 11 matplotlib | Python Bookdown">
+<meta name="twitter:description" content="11.1 Library import matplotlib import matplotlib.pyplot as plt import seaborn as sns import pandas as pd import numpy as np from plydata import define, query, select, group_by, summarize, arrange,...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -50,17 +50,18 @@
 <li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
 <li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
 <li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
-<li><a class="active" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
-<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
-<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
+<li><a class="" href="built-in-functions-1.html"><span class="header-section-number">7</span> Built-in Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">8</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">9</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">10</span> Decorator</a></li>
+<li><a class="active" href="matplotlib.html"><span class="header-section-number">11</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">13</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">14</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">15</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">16</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -68,30 +69,30 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="matplotlib" class="section level1" number="10">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="matplotlib" class="section level1" number="11">
 <h1>
-<span class="header-section-number">10</span> matplotlib<a class="anchor" aria-label="anchor" href="#matplotlib"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11</span> matplotlib<a class="anchor" aria-label="anchor" href="#matplotlib"><i class="fas fa-link"></i></a>
 </h1>
-<div id="library" class="section level2" number="10.1">
+<div id="library" class="section level2" number="11.1">
 <h2>
-<span class="header-section-number">10.1</span> Library<a class="anchor" aria-label="anchor" href="#library"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.1</span> Library<a class="anchor" aria-label="anchor" href="#library"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb564"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb564-1"><a href="matplotlib.html#cb564-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
-<span id="cb564-2"><a href="matplotlib.html#cb564-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb564-3"><a href="matplotlib.html#cb564-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb564-4"><a href="matplotlib.html#cb564-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb564-5"><a href="matplotlib.html#cb564-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb564-6"><a href="matplotlib.html#cb564-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb564-7"><a href="matplotlib.html#cb564-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plydata <span class="im">import</span> define, query, select, group_by, summarize, arrange, head, rename</span>
-<span id="cb564-8"><a href="matplotlib.html#cb564-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine</span>
-<span id="cb564-9"><a href="matplotlib.html#cb564-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb564-10"><a href="matplotlib.html#cb564-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb564-11"><a href="matplotlib.html#cb564-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb564-12"><a href="matplotlib.html#cb564-12" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">'QT_QPA_PLATFORM_PLUGIN_PATH'</span>] <span class="op">=</span> <span class="st">"C:\ProgramData\Anaconda3\Library\plugins\platforms"</span></span></code></pre></div>
+<div class="sourceCode" id="cb470"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb470-1"><a href="matplotlib.html#cb470-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb470-2"><a href="matplotlib.html#cb470-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb470-3"><a href="matplotlib.html#cb470-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb470-4"><a href="matplotlib.html#cb470-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb470-5"><a href="matplotlib.html#cb470-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb470-6"><a href="matplotlib.html#cb470-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb470-7"><a href="matplotlib.html#cb470-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plydata <span class="im">import</span> define, query, select, group_by, summarize, arrange, head, rename</span>
+<span id="cb470-8"><a href="matplotlib.html#cb470-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine</span>
+<span id="cb470-9"><a href="matplotlib.html#cb470-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb470-10"><a href="matplotlib.html#cb470-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb470-11"><a href="matplotlib.html#cb470-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb470-12"><a href="matplotlib.html#cb470-12" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">'QT_QPA_PLATFORM_PLUGIN_PATH'</span>] <span class="op">=</span> <span class="st">"C:\ProgramData\Anaconda3\Library\plugins\platforms"</span></span></code></pre></div>
 </div>
-<div id="sample-data" class="section level2" number="10.2">
+<div id="sample-data" class="section level2" number="11.2">
 <h2>
-<span class="header-section-number">10.2</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.2</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data"><i class="fas fa-link"></i></a>
 </h2>
 <p>This chapter uses the sample data generate with below code. The idea is to simulate two categorical-alike feature, and two numeric value feature:</p>
 <ul>
@@ -105,29 +106,29 @@
 </li>
 <li>value2 is numeric value, normally distributed at mean 25</li>
 </ul>
-<div class="sourceCode" id="cb565"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb565-1"><a href="matplotlib.html#cb565-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb565-2"><a href="matplotlib.html#cb565-2" aria-hidden="true" tabindex="-1"></a>comp <span class="op">=</span> [<span class="st">'C'</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> np.random.randint( <span class="dv">1</span>,<span class="dv">4</span>, size  <span class="op">=</span> n).astype(<span class="bu">str</span>)] <span class="co"># 3x Company</span></span>
-<span id="cb565-3"><a href="matplotlib.html#cb565-3" aria-hidden="true" tabindex="-1"></a>dept <span class="op">=</span> [<span class="st">'D'</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> np.random.randint( <span class="dv">1</span>,<span class="dv">6</span>, size  <span class="op">=</span> n).astype(<span class="bu">str</span>)] <span class="co"># 5x Department</span></span>
-<span id="cb565-4"><a href="matplotlib.html#cb565-4" aria-hidden="true" tabindex="-1"></a>grp <span class="op">=</span>  [<span class="st">'G'</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> np.random.randint( <span class="dv">1</span>,<span class="dv">3</span>, size  <span class="op">=</span> n).astype(<span class="bu">str</span>)] <span class="co"># 2x Groups</span></span>
-<span id="cb565-5"><a href="matplotlib.html#cb565-5" aria-hidden="true" tabindex="-1"></a>value1 <span class="op">=</span> np.random.normal( loc<span class="op">=</span><span class="dv">50</span> , scale<span class="op">=</span><span class="dv">5</span> , size <span class="op">=</span> n)</span>
-<span id="cb565-6"><a href="matplotlib.html#cb565-6" aria-hidden="true" tabindex="-1"></a>value2 <span class="op">=</span> np.random.normal( loc<span class="op">=</span><span class="dv">20</span> , scale<span class="op">=</span><span class="dv">3</span> , size <span class="op">=</span> n)</span>
-<span id="cb565-7"><a href="matplotlib.html#cb565-7" aria-hidden="true" tabindex="-1"></a>value3 <span class="op">=</span> np.random.normal( loc<span class="op">=</span><span class="dv">5</span> , scale<span class="op">=</span><span class="dv">30</span> , size <span class="op">=</span> n)</span>
-<span id="cb565-8"><a href="matplotlib.html#cb565-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb565-9"><a href="matplotlib.html#cb565-9" aria-hidden="true" tabindex="-1"></a>mydf <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb565-10"><a href="matplotlib.html#cb565-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'comp'</span>:comp, </span>
-<span id="cb565-11"><a href="matplotlib.html#cb565-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'dept'</span>:dept, </span>
-<span id="cb565-12"><a href="matplotlib.html#cb565-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'grp'</span>: grp,</span>
-<span id="cb565-13"><a href="matplotlib.html#cb565-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value1'</span>:value1, </span>
-<span id="cb565-14"><a href="matplotlib.html#cb565-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value2'</span>:value2,</span>
-<span id="cb565-15"><a href="matplotlib.html#cb565-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value3'</span>:value3 })</span>
-<span id="cb565-16"><a href="matplotlib.html#cb565-16" aria-hidden="true" tabindex="-1"></a>mydf.head()</span></code></pre></div>
+<div class="sourceCode" id="cb471"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb471-1"><a href="matplotlib.html#cb471-1" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb471-2"><a href="matplotlib.html#cb471-2" aria-hidden="true" tabindex="-1"></a>comp <span class="op">=</span> [<span class="st">'C'</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> np.random.randint( <span class="dv">1</span>,<span class="dv">4</span>, size  <span class="op">=</span> n).astype(<span class="bu">str</span>)] <span class="co"># 3x Company</span></span>
+<span id="cb471-3"><a href="matplotlib.html#cb471-3" aria-hidden="true" tabindex="-1"></a>dept <span class="op">=</span> [<span class="st">'D'</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> np.random.randint( <span class="dv">1</span>,<span class="dv">6</span>, size  <span class="op">=</span> n).astype(<span class="bu">str</span>)] <span class="co"># 5x Department</span></span>
+<span id="cb471-4"><a href="matplotlib.html#cb471-4" aria-hidden="true" tabindex="-1"></a>grp <span class="op">=</span>  [<span class="st">'G'</span> <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> np.random.randint( <span class="dv">1</span>,<span class="dv">3</span>, size  <span class="op">=</span> n).astype(<span class="bu">str</span>)] <span class="co"># 2x Groups</span></span>
+<span id="cb471-5"><a href="matplotlib.html#cb471-5" aria-hidden="true" tabindex="-1"></a>value1 <span class="op">=</span> np.random.normal( loc<span class="op">=</span><span class="dv">50</span> , scale<span class="op">=</span><span class="dv">5</span> , size <span class="op">=</span> n)</span>
+<span id="cb471-6"><a href="matplotlib.html#cb471-6" aria-hidden="true" tabindex="-1"></a>value2 <span class="op">=</span> np.random.normal( loc<span class="op">=</span><span class="dv">20</span> , scale<span class="op">=</span><span class="dv">3</span> , size <span class="op">=</span> n)</span>
+<span id="cb471-7"><a href="matplotlib.html#cb471-7" aria-hidden="true" tabindex="-1"></a>value3 <span class="op">=</span> np.random.normal( loc<span class="op">=</span><span class="dv">5</span> , scale<span class="op">=</span><span class="dv">30</span> , size <span class="op">=</span> n)</span>
+<span id="cb471-8"><a href="matplotlib.html#cb471-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb471-9"><a href="matplotlib.html#cb471-9" aria-hidden="true" tabindex="-1"></a>mydf <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb471-10"><a href="matplotlib.html#cb471-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'comp'</span>:comp, </span>
+<span id="cb471-11"><a href="matplotlib.html#cb471-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'dept'</span>:dept, </span>
+<span id="cb471-12"><a href="matplotlib.html#cb471-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'grp'</span>: grp,</span>
+<span id="cb471-13"><a href="matplotlib.html#cb471-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value1'</span>:value1, </span>
+<span id="cb471-14"><a href="matplotlib.html#cb471-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value2'</span>:value2,</span>
+<span id="cb471-15"><a href="matplotlib.html#cb471-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value3'</span>:value3 })</span>
+<span id="cb471-16"><a href="matplotlib.html#cb471-16" aria-hidden="true" tabindex="-1"></a>mydf.head()</span></code></pre></div>
 <pre><code>##   comp dept grp     value1     value2     value3
-## 0   C1   D2  G2  50.050508  18.779231  35.434428
-## 1   C1   D4  G1  50.293263  17.812899 -20.869943
-## 2   C3   D2  G1  54.326185  23.682367 -14.722616
-## 3   C2   D3  G1  44.923854  16.219156  13.321630
-## 4   C1   D1  G2  45.623884  20.273640  15.969013</code></pre>
-<div class="sourceCode" id="cb567"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb567-1"><a href="matplotlib.html#cb567-1" aria-hidden="true" tabindex="-1"></a>mydf.info()</span></code></pre></div>
+## 0   C1   D4  G1  42.997456  15.142062 -21.372720
+## 1   C3   D5  G2  50.755162  19.992255  -5.215607
+## 2   C3   D5  G1  50.515967  19.888382 -17.746785
+## 3   C3   D4  G1  54.357718  23.231924  62.016581
+## 4   C1   D2  G1  40.072219  24.850322  28.796247</code></pre>
+<div class="sourceCode" id="cb473"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb473-1"><a href="matplotlib.html#cb473-1" aria-hidden="true" tabindex="-1"></a>mydf.info()</span></code></pre></div>
 <pre><code>## &lt;class 'pandas.core.frame.DataFrame'&gt;
 ## RangeIndex: 200 entries, 0 to 199
 ## Data columns (total 6 columns):
@@ -142,9 +143,9 @@
 ## dtypes: float64(3), object(3)
 ## memory usage: 9.5+ KB</code></pre>
 </div>
-<div id="matlab-like-api" class="section level2" number="10.3">
+<div id="matlab-like-api" class="section level2" number="11.3">
 <h2>
-<span class="header-section-number">10.3</span> MATLAB-like API<a class="anchor" aria-label="anchor" href="#matlab-like-api"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.3</span> MATLAB-like API<a class="anchor" aria-label="anchor" href="#matlab-like-api"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>The good thing about the pylab MATLAB-style API is that it is easy to get started with if you are familiar with MATLAB, and it has a minumum of coding overhead for simple plots.<br>
@@ -153,92 +154,92 @@
 </li>
 <li>Instead, I recommend learning and using matplotlib’s object-oriented plotting API. It is remarkably powerful. For advanced figures with subplots, insets and other components it is very nice to work with.</li>
 </ul>
-<div id="sample-data-1" class="section level3" number="10.3.1">
+<div id="sample-data-1" class="section level3" number="11.3.1">
 <h3>
-<span class="header-section-number">10.3.1</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.3.1</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data-1"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb569"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb569-1"><a href="matplotlib.html#cb569-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample Data</span></span>
-<span id="cb569-2"><a href="matplotlib.html#cb569-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">10</span>)</span>
-<span id="cb569-3"><a href="matplotlib.html#cb569-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb475"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb475-1"><a href="matplotlib.html#cb475-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample Data</span></span>
+<span id="cb475-2"><a href="matplotlib.html#cb475-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">10</span>)</span>
+<span id="cb475-3"><a href="matplotlib.html#cb475-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 </div>
-<div id="single-plot" class="section level3" number="10.3.2">
+<div id="single-plot" class="section level3" number="11.3.2">
 <h3>
-<span class="header-section-number">10.3.2</span> Single Plot<a class="anchor" aria-label="anchor" href="#single-plot"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.3.2</span> Single Plot<a class="anchor" aria-label="anchor" href="#single-plot"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb570"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb570-1"><a href="matplotlib.html#cb570-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb570-2"><a href="matplotlib.html#cb570-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb570-3"><a href="matplotlib.html#cb570-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb570-4"><a href="matplotlib.html#cb570-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y,<span class="st">'red'</span>)</span>
-<span id="cb570-5"><a href="matplotlib.html#cb570-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My Good Data'</span>)</span>
-<span id="cb570-6"><a href="matplotlib.html#cb570-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb476"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb476-1"><a href="matplotlib.html#cb476-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb476-2"><a href="matplotlib.html#cb476-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb476-3"><a href="matplotlib.html#cb476-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
+<span id="cb476-4"><a href="matplotlib.html#cb476-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y,<span class="st">'red'</span>)</span>
+<span id="cb476-5"><a href="matplotlib.html#cb476-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'My Good Data'</span>)</span>
+<span id="cb476-6"><a href="matplotlib.html#cb476-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-7-1.png" width="672"></div>
 </div>
-<div id="multiple-subplots" class="section level3" number="10.3.3">
+<div id="multiple-subplots" class="section level3" number="11.3.3">
 <h3>
-<span class="header-section-number">10.3.3</span> Multiple Subplots<a class="anchor" aria-label="anchor" href="#multiple-subplots"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.3.3</span> Multiple Subplots<a class="anchor" aria-label="anchor" href="#multiple-subplots"><i class="fas fa-link"></i></a>
 </h3>
 <p>Each call lto <strong>subplot()</strong> will create a new container for subsequent plot command</p>
-<div class="sourceCode" id="cb571"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb571-1"><a href="matplotlib.html#cb571-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
-<span id="cb571-2"><a href="matplotlib.html#cb571-2" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>) <span class="co"># 1 row, 2 cols, at first box</span></span>
-<span id="cb571-3"><a href="matplotlib.html#cb571-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y,<span class="st">'r--'</span>)</span>
-<span id="cb571-4"><a href="matplotlib.html#cb571-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>) <span class="co"># 1 row, 2 cols, at second box</span></span>
-<span id="cb571-5"><a href="matplotlib.html#cb571-5" aria-hidden="true" tabindex="-1"></a>plt.plot(y,x,<span class="st">'g*-'</span>)</span>
-<span id="cb571-6"><a href="matplotlib.html#cb571-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb477"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb477-1"><a href="matplotlib.html#cb477-1" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb477-2"><a href="matplotlib.html#cb477-2" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>) <span class="co"># 1 row, 2 cols, at first box</span></span>
+<span id="cb477-3"><a href="matplotlib.html#cb477-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y,<span class="st">'r--'</span>)</span>
+<span id="cb477-4"><a href="matplotlib.html#cb477-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>) <span class="co"># 1 row, 2 cols, at second box</span></span>
+<span id="cb477-5"><a href="matplotlib.html#cb477-5" aria-hidden="true" tabindex="-1"></a>plt.plot(y,x,<span class="st">'g*-'</span>)</span>
+<span id="cb477-6"><a href="matplotlib.html#cb477-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-8-3.png" width="672"></div>
 </div>
 </div>
-<div id="object-oriented-api" class="section level2" number="10.4">
+<div id="object-oriented-api" class="section level2" number="11.4">
 <h2>
-<span class="header-section-number">10.4</span> Object-Oriented API<a class="anchor" aria-label="anchor" href="#object-oriented-api"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4</span> Object-Oriented API<a class="anchor" aria-label="anchor" href="#object-oriented-api"><i class="fas fa-link"></i></a>
 </h2>
-<div id="sample-data-2" class="section level3" number="10.4.1">
+<div id="sample-data-2" class="section level3" number="11.4.1">
 <h3>
-<span class="header-section-number">10.4.1</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data-2"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.1</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb572"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb572-1"><a href="matplotlib.html#cb572-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample Data</span></span>
-<span id="cb572-2"><a href="matplotlib.html#cb572-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">10</span>)</span>
-<span id="cb572-3"><a href="matplotlib.html#cb572-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb478"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb478-1"><a href="matplotlib.html#cb478-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample Data</span></span>
+<span id="cb478-2"><a href="matplotlib.html#cb478-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">10</span>)</span>
+<span id="cb478-3"><a href="matplotlib.html#cb478-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 </div>
-<div id="single-plot-1" class="section level3" number="10.4.2">
+<div id="single-plot-1" class="section level3" number="11.4.2">
 <h3>
-<span class="header-section-number">10.4.2</span> Single Plot<a class="anchor" aria-label="anchor" href="#single-plot-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.2</span> Single Plot<a class="anchor" aria-label="anchor" href="#single-plot-1"><i class="fas fa-link"></i></a>
 </h3>
 <p><strong>One figure, one axes</strong></p>
-<div class="sourceCode" id="cb573"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb573-1"><a href="matplotlib.html#cb573-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb573-2"><a href="matplotlib.html#cb573-2" aria-hidden="true" tabindex="-1"></a>axes <span class="op">=</span> fig.add_axes([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>]) <span class="co"># left, bottom, width, height (range 0 to 1)</span></span>
-<span id="cb573-3"><a href="matplotlib.html#cb573-3" aria-hidden="true" tabindex="-1"></a>axes.plot(x, y, <span class="st">'r'</span>)</span>
-<span id="cb573-4"><a href="matplotlib.html#cb573-4" aria-hidden="true" tabindex="-1"></a>axes.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb573-5"><a href="matplotlib.html#cb573-5" aria-hidden="true" tabindex="-1"></a>axes.set_ylabel(<span class="st">'y'</span>)</span>
-<span id="cb573-6"><a href="matplotlib.html#cb573-6" aria-hidden="true" tabindex="-1"></a>axes.set_title(<span class="st">'title'</span>)</span>
-<span id="cb573-7"><a href="matplotlib.html#cb573-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb479"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb479-1"><a href="matplotlib.html#cb479-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb479-2"><a href="matplotlib.html#cb479-2" aria-hidden="true" tabindex="-1"></a>axes <span class="op">=</span> fig.add_axes([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>]) <span class="co"># left, bottom, width, height (range 0 to 1)</span></span>
+<span id="cb479-3"><a href="matplotlib.html#cb479-3" aria-hidden="true" tabindex="-1"></a>axes.plot(x, y, <span class="st">'r'</span>)</span>
+<span id="cb479-4"><a href="matplotlib.html#cb479-4" aria-hidden="true" tabindex="-1"></a>axes.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb479-5"><a href="matplotlib.html#cb479-5" aria-hidden="true" tabindex="-1"></a>axes.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb479-6"><a href="matplotlib.html#cb479-6" aria-hidden="true" tabindex="-1"></a>axes.set_title(<span class="st">'title'</span>)</span>
+<span id="cb479-7"><a href="matplotlib.html#cb479-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-10-5.png" width="672"></div>
 </div>
-<div id="multiple-axes-in-one-plot" class="section level3" number="10.4.3">
+<div id="multiple-axes-in-one-plot" class="section level3" number="11.4.3">
 <h3>
-<span class="header-section-number">10.4.3</span> Multiple Axes In One Plot<a class="anchor" aria-label="anchor" href="#multiple-axes-in-one-plot"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.3</span> Multiple Axes In One Plot<a class="anchor" aria-label="anchor" href="#multiple-axes-in-one-plot"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>This is still considered a <strong>single plot</strong>, but with <strong>multiple axes</strong>
 </li>
 </ul>
-<div class="sourceCode" id="cb574"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb574-1"><a href="matplotlib.html#cb574-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb574-2"><a href="matplotlib.html#cb574-2" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_axes([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>])         <span class="co"># main axes</span></span>
-<span id="cb574-3"><a href="matplotlib.html#cb574-3" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> fig.add_axes([<span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>]) <span class="co"># inset axes</span></span>
-<span id="cb574-4"><a href="matplotlib.html#cb574-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb574-5"><a href="matplotlib.html#cb574-5" aria-hidden="true" tabindex="-1"></a>ax1.plot(x,y,<span class="st">'r'</span>)</span>
-<span id="cb574-6"><a href="matplotlib.html#cb574-6" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb574-7"><a href="matplotlib.html#cb574-7" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'y'</span>)</span>
-<span id="cb574-8"><a href="matplotlib.html#cb574-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb574-9"><a href="matplotlib.html#cb574-9" aria-hidden="true" tabindex="-1"></a>ax2.plot(y, x, <span class="st">'g'</span>)</span>
-<span id="cb574-10"><a href="matplotlib.html#cb574-10" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'y'</span>)</span>
-<span id="cb574-11"><a href="matplotlib.html#cb574-11" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'x'</span>)</span>
-<span id="cb574-12"><a href="matplotlib.html#cb574-12" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'insert title'</span>)</span>
-<span id="cb574-13"><a href="matplotlib.html#cb574-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb480"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb480-1"><a href="matplotlib.html#cb480-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb480-2"><a href="matplotlib.html#cb480-2" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_axes([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>])         <span class="co"># main axes</span></span>
+<span id="cb480-3"><a href="matplotlib.html#cb480-3" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> fig.add_axes([<span class="fl">0.2</span>, <span class="fl">0.5</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>]) <span class="co"># inset axes</span></span>
+<span id="cb480-4"><a href="matplotlib.html#cb480-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb480-5"><a href="matplotlib.html#cb480-5" aria-hidden="true" tabindex="-1"></a>ax1.plot(x,y,<span class="st">'r'</span>)</span>
+<span id="cb480-6"><a href="matplotlib.html#cb480-6" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb480-7"><a href="matplotlib.html#cb480-7" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb480-8"><a href="matplotlib.html#cb480-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb480-9"><a href="matplotlib.html#cb480-9" aria-hidden="true" tabindex="-1"></a>ax2.plot(y, x, <span class="st">'g'</span>)</span>
+<span id="cb480-10"><a href="matplotlib.html#cb480-10" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'y'</span>)</span>
+<span id="cb480-11"><a href="matplotlib.html#cb480-11" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'x'</span>)</span>
+<span id="cb480-12"><a href="matplotlib.html#cb480-12" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'insert title'</span>)</span>
+<span id="cb480-13"><a href="matplotlib.html#cb480-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-11-7.png" width="672"></div>
 </div>
-<div id="multiple-subplots-1" class="section level3" number="10.4.4">
+<div id="multiple-subplots-1" class="section level3" number="11.4.4">
 <h3>
-<span class="header-section-number">10.4.4</span> Multiple Subplots<a class="anchor" aria-label="anchor" href="#multiple-subplots-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.4</span> Multiple Subplots<a class="anchor" aria-label="anchor" href="#multiple-subplots-1"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>One <strong>figure</strong> can contain multiple <strong>subplots</strong><br>
@@ -246,41 +247,41 @@
 <li>Each subplot has <strong>one axes</strong>
 </li>
 </ul>
-<div id="simple-subplots---all-same-size" class="section level4" number="10.4.4.1">
+<div id="simple-subplots---all-same-size" class="section level4" number="11.4.4.1">
 <h4>
-<span class="header-section-number">10.4.4.1</span> Simple Subplots - all same size<a class="anchor" aria-label="anchor" href="#simple-subplots---all-same-size"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.4.1</span> Simple Subplots - all same size<a class="anchor" aria-label="anchor" href="#simple-subplots---all-same-size"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li>subplots() function return axes object that is iterable.</li>
 </ul>
 <p><strong>Single Row Grid</strong><br>
 Single row grid means axes is an 1-D array. Hence can use <strong>for</strong> to iterate through axes</p>
-<div class="sourceCode" id="cb575"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb575-1"><a href="matplotlib.html#cb575-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots( nrows<span class="op">=</span><span class="dv">1</span>,ncols<span class="op">=</span><span class="dv">3</span> )</span>
-<span id="cb575-2"><a href="matplotlib.html#cb575-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (axes.shape)</span></code></pre></div>
+<div class="sourceCode" id="cb481"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb481-1"><a href="matplotlib.html#cb481-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots( nrows<span class="op">=</span><span class="dv">1</span>,ncols<span class="op">=</span><span class="dv">3</span> )</span>
+<span id="cb481-2"><a href="matplotlib.html#cb481-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (axes.shape)</span></code></pre></div>
 <pre><code>## (3,)</code></pre>
-<div class="sourceCode" id="cb577"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb577-1"><a href="matplotlib.html#cb577-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
-<span id="cb577-2"><a href="matplotlib.html#cb577-2" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, <span class="st">'r'</span>)</span>
-<span id="cb577-3"><a href="matplotlib.html#cb577-3" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb577-4"><a href="matplotlib.html#cb577-4" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'y'</span>)</span>
-<span id="cb577-5"><a href="matplotlib.html#cb577-5" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'title'</span>)</span>
-<span id="cb577-6"><a href="matplotlib.html#cb577-6" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">0.2</span>,<span class="fl">0.5</span>,<span class="st">'One'</span>)</span>
-<span id="cb577-7"><a href="matplotlib.html#cb577-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb483"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb483-1"><a href="matplotlib.html#cb483-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb483-2"><a href="matplotlib.html#cb483-2" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, <span class="st">'r'</span>)</span>
+<span id="cb483-3"><a href="matplotlib.html#cb483-3" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb483-4"><a href="matplotlib.html#cb483-4" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb483-5"><a href="matplotlib.html#cb483-5" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'title'</span>)</span>
+<span id="cb483-6"><a href="matplotlib.html#cb483-6" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="fl">0.2</span>,<span class="fl">0.5</span>,<span class="st">'One'</span>)</span>
+<span id="cb483-7"><a href="matplotlib.html#cb483-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-12-9.png" width="672"></div>
 <p><strong>Multiple Row Grid</strong><br>
 Multile row grid means axes is an 2-D array. Hence can use two levels of <strong>for</strong> loop to iterate through each row and column</p>
-<div class="sourceCode" id="cb578"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb578-1"><a href="matplotlib.html#cb578-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>)</span>
-<span id="cb578-2"><a href="matplotlib.html#cb578-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (axes.shape)</span></code></pre></div>
+<div class="sourceCode" id="cb484"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb484-1"><a href="matplotlib.html#cb484-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>)</span>
+<span id="cb484-2"><a href="matplotlib.html#cb484-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (axes.shape)</span></code></pre></div>
 <pre><code>## (2, 3)</code></pre>
-<div class="sourceCode" id="cb580"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb580-1"><a href="matplotlib.html#cb580-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(axes.shape[<span class="dv">0</span>]):</span>
-<span id="cb580-2"><a href="matplotlib.html#cb580-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(axes.shape[<span class="dv">1</span>]):</span>
-<span id="cb580-3"><a href="matplotlib.html#cb580-3" aria-hidden="true" tabindex="-1"></a>        axes[i, j].text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="bu">str</span>((i, j)),</span>
-<span id="cb580-4"><a href="matplotlib.html#cb580-4" aria-hidden="true" tabindex="-1"></a>                      fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb580-5"><a href="matplotlib.html#cb580-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb486"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb486-1"><a href="matplotlib.html#cb486-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(axes.shape[<span class="dv">0</span>]):</span>
+<span id="cb486-2"><a href="matplotlib.html#cb486-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(axes.shape[<span class="dv">1</span>]):</span>
+<span id="cb486-3"><a href="matplotlib.html#cb486-3" aria-hidden="true" tabindex="-1"></a>        axes[i, j].text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="bu">str</span>((i, j)),</span>
+<span id="cb486-4"><a href="matplotlib.html#cb486-4" aria-hidden="true" tabindex="-1"></a>                      fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb486-5"><a href="matplotlib.html#cb486-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-13-11.png" width="672"></div>
 </div>
-<div id="complicated-subplots---different-size" class="section level4" number="10.4.4.2">
+<div id="complicated-subplots---different-size" class="section level4" number="11.4.4.2">
 <h4>
-<span class="header-section-number">10.4.4.2</span> Complicated Subplots - different size<a class="anchor" aria-label="anchor" href="#complicated-subplots---different-size"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.4.2</span> Complicated Subplots - different size<a class="anchor" aria-label="anchor" href="#complicated-subplots---different-size"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li>
@@ -288,198 +289,198 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 </li>
 <li>Manually specify each subplot and their relevant grid position and size</li>
 </ul>
-<div class="sourceCode" id="cb581"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb581-1"><a href="matplotlib.html#cb581-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb581-2"><a href="matplotlib.html#cb581-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> plt.GridSpec(<span class="dv">2</span>, <span class="dv">3</span>, hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb581-3"><a href="matplotlib.html#cb581-3" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">0</span>, <span class="dv">0</span>])  <span class="co">#row 0, col 0</span></span>
-<span id="cb581-4"><a href="matplotlib.html#cb581-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">0</span>, <span class="dv">1</span>:]) <span class="co">#row 0, col 1 to :</span></span>
-<span id="cb581-5"><a href="matplotlib.html#cb581-5" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">1</span>, :<span class="dv">2</span>]) <span class="co">#row 1, col 0:2 </span></span>
-<span id="cb581-6"><a href="matplotlib.html#cb581-6" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">1</span>, <span class="dv">2</span>])<span class="op">;</span> <span class="co">#row 1, col 2</span></span>
-<span id="cb581-7"><a href="matplotlib.html#cb581-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb487"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb487-1"><a href="matplotlib.html#cb487-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb487-2"><a href="matplotlib.html#cb487-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> plt.GridSpec(<span class="dv">2</span>, <span class="dv">3</span>, hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb487-3"><a href="matplotlib.html#cb487-3" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">0</span>, <span class="dv">0</span>])  <span class="co">#row 0, col 0</span></span>
+<span id="cb487-4"><a href="matplotlib.html#cb487-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">0</span>, <span class="dv">1</span>:]) <span class="co">#row 0, col 1 to :</span></span>
+<span id="cb487-5"><a href="matplotlib.html#cb487-5" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">1</span>, :<span class="dv">2</span>]) <span class="co">#row 1, col 0:2 </span></span>
+<span id="cb487-6"><a href="matplotlib.html#cb487-6" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">1</span>, <span class="dv">2</span>])<span class="op">;</span> <span class="co">#row 1, col 2</span></span>
+<span id="cb487-7"><a href="matplotlib.html#cb487-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-14-13.png" width="480"></div>
-<div class="sourceCode" id="cb582"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb582-1"><a href="matplotlib.html#cb582-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
-<span id="cb582-2"><a href="matplotlib.html#cb582-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> plt.GridSpec(<span class="dv">4</span>, <span class="dv">4</span>, hspace<span class="op">=</span><span class="fl">0.8</span>, wspace<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb582-3"><a href="matplotlib.html#cb582-3" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="dv">3</span>, <span class="dv">0</span>])    <span class="co"># row 0:3, col 0</span></span>
-<span id="cb582-4"><a href="matplotlib.html#cb582-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="dv">3</span>, <span class="dv">1</span>: ])  <span class="co"># row 0:3, col 1:</span></span>
-<span id="cb582-5"><a href="matplotlib.html#cb582-5" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">3</span>, <span class="dv">1</span>: ])<span class="op">;</span>  <span class="co"># row 3,   col 1:</span></span>
-<span id="cb582-6"><a href="matplotlib.html#cb582-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb488"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb488-1"><a href="matplotlib.html#cb488-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb488-2"><a href="matplotlib.html#cb488-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> plt.GridSpec(<span class="dv">4</span>, <span class="dv">4</span>, hspace<span class="op">=</span><span class="fl">0.8</span>, wspace<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb488-3"><a href="matplotlib.html#cb488-3" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="dv">3</span>, <span class="dv">0</span>])    <span class="co"># row 0:3, col 0</span></span>
+<span id="cb488-4"><a href="matplotlib.html#cb488-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="dv">3</span>, <span class="dv">1</span>: ])  <span class="co"># row 0:3, col 1:</span></span>
+<span id="cb488-5"><a href="matplotlib.html#cb488-5" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="dv">3</span>, <span class="dv">1</span>: ])<span class="op">;</span>  <span class="co"># row 3,   col 1:</span></span>
+<span id="cb488-6"><a href="matplotlib.html#cb488-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-15-15.png" width="480"></div>
 <p><strong>-1 means last row or column</strong></p>
-<div class="sourceCode" id="cb583"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb583-1"><a href="matplotlib.html#cb583-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>))</span>
-<span id="cb583-2"><a href="matplotlib.html#cb583-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> plt.GridSpec(<span class="dv">4</span>, <span class="dv">4</span>, hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">1.2</span>)</span>
-<span id="cb583-3"><a href="matplotlib.html#cb583-3" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span> ])  <span class="co"># row 0 till last row (not including last row), col 0</span></span>
-<span id="cb583-4"><a href="matplotlib.html#cb583-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>:])  <span class="co"># row 0 till last row (not including last row), col 1 till end</span></span>
-<span id="cb583-5"><a href="matplotlib.html#cb583-5" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>: ])<span class="op">;</span> <span class="co"># row last row, col 1 till end</span></span>
-<span id="cb583-6"><a href="matplotlib.html#cb583-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb489"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb489-1"><a href="matplotlib.html#cb489-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>,<span class="dv">6</span>))</span>
+<span id="cb489-2"><a href="matplotlib.html#cb489-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> plt.GridSpec(<span class="dv">4</span>, <span class="dv">4</span>, hspace<span class="op">=</span><span class="fl">0.4</span>, wspace<span class="op">=</span><span class="fl">1.2</span>)</span>
+<span id="cb489-3"><a href="matplotlib.html#cb489-3" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span> ])  <span class="co"># row 0 till last row (not including last row), col 0</span></span>
+<span id="cb489-4"><a href="matplotlib.html#cb489-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[:<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>:])  <span class="co"># row 0 till last row (not including last row), col 1 till end</span></span>
+<span id="cb489-5"><a href="matplotlib.html#cb489-5" aria-hidden="true" tabindex="-1"></a>plt.subplot(grid[<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>: ])<span class="op">;</span> <span class="co"># row last row, col 1 till end</span></span>
+<span id="cb489-6"><a href="matplotlib.html#cb489-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-16-17.png" width="576"></div>
 </div>
 </div>
-<div id="figure-customization" class="section level3" number="10.4.5">
+<div id="figure-customization" class="section level3" number="11.4.5">
 <h3>
-<span class="header-section-number">10.4.5</span> Figure Customization<a class="anchor" aria-label="anchor" href="#figure-customization"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.5</span> Figure Customization<a class="anchor" aria-label="anchor" href="#figure-customization"><i class="fas fa-link"></i></a>
 </h3>
-<div id="avoid-overlap---use-tight_layout" class="section level4" number="10.4.5.1">
+<div id="avoid-overlap---use-tight_layout" class="section level4" number="11.4.5.1">
 <h4>
-<span class="header-section-number">10.4.5.1</span> Avoid Overlap - Use tight_layout()<a class="anchor" aria-label="anchor" href="#avoid-overlap---use-tight_layout"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.5.1</span> Avoid Overlap - Use tight_layout()<a class="anchor" aria-label="anchor" href="#avoid-overlap---use-tight_layout"><i class="fas fa-link"></i></a>
 </h4>
 <p>Sometimes when the figure size is too small, plots will overlap each other.
 - <strong>tight_layout()</strong> will introduce extra white space in between the subplots to avoid overlap.<br>
 - The figure became wider.</p>
-<div class="sourceCode" id="cb584"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb584-1"><a href="matplotlib.html#cb584-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots( nrows<span class="op">=</span><span class="dv">1</span>,ncols<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb584-2"><a href="matplotlib.html#cb584-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
-<span id="cb584-3"><a href="matplotlib.html#cb584-3" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, <span class="st">'r'</span>)</span>
-<span id="cb584-4"><a href="matplotlib.html#cb584-4" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb584-5"><a href="matplotlib.html#cb584-5" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'y'</span>)</span>
-<span id="cb584-6"><a href="matplotlib.html#cb584-6" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'title'</span>)</span>
-<span id="cb584-7"><a href="matplotlib.html#cb584-7" aria-hidden="true" tabindex="-1"></a>fig.tight_layout() <span class="co"># adjust the positions of axes so that there is no overlap</span></span>
-<span id="cb584-8"><a href="matplotlib.html#cb584-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb490"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb490-1"><a href="matplotlib.html#cb490-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots( nrows<span class="op">=</span><span class="dv">1</span>,ncols<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb490-2"><a href="matplotlib.html#cb490-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb490-3"><a href="matplotlib.html#cb490-3" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, <span class="st">'r'</span>)</span>
+<span id="cb490-4"><a href="matplotlib.html#cb490-4" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb490-5"><a href="matplotlib.html#cb490-5" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb490-6"><a href="matplotlib.html#cb490-6" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'title'</span>)</span>
+<span id="cb490-7"><a href="matplotlib.html#cb490-7" aria-hidden="true" tabindex="-1"></a>fig.tight_layout() <span class="co"># adjust the positions of axes so that there is no overlap</span></span>
+<span id="cb490-8"><a href="matplotlib.html#cb490-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-17-19.png" width="672"></div>
 </div>
-<div id="avoid-overlap---change-figure-size" class="section level4" number="10.4.5.2">
+<div id="avoid-overlap---change-figure-size" class="section level4" number="11.4.5.2">
 <h4>
-<span class="header-section-number">10.4.5.2</span> Avoid Overlap - Change Figure Size<a class="anchor" aria-label="anchor" href="#avoid-overlap---change-figure-size"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.5.2</span> Avoid Overlap - Change Figure Size<a class="anchor" aria-label="anchor" href="#avoid-overlap---change-figure-size"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb585"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb585-1"><a href="matplotlib.html#cb585-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots( nrows<span class="op">=</span><span class="dv">1</span>,ncols<span class="op">=</span><span class="dv">2</span>,figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">3</span>))</span>
-<span id="cb585-2"><a href="matplotlib.html#cb585-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
-<span id="cb585-3"><a href="matplotlib.html#cb585-3" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, <span class="st">'r'</span>)</span>
-<span id="cb585-4"><a href="matplotlib.html#cb585-4" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb585-5"><a href="matplotlib.html#cb585-5" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'y'</span>)</span>
-<span id="cb585-6"><a href="matplotlib.html#cb585-6" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'title'</span>)</span>
-<span id="cb585-7"><a href="matplotlib.html#cb585-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb491"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb491-1"><a href="matplotlib.html#cb491-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots( nrows<span class="op">=</span><span class="dv">1</span>,ncols<span class="op">=</span><span class="dv">2</span>,figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">3</span>))</span>
+<span id="cb491-2"><a href="matplotlib.html#cb491-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> axes:</span>
+<span id="cb491-3"><a href="matplotlib.html#cb491-3" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, <span class="st">'r'</span>)</span>
+<span id="cb491-4"><a href="matplotlib.html#cb491-4" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'x'</span>)</span>
+<span id="cb491-5"><a href="matplotlib.html#cb491-5" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'y'</span>)</span>
+<span id="cb491-6"><a href="matplotlib.html#cb491-6" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="st">'title'</span>)</span>
+<span id="cb491-7"><a href="matplotlib.html#cb491-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-18-21.png" width="1152"></div>
 </div>
-<div id="text-within-figure" class="section level4" number="10.4.5.3">
+<div id="text-within-figure" class="section level4" number="11.4.5.3">
 <h4>
-<span class="header-section-number">10.4.5.3</span> Text Within Figure<a class="anchor" aria-label="anchor" href="#text-within-figure"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.5.3</span> Text Within Figure<a class="anchor" aria-label="anchor" href="#text-within-figure"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb586"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb586-1"><a href="matplotlib.html#cb586-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb586-2"><a href="matplotlib.html#cb586-2" aria-hidden="true" tabindex="-1"></a>fig.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'This Is A Sample'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)<span class="op">;</span></span>
-<span id="cb586-3"><a href="matplotlib.html#cb586-3" aria-hidden="true" tabindex="-1"></a>axes <span class="op">=</span> fig.add_axes([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>]) <span class="co"># left, bottom, width, height (range 0 to 1)</span></span>
-<span id="cb586-4"><a href="matplotlib.html#cb586-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb492"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb492-1"><a href="matplotlib.html#cb492-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb492-2"><a href="matplotlib.html#cb492-2" aria-hidden="true" tabindex="-1"></a>fig.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'This Is A Sample'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)<span class="op">;</span></span>
+<span id="cb492-3"><a href="matplotlib.html#cb492-3" aria-hidden="true" tabindex="-1"></a>axes <span class="op">=</span> fig.add_axes([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>]) <span class="co"># left, bottom, width, height (range 0 to 1)</span></span>
+<span id="cb492-4"><a href="matplotlib.html#cb492-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-19-23.png" width="672"></div>
 </div>
 </div>
-<div id="axes-customization" class="section level3" number="10.4.6">
+<div id="axes-customization" class="section level3" number="11.4.6">
 <h3>
-<span class="header-section-number">10.4.6</span> Axes Customization<a class="anchor" aria-label="anchor" href="#axes-customization"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.6</span> Axes Customization<a class="anchor" aria-label="anchor" href="#axes-customization"><i class="fas fa-link"></i></a>
 </h3>
-<div id="y-axis-limit" class="section level4" number="10.4.6.1">
+<div id="y-axis-limit" class="section level4" number="11.4.6.1">
 <h4>
-<span class="header-section-number">10.4.6.1</span> Y-Axis Limit<a class="anchor" aria-label="anchor" href="#y-axis-limit"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.6.1</span> Y-Axis Limit<a class="anchor" aria-label="anchor" href="#y-axis-limit"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb587"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb587-1"><a href="matplotlib.html#cb587-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb587-2"><a href="matplotlib.html#cb587-2" aria-hidden="true" tabindex="-1"></a>fig.add_axes([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>], ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">5</span>))<span class="op">;</span></span>
-<span id="cb587-3"><a href="matplotlib.html#cb587-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb493"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb493-1"><a href="matplotlib.html#cb493-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb493-2"><a href="matplotlib.html#cb493-2" aria-hidden="true" tabindex="-1"></a>fig.add_axes([<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>], ylim<span class="op">=</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">5</span>))<span class="op">;</span></span>
+<span id="cb493-3"><a href="matplotlib.html#cb493-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-20-25.png" width="672"></div>
 </div>
-<div id="text-within-axes" class="section level4" number="10.4.6.2">
+<div id="text-within-axes" class="section level4" number="11.4.6.2">
 <h4>
-<span class="header-section-number">10.4.6.2</span> Text Within Axes<a class="anchor" aria-label="anchor" href="#text-within-axes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.6.2</span> Text Within Axes<a class="anchor" aria-label="anchor" href="#text-within-axes"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb588"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb588-1"><a href="matplotlib.html#cb588-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>)</span>
-<span id="cb588-2"><a href="matplotlib.html#cb588-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
-<span id="cb588-3"><a href="matplotlib.html#cb588-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb588-4"><a href="matplotlib.html#cb588-4" aria-hidden="true" tabindex="-1"></a>        ax[i, j].text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="bu">str</span>((i, j)),</span>
-<span id="cb588-5"><a href="matplotlib.html#cb588-5" aria-hidden="true" tabindex="-1"></a>                      fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb588-6"><a href="matplotlib.html#cb588-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb494"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb494-1"><a href="matplotlib.html#cb494-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>)</span>
+<span id="cb494-2"><a href="matplotlib.html#cb494-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
+<span id="cb494-3"><a href="matplotlib.html#cb494-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb494-4"><a href="matplotlib.html#cb494-4" aria-hidden="true" tabindex="-1"></a>        ax[i, j].text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="bu">str</span>((i, j)),</span>
+<span id="cb494-5"><a href="matplotlib.html#cb494-5" aria-hidden="true" tabindex="-1"></a>                      fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb494-6"><a href="matplotlib.html#cb494-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-21-27.png" width="672"></div>
-<div class="sourceCode" id="cb589"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb589-1"><a href="matplotlib.html#cb589-1" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'one'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb589-2"><a href="matplotlib.html#cb589-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb495"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb495-1"><a href="matplotlib.html#cb495-1" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'one'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb495-2"><a href="matplotlib.html#cb495-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-22-29.png" width="672"></div>
 </div>
-<div id="share-y-axis-label" class="section level4" number="10.4.6.3">
+<div id="share-y-axis-label" class="section level4" number="11.4.6.3">
 <h4>
-<span class="header-section-number">10.4.6.3</span> Share Y Axis Label<a class="anchor" aria-label="anchor" href="#share-y-axis-label"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.6.3</span> Share Y Axis Label<a class="anchor" aria-label="anchor" href="#share-y-axis-label"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb590"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb590-1"><a href="matplotlib.html#cb590-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>) <span class="co"># removed inner label</span></span>
-<span id="cb590-2"><a href="matplotlib.html#cb590-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb496"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb496-1"><a href="matplotlib.html#cb496-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>) <span class="co"># removed inner label</span></span>
+<span id="cb496-2"><a href="matplotlib.html#cb496-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-23-31.png" width="672"></div>
 </div>
-<div id="create-subplot-individually" class="section level4" number="10.4.6.4">
+<div id="create-subplot-individually" class="section level4" number="11.4.6.4">
 <h4>
-<span class="header-section-number">10.4.6.4</span> Create Subplot Individually<a class="anchor" aria-label="anchor" href="#create-subplot-individually"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.4.6.4</span> Create Subplot Individually<a class="anchor" aria-label="anchor" href="#create-subplot-individually"><i class="fas fa-link"></i></a>
 </h4>
 <p>Each call lto <strong>subplot()</strong> will create a new container for subsequent plot command</p>
-<div class="sourceCode" id="cb591"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb591-1"><a href="matplotlib.html#cb591-1" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>)</span>
-<span id="cb591-2"><a href="matplotlib.html#cb591-2" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'one'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb591-3"><a href="matplotlib.html#cb591-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb591-4"><a href="matplotlib.html#cb591-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">8</span>)</span>
-<span id="cb591-5"><a href="matplotlib.html#cb591-5" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'eight'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb591-6"><a href="matplotlib.html#cb591-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb497"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb497-1"><a href="matplotlib.html#cb497-1" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>)</span>
+<span id="cb497-2"><a href="matplotlib.html#cb497-2" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'one'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb497-3"><a href="matplotlib.html#cb497-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb497-4"><a href="matplotlib.html#cb497-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">8</span>)</span>
+<span id="cb497-5"><a href="matplotlib.html#cb497-5" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="st">'eight'</span>,fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb497-6"><a href="matplotlib.html#cb497-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-24-33.png" width="672"></div>
 <p><strong>Iterate through subplots (ax) to populate them</strong></p>
-<div class="sourceCode" id="cb592"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb592-1"><a href="matplotlib.html#cb592-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>)</span>
-<span id="cb592-2"><a href="matplotlib.html#cb592-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
-<span id="cb592-3"><a href="matplotlib.html#cb592-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
-<span id="cb592-4"><a href="matplotlib.html#cb592-4" aria-hidden="true" tabindex="-1"></a>        ax[i, j].text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="bu">str</span>((i, j)),</span>
-<span id="cb592-5"><a href="matplotlib.html#cb592-5" aria-hidden="true" tabindex="-1"></a>                      fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb592-6"><a href="matplotlib.html#cb592-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb498"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb498-1"><a href="matplotlib.html#cb498-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>)</span>
+<span id="cb498-2"><a href="matplotlib.html#cb498-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
+<span id="cb498-3"><a href="matplotlib.html#cb498-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb498-4"><a href="matplotlib.html#cb498-4" aria-hidden="true" tabindex="-1"></a>        ax[i, j].text(<span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="bu">str</span>((i, j)),</span>
+<span id="cb498-5"><a href="matplotlib.html#cb498-5" aria-hidden="true" tabindex="-1"></a>                      fontsize<span class="op">=</span><span class="dv">18</span>, ha<span class="op">=</span><span class="st">'center'</span>)</span>
+<span id="cb498-6"><a href="matplotlib.html#cb498-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-25-35.png" width="672"></div>
 </div>
 </div>
 </div>
-<div id="histogram" class="section level2" number="10.5">
+<div id="histogram" class="section level2" number="11.5">
 <h2>
-<span class="header-section-number">10.5</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.5</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb593"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb593-1"><a href="matplotlib.html#cb593-1" aria-hidden="true" tabindex="-1"></a>plt.hist(mydf.value1, bins<span class="op">=</span><span class="dv">12</span>)<span class="op">;</span></span>
-<span id="cb593-2"><a href="matplotlib.html#cb593-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb499"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb499-1"><a href="matplotlib.html#cb499-1" aria-hidden="true" tabindex="-1"></a>plt.hist(mydf.value1, bins<span class="op">=</span><span class="dv">12</span>)<span class="op">;</span></span>
+<span id="cb499-2"><a href="matplotlib.html#cb499-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-26-37.png" width="672"></div>
 </div>
-<div id="scatter-plot" class="section level2" number="10.6">
+<div id="scatter-plot" class="section level2" number="11.6">
 <h2>
-<span class="header-section-number">10.6</span> Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.6</span> Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb594"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb594-1"><a href="matplotlib.html#cb594-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(mydf.value1, mydf.value2)</span>
-<span id="cb594-2"><a href="matplotlib.html#cb594-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb500"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb500-1"><a href="matplotlib.html#cb500-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(mydf.value1, mydf.value2)</span>
+<span id="cb500-2"><a href="matplotlib.html#cb500-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-27-39.png" width="672"></div>
 </div>
-<div id="bar-chart" class="section level2" number="10.7">
+<div id="bar-chart" class="section level2" number="11.7">
 <h2>
-<span class="header-section-number">10.7</span> Bar Chart<a class="anchor" aria-label="anchor" href="#bar-chart"><i class="fas fa-link"></i></a>
+<span class="header-section-number">11.7</span> Bar Chart<a class="anchor" aria-label="anchor" href="#bar-chart"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb595"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb595-1"><a href="matplotlib.html#cb595-1" aria-hidden="true" tabindex="-1"></a>com_grp <span class="op">=</span> mydf.groupby(<span class="st">'comp'</span>)</span>
-<span id="cb595-2"><a href="matplotlib.html#cb595-2" aria-hidden="true" tabindex="-1"></a>grpdf <span class="op">=</span> com_grp[<span class="st">'value1'</span>].<span class="bu">sum</span>().reset_index()</span>
-<span id="cb595-3"><a href="matplotlib.html#cb595-3" aria-hidden="true" tabindex="-1"></a>grpdf</span></code></pre></div>
+<div class="sourceCode" id="cb501"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb501-1"><a href="matplotlib.html#cb501-1" aria-hidden="true" tabindex="-1"></a>com_grp <span class="op">=</span> mydf.groupby(<span class="st">'comp'</span>)</span>
+<span id="cb501-2"><a href="matplotlib.html#cb501-2" aria-hidden="true" tabindex="-1"></a>grpdf <span class="op">=</span> com_grp[<span class="st">'value1'</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb501-3"><a href="matplotlib.html#cb501-3" aria-hidden="true" tabindex="-1"></a>grpdf</span></code></pre></div>
 <pre><code>##   comp       value1
-## 0   C1  3307.099079
-## 1   C2  3918.892226
-## 2   C3  2734.931089</code></pre>
-<div class="sourceCode" id="cb597"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb597-1"><a href="matplotlib.html#cb597-1" aria-hidden="true" tabindex="-1"></a>plt.bar(grpdf.comp, grpdf.value1)<span class="op">;</span></span>
-<span id="cb597-2"><a href="matplotlib.html#cb597-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Company'</span>)</span>
-<span id="cb597-3"><a href="matplotlib.html#cb597-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Sum of Value 1'</span>)</span>
-<span id="cb597-4"><a href="matplotlib.html#cb597-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+## 0   C1  2690.773131
+## 1   C2  3660.160195
+## 2   C3  3578.634305</code></pre>
+<div class="sourceCode" id="cb503"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb503-1"><a href="matplotlib.html#cb503-1" aria-hidden="true" tabindex="-1"></a>plt.bar(grpdf.comp, grpdf.value1)<span class="op">;</span></span>
+<span id="cb503-2"><a href="matplotlib.html#cb503-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Company'</span>)</span>
+<span id="cb503-3"><a href="matplotlib.html#cb503-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Sum of Value 1'</span>)</span>
+<span id="cb503-4"><a href="matplotlib.html#cb503-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-29-41.png" width="672"></div>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="decorator.html"><span class="header-section-number">9</span> Decorator</a></div>
-<div class="next"><a href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></div>
+<div class="prev"><a href="decorator.html"><span class="header-section-number">10</span> Decorator</a></div>
+<div class="next"><a href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#matplotlib"><span class="header-section-number">10</span> matplotlib</a></li>
-<li><a class="nav-link" href="#library"><span class="header-section-number">10.1</span> Library</a></li>
-<li><a class="nav-link" href="#sample-data"><span class="header-section-number">10.2</span> Sample Data</a></li>
+<li><a class="nav-link" href="#matplotlib"><span class="header-section-number">11</span> matplotlib</a></li>
+<li><a class="nav-link" href="#library"><span class="header-section-number">11.1</span> Library</a></li>
+<li><a class="nav-link" href="#sample-data"><span class="header-section-number">11.2</span> Sample Data</a></li>
 <li>
-<a class="nav-link" href="#matlab-like-api"><span class="header-section-number">10.3</span> MATLAB-like API</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#sample-data-1"><span class="header-section-number">10.3.1</span> Sample Data</a></li>
-<li><a class="nav-link" href="#single-plot"><span class="header-section-number">10.3.2</span> Single Plot</a></li>
-<li><a class="nav-link" href="#multiple-subplots"><span class="header-section-number">10.3.3</span> Multiple Subplots</a></li>
+<a class="nav-link" href="#matlab-like-api"><span class="header-section-number">11.3</span> MATLAB-like API</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sample-data-1"><span class="header-section-number">11.3.1</span> Sample Data</a></li>
+<li><a class="nav-link" href="#single-plot"><span class="header-section-number">11.3.2</span> Single Plot</a></li>
+<li><a class="nav-link" href="#multiple-subplots"><span class="header-section-number">11.3.3</span> Multiple Subplots</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#object-oriented-api"><span class="header-section-number">10.4</span> Object-Oriented API</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#sample-data-2"><span class="header-section-number">10.4.1</span> Sample Data</a></li>
-<li><a class="nav-link" href="#single-plot-1"><span class="header-section-number">10.4.2</span> Single Plot</a></li>
-<li><a class="nav-link" href="#multiple-axes-in-one-plot"><span class="header-section-number">10.4.3</span> Multiple Axes In One Plot</a></li>
-<li><a class="nav-link" href="#multiple-subplots-1"><span class="header-section-number">10.4.4</span> Multiple Subplots</a></li>
-<li><a class="nav-link" href="#figure-customization"><span class="header-section-number">10.4.5</span> Figure Customization</a></li>
-<li><a class="nav-link" href="#axes-customization"><span class="header-section-number">10.4.6</span> Axes Customization</a></li>
+<a class="nav-link" href="#object-oriented-api"><span class="header-section-number">11.4</span> Object-Oriented API</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sample-data-2"><span class="header-section-number">11.4.1</span> Sample Data</a></li>
+<li><a class="nav-link" href="#single-plot-1"><span class="header-section-number">11.4.2</span> Single Plot</a></li>
+<li><a class="nav-link" href="#multiple-axes-in-one-plot"><span class="header-section-number">11.4.3</span> Multiple Axes In One Plot</a></li>
+<li><a class="nav-link" href="#multiple-subplots-1"><span class="header-section-number">11.4.4</span> Multiple Subplots</a></li>
+<li><a class="nav-link" href="#figure-customization"><span class="header-section-number">11.4.5</span> Figure Customization</a></li>
+<li><a class="nav-link" href="#axes-customization"><span class="header-section-number">11.4.6</span> Axes Customization</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#histogram"><span class="header-section-number">10.5</span> Histogram</a></li>
-<li><a class="nav-link" href="#scatter-plot"><span class="header-section-number">10.6</span> Scatter Plot</a></li>
-<li><a class="nav-link" href="#bar-chart"><span class="header-section-number">10.7</span> Bar Chart</a></li>
+<li><a class="nav-link" href="#histogram"><span class="header-section-number">11.5</span> Histogram</a></li>
+<li><a class="nav-link" href="#scatter-plot"><span class="header-section-number">11.6</span> Scatter Plot</a></li>
+<li><a class="nav-link" href="#bar-chart"><span class="header-section-number">11.7</span> Bar Chart</a></li>
 </ul>
 
       <div class="book-extra">
@@ -497,7 +498,7 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

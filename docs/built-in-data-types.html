@@ -50,17 +50,18 @@
 <li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
 <li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
 <li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
-<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
-<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
-<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
+<li><a class="" href="built-in-functions-1.html"><span class="header-section-number">7</span> Built-in Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">8</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">9</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">10</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">11</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">13</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">14</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">15</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">16</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -185,13 +186,13 @@ Remainder by float return <strong>float</strong></p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="built-in-data-types.html#cb44-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'abcde'</span></span>
 <span id="cb44-2"><a href="built-in-data-types.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'s : '</span>, <span class="bu">id</span>(s))</span>
 <span id="cb44-3"><a href="built-in-data-types.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co">#s[1] = 'z'               # immutable, result in error</span></span></code></pre></div>
-<pre><code>## s :  1744787125104</code></pre>
+<pre><code>## s :  2940624418800</code></pre>
 <ul>
 <li>Changing the variable completley change the reference (for new object)</li>
 </ul>
 <div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="built-in-data-types.html#cb46-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'efgh'</span></span>
 <span id="cb46-2"><a href="built-in-data-types.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'s : '</span>, <span class="bu">id</span>(s))</span></code></pre></div>
-<pre><code>## s :  1744787141680</code></pre>
+<pre><code>## s :  2940624431216</code></pre>
 </div>
 </div>
 <div id="class-constants" class="section level3" number="2.2.2">
@@ -377,8 +378,8 @@ For partial match, workaround is to <strong>convert list to single string</stron
 <span id="cb103-3"><a href="built-in-data-types.html#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'id(a) = '</span>, <span class="bu">id</span>(a), </span>
 <span id="cb103-4"><a href="built-in-data-types.html#cb103-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">'</span><span class="ch">\n</span><span class="st">id(b) = '</span>, <span class="bu">id</span>(b),</span>
 <span id="cb103-5"><a href="built-in-data-types.html#cb103-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">'</span><span class="ch">\n</span><span class="st">a == b  '</span>, a<span class="op">==</span>b)</span></code></pre></div>
-<pre><code>## id(a) =  1744537183216 
-## id(b) =  1744537183216 
+<pre><code>## id(a) =  2940376445872 
+## id(b) =  2940376445872 
 ## a == b   True</code></pre>
 </div>
 </div>
@@ -589,7 +590,7 @@ For partial match, workaround is to <strong>convert list to single string</stron
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

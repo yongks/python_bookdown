@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 4 Built-In Data Structure | Python Bookdown</title>
 <meta name="author" content="Yong Keh Soon">
-<meta name="description" content="4.1 Tuple Tuple is an immutable list. Any attempt to change/update tuple will return error. It can contain different types of object. Benefits of tuple against List are: - Faster than list -...">
+<meta name="description" content="4.1 Tuple Tuple is an immutable list. Any attempt to change/update tuple will return error. It can contain different types of object just like list. Benefits of tuple against List are: Tuple is...">
 <meta name="generator" content="bookdown 0.31 with bs4_book()">
 <meta property="og:title" content="Chapter 4 Built-In Data Structure | Python Bookdown">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/yongks/python_bookdown/built-in-data-structure.html">
-<meta property="og:description" content="4.1 Tuple Tuple is an immutable list. Any attempt to change/update tuple will return error. It can contain different types of object. Benefits of tuple against List are: - Faster than list -...">
+<meta property="og:description" content="4.1 Tuple Tuple is an immutable list. Any attempt to change/update tuple will return error. It can contain different types of object just like list. Benefits of tuple against List are: Tuple is...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 4 Built-In Data Structure | Python Bookdown">
-<meta name="twitter:description" content="4.1 Tuple Tuple is an immutable list. Any attempt to change/update tuple will return error. It can contain different types of object. Benefits of tuple against List are: - Faster than list -...">
+<meta name="twitter:description" content="4.1 Tuple Tuple is an immutable list. Any attempt to change/update tuple will return error. It can contain different types of object just like list. Benefits of tuple against List are: Tuple is...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -50,17 +50,18 @@
 <li><a class="active" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
 <li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
 <li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
-<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
-<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
-<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
+<li><a class="" href="built-in-functions-1.html"><span class="header-section-number">7</span> Built-in Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">8</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">9</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">10</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">11</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">13</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">14</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">15</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">16</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -76,59 +77,58 @@
 <h2>
 <span class="header-section-number">4.1</span> Tuple<a class="anchor" aria-label="anchor" href="#tuple"><i class="fas fa-link"></i></a>
 </h2>
-<p>Tuple is an <strong>immutable list</strong>. Any attempt to change/update tuple will return error. It can contain <strong>different types</strong> of object.</p>
-<p>Benefits of tuple against List are:
-- <strong>Faster</strong> than list
-- <strong>Protects</strong> your data against accidental change
-- Can be used as key in dictionaries, list can’t</p>
-<div id="creating" class="section level3" number="4.1.1">
+<p>Tuple is an <strong>immutable list</strong>. Any attempt to change/update tuple will return error. It can contain <strong>different types</strong> of object just like <strong>list</strong>.</p>
+<p>Benefits of tuple against List are:</p>
+<ul>
+<li>Tuple is <strong>Faster</strong> than list</li>
+<li>Tuple <strong>Protects</strong> your data against accidental change</li>
+<li>Can be used as key in dictionaries, list can’t</li>
+</ul>
+<div id="creation" class="section level3" number="4.1.1">
 <h3>
-<span class="header-section-number">4.1.1</span> Creating<a class="anchor" aria-label="anchor" href="#creating"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1.1</span> Creation<a class="anchor" aria-label="anchor" href="#creation"><i class="fas fa-link"></i></a>
 </h3>
-<div id="constructor-4" class="section level4" number="4.1.1.1">
-<h4>
-<span class="header-section-number">4.1.1.1</span> Constructor<a class="anchor" aria-label="anchor" href="#constructor-4"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb254"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb254-1"><a href="built-in-data-structure.html#cb254-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
-<span id="cb254-2"><a href="built-in-data-structure.html#cb254-2" aria-hidden="true" tabindex="-1"></a><span class="bu">tuple</span>(mylist)</span></code></pre></div>
-<pre><code>## (1, 2, 3)</code></pre>
+<p>Tuple is created through assignment with or without brackets. To create tuple from list, use <strong>tuple()</strong> constructor.</p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb254-1"><a href="built-in-data-structure.html#cb254-1" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="st">'o'</span>,(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>))                   <span class="co">## with brackets</span></span>
+<span id="cb254-2"><a href="built-in-data-structure.html#cb254-2" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> <span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="st">'o'</span>,<span class="st">'apple'</span>, (<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)            <span class="co">## without brackets</span></span>
+<span id="cb254-3"><a href="built-in-data-structure.html#cb254-3" aria-hidden="true" tabindex="-1"></a>t3 <span class="op">=</span> <span class="bu">tuple</span>([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="st">'o'</span>,<span class="st">'apple'</span>, (<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)])   <span class="co">## create from list using constructor</span></span>
+<span id="cb254-4"><a href="built-in-data-structure.html#cb254-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb254-5"><a href="built-in-data-structure.html#cb254-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(t1), <span class="bu">type</span>(t2), <span class="bu">type</span>(t3))</span></code></pre></div>
+<pre><code>## &lt;class 'tuple'&gt; &lt;class 'tuple'&gt; &lt;class 'tuple'&gt;</code></pre>
 </div>
-<div id="assignment-1" class="section level4" number="4.1.1.2">
-<h4>
-<span class="header-section-number">4.1.1.2</span> Assignment<a class="anchor" aria-label="anchor" href="#assignment-1"><i class="fas fa-link"></i></a>
-</h4>
-<p><strong>With or Without <code>()</code> </strong></p>
-<p>This is a formal syntax for defining tuple, items inside ( ) notation. Assignment although works without <code>()</code>, it is not recommended.</p>
-<div class="sourceCode" id="cb256"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb256-1"><a href="built-in-data-structure.html#cb256-1" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="st">'o'</span>,<span class="st">'apple'</span>)</span>
-<span id="cb256-2"><a href="built-in-data-structure.html#cb256-2" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> <span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="st">'o'</span>,<span class="st">'apple'</span></span>
-<span id="cb256-3"><a href="built-in-data-structure.html#cb256-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb256-4"><a href="built-in-data-structure.html#cb256-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(t1), <span class="bu">type</span>(t2))</span></code></pre></div>
-<pre><code>## &lt;class 'tuple'&gt; &lt;class 'tuple'&gt;</code></pre>
-</div>
-</div>
-<div id="accessing" class="section level3" number="4.1.2">
+<div id="accessor" class="section level3" number="4.1.2">
 <h3>
-<span class="header-section-number">4.1.2</span> Accessing<a class="anchor" aria-label="anchor" href="#accessing"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1.2</span> Accessor<a class="anchor" aria-label="anchor" href="#accessor"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb258"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb258-1"><a href="built-in-data-structure.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( t1[<span class="dv">1</span>], t1[<span class="dv">1</span>:<span class="dv">3</span>] )</span></code></pre></div>
-<pre><code>## 2 (2, 3)</code></pre>
+<p>Assessing single element returns the element. Assessing range of elements returns tuple.</p>
+<div class="sourceCode" id="cb256"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb256-1"><a href="built-in-data-structure.html#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( t1[<span class="dv">0</span>], t1[<span class="dv">1</span>:<span class="dv">3</span>] )</span></code></pre></div>
+<pre><code>## 1 (2, 3)</code></pre>
 </div>
-<div id="duplicating" class="section level3" number="4.1.3">
+<div id="copy-and-clone" class="section level3" number="4.1.3">
 <h3>
-<span class="header-section-number">4.1.3</span> Duplicating<a class="anchor" aria-label="anchor" href="#duplicating"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1.3</span> Copy and Clone<a class="anchor" aria-label="anchor" href="#copy-and-clone"><i class="fas fa-link"></i></a>
 </h3>
-<p>Use normal assignment <code>=</code> to duplicate. Reference of the memory address is copied. Data is actually not duplicated in memory.</p>
-<div class="sourceCode" id="cb260"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb260-1"><a href="built-in-data-structure.html#cb260-1" aria-hidden="true" tabindex="-1"></a>original <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb260-2"><a href="built-in-data-structure.html#cb260-2" aria-hidden="true" tabindex="-1"></a>copy_test <span class="op">=</span> original</span>
-<span id="cb260-3"><a href="built-in-data-structure.html#cb260-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(original)</span></code></pre></div>
+<p>Use normal assignment <strong>=</strong> to duplicate. Reference of the memory address is copied. Data is actually not duplicated in memory. To clone an tuple (different ID), convert to list then back to tuple again.</p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb258-1"><a href="built-in-data-structure.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy actually points to the same memory location</span></span>
+<span id="cb258-2"><a href="built-in-data-structure.html#cb258-2" aria-hidden="true" tabindex="-1"></a>original   <span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb258-3"><a href="built-in-data-structure.html#cb258-3" aria-hidden="true" tabindex="-1"></a>copy_test  <span class="op">=</span> original</span>
+<span id="cb258-4"><a href="built-in-data-structure.html#cb258-4" aria-hidden="true" tabindex="-1"></a>clone_test <span class="op">=</span> <span class="bu">tuple</span>(<span class="bu">list</span>(original)) <span class="co">## convert to list then back to tuple</span></span>
+<span id="cb258-5"><a href="built-in-data-structure.html#cb258-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb258-6"><a href="built-in-data-structure.html#cb258-6" aria-hidden="true" tabindex="-1"></a><span class="co">## The copy refers to the same content</span></span>
+<span id="cb258-7"><a href="built-in-data-structure.html#cb258-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(original)</span></code></pre></div>
 <pre><code>## (1, 2, 3, 4, 5)</code></pre>
-<div class="sourceCode" id="cb262"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb262-1"><a href="built-in-data-structure.html#cb262-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(copy_test)</span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb260-1"><a href="built-in-data-structure.html#cb260-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(copy_test)</span></code></pre></div>
 <pre><code>## (1, 2, 3, 4, 5)</code></pre>
-<p>The copy and original has the same memory location.</p>
+<div class="sourceCode" id="cb262"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb262-1"><a href="built-in-data-structure.html#cb262-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(clone_test)</span>
+<span id="cb262-2"><a href="built-in-data-structure.html#cb262-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb262-3"><a href="built-in-data-structure.html#cb262-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy and original has the same memory location.</span></span></code></pre></div>
+<pre><code>## (1, 2, 3, 4, 5)</code></pre>
 <div class="sourceCode" id="cb264"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb264-1"><a href="built-in-data-structure.html#cb264-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Original ID: '</span>, <span class="bu">id</span>(original))</span></code></pre></div>
-<pre><code>## Original ID:  1885262920016</code></pre>
+<pre><code>## Original ID:  2314318623904</code></pre>
 <div class="sourceCode" id="cb266"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb266-1"><a href="built-in-data-structure.html#cb266-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Copy ID:     '</span>, <span class="bu">id</span>(copy_test))</span></code></pre></div>
-<pre><code>## Copy ID:      1885262920016</code></pre>
+<pre><code>## Copy ID:      2314318623904</code></pre>
+<div class="sourceCode" id="cb268"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb268-1"><a href="built-in-data-structure.html#cb268-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Clone ID:    '</span>, <span class="bu">id</span>(clone_test))  <span class="co">## clone has different ID</span></span></code></pre></div>
+<pre><code>## Clone ID:     2314318884752</code></pre>
 </div>
 </div>
 <div id="list" class="section level2" number="4.2">
@@ -138,266 +138,184 @@
 <ul>
 <li>List is a collection of <strong>ordered</strong> items, where the items <strong>can be different data types</strong><br>
 </li>
-<li>You can pack list of items by placing them into []<br>
+<li>You can pack list of items by placing them into <strong>[]</strong>
 </li>
 <li>List is mutable</li>
 </ul>
-<div id="creating-list" class="section level3" number="4.2.1">
+<div id="creation-1" class="section level3" number="4.2.1">
 <h3>
-<span class="header-section-number">4.2.1</span> Creating List<a class="anchor" aria-label="anchor" href="#creating-list"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.1</span> Creation<a class="anchor" aria-label="anchor" href="#creation-1"><i class="fas fa-link"></i></a>
 </h3>
-<div id="empty-list" class="section level4" number="4.2.1.1">
-<h4>
-<span class="header-section-number">4.2.1.1</span> Empty List<a class="anchor" aria-label="anchor" href="#empty-list"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb268"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb268-1"><a href="built-in-data-structure.html#cb268-1" aria-hidden="true" tabindex="-1"></a>empty <span class="op">=</span> []      <span class="co"># literal assignment method</span></span>
-<span id="cb268-2"><a href="built-in-data-structure.html#cb268-2" aria-hidden="true" tabindex="-1"></a>empty <span class="op">=</span> <span class="bu">list</span>()  <span class="co"># constructor method</span></span>
-<span id="cb268-3"><a href="built-in-data-structure.html#cb268-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (empty)</span></code></pre></div>
-<pre><code>## []</code></pre>
+<div class="sourceCode" id="cb270"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb270-1"><a href="built-in-data-structure.html#cb270-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Create Empty List</span></span>
+<span id="cb270-2"><a href="built-in-data-structure.html#cb270-2" aria-hidden="true" tabindex="-1"></a>empty <span class="op">=</span> []      <span class="co"># literal assignment method</span></span>
+<span id="cb270-3"><a href="built-in-data-structure.html#cb270-3" aria-hidden="true" tabindex="-1"></a>empty <span class="op">=</span> <span class="bu">list</span>()  <span class="co"># constructor method</span></span>
+<span id="cb270-4"><a href="built-in-data-structure.html#cb270-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb270-5"><a href="built-in-data-structure.html#cb270-5" aria-hidden="true" tabindex="-1"></a>multiple <span class="op">=</span> [<span class="dv">123</span>,<span class="st">'abc'</span>,<span class="dv">456</span>, <span class="va">None</span>] <span class="co">## multiple datatypes allowed</span></span>
+<span id="cb270-6"><a href="built-in-data-structure.html#cb270-6" aria-hidden="true" tabindex="-1"></a>str_list <span class="op">=</span> <span class="bu">list</span>(<span class="st">'hello'</span>)         <span class="co">## [split into h,e,l,l,o]</span></span>
+<span id="cb270-7"><a href="built-in-data-structure.html#cb270-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb270-8"><a href="built-in-data-structure.html#cb270-8" aria-hidden="true" tabindex="-1"></a>multiple</span>
+<span id="cb270-9"><a href="built-in-data-structure.html#cb270-9" aria-hidden="true" tabindex="-1"></a>str_list</span></code></pre></div>
+<pre><code>## [123, 'abc', 456, None]
+## ['h', 'e', 'l', 'l', 'o']</code></pre>
 </div>
-<div id="literal-assignment" class="section level4" number="4.2.1.2">
-<h4>
-<span class="header-section-number">4.2.1.2</span> Literal Assignment<a class="anchor" aria-label="anchor" href="#literal-assignment"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>
-<strong>Multiple data types</strong> is allowed in a list</li>
-</ul>
-<div class="sourceCode" id="cb270"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb270-1"><a href="built-in-data-structure.html#cb270-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">123</span>,<span class="st">'abc'</span>,<span class="dv">456</span>, <span class="va">None</span>]</span></code></pre></div>
-<pre><code>## [123, 'abc', 456, None]</code></pre>
-<p><strong>Constructor</strong></p>
-<ul>
-<li>Note that <strong>list(string)</strong> will split the string into letters</li>
-</ul>
-<div class="sourceCode" id="cb272"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb272-1"><a href="built-in-data-structure.html#cb272-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="st">'hello'</span>)</span></code></pre></div>
-<pre><code>## ['h', 'e', 'l', 'l', 'o']</code></pre>
-</div>
-</div>
-<div id="accessing-items" class="section level3" number="4.2.2">
+<div id="accessor-1" class="section level3" number="4.2.2">
 <h3>
-<span class="header-section-number">4.2.2</span> Accessing Items<a class="anchor" aria-label="anchor" href="#accessing-items"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.2</span> Accessor<a class="anchor" aria-label="anchor" href="#accessor-1"><i class="fas fa-link"></i></a>
 </h3>
-<p><strong>Access specific index number</strong></p>
-<div class="sourceCode" id="cb274"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb274-1"><a href="built-in-data-structure.html#cb274-1" aria-hidden="true" tabindex="-1"></a>food <span class="op">=</span> [<span class="st">'bread'</span>, <span class="st">'noodle'</span>, <span class="st">'rice'</span>, <span class="st">'biscuit'</span>,<span class="st">'jelly'</span>,<span class="st">'cake'</span>]</span>
-<span id="cb274-2"><a href="built-in-data-structure.html#cb274-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food[<span class="dv">2</span>])  <span class="co"># 3rd item</span></span></code></pre></div>
-<pre><code>## rice</code></pre>
-<div class="sourceCode" id="cb276"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb276-1"><a href="built-in-data-structure.html#cb276-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food[<span class="op">-</span><span class="dv">1</span>]) <span class="co"># last item</span></span></code></pre></div>
-<pre><code>## cake</code></pre>
-<p><strong>Access range of indexes</strong></p>
-<div class="sourceCode" id="cb278"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb278-1"><a href="built-in-data-structure.html#cb278-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food[:<span class="dv">4</span>])     <span class="co"># first 3 items</span></span></code></pre></div>
-<pre><code>## ['bread', 'noodle', 'rice', 'biscuit']</code></pre>
-<div class="sourceCode" id="cb280"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb280-1"><a href="built-in-data-structure.html#cb280-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food[<span class="op">-</span><span class="dv">3</span>:])    <span class="co"># last 3 items</span></span></code></pre></div>
-<pre><code>## ['biscuit', 'jelly', 'cake']</code></pre>
-<div class="sourceCode" id="cb282"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb282-1"><a href="built-in-data-structure.html#cb282-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food[<span class="dv">1</span>:<span class="dv">5</span>])    <span class="co"># item 1 to 4</span></span></code></pre></div>
-<pre><code>## ['noodle', 'rice', 'biscuit', 'jelly']</code></pre>
-<div class="sourceCode" id="cb284"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb284-1"><a href="built-in-data-structure.html#cb284-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food[<span class="dv">5</span>:<span class="dv">2</span>:<span class="op">-</span><span class="dv">1</span>]) <span class="co"># item 3 to 5, reverse order</span></span></code></pre></div>
-<pre><code>## ['cake', 'jelly', 'biscuit']</code></pre>
-<div class="sourceCode" id="cb286"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb286-1"><a href="built-in-data-structure.html#cb286-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food[::<span class="op">-</span><span class="dv">1</span>])   <span class="co"># reverse order</span></span></code></pre></div>
-<pre><code>## ['cake', 'jelly', 'biscuit', 'rice', 'noodle', 'bread']</code></pre>
+<p>Use <strong>[]</strong> to specify single or range of objects to return. Index numner starts from <strong>0</strong>.</p>
+<div class="sourceCode" id="cb272"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb272-1"><a href="built-in-data-structure.html#cb272-1" aria-hidden="true" tabindex="-1"></a>food <span class="op">=</span> [<span class="st">'bread'</span>, <span class="st">'noodle'</span>, <span class="st">'rice'</span>, <span class="st">'biscuit'</span>,<span class="st">'jelly'</span>,<span class="st">'cake'</span>]</span>
+<span id="cb272-2"><a href="built-in-data-structure.html#cb272-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb272-3"><a href="built-in-data-structure.html#cb272-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Accessing Single Index, Returns Object</span></span>
+<span id="cb272-4"><a href="built-in-data-structure.html#cb272-4" aria-hidden="true" tabindex="-1"></a>food[<span class="dv">2</span>]  <span class="co"># 3rd item</span></span>
+<span id="cb272-5"><a href="built-in-data-structure.html#cb272-5" aria-hidden="true" tabindex="-1"></a>food[<span class="op">-</span><span class="dv">1</span>] <span class="co"># last item</span></span>
+<span id="cb272-6"><a href="built-in-data-structure.html#cb272-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb272-7"><a href="built-in-data-structure.html#cb272-7" aria-hidden="true" tabindex="-1"></a><span class="co">## Accessing Range Of Indexes, Return List</span></span>
+<span id="cb272-8"><a href="built-in-data-structure.html#cb272-8" aria-hidden="true" tabindex="-1"></a>food[:<span class="dv">4</span>]     <span class="co"># first 3 items</span></span>
+<span id="cb272-9"><a href="built-in-data-structure.html#cb272-9" aria-hidden="true" tabindex="-1"></a>food[<span class="op">-</span><span class="dv">3</span>:]    <span class="co"># last 3 items</span></span>
+<span id="cb272-10"><a href="built-in-data-structure.html#cb272-10" aria-hidden="true" tabindex="-1"></a>food[<span class="dv">1</span>:<span class="dv">5</span>]    <span class="co"># item 1 to 4</span></span>
+<span id="cb272-11"><a href="built-in-data-structure.html#cb272-11" aria-hidden="true" tabindex="-1"></a>food[<span class="dv">5</span>:<span class="dv">2</span>:<span class="op">-</span><span class="dv">1</span>] <span class="co"># item 3 to 5, reverse order</span></span>
+<span id="cb272-12"><a href="built-in-data-structure.html#cb272-12" aria-hidden="true" tabindex="-1"></a>food[::<span class="op">-</span><span class="dv">1</span>]   <span class="co"># reverse order</span></span></code></pre></div>
+<pre><code>## 'rice'
+## 'cake'
+## ['bread', 'noodle', 'rice', 'biscuit']
+## ['biscuit', 'jelly', 'cake']
+## ['noodle', 'rice', 'biscuit', 'jelly']
+## ['cake', 'jelly', 'biscuit']
+## ['cake', 'jelly', 'biscuit', 'rice', 'noodle', 'bread']</code></pre>
 </div>
 <div id="methods" class="section level3" number="4.2.3">
 <h3>
 <span class="header-section-number">4.2.3</span> Methods<a class="anchor" aria-label="anchor" href="#methods"><i class="fas fa-link"></i></a>
 </h3>
-<div id="remove-items" class="section level4" number="4.2.3.1">
-<h4>
-<span class="header-section-number">4.2.3.1</span> Remove Item(s)<a class="anchor" aria-label="anchor" href="#remove-items"><i class="fas fa-link"></i></a>
-</h4>
-<p>Removal of non-existance item will result in error</p>
-<p><strong>Search and remove first matching item</strong></p>
-<div class="sourceCode" id="cb288"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb288-1"><a href="built-in-data-structure.html#cb288-1" aria-hidden="true" tabindex="-1"></a>food <span class="op">=</span> <span class="bu">list</span>([<span class="st">'bread'</span>, <span class="st">'noodle'</span>, <span class="st">'rice'</span>, <span class="st">'biscuit'</span>,<span class="st">'jelly'</span>,<span class="st">'cake'</span>,<span class="st">'noodle'</span>])</span>
-<span id="cb288-2"><a href="built-in-data-structure.html#cb288-2" aria-hidden="true" tabindex="-1"></a>food.remove(<span class="st">'noodle'</span>)</span>
-<span id="cb288-3"><a href="built-in-data-structure.html#cb288-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food)</span></code></pre></div>
-<pre><code>## ['bread', 'rice', 'biscuit', 'jelly', 'cake', 'noodle']</code></pre>
-<p><strong>Remove last item</strong></p>
-<div class="sourceCode" id="cb290"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb290-1"><a href="built-in-data-structure.html#cb290-1" aria-hidden="true" tabindex="-1"></a>food.pop()</span></code></pre></div>
-<pre><code>## 'noodle'</code></pre>
-<div class="sourceCode" id="cb292"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb292-1"><a href="built-in-data-structure.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food)</span></code></pre></div>
-<pre><code>## ['bread', 'rice', 'biscuit', 'jelly', 'cake']</code></pre>
-<p><strong>Remove item at specific position</strong></p>
-<div class="sourceCode" id="cb294"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb294-1"><a href="built-in-data-structure.html#cb294-1" aria-hidden="true" tabindex="-1"></a>food.pop(<span class="dv">1</span>)  <span class="co"># counter start from 0</span></span></code></pre></div>
-<pre><code>## 'rice'</code></pre>
-<div class="sourceCode" id="cb296"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb296-1"><a href="built-in-data-structure.html#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(food)</span></code></pre></div>
-<pre><code>## ['bread', 'biscuit', 'jelly', 'cake']</code></pre>
-<div class="sourceCode" id="cb298"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb298-1"><a href="built-in-data-structure.html#cb298-1" aria-hidden="true" tabindex="-1"></a>food.remove(<span class="st">'jelly'</span>)</span>
-<span id="cb298-2"><a href="built-in-data-structure.html#cb298-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(food)</span></code></pre></div>
-<pre><code>## ['bread', 'biscuit', 'cake']</code></pre>
+<p>All methods shown below is “inplace”, meaning the original data will be changed.</p>
+<p><strong>Remove Item(s)</strong></p>
+<p>Removal of non-existence item will result in error</p>
+<div class="sourceCode" id="cb274"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb274-1"><a href="built-in-data-structure.html#cb274-1" aria-hidden="true" tabindex="-1"></a>food <span class="op">=</span> <span class="bu">list</span>([<span class="st">'bread'</span>, <span class="st">'noodle'</span>, <span class="st">'rice'</span>, <span class="st">'biscuit'</span>,<span class="st">'jelly'</span>,<span class="st">'biscuit'</span>,<span class="st">'noodle'</span>])</span>
+<span id="cb274-2"><a href="built-in-data-structure.html#cb274-2" aria-hidden="true" tabindex="-1"></a>food.remove(<span class="st">'biscuit'</span>)     <span class="co">## remove first found element</span></span>
+<span id="cb274-3"><a href="built-in-data-structure.html#cb274-3" aria-hidden="true" tabindex="-1"></a>food.pop()         <span class="co">## remove last element, and return it</span></span>
+<span id="cb274-4"><a href="built-in-data-structure.html#cb274-4" aria-hidden="true" tabindex="-1"></a>food.pop(<span class="dv">1</span>)        <span class="co">## remove second element, and return it</span></span>
+<span id="cb274-5"><a href="built-in-data-structure.html#cb274-5" aria-hidden="true" tabindex="-1"></a>food</span></code></pre></div>
+<pre><code>## 'noodle'
+## 'noodle'
+## ['bread', 'rice', 'jelly', 'biscuit']</code></pre>
+<p><strong>Appending</strong></p>
+<p>There are two methods to add elements to the tail. <strong>append()</strong> adds single element. <strong>extend()</strong> addes multiple elements.</p>
+<div class="sourceCode" id="cb276"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb276-1"><a href="built-in-data-structure.html#cb276-1" aria-hidden="true" tabindex="-1"></a>food.append(<span class="st">'durian'</span>)        <span class="co">## add single element to the tail </span></span>
+<span id="cb276-2"><a href="built-in-data-structure.html#cb276-2" aria-hidden="true" tabindex="-1"></a>food.extend([<span class="st">'nand'</span>,<span class="st">'puff'</span>]) <span class="co">## add elements to the tail</span></span>
+<span id="cb276-3"><a href="built-in-data-structure.html#cb276-3" aria-hidden="true" tabindex="-1"></a>food</span></code></pre></div>
+<pre><code>## ['bread', 'rice', 'jelly', 'biscuit', 'durian', 'nand', 'puff']</code></pre>
+<p><strong>Other Methods</strong></p>
+<div class="sourceCode" id="cb278"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb278-1"><a href="built-in-data-structure.html#cb278-1" aria-hidden="true" tabindex="-1"></a><span class="co">## ordering of elements</span></span>
+<span id="cb278-2"><a href="built-in-data-structure.html#cb278-2" aria-hidden="true" tabindex="-1"></a>food.reverse()          <span class="co">## reverse current order</span></span>
+<span id="cb278-3"><a href="built-in-data-structure.html#cb278-3" aria-hidden="true" tabindex="-1"></a>food.sort()             <span class="co">## sort ascending</span></span>
+<span id="cb278-4"><a href="built-in-data-structure.html#cb278-4" aria-hidden="true" tabindex="-1"></a>food.sort(reverse<span class="op">=</span><span class="va">True</span>) <span class="co">## sort descending</span></span>
+<span id="cb278-5"><a href="built-in-data-structure.html#cb278-5" aria-hidden="true" tabindex="-1"></a>food</span>
+<span id="cb278-6"><a href="built-in-data-structure.html#cb278-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb278-7"><a href="built-in-data-structure.html#cb278-7" aria-hidden="true" tabindex="-1"></a><span class="co">## methods returning number</span></span>
+<span id="cb278-8"><a href="built-in-data-structure.html#cb278-8" aria-hidden="true" tabindex="-1"></a>food.index(<span class="st">'biscuit'</span>)   <span class="co">## return the index of first found element</span></span>
+<span id="cb278-9"><a href="built-in-data-structure.html#cb278-9" aria-hidden="true" tabindex="-1"></a>food.count(<span class="st">'biscuit'</span>)   <span class="co">## return occurance of element</span></span></code></pre></div>
+<pre><code>## ['rice', 'puff', 'nand', 'jelly', 'durian', 'bread', 'biscuit']
+## 6
+## 1</code></pre>
 </div>
-<div id="appending-item-s" class="section level4" number="4.2.3.2">
-<h4>
-<span class="header-section-number">4.2.3.2</span> Appending Item (s)<a class="anchor" aria-label="anchor" href="#appending-item-s"><i class="fas fa-link"></i></a>
-</h4>
-<p><strong>Append One Item</strong></p>
-<div class="sourceCode" id="cb300"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb300-1"><a href="built-in-data-structure.html#cb300-1" aria-hidden="true" tabindex="-1"></a>food.append(<span class="st">'jelly'</span>)</span>
-<span id="cb300-2"><a href="built-in-data-structure.html#cb300-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food)</span></code></pre></div>
-<pre><code>## ['bread', 'biscuit', 'cake', 'jelly']</code></pre>
-<p><strong>Append Multiple Items</strong> <strong><code>extend()</code></strong> will expand the list/tupple argument and append as multiple items</p>
-<div class="sourceCode" id="cb302"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb302-1"><a href="built-in-data-structure.html#cb302-1" aria-hidden="true" tabindex="-1"></a>food.extend([<span class="st">'nand'</span>,<span class="st">'puff'</span>])</span>
-<span id="cb302-2"><a href="built-in-data-structure.html#cb302-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food)</span></code></pre></div>
-<pre><code>## ['bread', 'biscuit', 'cake', 'jelly', 'nand', 'puff']</code></pre>
-</div>
-<div id="other-methods" class="section level4" number="4.2.3.3">
-<h4>
-<span class="header-section-number">4.2.3.3</span> Other Methods<a class="anchor" aria-label="anchor" href="#other-methods"><i class="fas fa-link"></i></a>
-</h4>
-<p><strong>Reversing the order of the items</strong></p>
-<div class="sourceCode" id="cb304"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb304-1"><a href="built-in-data-structure.html#cb304-1" aria-hidden="true" tabindex="-1"></a>food.reverse()</span>
-<span id="cb304-2"><a href="built-in-data-structure.html#cb304-2" aria-hidden="true" tabindex="-1"></a>food</span></code></pre></div>
-<pre><code>## ['puff', 'nand', 'jelly', 'cake', 'biscuit', 'bread']</code></pre>
-<p><strong>Locating the Index Number of An Item</strong></p>
-<div class="sourceCode" id="cb306"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb306-1"><a href="built-in-data-structure.html#cb306-1" aria-hidden="true" tabindex="-1"></a>food.index(<span class="st">'biscuit'</span>)</span></code></pre></div>
-<pre><code>## 4</code></pre>
-<p><strong>Count occurance</strong></p>
-<div class="sourceCode" id="cb308"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb308-1"><a href="built-in-data-structure.html#cb308-1" aria-hidden="true" tabindex="-1"></a>test <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'a'</span>,<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>]</span>
-<span id="cb308-2"><a href="built-in-data-structure.html#cb308-2" aria-hidden="true" tabindex="-1"></a>test.count(<span class="st">'a'</span>)</span></code></pre></div>
-<pre><code>## 3</code></pre>
-<p><strong>Sorting The Order of Items</strong></p>
-<div class="sourceCode" id="cb310"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb310-1"><a href="built-in-data-structure.html#cb310-1" aria-hidden="true" tabindex="-1"></a>food.sort()</span>
-<span id="cb310-2"><a href="built-in-data-structure.html#cb310-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (food)</span></code></pre></div>
-<pre><code>## ['biscuit', 'bread', 'cake', 'jelly', 'nand', 'puff']</code></pre>
-</div>
-</div>
-<div id="operator-1" class="section level3" number="4.2.4">
+<div id="operators" class="section level3" number="4.2.4">
 <h3>
-<span class="header-section-number">4.2.4</span> Operator<a class="anchor" aria-label="anchor" href="#operator-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.4</span> Operators<a class="anchor" aria-label="anchor" href="#operators"><i class="fas fa-link"></i></a>
 </h3>
-<div id="concatenation-1" class="section level4" number="4.2.4.1">
-<h4>
-<span class="header-section-number">4.2.4.1</span> Concatenation<a class="anchor" aria-label="anchor" href="#concatenation-1"><i class="fas fa-link"></i></a>
-</h4>
-<p><strong>Concatenating Lists</strong></p>
-<p>Two lists can be concatenanted using ‘+’ operator.</p>
-<div class="sourceCode" id="cb312"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb312-1"><a href="built-in-data-structure.html#cb312-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">'dog'</span>,<span class="st">'cat'</span>,<span class="st">'horse'</span>] <span class="op">+</span> [<span class="st">'elephant'</span>,<span class="st">'tiger'</span>] <span class="op">+</span> [<span class="st">'sheep'</span>]</span></code></pre></div>
-<pre><code>## ['dog', 'cat', 'horse', 'elephant', 'tiger', 'sheep']</code></pre>
-</div>
-</div>
-<div id="list-is-mutable" class="section level3" number="4.2.5">
-<h3>
-<span class="header-section-number">4.2.5</span> List is Mutable<a class="anchor" aria-label="anchor" href="#list-is-mutable"><i class="fas fa-link"></i></a>
-</h3>
+<p><strong>Concatenation</strong></p>
+<p>Two lists can be concatenated using ‘+’ operator.</p>
+<div class="sourceCode" id="cb280"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb280-1"><a href="built-in-data-structure.html#cb280-1" aria-hidden="true" tabindex="-1"></a>animals <span class="op">=</span> [<span class="st">'dog'</span>,<span class="st">'cat'</span>,<span class="st">'horse'</span>] <span class="op">+</span> [<span class="st">'elephant'</span>,<span class="st">'tiger'</span>] <span class="op">+</span> [<span class="st">'sheep'</span>]</span></code></pre></div>
+<p><strong>List is Mutable</strong></p>
 <p>The reference of list variable won’t change after adding/removing its item</p>
-<div class="sourceCode" id="cb314"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb314-1"><a href="built-in-data-structure.html#cb314-1" aria-hidden="true" tabindex="-1"></a>food <span class="op">=</span> [<span class="st">'cake'</span>,<span class="st">'jelly'</span>,<span class="st">'roti'</span>,<span class="st">'noodle'</span>]</span>
-<span id="cb314-2"><a href="built-in-data-structure.html#cb314-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'food : '</span>,<span class="bu">id</span>(food))</span></code></pre></div>
-<pre><code>## food :  1885262999808</code></pre>
-<div class="sourceCode" id="cb316"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb316-1"><a href="built-in-data-structure.html#cb316-1" aria-hidden="true" tabindex="-1"></a>food <span class="op">+=</span> [<span class="st">'salad'</span>,<span class="st">'chicken'</span>]</span>
-<span id="cb316-2"><a href="built-in-data-structure.html#cb316-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'food : '</span>,<span class="bu">id</span>(food))</span></code></pre></div>
-<pre><code>## food :  1885262999808</code></pre>
-<p>A function is actually an <strong>object</strong>, which reference never change, hence <strong>mutable</strong></p>
-<div class="sourceCode" id="cb318"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb318-1"><a href="built-in-data-structure.html#cb318-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spam (elem, some_list<span class="op">=</span>[<span class="st">'a'</span>,<span class="st">'b'</span>]):</span>
-<span id="cb318-2"><a href="built-in-data-structure.html#cb318-2" aria-hidden="true" tabindex="-1"></a>    some_list.append(elem)</span>
-<span id="cb318-3"><a href="built-in-data-structure.html#cb318-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> some_list</span>
-<span id="cb318-4"><a href="built-in-data-structure.html#cb318-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb318-5"><a href="built-in-data-structure.html#cb318-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">1</span>,[<span class="st">'x'</span>]))</span></code></pre></div>
-<pre><code>## ['x', 1]</code></pre>
-<div class="sourceCode" id="cb320"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb320-1"><a href="built-in-data-structure.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">2</span>)) <span class="co">## second parameter is not passed</span></span></code></pre></div>
-<pre><code>## ['a', 'b', 2]</code></pre>
-<div class="sourceCode" id="cb322"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb322-1"><a href="built-in-data-structure.html#cb322-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">3</span>)) <span class="co">##  notice the default was remembered</span></span></code></pre></div>
-<pre><code>## ['a', 'b', 2, 3]</code></pre>
-</div>
-<div id="duplicate-or-reference" class="section level3" number="4.2.6">
-<h3>
-<span class="header-section-number">4.2.6</span> Duplicate or Reference<a class="anchor" aria-label="anchor" href="#duplicate-or-reference"><i class="fas fa-link"></i></a>
-</h3>
-<p><strong>Use =</strong> : It just copy the refernce. IDs are similar</p>
-<div class="sourceCode" id="cb324"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb324-1"><a href="built-in-data-structure.html#cb324-1" aria-hidden="true" tabindex="-1"></a>original <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb324-2"><a href="built-in-data-structure.html#cb324-2" aria-hidden="true" tabindex="-1"></a>copy_test <span class="op">=</span> original</span>
-<span id="cb324-3"><a href="built-in-data-structure.html#cb324-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Original ID: '</span>, <span class="bu">id</span>(original))</span></code></pre></div>
-<pre><code>## Original ID:  1885263016128</code></pre>
-<div class="sourceCode" id="cb326"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb326-1"><a href="built-in-data-structure.html#cb326-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Copy ID:     '</span>, <span class="bu">id</span>(copy_test))                          </span></code></pre></div>
-<pre><code>## Copy ID:      1885263016128</code></pre>
-<div class="sourceCode" id="cb328"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb328-1"><a href="built-in-data-structure.html#cb328-1" aria-hidden="true" tabindex="-1"></a>original[<span class="dv">0</span>]<span class="op">=</span><span class="dv">999</span>   <span class="co">## change original</span></span>
-<span id="cb328-2"><a href="built-in-data-structure.html#cb328-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(original)</span></code></pre></div>
-<pre><code>## [999, 2, 3, 4, 5]</code></pre>
-<div class="sourceCode" id="cb330"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb330-1"><a href="built-in-data-structure.html#cb330-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(copy_test)  <span class="co">## copy affected</span></span></code></pre></div>
-<pre><code>## [999, 2, 3, 4, 5]</code></pre>
-<p><strong>Duplicate A List Object</strong> with <strong><code>copy()</code></strong>. Resulting IDs are different</p>
-<div class="sourceCode" id="cb332"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb332-1"><a href="built-in-data-structure.html#cb332-1" aria-hidden="true" tabindex="-1"></a>original <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb332-2"><a href="built-in-data-structure.html#cb332-2" aria-hidden="true" tabindex="-1"></a>copy_test <span class="op">=</span> original.copy()</span>
-<span id="cb332-3"><a href="built-in-data-structure.html#cb332-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(original)</span></code></pre></div>
-<pre><code>## [1, 2, 3, 4, 5]</code></pre>
-<div class="sourceCode" id="cb334"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb334-1"><a href="built-in-data-structure.html#cb334-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(copy_test)</span></code></pre></div>
-<pre><code>## [1, 2, 3, 4, 5]</code></pre>
-<div class="sourceCode" id="cb336"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb336-1"><a href="built-in-data-structure.html#cb336-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Original ID: '</span>, <span class="bu">id</span>(original))</span></code></pre></div>
-<pre><code>## Original ID:  1885263018944</code></pre>
-<div class="sourceCode" id="cb338"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb338-1"><a href="built-in-data-structure.html#cb338-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Copy ID:     '</span>, <span class="bu">id</span>(copy_test))</span></code></pre></div>
-<pre><code>## Copy ID:      1885263022592</code></pre>
-<div class="sourceCode" id="cb340"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb340-1"><a href="built-in-data-structure.html#cb340-1" aria-hidden="true" tabindex="-1"></a>original[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">999</span>  <span class="co">## change original</span></span>
-<span id="cb340-2"><a href="built-in-data-structure.html#cb340-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(original)    </span></code></pre></div>
-<pre><code>## [999, 2, 3, 4, 5]</code></pre>
-<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="built-in-data-structure.html#cb342-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(copy_test)   <span class="co">## copy not affected</span></span></code></pre></div>
-<pre><code>## [1, 2, 3, 4, 5]</code></pre>
+<div class="sourceCode" id="cb281"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb281-1"><a href="built-in-data-structure.html#cb281-1" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(animals)</span>
+<span id="cb281-2"><a href="built-in-data-structure.html#cb281-2" aria-hidden="true" tabindex="-1"></a>animals <span class="op">+=</span> [<span class="st">'chicken'</span>]</span>
+<span id="cb281-3"><a href="built-in-data-structure.html#cb281-3" aria-hidden="true" tabindex="-1"></a>animals.pop()</span>
+<span id="cb281-4"><a href="built-in-data-structure.html#cb281-4" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(animals)  <span class="co">## ID had not changed</span></span></code></pre></div>
+<pre><code>## 2314072991488
+## 'chicken'
+## 2314072991488</code></pre>
+<p><strong>Copy and Clone</strong></p>
+<p>Assignment to another variable always refers to the same data.Use <strong>copy()</strong> method if you wish to clone the data, with different ID.</p>
+<div class="sourceCode" id="cb283"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb283-1"><a href="built-in-data-structure.html#cb283-1" aria-hidden="true" tabindex="-1"></a>original   <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]      <span class="co">## original data</span></span>
+<span id="cb283-2"><a href="built-in-data-structure.html#cb283-2" aria-hidden="true" tabindex="-1"></a>copy_test  <span class="op">=</span> original         <span class="co">## same ID as Original</span></span>
+<span id="cb283-3"><a href="built-in-data-structure.html#cb283-3" aria-hidden="true" tabindex="-1"></a>clone_test <span class="op">=</span> original.copy()  <span class="co">## different ID</span></span>
+<span id="cb283-4"><a href="built-in-data-structure.html#cb283-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="bu">id</span>(original), <span class="bu">id</span>(copy_test), <span class="bu">id</span>(clone_test))</span></code></pre></div>
+<pre><code>## 2314318931328 2314318931328 2314318936768</code></pre>
 <p><strong>Passing To Function As Reference</strong></p>
-<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="built-in-data-structure.html#cb344-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
-<span id="cb344-2"><a href="built-in-data-structure.html#cb344-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
-<span id="cb344-3"><a href="built-in-data-structure.html#cb344-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'ID in Function:      '</span>, <span class="bu">id</span>(x))</span>
-<span id="cb344-4"><a href="built-in-data-structure.html#cb344-4" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">6</span>)    <span class="co">## modify the refrence</span></span>
-<span id="cb344-5"><a href="built-in-data-structure.html#cb344-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb344-6"><a href="built-in-data-structure.html#cb344-6" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb344-7"><a href="built-in-data-structure.html#cb344-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'ID outside Function: '</span>, <span class="bu">id</span>(my_list))</span></code></pre></div>
-<pre><code>## ID outside Function:  1885263016128</code></pre>
-<div class="sourceCode" id="cb346"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb346-1"><a href="built-in-data-structure.html#cb346-1" aria-hidden="true" tabindex="-1"></a>func(my_list)  <span class="co">## call the function, pass the reference</span></span></code></pre></div>
+<p>When passing list to functions, only the reference passed. Meaning all changes to the list within the function will be reflected outside the function.</p>
+<div class="sourceCode" id="cb285"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb285-1"><a href="built-in-data-structure.html#cb285-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb285-2"><a href="built-in-data-structure.html#cb285-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb285-3"><a href="built-in-data-structure.html#cb285-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
+<span id="cb285-4"><a href="built-in-data-structure.html#cb285-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
+<span id="cb285-5"><a href="built-in-data-structure.html#cb285-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'ID in Function:      '</span>, <span class="bu">id</span>(x))</span>
+<span id="cb285-6"><a href="built-in-data-structure.html#cb285-6" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">6</span>)    <span class="co">## modify the refrence</span></span>
+<span id="cb285-7"><a href="built-in-data-structure.html#cb285-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb285-8"><a href="built-in-data-structure.html#cb285-8" aria-hidden="true" tabindex="-1"></a>my_list</span>
+<span id="cb285-9"><a href="built-in-data-structure.html#cb285-9" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(my_list)</span>
+<span id="cb285-10"><a href="built-in-data-structure.html#cb285-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb285-11"><a href="built-in-data-structure.html#cb285-11" aria-hidden="true" tabindex="-1"></a>func(my_list)  <span class="co">## passing reference to function</span></span>
+<span id="cb285-12"><a href="built-in-data-structure.html#cb285-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb285-13"><a href="built-in-data-structure.html#cb285-13" aria-hidden="true" tabindex="-1"></a>my_list        <span class="co">## content was altered</span></span>
+<span id="cb285-14"><a href="built-in-data-structure.html#cb285-14" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(my_list)</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4, 5]
-## ID in Function:       1885263016128</code></pre>
-<div class="sourceCode" id="cb348"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb348-1"><a href="built-in-data-structure.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list) <span class="co">## content was altered</span></span></code></pre></div>
-<pre><code>## [1, 2, 3, 4, 5, 6]</code></pre>
+## 2314318936832
+## [1, 2, 3, 4, 5]
+## ID in Function:       2314318936832
+## [1, 2, 3, 4, 5, 6]
+## 2314318936832</code></pre>
 </div>
-<div id="list-is-iterable" class="section level3" number="4.2.7">
+<div id="iteration" class="section level3" number="4.2.5">
 <h3>
-<span class="header-section-number">4.2.7</span> List Is Iterable<a class="anchor" aria-label="anchor" href="#list-is-iterable"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.5</span> Iteration<a class="anchor" aria-label="anchor" href="#iteration"><i class="fas fa-link"></i></a>
 </h3>
-<div id="for-loop" class="section level4" number="4.2.7.1">
-<h4>
-<span class="header-section-number">4.2.7.1</span> For Loop<a class="anchor" aria-label="anchor" href="#for-loop"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb350"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb350-1"><a href="built-in-data-structure.html#cb350-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
-<span id="cb350-2"><a href="built-in-data-structure.html#cb350-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> s:</span>
-<span id="cb350-3"><a href="built-in-data-structure.html#cb350-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'abc'</span> <span class="kw">in</span> x:</span>
-<span id="cb350-4"><a href="built-in-data-structure.html#cb350-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span> (x)</span></code></pre></div>
+<p><strong>For Loop</strong></p>
+<div class="sourceCode" id="cb287"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb287-1"><a href="built-in-data-structure.html#cb287-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
+<span id="cb287-2"><a href="built-in-data-structure.html#cb287-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> mylist:</span>
+<span id="cb287-3"><a href="built-in-data-structure.html#cb287-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'abc'</span> <span class="kw">in</span> x:</span>
+<span id="cb287-4"><a href="built-in-data-structure.html#cb287-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span> (x)</span></code></pre></div>
 <pre><code>## abc
 ## abcd</code></pre>
-</div>
-<div id="list-comprehension" class="section level4" number="4.2.7.2">
-<h4>
-<span class="header-section-number">4.2.7.2</span> List Comprehension<a class="anchor" aria-label="anchor" href="#list-comprehension"><i class="fas fa-link"></i></a>
-</h4>
-<p>This code below is a shorform method of <strong>for loop and if</strong>.</p>
-<div class="sourceCode" id="cb352"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb352-1"><a href="built-in-data-structure.html#cb352-1" aria-hidden="true" tabindex="-1"></a>old_list <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
-<span id="cb352-2"><a href="built-in-data-structure.html#cb352-2" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> old_list <span class="cf">if</span> <span class="st">'abc'</span> <span class="kw">in</span> x]</span></code></pre></div>
+<p><strong>List Comprehension</strong></p>
+<p>This code below is a short-form method of <strong>for loop and if</strong>. The output of list comprehension is a new <strong>list</strong>.</p>
+<div class="sourceCode" id="cb289"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb289-1"><a href="built-in-data-structure.html#cb289-1" aria-hidden="true" tabindex="-1"></a>old_list <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
+<span id="cb289-2"><a href="built-in-data-structure.html#cb289-2" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> old_list <span class="cf">if</span> <span class="st">'abc'</span> <span class="kw">in</span> x]</span></code></pre></div>
 <pre><code>## ['abc', 'abcd']</code></pre>
-<p>Compare to traditional version of code below:</p>
-<div class="sourceCode" id="cb354"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb354-1"><a href="built-in-data-structure.html#cb354-1" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> []</span>
-<span id="cb354-2"><a href="built-in-data-structure.html#cb354-2" aria-hidden="true" tabindex="-1"></a>old_list <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
-<span id="cb354-3"><a href="built-in-data-structure.html#cb354-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> old_list:</span>
-<span id="cb354-4"><a href="built-in-data-structure.html#cb354-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'abc'</span> <span class="kw">in</span> x:</span>
-<span id="cb354-5"><a href="built-in-data-structure.html#cb354-5" aria-hidden="true" tabindex="-1"></a>        new_list.append(x)</span>
-<span id="cb354-6"><a href="built-in-data-structure.html#cb354-6" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb354-7"><a href="built-in-data-structure.html#cb354-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( new_list )</span></code></pre></div>
+<p>Code below is a long-version compared to list comprehension aboce.</p>
+<div class="sourceCode" id="cb291"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb291-1"><a href="built-in-data-structure.html#cb291-1" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> []</span>
+<span id="cb291-2"><a href="built-in-data-structure.html#cb291-2" aria-hidden="true" tabindex="-1"></a>old_list <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
+<span id="cb291-3"><a href="built-in-data-structure.html#cb291-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> old_list:</span>
+<span id="cb291-4"><a href="built-in-data-structure.html#cb291-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'abc'</span> <span class="kw">in</span> x:</span>
+<span id="cb291-5"><a href="built-in-data-structure.html#cb291-5" aria-hidden="true" tabindex="-1"></a>        new_list.append(x)</span>
+<span id="cb291-6"><a href="built-in-data-structure.html#cb291-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb291-7"><a href="built-in-data-structure.html#cb291-7" aria-hidden="true" tabindex="-1"></a>new_list</span></code></pre></div>
 <pre><code>## ['abc', 'abcd']</code></pre>
 </div>
-</div>
-<div id="conversion" class="section level3" number="4.2.8">
+<div id="tuple-conversion" class="section level3" number="4.2.6">
 <h3>
-<span class="header-section-number">4.2.8</span> Conversion<a class="anchor" aria-label="anchor" href="#conversion"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.6</span> Tuple Conversion<a class="anchor" aria-label="anchor" href="#tuple-conversion"><i class="fas fa-link"></i></a>
 </h3>
-<p>Convert mutable list to immutable <strong>tuple</strong> with <strong><code>tuple()</code></strong></p>
-<div class="sourceCode" id="cb356"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb356-1"><a href="built-in-data-structure.html#cb356-1" aria-hidden="true" tabindex="-1"></a>original <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
-<span id="cb356-2"><a href="built-in-data-structure.html#cb356-2" aria-hidden="true" tabindex="-1"></a>original_tuple <span class="op">=</span> <span class="bu">tuple</span>(original)</span>
-<span id="cb356-3"><a href="built-in-data-structure.html#cb356-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="bu">id</span>(original),</span>
-<span id="cb356-4"><a href="built-in-data-structure.html#cb356-4" aria-hidden="true" tabindex="-1"></a>       <span class="bu">id</span>(original_tuple))</span></code></pre></div>
-<pre><code>## 1885362537472 1885262488704</code></pre>
+<div class="sourceCode" id="cb293"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb293-1"><a href="built-in-data-structure.html#cb293-1" aria-hidden="true" tabindex="-1"></a>my_list  <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb293-2"><a href="built-in-data-structure.html#cb293-2" aria-hidden="true" tabindex="-1"></a>my_tuple <span class="op">=</span> <span class="bu">tuple</span>(my_list)   <span class="co">## concert to tuple using constructor</span></span>
+<span id="cb293-3"><a href="built-in-data-structure.html#cb293-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb293-4"><a href="built-in-data-structure.html#cb293-4" aria-hidden="true" tabindex="-1"></a>my_list</span>
+<span id="cb293-5"><a href="built-in-data-structure.html#cb293-5" aria-hidden="true" tabindex="-1"></a>my_tuple</span></code></pre></div>
+<pre><code>## [1, 2, 3]
+## (1, 2, 3)</code></pre>
 </div>
-<div id="built-in-functions-applicable-to-list" class="section level3" number="4.2.9">
+<div id="built-in-functions" class="section level3" number="4.2.7">
 <h3>
-<span class="header-section-number">4.2.9</span> Built-In Functions Applicable To List<a class="anchor" aria-label="anchor" href="#built-in-functions-applicable-to-list"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2.7</span> Built-In Functions<a class="anchor" aria-label="anchor" href="#built-in-functions"><i class="fas fa-link"></i></a>
 </h3>
-<p><strong>Number of Elements</strong></p>
-<div class="sourceCode" id="cb358"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb358-1"><a href="built-in-data-structure.html#cb358-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(food)</span></code></pre></div>
-<pre><code>## 6</code></pre>
-<p><strong>Max Value</strong></p>
-<div class="sourceCode" id="cb360"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb360-1"><a href="built-in-data-structure.html#cb360-1" aria-hidden="true" tabindex="-1"></a>test <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>]</span>
-<span id="cb360-2"><a href="built-in-data-structure.html#cb360-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="bu">max</span>(test)</span>
-<span id="cb360-3"><a href="built-in-data-structure.html#cb360-3" aria-hidden="true" tabindex="-1"></a>test.index(m)  <span class="co">## only first occurance is found</span></span></code></pre></div>
-<pre><code>## 3</code></pre>
+<div class="sourceCode" id="cb295"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb295-1"><a href="built-in-data-structure.html#cb295-1" aria-hidden="true" tabindex="-1"></a>my_numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>]</span>
+<span id="cb295-2"><a href="built-in-data-structure.html#cb295-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb295-3"><a href="built-in-data-structure.html#cb295-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(my_numbers)    <span class="co">## numner of elements</span></span>
+<span id="cb295-4"><a href="built-in-data-structure.html#cb295-4" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(my_numbers)    <span class="co">## maximum value of elements</span></span>
+<span id="cb295-5"><a href="built-in-data-structure.html#cb295-5" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(my_numbers) <span class="co">## sort ascending</span></span>
+<span id="cb295-6"><a href="built-in-data-structure.html#cb295-6" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(my_numbers, reverse<span class="op">=</span><span class="va">True</span>) <span class="co">## sort descending</span></span></code></pre></div>
+<pre><code>## 8
+## 5
+## [1, 1, 2, 2, 3, 3, 5, 5]
+## [5, 5, 3, 3, 2, 2, 1, 1]</code></pre>
 </div>
 </div>
 <div id="dictionaries" class="section level2" number="4.3">
@@ -405,102 +323,84 @@
 <span class="header-section-number">4.3</span> Dictionaries<a class="anchor" aria-label="anchor" href="#dictionaries"><i class="fas fa-link"></i></a>
 </h2>
 <p>Dictionary is a list of index-value items.</p>
-<div id="creating-dict" class="section level3" number="4.3.1">
+<div id="creation-2" class="section level3" number="4.3.1">
 <h3>
-<span class="header-section-number">4.3.1</span> Creating dict<a class="anchor" aria-label="anchor" href="#creating-dict"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.1</span> Creation<a class="anchor" aria-label="anchor" href="#creation-2"><i class="fas fa-link"></i></a>
 </h3>
-<div id="from-literals" class="section level4" number="4.3.1.1">
-<h4>
-<span class="header-section-number">4.3.1.1</span> From Literals<a class="anchor" aria-label="anchor" href="#from-literals"><i class="fas fa-link"></i></a>
-</h4>
 <p><strong>Simple Dictionary</strong></p>
-<div class="sourceCode" id="cb362"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb362-1"><a href="built-in-data-structure.html#cb362-1" aria-hidden="true" tabindex="-1"></a>animal_counts <span class="op">=</span> { <span class="st">'cats'</span> : <span class="dv">2</span>, <span class="st">'dogs'</span> : <span class="dv">5</span>, <span class="st">'horses'</span>:<span class="dv">4</span>}</span>
-<span id="cb362-2"><a href="built-in-data-structure.html#cb362-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (animal_counts)</span></code></pre></div>
-<pre><code>## {'cats': 2, 'dogs': 5, 'horses': 4}</code></pre>
-<div class="sourceCode" id="cb364"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb364-1"><a href="built-in-data-structure.html#cb364-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="bu">type</span>(animal_counts) )</span></code></pre></div>
-<pre><code>## &lt;class 'dict'&gt;</code></pre>
+<div class="sourceCode" id="cb297"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb297-1"><a href="built-in-data-structure.html#cb297-1" aria-hidden="true" tabindex="-1"></a>empty_dict    <span class="op">=</span> {}   <span class="co">## create empty</span></span>
+<span id="cb297-2"><a href="built-in-data-structure.html#cb297-2" aria-hidden="true" tabindex="-1"></a>animal_counts <span class="op">=</span> { <span class="st">'cats'</span> : <span class="dv">2</span>, <span class="st">'dogs'</span> : <span class="dv">5</span>, <span class="st">'horses'</span>:<span class="dv">4</span>}</span>
+<span id="cb297-3"><a href="built-in-data-structure.html#cb297-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(animal_counts)</span>
+<span id="cb297-4"><a href="built-in-data-structure.html#cb297-4" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(empty_dict)</span></code></pre></div>
+<pre><code>## &lt;class 'dict'&gt;
+## &lt;class 'dict'&gt;</code></pre>
 <p><strong>Dictionary with list</strong></p>
-<div class="sourceCode" id="cb366"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb366-1"><a href="built-in-data-structure.html#cb366-1" aria-hidden="true" tabindex="-1"></a>animal_names <span class="op">=</span> {<span class="st">'cats'</span>:   [<span class="st">'Walter'</span>,<span class="st">'Ra'</span>],</span>
-<span id="cb366-2"><a href="built-in-data-structure.html#cb366-2" aria-hidden="true" tabindex="-1"></a>                <span class="st">'dogs'</span>:   [<span class="st">'Jim'</span>,<span class="st">'Roy'</span>,<span class="st">'John'</span>,<span class="st">'Lucky'</span>,<span class="st">'Row'</span>],</span>
-<span id="cb366-3"><a href="built-in-data-structure.html#cb366-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">'horses'</span>: [<span class="st">'Sax'</span>,<span class="st">'Jack'</span>,<span class="st">'Ann'</span>,<span class="st">'Jeep'</span>]</span>
-<span id="cb366-4"><a href="built-in-data-structure.html#cb366-4" aria-hidden="true" tabindex="-1"></a>               }</span>
-<span id="cb366-5"><a href="built-in-data-structure.html#cb366-5" aria-hidden="true" tabindex="-1"></a>animal_names</span></code></pre></div>
+<div class="sourceCode" id="cb299"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb299-1"><a href="built-in-data-structure.html#cb299-1" aria-hidden="true" tabindex="-1"></a>horse_names  <span class="op">=</span> [<span class="st">'Sax'</span>,<span class="st">'Jack'</span>,<span class="st">'Ann'</span>,<span class="st">'Jeep'</span>]</span>
+<span id="cb299-2"><a href="built-in-data-structure.html#cb299-2" aria-hidden="true" tabindex="-1"></a>animal_names <span class="op">=</span> {<span class="st">'cats'</span>:   [<span class="st">'Walter'</span>,<span class="st">'Ra'</span>],</span>
+<span id="cb299-3"><a href="built-in-data-structure.html#cb299-3" aria-hidden="true" tabindex="-1"></a>                <span class="st">'dogs'</span>:   [<span class="st">'Jim'</span>,<span class="st">'Roy'</span>,<span class="st">'John'</span>,<span class="st">'Lucky'</span>,<span class="st">'Row'</span>],</span>
+<span id="cb299-4"><a href="built-in-data-structure.html#cb299-4" aria-hidden="true" tabindex="-1"></a>                <span class="st">'horses'</span>: horse_names</span>
+<span id="cb299-5"><a href="built-in-data-structure.html#cb299-5" aria-hidden="true" tabindex="-1"></a>               }</span>
+<span id="cb299-6"><a href="built-in-data-structure.html#cb299-6" aria-hidden="true" tabindex="-1"></a>animal_names</span></code></pre></div>
 <pre><code>## {'cats': ['Walter', 'Ra'], 'dogs': ['Jim', 'Roy', 'John', 'Lucky', 'Row'], 'horses': ['Sax', 'Jack', 'Ann', 'Jeep']}</code></pre>
 </div>
-<div id="from-variables" class="section level4" number="4.3.1.2">
-<h4>
-<span class="header-section-number">4.3.1.2</span> From Variables<a class="anchor" aria-label="anchor" href="#from-variables"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb368"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb368-1"><a href="built-in-data-structure.html#cb368-1" aria-hidden="true" tabindex="-1"></a>cat_names <span class="op">=</span> [<span class="st">'Walter'</span>,<span class="st">'Ra'</span>,<span class="st">'Jim'</span>]</span>
-<span id="cb368-2"><a href="built-in-data-structure.html#cb368-2" aria-hidden="true" tabindex="-1"></a>dog_names <span class="op">=</span> [<span class="st">'Jim'</span>,<span class="st">'Roy'</span>,<span class="st">'John'</span>,<span class="st">'Lucky'</span>,<span class="st">'Row'</span>]</span>
-<span id="cb368-3"><a href="built-in-data-structure.html#cb368-3" aria-hidden="true" tabindex="-1"></a>horse_names<span class="op">=</span> [<span class="st">'Sax'</span>,<span class="st">'Jack'</span>,<span class="st">'Ann'</span>,<span class="st">'Jeep'</span>]</span>
-<span id="cb368-4"><a href="built-in-data-structure.html#cb368-4" aria-hidden="true" tabindex="-1"></a>animal_names <span class="op">=</span> {<span class="st">'cats'</span>: cat_names, <span class="st">'dogs'</span>: dog_names, <span class="st">'horses'</span>: horse_names}</span>
-<span id="cb368-5"><a href="built-in-data-structure.html#cb368-5" aria-hidden="true" tabindex="-1"></a>animal_names</span></code></pre></div>
-<pre><code>## {'cats': ['Walter', 'Ra', 'Jim'], 'dogs': ['Jim', 'Roy', 'John', 'Lucky', 'Row'], 'horses': ['Sax', 'Jack', 'Ann', 'Jeep']}</code></pre>
-</div>
-</div>
-<div id="accessing-dict" class="section level3" number="4.3.2">
+<div id="accessor-2" class="section level3" number="4.3.2">
 <h3>
-<span class="header-section-number">4.3.2</span> Accessing dict<a class="anchor" aria-label="anchor" href="#accessing-dict"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.2</span> Accessor<a class="anchor" aria-label="anchor" href="#accessor-2"><i class="fas fa-link"></i></a>
 </h3>
-<div id="get-all-keys" class="section level4" number="4.3.2.1">
-<h4>
-<span class="header-section-number">4.3.2.1</span> Get All Keys<a class="anchor" aria-label="anchor" href="#get-all-keys"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb370"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb370-1"><a href="built-in-data-structure.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (animal_names.keys())</span></code></pre></div>
-<pre><code>## dict_keys(['cats', 'dogs', 'horses'])</code></pre>
-<div class="sourceCode" id="cb372"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb372-1"><a href="built-in-data-structure.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="bu">sorted</span>(animal_names.keys()))</span></code></pre></div>
-<pre><code>## ['cats', 'dogs', 'horses']</code></pre>
-</div>
-<div id="get-all-values" class="section level4" number="4.3.2.2">
-<h4>
-<span class="header-section-number">4.3.2.2</span> Get All Values<a class="anchor" aria-label="anchor" href="#get-all-values"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb374"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb374-1"><a href="built-in-data-structure.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (animal_names.values())</span></code></pre></div>
-<pre><code>## dict_values([['Walter', 'Ra', 'Jim'], ['Jim', 'Roy', 'John', 'Lucky', 'Row'], ['Sax', 'Jack', 'Ann', 'Jeep']])</code></pre>
-<div class="sourceCode" id="cb376"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb376-1"><a href="built-in-data-structure.html#cb376-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="bu">sorted</span>(animal_names.values()))</span></code></pre></div>
-<pre><code>## [['Jim', 'Roy', 'John', 'Lucky', 'Row'], ['Sax', 'Jack', 'Ann', 'Jeep'], ['Walter', 'Ra', 'Jim']]</code></pre>
-</div>
-<div id="access-value-with-specific-key" class="section level4" number="4.3.2.3">
-<h4>
-<span class="header-section-number">4.3.2.3</span> Access value with Specific Key<a class="anchor" aria-label="anchor" href="#access-value-with-specific-key"><i class="fas fa-link"></i></a>
-</h4>
-<p>Use <strong><code>[ key ]</code></strong> notation. However, this will return <strong>Error</strong> if key does not exist</p>
-<div class="sourceCode" id="cb378"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb378-1"><a href="built-in-data-structure.html#cb378-1" aria-hidden="true" tabindex="-1"></a>animal_names[<span class="st">'dogs'</span>]</span></code></pre></div>
+<p><strong>Get All Keys</strong></p>
+<div class="sourceCode" id="cb301"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb301-1"><a href="built-in-data-structure.html#cb301-1" aria-hidden="true" tabindex="-1"></a>animal_name_keys <span class="op">=</span> animal_names.keys()</span>
+<span id="cb301-2"><a href="built-in-data-structure.html#cb301-2" aria-hidden="true" tabindex="-1"></a>animal_name_keys               <span class="co">## it is a list</span></span>
+<span id="cb301-3"><a href="built-in-data-structure.html#cb301-3" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> animal_name_keys]  <span class="co">## it is iterable</span></span></code></pre></div>
+<pre><code>## dict_keys(['cats', 'dogs', 'horses'])
+## ['cats', 'dogs', 'horses']</code></pre>
+<p><strong>Get All Values</strong></p>
+<div class="sourceCode" id="cb303"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb303-1"><a href="built-in-data-structure.html#cb303-1" aria-hidden="true" tabindex="-1"></a>animal_name_values <span class="op">=</span> animal_names.values()</span>
+<span id="cb303-2"><a href="built-in-data-structure.html#cb303-2" aria-hidden="true" tabindex="-1"></a>animal_name_values               <span class="co">## it is a list</span></span>
+<span id="cb303-3"><a href="built-in-data-structure.html#cb303-3" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> animal_name_values]  <span class="co">## values are iterable</span></span></code></pre></div>
+<pre><code>## dict_values([['Walter', 'Ra'], ['Jim', 'Roy', 'John', 'Lucky', 'Row'], ['Sax', 'Jack', 'Ann', 'Jeep']])
+## [['Walter', 'Ra'], ['Jim', 'Roy', 'John', 'Lucky', 'Row'], ['Sax', 'Jack', 'Ann', 'Jeep']]</code></pre>
+<p><strong>Acceess With Key</strong></p>
+<p>Use <strong><code>[ key ]</code></strong> notation to get its value. However, this will return <strong>Error</strong> if key does not exist</p>
+<div class="sourceCode" id="cb305"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb305-1"><a href="built-in-data-structure.html#cb305-1" aria-hidden="true" tabindex="-1"></a>animal_names[<span class="st">'dogs'</span>]</span></code></pre></div>
 <pre><code>## ['Jim', 'Roy', 'John', 'Lucky', 'Row']</code></pre>
-<p>Use <strong><code>get( key )</code></strong> notation. will return None if key does not exist</p>
-<div class="sourceCode" id="cb380"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb380-1"><a href="built-in-data-structure.html#cb380-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (animal_counts.get(<span class="st">'cow'</span>))</span></code></pre></div>
-<pre><code>## None</code></pre>
+<p>For a safer approach (not to return error when key doesn’t exist), use <strong><code>get( key )</code></strong> notation. It will return None if key does not exist</p>
+<div class="sourceCode" id="cb307"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb307-1"><a href="built-in-data-structure.html#cb307-1" aria-hidden="true" tabindex="-1"></a>animal_names.get(<span class="st">'cow'</span>)   <span class="co">## does not exist, return None</span></span>
+<span id="cb307-2"><a href="built-in-data-structure.html#cb307-2" aria-hidden="true" tabindex="-1"></a>animal_names.get(<span class="st">'dogs'</span>)</span></code></pre></div>
+<pre><code>## ['Jim', 'Roy', 'John', 'Lucky', 'Row']</code></pre>
 </div>
-</div>
-<div id="dict-is-mutable" class="section level3" number="4.3.3">
+<div id="macd" class="section level3" number="4.3.3">
 <h3>
-<span class="header-section-number">4.3.3</span> Dict Is Mutable<a class="anchor" aria-label="anchor" href="#dict-is-mutable"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.3</span> MACD<a class="anchor" aria-label="anchor" href="#macd"><i class="fas fa-link"></i></a>
 </h3>
-<div id="updateappend" class="section level4" number="4.3.3.1">
-<h4>
-<span class="header-section-number">4.3.3.1</span> Update/Append<a class="anchor" aria-label="anchor" href="#updateappend"><i class="fas fa-link"></i></a>
-</h4>
-<p>Use <strong>[key]</strong> notation to <strong>update</strong> o <strong>append</strong> the content of element.</p>
-<div class="sourceCode" id="cb382"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb382-1"><a href="built-in-data-structure.html#cb382-1" aria-hidden="true" tabindex="-1"></a>animal_names[<span class="st">'dogs'</span>] <span class="op">=</span> [<span class="st">'Ali'</span>,<span class="st">'Abu'</span>,<span class="st">'Bakar'</span>]</span>
-<span id="cb382-2"><a href="built-in-data-structure.html#cb382-2" aria-hidden="true" tabindex="-1"></a>animal_names</span></code></pre></div>
-<pre><code>## {'cats': ['Walter', 'Ra', 'Jim'], 'dogs': ['Ali', 'Abu', 'Bakar'], 'horses': ['Sax', 'Jack', 'Ann', 'Jeep']}</code></pre>
+<p><strong>Update/Append</strong></p>
+<p>Use <strong><code>[key]</code></strong> notation to <strong>update</strong> or <strong>append</strong> the content of element. Use <strong><code>del</code></strong> to remove a key/value pair.</p>
+<div class="sourceCode" id="cb309"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb309-1"><a href="built-in-data-structure.html#cb309-1" aria-hidden="true" tabindex="-1"></a>new_world <span class="op">=</span> {}                                 <span class="co">## create empty</span></span>
+<span id="cb309-2"><a href="built-in-data-structure.html#cb309-2" aria-hidden="true" tabindex="-1"></a>new_world[<span class="st">'bacteria'</span>] <span class="op">=</span> [<span class="st">'Ameoba'</span>,<span class="st">'Fractona'</span>]  <span class="co">## add new key/value</span></span>
+<span id="cb309-3"><a href="built-in-data-structure.html#cb309-3" aria-hidden="true" tabindex="-1"></a>new_world[<span class="st">'alien'</span>]    <span class="op">=</span> [<span class="st">'Ali'</span>,<span class="st">'Abu'</span>]          <span class="co">## add new key/value</span></span>
+<span id="cb309-4"><a href="built-in-data-structure.html#cb309-4" aria-hidden="true" tabindex="-1"></a>new_world</span>
+<span id="cb309-5"><a href="built-in-data-structure.html#cb309-5" aria-hidden="true" tabindex="-1"></a>new_world[<span class="st">'bacteria'</span>] <span class="op">=</span> [<span class="st">'Mutu'</span>, <span class="st">'Aru'</span>]        <span class="co">## Update value</span></span>
+<span id="cb309-6"><a href="built-in-data-structure.html#cb309-6" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> new_world[<span class="st">'alien'</span>]                         <span class="co">## delete key/value</span></span>
+<span id="cb309-7"><a href="built-in-data-structure.html#cb309-7" aria-hidden="true" tabindex="-1"></a>new_world</span></code></pre></div>
+<pre><code>## {'bacteria': ['Ameoba', 'Fractona'], 'alien': ['Ali', 'Abu']}
+## {'bacteria': ['Mutu', 'Aru']}</code></pre>
 <p>Use <strong><code>clear()</code></strong> to erase all elements</p>
-<div class="sourceCode" id="cb384"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb384-1"><a href="built-in-data-structure.html#cb384-1" aria-hidden="true" tabindex="-1"></a>animal_names.clear()</span></code></pre></div>
+<div class="sourceCode" id="cb311"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb311-1"><a href="built-in-data-structure.html#cb311-1" aria-hidden="true" tabindex="-1"></a>animal_names.clear()</span>
+<span id="cb311-2"><a href="built-in-data-structure.html#cb311-2" aria-hidden="true" tabindex="-1"></a>animal_names  <span class="co">## now an empty dict</span></span></code></pre></div>
+<pre><code>## {}</code></pre>
 </div>
-</div>
-<div id="iterating-elements" class="section level3" number="4.3.4">
+<div id="iteration-1" class="section level3" number="4.3.4">
 <h3>
-<span class="header-section-number">4.3.4</span> Iterating Elements<a class="anchor" aria-label="anchor" href="#iterating-elements"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.4</span> Iteration<a class="anchor" aria-label="anchor" href="#iteration-1"><i class="fas fa-link"></i></a>
 </h3>
-<p>Loop through <strong><code>.items()</code></strong></p>
-<div class="sourceCode" id="cb385"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb385-1"><a href="built-in-data-structure.html#cb385-1" aria-hidden="true" tabindex="-1"></a>animal_dict <span class="op">=</span> { <span class="st">'cats'</span> : <span class="dv">2</span>, <span class="st">'dogs'</span> : <span class="dv">5</span>, <span class="st">'horses'</span>:<span class="dv">4</span>}</span>
-<span id="cb385-2"><a href="built-in-data-structure.html#cb385-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb385-3"><a href="built-in-data-structure.html#cb385-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key,val <span class="kw">in</span> animal_dict.items():</span>
-<span id="cb385-4"><a href="built-in-data-structure.html#cb385-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( key, val )</span></code></pre></div>
-<pre><code>## cats 2
-## dogs 5
-## horses 4</code></pre>
+<p>Example below shows how to iterate over keys (<strong><code>.keys()</code></strong>), values (<strong><code>.values()</code></strong>) and both key/values (<strong><code>.items()</code></strong>).</p>
+<div class="sourceCode" id="cb313"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb313-1"><a href="built-in-data-structure.html#cb313-1" aria-hidden="true" tabindex="-1"></a>animal_dict <span class="op">=</span> { <span class="st">'cats'</span> : <span class="dv">2</span>, <span class="st">'dogs'</span> : <span class="dv">5</span>, <span class="st">'horses'</span>:<span class="dv">4</span>}</span>
+<span id="cb313-2"><a href="built-in-data-structure.html#cb313-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb313-3"><a href="built-in-data-structure.html#cb313-3" aria-hidden="true" tabindex="-1"></a>[ (key,val) <span class="cf">for</span> key,val <span class="kw">in</span> animal_dict.items()] </span>
+<span id="cb313-4"><a href="built-in-data-structure.html#cb313-4" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> animal_dict.values()]  <span class="co">## values are iterable</span></span>
+<span id="cb313-5"><a href="built-in-data-structure.html#cb313-5" aria-hidden="true" tabindex="-1"></a>[x <span class="cf">for</span> x <span class="kw">in</span> animal_dict.keys()]    <span class="co">## keys are iterable</span></span></code></pre></div>
+<pre><code>## [('cats', 2), ('dogs', 5), ('horses', 4)]
+## [2, 5, 4]
+## ['cats', 'dogs', 'horses']</code></pre>
 </div>
 </div>
 <div id="sets" class="section level2" number="4.4">
@@ -508,98 +408,60 @@
 <span class="header-section-number">4.4</span> Sets<a class="anchor" aria-label="anchor" href="#sets"><i class="fas fa-link"></i></a>
 </h2>
 <p>Set is <strong>unordered</strong> collection of <strong>unique items</strong>. Set is <strong>mutable</strong></p>
-<div id="creation" class="section level3" number="4.4.1">
+<div id="creation-3" class="section level3" number="4.4.1">
 <h3>
-<span class="header-section-number">4.4.1</span> Creation<a class="anchor" aria-label="anchor" href="#creation"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.1</span> Creation<a class="anchor" aria-label="anchor" href="#creation-3"><i class="fas fa-link"></i></a>
 </h3>
-<p>Set can be declared with <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code>, unlike list creation uses ‘[]’.</p>
-<div class="sourceCode" id="cb387"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb387-1"><a href="built-in-data-structure.html#cb387-1" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> {<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>}</span>
-<span id="cb387-2"><a href="built-in-data-structure.html#cb387-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (myset) <span class="co"># notice no repetition values</span></span></code></pre></div>
-<pre><code>## {'b', 'f', 'c', 'g', 'e', 'd', 'a'}</code></pre>
-<p>Set can be created from list, and then converted back to list</p>
-<div class="sourceCode" id="cb389"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb389-1"><a href="built-in-data-structure.html#cb389-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>]</span>
-<span id="cb389-2"><a href="built-in-data-structure.html#cb389-2" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> <span class="bu">set</span>(mylist)</span>
-<span id="cb389-3"><a href="built-in-data-structure.html#cb389-3" aria-hidden="true" tabindex="-1"></a>my_unique_list <span class="op">=</span> <span class="bu">list</span>(myset)</span>
-<span id="cb389-4"><a href="built-in-data-structure.html#cb389-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (</span>
-<span id="cb389-5"><a href="built-in-data-structure.html#cb389-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">'Original List       : '</span>, mylist,</span>
-<span id="cb389-6"><a href="built-in-data-structure.html#cb389-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">'</span><span class="ch">\n</span><span class="st">Convert to set      : '</span>, myset,</span>
-<span id="cb389-7"><a href="built-in-data-structure.html#cb389-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">'</span><span class="ch">\n</span><span class="st">Convert back to list: '</span>, my_unique_list) <span class="co"># notice no repetition values</span></span></code></pre></div>
+<p>Set can be declared with <strong><code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code></strong>, just like list creation uses <strong>‘[]’</strong>.</p>
+<div class="sourceCode" id="cb315"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb315-1"><a href="built-in-data-structure.html#cb315-1" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> {<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>}</span>
+<span id="cb315-2"><a href="built-in-data-structure.html#cb315-2" aria-hidden="true" tabindex="-1"></a>myset <span class="co"># notice no repetition values</span></span></code></pre></div>
+<pre><code>## {'g', 'a', 'b', 'c', 'f', 'd', 'e'}</code></pre>
+<p>Set can be created from list, and then converted back to list. This is the perfect way to make a list unique.</p>
+<div class="sourceCode" id="cb317"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb317-1"><a href="built-in-data-structure.html#cb317-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>]</span>
+<span id="cb317-2"><a href="built-in-data-structure.html#cb317-2" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> <span class="bu">set</span>(mylist)</span>
+<span id="cb317-3"><a href="built-in-data-structure.html#cb317-3" aria-hidden="true" tabindex="-1"></a>my_unique_list <span class="op">=</span> <span class="bu">list</span>(myset)</span>
+<span id="cb317-4"><a href="built-in-data-structure.html#cb317-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (</span>
+<span id="cb317-5"><a href="built-in-data-structure.html#cb317-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">'Original List       : '</span>, mylist,</span>
+<span id="cb317-6"><a href="built-in-data-structure.html#cb317-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">'</span><span class="ch">\n</span><span class="st">Convert to set      : '</span>, myset,</span>
+<span id="cb317-7"><a href="built-in-data-structure.html#cb317-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">'</span><span class="ch">\n</span><span class="st">Convert back to list: '</span>, my_unique_list) <span class="co"># notice no repetition values</span></span></code></pre></div>
 <pre><code>## Original List       :  ['a', 'b', 'c', 'd', 'a', 'b', 'e', 'f', 'g'] 
-## Convert to set      :  {'b', 'f', 'g', 'e', 'a', 'c', 'd'} 
-## Convert back to list:  ['b', 'f', 'g', 'e', 'a', 'c', 'd']</code></pre>
+## Convert to set      :  {'a', 'b', 'e', 'f', 'g', 'c', 'd'} 
+## Convert back to list:  ['a', 'b', 'e', 'f', 'g', 'c', 'd']</code></pre>
 </div>
-<div id="membership-test" class="section level3" number="4.4.2">
+<div id="operators-1" class="section level3" number="4.4.2">
 <h3>
-<span class="header-section-number">4.4.2</span> Membership Test<a class="anchor" aria-label="anchor" href="#membership-test"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.4.2</span> Operators<a class="anchor" aria-label="anchor" href="#operators-1"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb391"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb391-1"><a href="built-in-data-structure.html#cb391-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'a'</span> <span class="kw">in</span> myset)      <span class="co"># is member ?</span></span></code></pre></div>
-<pre><code>## True</code></pre>
-<div class="sourceCode" id="cb393"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb393-1"><a href="built-in-data-structure.html#cb393-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'f'</span> <span class="kw">not</span> <span class="kw">in</span> myset)  <span class="co"># is not member ?</span></span></code></pre></div>
-<pre><code>## False</code></pre>
-</div>
-<div id="subset-test" class="section level3" number="4.4.3">
-<h3>
-<span class="header-section-number">4.4.3</span> Subset Test<a class="anchor" aria-label="anchor" href="#subset-test"><i class="fas fa-link"></i></a>
-</h3>
-<p>Subset Test : &lt;=<br>
-Proper Subset Test : &lt;</p>
-<div class="sourceCode" id="cb395"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb395-1"><a href="built-in-data-structure.html#cb395-1" aria-hidden="true" tabindex="-1"></a>mysubset <span class="op">=</span> {<span class="st">'d'</span>,<span class="st">'g'</span>}</span>
-<span id="cb395-2"><a href="built-in-data-structure.html#cb395-2" aria-hidden="true" tabindex="-1"></a>mysubset <span class="op">&lt;=</span> myset</span></code></pre></div>
+<p><strong>Membership Test</strong></p>
+<div class="sourceCode" id="cb319"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb319-1"><a href="built-in-data-structure.html#cb319-1" aria-hidden="true" tabindex="-1"></a><span class="co">'a'</span> <span class="kw">in</span> myset      <span class="co"># is member ?</span></span>
+<span id="cb319-2"><a href="built-in-data-structure.html#cb319-2" aria-hidden="true" tabindex="-1"></a><span class="co">'f'</span> <span class="kw">not</span> <span class="kw">in</span> myset  <span class="co"># is not member ?</span></span></code></pre></div>
+<pre><code>## True
+## False</code></pre>
+<p><strong>Subset Test</strong></p>
+<p>Subset Test : <strong><code>&lt;=</code></strong><br>
+Proper Subset Test : <strong><code>&lt;</code></strong></p>
+<div class="sourceCode" id="cb321"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb321-1"><a href="built-in-data-structure.html#cb321-1" aria-hidden="true" tabindex="-1"></a>mysubset <span class="op">=</span> {<span class="st">'d'</span>,<span class="st">'g'</span>}</span>
+<span id="cb321-2"><a href="built-in-data-structure.html#cb321-2" aria-hidden="true" tabindex="-1"></a>mysubset <span class="op">&lt;=</span> myset</span></code></pre></div>
 <pre><code>## True</code></pre>
 <p>Proper Subset test that the master set <strong>contain at least one element</strong> which is not in the subset</p>
-<div class="sourceCode" id="cb397"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb397-1"><a href="built-in-data-structure.html#cb397-1" aria-hidden="true" tabindex="-1"></a>mysubset <span class="op">=</span> {<span class="st">'b'</span>,<span class="st">'a'</span>,<span class="st">'d'</span>,<span class="st">'c'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>}</span>
-<span id="cb397-2"><a href="built-in-data-structure.html#cb397-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Is Subset : '</span>, mysubset <span class="op">&lt;=</span> myset)</span></code></pre></div>
-<pre><code>## Is Subset :  True</code></pre>
-<div class="sourceCode" id="cb399"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb399-1"><a href="built-in-data-structure.html#cb399-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Is Proper Subet : '</span>, mysubset <span class="op">&lt;</span> myset)</span></code></pre></div>
-<pre><code>## Is Proper Subet :  False</code></pre>
-</div>
-<div id="union-using" class="section level3" number="4.4.4">
-<h3>
-<span class="header-section-number">4.4.4</span> Union using <code>|</code><a class="anchor" aria-label="anchor" href="#union-using"><i class="fas fa-link"></i></a>
-</h3>
-<div class="sourceCode" id="cb401"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb401-1"><a href="built-in-data-structure.html#cb401-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>} <span class="op">|</span> {<span class="st">'a'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>
-<pre><code>## {'b', 'c', 'f', 'e', 'a'}</code></pre>
-</div>
-<div id="intersection-using" class="section level3" number="4.4.5">
-<h3>
-<span class="header-section-number">4.4.5</span> Intersection using <code>&amp;</code><a class="anchor" aria-label="anchor" href="#intersection-using"><i class="fas fa-link"></i></a>
-</h3>
+<div class="sourceCode" id="cb323"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb323-1"><a href="built-in-data-structure.html#cb323-1" aria-hidden="true" tabindex="-1"></a>mysubset <span class="op">=</span> {<span class="st">'b'</span>,<span class="st">'a'</span>,<span class="st">'d'</span>,<span class="st">'c'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>}</span>
+<span id="cb323-2"><a href="built-in-data-structure.html#cb323-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Is Subset : '</span>, mysubset <span class="op">&lt;=</span> myset)</span>
+<span id="cb323-3"><a href="built-in-data-structure.html#cb323-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Is Proper Subet : '</span>, mysubset <span class="op">&lt;</span> myset)</span></code></pre></div>
+<pre><code>## Is Subset :  True
+## Is Proper Subet :  False</code></pre>
+<p><strong>Union using <code>|</code></strong></p>
+<div class="sourceCode" id="cb325"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb325-1"><a href="built-in-data-structure.html#cb325-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>} <span class="op">|</span> {<span class="st">'a'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>
+<pre><code>## {'b', 'c', 'a', 'f', 'e'}</code></pre>
+<p><strong>Intersection using <code>&amp;</code></strong></p>
 <p>Any elments that exist in both left and right set</p>
-<div class="sourceCode" id="cb403"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb403-1"><a href="built-in-data-structure.html#cb403-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>} <span class="op">&amp;</span> {<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb327-1"><a href="built-in-data-structure.html#cb327-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>} <span class="op">&amp;</span> {<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>
 <pre><code>## {'c', 'd'}</code></pre>
-</div>
-<div id="difference-using--" class="section level3" number="4.4.6">
-<h3>
-<span class="header-section-number">4.4.6</span> Difference using <code>-</code><a class="anchor" aria-label="anchor" href="#difference-using--"><i class="fas fa-link"></i></a>
-</h3>
+<p><strong>Difference using <code>-</code></strong></p>
 <p>Remove <strong>right</strong> from <strong>left</strong></p>
-<div class="sourceCode" id="cb405"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb405-1"><a href="built-in-data-structure.html#cb405-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>} <span class="op">-</span> {<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb329-1"><a href="built-in-data-structure.html#cb329-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>} <span class="op">-</span> {<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>
 <pre><code>## {'b', 'a'}</code></pre>
-</div>
-</div>
-<div id="range" class="section level2" number="4.5">
-<h2>
-<span class="header-section-number">4.5</span> range<a class="anchor" aria-label="anchor" href="#range"><i class="fas fa-link"></i></a>
-</h2>
-<p><strong>range(X)</strong> generates sequence of integer object</p>
-<pre><code>range (lower_bound, upper_bound, step_size)  
-# lower bound is optional, default = 0
-# upper bound is not included in result
-# step is optional, default = 1</code></pre>
-<p><strong>Use list() to convert in order to view actual sequence of data</strong></p>
-<div class="sourceCode" id="cb408"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb408-1"><a href="built-in-data-structure.html#cb408-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="bu">range</span>(<span class="dv">10</span>)     <span class="co"># default lower bound =0, step =1</span></span>
-<span id="cb408-2"><a href="built-in-data-structure.html#cb408-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="bu">type</span> (r))</span></code></pre></div>
-<pre><code>## &lt;class 'range'&gt;</code></pre>
-<div class="sourceCode" id="cb410"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb410-1"><a href="built-in-data-structure.html#cb410-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (r)</span></code></pre></div>
-<pre><code>## range(0, 10)</code></pre>
-<div class="sourceCode" id="cb412"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb412-1"><a href="built-in-data-structure.html#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="bu">list</span>(r))</span></code></pre></div>
-<pre><code>## [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
-<p><strong>More Examples</strong></p>
-<div class="sourceCode" id="cb414"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb414-1"><a href="built-in-data-structure.html#cb414-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">8</span>)))    <span class="co"># step not specified, default 1</span></span></code></pre></div>
-<pre><code>## [2, 3, 4, 5, 6, 7]</code></pre>
-<div class="sourceCode" id="cb416"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb416-1"><a href="built-in-data-structure.html#cb416-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Odds Number : '</span> , <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>))) <span class="co"># generate odds number</span></span></code></pre></div>
-<pre><code>## Odds Number :  [1, 3, 5, 7, 9]</code></pre>
 
+</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -611,43 +473,36 @@ Proper Subset Test : &lt;</p>
 <li><a class="nav-link" href="#built-in-data-structure"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
 <li>
 <a class="nav-link" href="#tuple"><span class="header-section-number">4.1</span> Tuple</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#creating"><span class="header-section-number">4.1.1</span> Creating</a></li>
-<li><a class="nav-link" href="#accessing"><span class="header-section-number">4.1.2</span> Accessing</a></li>
-<li><a class="nav-link" href="#duplicating"><span class="header-section-number">4.1.3</span> Duplicating</a></li>
+<li><a class="nav-link" href="#creation"><span class="header-section-number">4.1.1</span> Creation</a></li>
+<li><a class="nav-link" href="#accessor"><span class="header-section-number">4.1.2</span> Accessor</a></li>
+<li><a class="nav-link" href="#copy-and-clone"><span class="header-section-number">4.1.3</span> Copy and Clone</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#list"><span class="header-section-number">4.2</span> List</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#creating-list"><span class="header-section-number">4.2.1</span> Creating List</a></li>
-<li><a class="nav-link" href="#accessing-items"><span class="header-section-number">4.2.2</span> Accessing Items</a></li>
+<li><a class="nav-link" href="#creation-1"><span class="header-section-number">4.2.1</span> Creation</a></li>
+<li><a class="nav-link" href="#accessor-1"><span class="header-section-number">4.2.2</span> Accessor</a></li>
 <li><a class="nav-link" href="#methods"><span class="header-section-number">4.2.3</span> Methods</a></li>
-<li><a class="nav-link" href="#operator-1"><span class="header-section-number">4.2.4</span> Operator</a></li>
-<li><a class="nav-link" href="#list-is-mutable"><span class="header-section-number">4.2.5</span> List is Mutable</a></li>
-<li><a class="nav-link" href="#duplicate-or-reference"><span class="header-section-number">4.2.6</span> Duplicate or Reference</a></li>
-<li><a class="nav-link" href="#list-is-iterable"><span class="header-section-number">4.2.7</span> List Is Iterable</a></li>
-<li><a class="nav-link" href="#conversion"><span class="header-section-number">4.2.8</span> Conversion</a></li>
-<li><a class="nav-link" href="#built-in-functions-applicable-to-list"><span class="header-section-number">4.2.9</span> Built-In Functions Applicable To List</a></li>
+<li><a class="nav-link" href="#operators"><span class="header-section-number">4.2.4</span> Operators</a></li>
+<li><a class="nav-link" href="#iteration"><span class="header-section-number">4.2.5</span> Iteration</a></li>
+<li><a class="nav-link" href="#tuple-conversion"><span class="header-section-number">4.2.6</span> Tuple Conversion</a></li>
+<li><a class="nav-link" href="#built-in-functions"><span class="header-section-number">4.2.7</span> Built-In Functions</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#dictionaries"><span class="header-section-number">4.3</span> Dictionaries</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#creating-dict"><span class="header-section-number">4.3.1</span> Creating dict</a></li>
-<li><a class="nav-link" href="#accessing-dict"><span class="header-section-number">4.3.2</span> Accessing dict</a></li>
-<li><a class="nav-link" href="#dict-is-mutable"><span class="header-section-number">4.3.3</span> Dict Is Mutable</a></li>
-<li><a class="nav-link" href="#iterating-elements"><span class="header-section-number">4.3.4</span> Iterating Elements</a></li>
+<li><a class="nav-link" href="#creation-2"><span class="header-section-number">4.3.1</span> Creation</a></li>
+<li><a class="nav-link" href="#accessor-2"><span class="header-section-number">4.3.2</span> Accessor</a></li>
+<li><a class="nav-link" href="#macd"><span class="header-section-number">4.3.3</span> MACD</a></li>
+<li><a class="nav-link" href="#iteration-1"><span class="header-section-number">4.3.4</span> Iteration</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#sets"><span class="header-section-number">4.4</span> Sets</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#creation"><span class="header-section-number">4.4.1</span> Creation</a></li>
-<li><a class="nav-link" href="#membership-test"><span class="header-section-number">4.4.2</span> Membership Test</a></li>
-<li><a class="nav-link" href="#subset-test"><span class="header-section-number">4.4.3</span> Subset Test</a></li>
-<li><a class="nav-link" href="#union-using"><span class="header-section-number">4.4.4</span> Union using |</a></li>
-<li><a class="nav-link" href="#intersection-using"><span class="header-section-number">4.4.5</span> Intersection using &amp;</a></li>
-<li><a class="nav-link" href="#difference-using--"><span class="header-section-number">4.4.6</span> Difference using -</a></li>
+<li><a class="nav-link" href="#creation-3"><span class="header-section-number">4.4.1</span> Creation</a></li>
+<li><a class="nav-link" href="#operators-1"><span class="header-section-number">4.4.2</span> Operators</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#range"><span class="header-section-number">4.5</span> range</a></li>
 </ul>
 
       <div class="book-extra">
@@ -665,7 +520,7 @@ Proper Subset Test : &lt;</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

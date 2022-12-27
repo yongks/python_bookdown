@@ -45,9 +45,9 @@ The main motivation of the book is for my personal reference. Therefore, it is w
 
 ## Building The Book {-}
 
-Although this book is written for python code, it is written using Bookdown tool (a R library). This is made possible with **reticulate** R library Python for R integration with Python. All content pages of the book are written as **RMarkdown** files, rendered by **Bookdown** in **BS4** (bootstrap 4, with 3 columns layout) output format.
+Although this book is written for python code, it was contructed sing Bookdown (R Language). This is made possible with **reticulate** R library for integrating Python in R. 
 
-The output of the renders goes into "/doc" folder. When uploaded to github, **/doc** folder will be served as Github Pages, which you are reading right now.
+All content pages of the book are written as **RMarkdown** files, rendered by **Bookdown** to **BS4** (bootstrap 4, with 3 columns layout) output format. Renders output goes into "/doc" folder, which was uploaded to github. **`/doc*`* folder in Github served as Github Pages, which you are reading right now.
 
 ### Ingridients {-}
 
@@ -74,5 +74,4 @@ The book is build on below Python environment:
 - plotnine (0.10.1)
 - nltk (3.7)
 - statsmodel (0.13.2)
-- nlpia (0.5.2)
 - bs4 (4.11.1)

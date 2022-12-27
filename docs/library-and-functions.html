@@ -50,17 +50,18 @@
 <li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
 <li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
 <li><a class="active" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
-<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
-<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
-<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
+<li><a class="" href="built-in-functions-1.html"><span class="header-section-number">7</span> Built-in Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">8</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">9</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">10</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">11</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">12</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">13</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">14</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">15</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">16</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -109,322 +110,231 @@
 <span class="header-section-number">6.2</span> Importing Library<a class="anchor" aria-label="anchor" href="#importing-library"><i class="fas fa-link"></i></a>
 </h2>
 <p>There are two methods to import library functions:</p>
-<p><strong>Standalone Namespace</strong></p>
-<pre><code>- import &lt;libName&gt;                        # access function through: libName.functionName
-- import &lt;libName&gt; as &lt;shortName&gt;         # access function through: shortName.functionName</code></pre>
-<p><strong>Global Namespace</strong></p>
-<pre><code>- from   &lt;libName&gt; import *               # all functions available at global namespace
-- from   &lt;libName&gt; import &lt;functionName&gt;  # access function through: functionName    
-- from   &lt;libName&gt; import &lt;functionName&gt; as &lt;shortFunctionName&gt;  # access function through shortFunctionName</code></pre>
-<div id="import-entire-library" class="section level3" number="6.2.1">
+<div id="standalone-namespace" class="section level3" number="6.2.1">
 <h3>
-<span class="header-section-number">6.2.1</span> Import Entire Library<a class="anchor" aria-label="anchor" href="#import-entire-library"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2.1</span> Standalone Namespace<a class="anchor" aria-label="anchor" href="#standalone-namespace"><i class="fas fa-link"></i></a>
 </h3>
-<div id="import-into-standalone-namespace" class="section level4" number="6.2.1.1">
-<h4>
-<span class="header-section-number">6.2.1.1</span> Import Into Standalone Namespace<a class="anchor" aria-label="anchor" href="#import-into-standalone-namespace"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb461"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb461-1"><a href="library-and-functions.html#cb461-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb461-2"><a href="library-and-functions.html#cb461-2" aria-hidden="true" tabindex="-1"></a>math.sqrt(<span class="dv">9</span>)</span></code></pre></div>
-<pre><code>## 3.0</code></pre>
-<p>Use <strong>as</strong> for aliasing library name. This is useful if you have conflicting library name</p>
-<div class="sourceCode" id="cb463"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb463-1"><a href="library-and-functions.html#cb463-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
-<span id="cb463-2"><a href="library-and-functions.html#cb463-2" aria-hidden="true" tabindex="-1"></a>m.sqrt(<span class="dv">9</span>)</span></code></pre></div>
-<pre><code>## 3.0</code></pre>
+<pre><code># access function through: libName.functionName
+- import &lt;libName&gt;                        
+
+# access function through: shortName.functionName
+- import &lt;libName&gt; as &lt;shortName&gt;         </code></pre>
+<p>Use <strong><code>as</code></strong> for aliasing library name. This is useful if you have conflicting library name</p>
+<div class="sourceCode" id="cb373"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb373-1"><a href="library-and-functions.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb373-2"><a href="library-and-functions.html#cb373-2" aria-hidden="true" tabindex="-1"></a>math.sqrt(<span class="dv">9</span>)</span>
+<span id="cb373-3"><a href="library-and-functions.html#cb373-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb373-4"><a href="library-and-functions.html#cb373-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> m   <span class="co">## use library shortname</span></span>
+<span id="cb373-5"><a href="library-and-functions.html#cb373-5" aria-hidden="true" tabindex="-1"></a>m.sqrt(<span class="dv">9</span>)</span></code></pre></div>
+<pre><code>## 3.0
+## 3.0</code></pre>
 </div>
-<div id="import-into-global-name-space" class="section level4" number="6.2.1.2">
-<h4>
-<span class="header-section-number">6.2.1.2</span> Import Into Global Name Space<a class="anchor" aria-label="anchor" href="#import-into-global-name-space"><i class="fas fa-link"></i></a>
-</h4>
-<p>All functions in the library accessible through global namespace</p>
-<pre><code>from &lt;libName&gt; import *</code></pre>
-</div>
-</div>
-<div id="import-specific-function" class="section level3" number="6.2.2">
+<div id="global-namespace" class="section level3" number="6.2.2">
 <h3>
-<span class="header-section-number">6.2.2</span> Import Specific Function<a class="anchor" aria-label="anchor" href="#import-specific-function"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2.2</span> Global Namespace<a class="anchor" aria-label="anchor" href="#global-namespace"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb466"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb466-1"><a href="library-and-functions.html#cb466-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
-<span id="cb466-2"><a href="library-and-functions.html#cb466-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sqrt(<span class="dv">9</span>))</span></code></pre></div>
-<pre><code>## 3.0</code></pre>
-<p>Use <strong>as</strong> for aliasing function name</p>
-<div class="sourceCode" id="cb468"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb468-1"><a href="library-and-functions.html#cb468-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt <span class="im">as</span> sq</span>
-<span id="cb468-2"><a href="library-and-functions.html#cb468-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sq(<span class="dv">9</span>))</span></code></pre></div>
-<pre><code>## 3.0</code></pre>
+<pre><code># all functions available at global namespace
+- from   &lt;libName&gt; import *
+
+# access function through original names
+- from   &lt;libName&gt; import &lt;functionName&gt;      
+
+# access function through custom names
+- from   &lt;libName&gt; import &lt;functionName&gt; as &lt;shortFunctionName&gt;  </code></pre>
+<div class="sourceCode" id="cb376"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb376-1"><a href="library-and-functions.html#cb376-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb376-2"><a href="library-and-functions.html#cb376-2" aria-hidden="true" tabindex="-1"></a>sqrt(<span class="dv">9</span>)</span>
+<span id="cb376-3"><a href="library-and-functions.html#cb376-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb376-4"><a href="library-and-functions.html#cb376-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt <span class="im">as</span> sq</span>
+<span id="cb376-5"><a href="library-and-functions.html#cb376-5" aria-hidden="true" tabindex="-1"></a>sq(<span class="dv">9</span>)</span></code></pre></div>
+<pre><code>## 3.0
+## 3.0</code></pre>
 </div>
-<div id="machine-learning-packages" class="section level3" number="6.2.3">
-<h3>
-<span class="header-section-number">6.2.3</span> Machine Learning Packages<a class="anchor" aria-label="anchor" href="#machine-learning-packages"><i class="fas fa-link"></i></a>
-</h3>
-<div class="figure">
-<img src="img/ml_libraries.jpg" alt=""><p class="caption">alt text</p>
 </div>
-</div>
-</div>
-<div id="define-function" class="section level2" number="6.3">
+<div id="functions" class="section level2" number="6.3">
 <h2>
-<span class="header-section-number">6.3</span> Define Function<a class="anchor" aria-label="anchor" href="#define-function"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> Functions<a class="anchor" aria-label="anchor" href="#functions"><i class="fas fa-link"></i></a>
 </h2>
-<div id="function-arguments" class="section level3" number="6.3.1">
+<div id="define" class="section level3" number="6.3.1">
 <h3>
-<span class="header-section-number">6.3.1</span> Function Arguments<a class="anchor" aria-label="anchor" href="#function-arguments"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.1</span> Define<a class="anchor" aria-label="anchor" href="#define"><i class="fas fa-link"></i></a>
 </h3>
-<p>By default, arguments are assigned to function left to right</p>
-<div class="sourceCode" id="cb470"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb470-1"><a href="library-and-functions.html#cb470-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y):</span>
-<span id="cb470-2"><a href="library-and-functions.html#cb470-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'x:'</span>,x)</span>
-<span id="cb470-3"><a href="library-and-functions.html#cb470-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'y:'</span>,y)</span>
-<span id="cb470-4"><a href="library-and-functions.html#cb470-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb470-5"><a href="library-and-functions.html#cb470-5" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">5</span>,<span class="dv">8</span>)</span></code></pre></div>
+<p>By default, arguments are assigned to function left to right. However, you can also specify the argument assignment during function call. Function can have <strong>default args value</strong>.</p>
+<div class="sourceCode" id="cb378"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb378-1"><a href="library-and-functions.html#cb378-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb378-2"><a href="library-and-functions.html#cb378-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'x:'</span>,x)</span>
+<span id="cb378-3"><a href="library-and-functions.html#cb378-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'y:'</span>,y)</span>
+<span id="cb378-4"><a href="library-and-functions.html#cb378-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb378-5"><a href="library-and-functions.html#cb378-5" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">5</span>,<span class="dv">8</span>)      <span class="co">## default function read args from left to right</span></span>
+<span id="cb378-6"><a href="library-and-functions.html#cb378-6" aria-hidden="true" tabindex="-1"></a>myfun (y<span class="op">=</span><span class="dv">8</span>,x<span class="op">=</span><span class="dv">5</span>) <span class="co">## but we can specific as well</span></span>
+<span id="cb378-7"><a href="library-and-functions.html#cb378-7" aria-hidden="true" tabindex="-1"></a>myfun (x<span class="op">=</span><span class="dv">5</span>)     <span class="co">## args x not specified, function assume default=</span></span></code></pre></div>
 <pre><code>## x: 5
-## y: 8</code></pre>
-<p>However, you can also specify the argument assigment during function call</p>
-<div class="sourceCode" id="cb472"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb472-1"><a href="library-and-functions.html#cb472-1" aria-hidden="true" tabindex="-1"></a>myfun (y<span class="op">=</span><span class="dv">8</span>,x<span class="op">=</span><span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## x: 5
-## y: 8</code></pre>
-<p>Function can have <strong>default argement value</strong></p>
-<div class="sourceCode" id="cb474"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb474-1"><a href="library-and-functions.html#cb474-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x<span class="op">=</span><span class="dv">1</span>,y<span class="op">=</span><span class="dv">1</span>):  <span class="co"># default argument value is 1</span></span>
-<span id="cb474-2"><a href="library-and-functions.html#cb474-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'x:'</span>,x)</span>
-<span id="cb474-3"><a href="library-and-functions.html#cb474-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'y:'</span>,y)</span>
-<span id="cb474-4"><a href="library-and-functions.html#cb474-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb474-5"><a href="library-and-functions.html#cb474-5" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">5</span>)  <span class="co"># pass only one argument</span></span></code></pre></div>
-<pre><code>## x: 5
-## y: 1</code></pre>
+## y: 8
+## x: 5
+## y: 8
+## x: 5
+## y: 3</code></pre>
 </div>
 <div id="list-within-function" class="section level3" number="6.3.2">
 <h3>
 <span class="header-section-number">6.3.2</span> List Within Function<a class="anchor" aria-label="anchor" href="#list-within-function"><i class="fas fa-link"></i></a>
 </h3>
-<p>Consider a function is an object, its variable (some_list) is immutable and hence its reference won’t change, even data changes</p>
-<div class="sourceCode" id="cb476"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb476-1"><a href="library-and-functions.html#cb476-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spam (elem, some_list<span class="op">=</span>[]):</span>
-<span id="cb476-2"><a href="library-and-functions.html#cb476-2" aria-hidden="true" tabindex="-1"></a>    some_list.append(elem)</span>
-<span id="cb476-3"><a href="library-and-functions.html#cb476-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> some_list</span>
-<span id="cb476-4"><a href="library-and-functions.html#cb476-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb476-5"><a href="library-and-functions.html#cb476-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## [1]</code></pre>
-<div class="sourceCode" id="cb478"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb478-1"><a href="library-and-functions.html#cb478-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">2</span>))</span></code></pre></div>
-<pre><code>## [1, 2]</code></pre>
-<div class="sourceCode" id="cb480"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb480-1"><a href="library-and-functions.html#cb480-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">3</span>))</span></code></pre></div>
-<pre><code>## [1, 2, 3]</code></pre>
+<p>Consider a function is an object, its variable (some_list) is a reference. Hence its value is remembered when no parameter is passed over. it is <strong>counter intuitive</strong>, always ensure to pass the arguments to function, even though it is a an empty list.</p>
+<div class="sourceCode" id="cb380"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb380-1"><a href="library-and-functions.html#cb380-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spam (elem, some_list<span class="op">=</span>[]):</span>
+<span id="cb380-2"><a href="library-and-functions.html#cb380-2" aria-hidden="true" tabindex="-1"></a>    some_list.append(elem)</span>
+<span id="cb380-3"><a href="library-and-functions.html#cb380-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> some_list</span>
+<span id="cb380-4"><a href="library-and-functions.html#cb380-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb380-5"><a href="library-and-functions.html#cb380-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">1</span>))</span>
+<span id="cb380-6"><a href="library-and-functions.html#cb380-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">2</span>,[<span class="dv">6</span>]))</span>
+<span id="cb380-7"><a href="library-and-functions.html#cb380-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">3</span>))</span>
+<span id="cb380-8"><a href="library-and-functions.html#cb380-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">2</span>,[<span class="dv">7</span>]))</span>
+<span id="cb380-9"><a href="library-and-functions.html#cb380-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (spam(<span class="dv">4</span>, []))</span></code></pre></div>
+<pre><code>## [1]
+## [6, 2]
+## [1, 3]
+## [7, 2]
+## [4]</code></pre>
 </div>
 <div id="return-statement" class="section level3" number="6.3.3">
 <h3>
 <span class="header-section-number">6.3.3</span> Return Statement<a class="anchor" aria-label="anchor" href="#return-statement"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb482"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb482-1"><a href="library-and-functions.html#cb482-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bigger(x,y):</span>
-<span id="cb482-2"><a href="library-and-functions.html#cb482-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x<span class="op">&gt;</span>y):</span>
-<span id="cb482-3"><a href="library-and-functions.html#cb482-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
-<span id="cb482-4"><a href="library-and-functions.html#cb482-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb482-5"><a href="library-and-functions.html#cb482-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y</span>
-<span id="cb482-6"><a href="library-and-functions.html#cb482-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb482-7"><a href="library-and-functions.html#cb482-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (bigger(<span class="dv">5</span>,<span class="dv">8</span>))</span></code></pre></div>
-<pre><code>## 8</code></pre>
-</div>
-<div id="no-return-statement" class="section level3" number="6.3.4">
-<h3>
-<span class="header-section-number">6.3.4</span> No Return Statement<a class="anchor" aria-label="anchor" href="#no-return-statement"><i class="fas fa-link"></i></a>
-</h3>
-<p>if no <strong>return</strong> statement, python return <strong>None</strong></p>
-<div class="sourceCode" id="cb484"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb484-1"><a href="library-and-functions.html#cb484-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dummy():</span>
-<span id="cb484-2"><a href="library-and-functions.html#cb484-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'This is a dummy function, return no value'</span>)</span>
-<span id="cb484-3"><a href="library-and-functions.html#cb484-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb484-4"><a href="library-and-functions.html#cb484-4" aria-hidden="true" tabindex="-1"></a>dummy()</span></code></pre></div>
-<pre><code>## This is a dummy function, return no value</code></pre>
-</div>
-<div id="return-multiple-value" class="section level3" number="6.3.5">
-<h3>
-<span class="header-section-number">6.3.5</span> Return Multiple Value<a class="anchor" aria-label="anchor" href="#return-multiple-value"><i class="fas fa-link"></i></a>
-</h3>
 <p>Multiple value is returned as <strong>tuple</strong>. Use multiple assignment to assign to multiple variable</p>
-<div class="sourceCode" id="cb486"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb486-1"><a href="library-and-functions.html#cb486-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> minmax(x,y,z):</span>
-<span id="cb486-2"><a href="library-and-functions.html#cb486-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">min</span>(x,y,z), <span class="bu">max</span>(x,y,z)</span>
-<span id="cb486-3"><a href="library-and-functions.html#cb486-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb486-4"><a href="library-and-functions.html#cb486-4" aria-hidden="true" tabindex="-1"></a>a,b <span class="op">=</span> minmax(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)     <span class="co"># multiple assignment</span></span>
-<span id="cb486-5"><a href="library-and-functions.html#cb486-5" aria-hidden="true" tabindex="-1"></a>c   <span class="op">=</span> minmax(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)     <span class="co"># tuple</span></span>
-<span id="cb486-6"><a href="library-and-functions.html#cb486-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb486-7"><a href="library-and-functions.html#cb486-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a,b)</span></code></pre></div>
-<pre><code>## 7 9</code></pre>
-<div class="sourceCode" id="cb488"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb488-1"><a href="library-and-functions.html#cb488-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (c)    </span></code></pre></div>
-<pre><code>## (7, 9)</code></pre>
+<div class="sourceCode" id="cb382"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb382-1"><a href="library-and-functions.html#cb382-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bigger(x,y):</span>
+<span id="cb382-2"><a href="library-and-functions.html#cb382-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x<span class="op">&gt;</span>y):</span>
+<span id="cb382-3"><a href="library-and-functions.html#cb382-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb382-4"><a href="library-and-functions.html#cb382-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb382-5"><a href="library-and-functions.html#cb382-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y</span>
+<span id="cb382-6"><a href="library-and-functions.html#cb382-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb382-7"><a href="library-and-functions.html#cb382-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> minmax(x,y,z):</span>
+<span id="cb382-8"><a href="library-and-functions.html#cb382-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">min</span>(x,y,z), <span class="bu">max</span>(x,y,z)</span>
+<span id="cb382-9"><a href="library-and-functions.html#cb382-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb382-10"><a href="library-and-functions.html#cb382-10" aria-hidden="true" tabindex="-1"></a>big   <span class="op">=</span> bigger(<span class="dv">5</span>,<span class="dv">8</span>)</span>
+<span id="cb382-11"><a href="library-and-functions.html#cb382-11" aria-hidden="true" tabindex="-1"></a>a,b   <span class="op">=</span> minmax(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)     <span class="co"># multiple assignment</span></span>
+<span id="cb382-12"><a href="library-and-functions.html#cb382-12" aria-hidden="true" tabindex="-1"></a>c     <span class="op">=</span> minmax(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)     <span class="co"># tuple</span></span>
+<span id="cb382-13"><a href="library-and-functions.html#cb382-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb382-14"><a href="library-and-functions.html#cb382-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (big)  <span class="co">## noolean</span></span>
+<span id="cb382-15"><a href="library-and-functions.html#cb382-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a,b)  <span class="co">## integer</span></span>
+<span id="cb382-16"><a href="library-and-functions.html#cb382-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (c)    <span class="co">## tuple</span></span></code></pre></div>
+<pre><code>## 8
+## 7 9
+## (7, 9)</code></pre>
+<p>if no <strong>return</strong> statement, python return <strong>None</strong></p>
+<div class="sourceCode" id="cb384"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb384-1"><a href="library-and-functions.html#cb384-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dummy():</span>
+<span id="cb384-2"><a href="library-and-functions.html#cb384-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'This is a dummy function, return no value'</span>)</span>
+<span id="cb384-3"><a href="library-and-functions.html#cb384-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb384-4"><a href="library-and-functions.html#cb384-4" aria-hidden="true" tabindex="-1"></a>dummy() <span class="op">==</span> <span class="va">None</span></span></code></pre></div>
+<pre><code>## This is a dummy function, return no value
+## True</code></pre>
 </div>
-<div id="passing-function-as-argument" class="section level3" number="6.3.6">
+<div id="argument" class="section level3" number="6.3.4">
 <h3>
-<span class="header-section-number">6.3.6</span> Passing Function as Argument<a class="anchor" aria-label="anchor" href="#passing-function-as-argument"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.4</span> Argument<a class="anchor" aria-label="anchor" href="#argument"><i class="fas fa-link"></i></a>
 </h3>
-<p>You can pass a function name as an argument to a function</p>
-<div class="sourceCode" id="cb490"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb490-1"><a href="library-and-functions.html#cb490-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y,f):</span>
-<span id="cb490-2"><a href="library-and-functions.html#cb490-2" aria-hidden="true" tabindex="-1"></a>    f(x,y)</span>
-<span id="cb490-3"><a href="library-and-functions.html#cb490-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb490-4"><a href="library-and-functions.html#cb490-4" aria-hidden="true" tabindex="-1"></a>myfun(<span class="st">'hello'</span>,<span class="dv">54</span>,<span class="bu">print</span>)</span></code></pre></div>
+<p>Passing <strong>too many</strong> arguments will result in an error.
+Passing <strong>too little</strong> arguments <strong>without default</strong> value defined will also result in error.
+For dynamic number of arguments, see <strong><code>args</code></strong> in the next section.</p>
+<div class="sourceCode" id="cb386"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb386-1"><a href="library-and-functions.html#cb386-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y):</span>
+<span id="cb386-2"><a href="library-and-functions.html#cb386-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
+<span id="cb386-3"><a href="library-and-functions.html#cb386-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
+<span id="cb386-4"><a href="library-and-functions.html#cb386-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb386-5"><a href="library-and-functions.html#cb386-5" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb386-6"><a href="library-and-functions.html#cb386-6" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: myfun() takes 2 positional arguments but 5 were given</code></pre>
+<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: myfun() missing 1 required positional argument: 'y'</code></pre>
+<p><strong>Function as Argument</strong></p>
+<div class="sourceCode" id="cb389"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb389-1"><a href="library-and-functions.html#cb389-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y,f):</span>
+<span id="cb389-2"><a href="library-and-functions.html#cb389-2" aria-hidden="true" tabindex="-1"></a>    f(x,y)</span>
+<span id="cb389-3"><a href="library-and-functions.html#cb389-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb389-4"><a href="library-and-functions.html#cb389-4" aria-hidden="true" tabindex="-1"></a>myfun(<span class="st">'hello'</span>,<span class="dv">54</span>,<span class="bu">print</span>)</span></code></pre></div>
 <pre><code>## hello 54</code></pre>
+<p><strong>Breaking Dict as Argument</strong></p>
+<p>Below example break <strong><code>dict</code></strong> to a function. However, be careful not to pass extra key to the function, which will result in error.</p>
+<div class="sourceCode" id="cb391"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb391-1"><a href="library-and-functions.html#cb391-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(a,b,c,d<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb391-2"><a href="library-and-functions.html#cb391-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a, b, c, d)</span>
+<span id="cb391-3"><a href="library-and-functions.html#cb391-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb391-4"><a href="library-and-functions.html#cb391-4" aria-hidden="true" tabindex="-1"></a>foo(<span class="op">**</span>{<span class="st">"a"</span>:<span class="dv">2</span>,<span class="st">"b"</span>:<span class="dv">3</span>,<span class="st">"c"</span>:<span class="dv">4</span>})          <span class="co">## ok</span></span>
+<span id="cb391-5"><a href="library-and-functions.html#cb391-5" aria-hidden="true" tabindex="-1"></a>foo(<span class="op">**</span>{<span class="st">"a"</span>:<span class="dv">2</span>,<span class="st">"b"</span>:<span class="dv">3</span>,<span class="st">"c"</span>:<span class="dv">4</span>, <span class="st">"z"</span>:<span class="dv">100</span>}) <span class="co">## Error, 'z' not recognized</span></span></code></pre></div>
+<pre><code>## 2 3 4 1</code></pre>
+<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: foo() got an unexpected keyword argument 'z'</code></pre>
 </div>
-<div id="arguments" class="section level3" number="6.3.7">
+<div id="argument-args" class="section level3" number="6.3.5">
 <h3>
-<span class="header-section-number">6.3.7</span> Arguments<a class="anchor" aria-label="anchor" href="#arguments"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.5</span> Argument: args<a class="anchor" aria-label="anchor" href="#argument-args"><i class="fas fa-link"></i></a>
 </h3>
-<p>args is a <strong>tuple</strong></p>
-<div id="example-1" class="section level4" number="6.3.7.1">
-<h4>
-<span class="header-section-number">6.3.7.1</span> Example 1<a class="anchor" aria-label="anchor" href="#example-1"><i class="fas fa-link"></i></a>
-</h4>
-<p>Error example, too many parameters passed over to function</p>
-</div>
-<div id="example-2" class="section level4" number="6.3.7.2">
-<h4>
-<span class="header-section-number">6.3.7.2</span> Example 2<a class="anchor" aria-label="anchor" href="#example-2"><i class="fas fa-link"></i></a>
-</h4>
-<p>First argument goes to x, remaining goes to args as tuple</p>
-<div class="sourceCode" id="cb492"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb492-1"><a href="library-and-functions.html#cb492-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,<span class="op">*</span>args):</span>
-<span id="cb492-2"><a href="library-and-functions.html#cb492-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
-<span id="cb492-3"><a href="library-and-functions.html#cb492-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)     <span class="co">#tuple</span></span>
-<span id="cb492-4"><a href="library-and-functions.html#cb492-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb492-5"><a href="library-and-functions.html#cb492-5" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="st">'abc'</span>)</span></code></pre></div>
-<pre><code>## 1
-## (2, 3, 4, 5, 'abc')</code></pre>
-</div>
-<div id="example-3" class="section level4" number="6.3.7.3">
-<h4>
-<span class="header-section-number">6.3.7.3</span> Example 3<a class="anchor" aria-label="anchor" href="#example-3"><i class="fas fa-link"></i></a>
-</h4>
-<p>First argument goes to x, second argument goest to y, remaining goes to args</p>
-<div class="sourceCode" id="cb494"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb494-1"><a href="library-and-functions.html#cb494-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y,<span class="op">*</span>args):</span>
-<span id="cb494-2"><a href="library-and-functions.html#cb494-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
-<span id="cb494-3"><a href="library-and-functions.html#cb494-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
-<span id="cb494-4"><a href="library-and-functions.html#cb494-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)     <span class="co">#tuple</span></span>
-<span id="cb494-5"><a href="library-and-functions.html#cb494-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb494-6"><a href="library-and-functions.html#cb494-6" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</span></code></pre></div>
+<p>All dynamic length of argumens not captured in the defined argument will overflow into <strong><code>args</code></strong>, which is a tuple.</p>
+<p><strong>Example 1 - All tails overflow to args</strong></p>
+<p>First argument goes to x, second argument goes to y, remaining overflow to args.</p>
+<div class="sourceCode" id="cb394"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb394-1"><a href="library-and-functions.html#cb394-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y,<span class="op">*</span>args):</span>
+<span id="cb394-2"><a href="library-and-functions.html#cb394-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
+<span id="cb394-3"><a href="library-and-functions.html#cb394-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
+<span id="cb394-4"><a href="library-and-functions.html#cb394-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)     <span class="co">#tuple</span></span>
+<span id="cb394-5"><a href="library-and-functions.html#cb394-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb394-6"><a href="library-and-functions.html#cb394-6" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="st">'any'</span>)</span></code></pre></div>
 <pre><code>## 1
 ## 2
-## (3,)</code></pre>
-</div>
-<div id="example-4" class="section level4" number="6.3.7.4">
-<h4>
-<span class="header-section-number">6.3.7.4</span> Example 4<a class="anchor" aria-label="anchor" href="#example-4"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb496"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb496-1"><a href="library-and-functions.html#cb496-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,<span class="op">*</span>args, y<span class="op">=</span><span class="dv">9</span>):</span>
-<span id="cb496-2"><a href="library-and-functions.html#cb496-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
-<span id="cb496-3"><a href="library-and-functions.html#cb496-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
-<span id="cb496-4"><a href="library-and-functions.html#cb496-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)     <span class="co">#tuple</span></span>
-<span id="cb496-5"><a href="library-and-functions.html#cb496-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb496-6"><a href="library-and-functions.html#cb496-6" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span></code></pre></div>
+## (3, 4, 5, 'any')</code></pre>
+<p><strong>Example 2 - Middle overflow to args</strong></p>
+<div class="sourceCode" id="cb396"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb396-1"><a href="library-and-functions.html#cb396-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,<span class="op">*</span>args, y<span class="op">=</span><span class="dv">9</span>):</span>
+<span id="cb396-2"><a href="library-and-functions.html#cb396-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
+<span id="cb396-3"><a href="library-and-functions.html#cb396-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
+<span id="cb396-4"><a href="library-and-functions.html#cb396-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)     <span class="co">#tuple</span></span>
+<span id="cb396-5"><a href="library-and-functions.html#cb396-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb396-6"><a href="library-and-functions.html#cb396-6" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## 1
 ## 9
 ## (2, 3, 4, 5)</code></pre>
-</div>
-<div id="example-5" class="section level4" number="6.3.7.5">
-<h4>
-<span class="header-section-number">6.3.7.5</span> Example 5<a class="anchor" aria-label="anchor" href="#example-5"><i class="fas fa-link"></i></a>
-</h4>
-<p>All goes to args</p>
-<div class="sourceCode" id="cb498"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb498-1"><a href="library-and-functions.html#cb498-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(<span class="op">*</span>args):</span>
-<span id="cb498-2"><a href="library-and-functions.html#cb498-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)     <span class="co">#tuple</span></span>
-<span id="cb498-3"><a href="library-and-functions.html#cb498-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb498-4"><a href="library-and-functions.html#cb498-4" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span></code></pre></div>
+<p><strong>Example 3 - All goes to args</strong></p>
+<div class="sourceCode" id="cb398"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb398-1"><a href="library-and-functions.html#cb398-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(<span class="op">*</span>args):</span>
+<span id="cb398-2"><a href="library-and-functions.html#cb398-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)     <span class="co">#tuple</span></span>
+<span id="cb398-3"><a href="library-and-functions.html#cb398-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb398-4"><a href="library-and-functions.html#cb398-4" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## (1, 2, 3, 4, 5)</code></pre>
-</div>
-<div id="example-6-empty-args" class="section level4" number="6.3.7.6">
-<h4>
-<span class="header-section-number">6.3.7.6</span> Example 6 Empty args<a class="anchor" aria-label="anchor" href="#example-6-empty-args"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb500"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb500-1"><a href="library-and-functions.html#cb500-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y,<span class="op">*</span>args):</span>
-<span id="cb500-2"><a href="library-and-functions.html#cb500-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
-<span id="cb500-3"><a href="library-and-functions.html#cb500-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
-<span id="cb500-4"><a href="library-and-functions.html#cb500-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)</span>
-<span id="cb500-5"><a href="library-and-functions.html#cb500-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb500-6"><a href="library-and-functions.html#cb500-6" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>)</span></code></pre></div>
+<p><strong>Example 4 - Empty args</strong></p>
+<div class="sourceCode" id="cb400"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb400-1"><a href="library-and-functions.html#cb400-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> myfun(x,y,<span class="op">*</span>args):</span>
+<span id="cb400-2"><a href="library-and-functions.html#cb400-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
+<span id="cb400-3"><a href="library-and-functions.html#cb400-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
+<span id="cb400-4"><a href="library-and-functions.html#cb400-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)</span>
+<span id="cb400-5"><a href="library-and-functions.html#cb400-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb400-6"><a href="library-and-functions.html#cb400-6" aria-hidden="true" tabindex="-1"></a>myfun(<span class="dv">1</span>,<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## 1
 ## 2
 ## ()</code></pre>
 </div>
-</div>
-<div id="keyword-arguments" class="section level3" number="6.3.8">
+<div id="argument-kwargs" class="section level3" number="6.3.6">
 <h3>
-<span class="header-section-number">6.3.8</span> keyword arguments<a class="anchor" aria-label="anchor" href="#keyword-arguments"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3.6</span> Argument: kwargs<a class="anchor" aria-label="anchor" href="#argument-kwargs"><i class="fas fa-link"></i></a>
 </h3>
 <p>kwargs is a <strong>dictionary</strong></p>
-<div id="example-1-1" class="section level4" number="6.3.8.1">
-<h4>
-<span class="header-section-number">6.3.8.1</span> Example 1<a class="anchor" aria-label="anchor" href="#example-1-1"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb502"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb502-1"><a href="library-and-functions.html#cb502-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(<span class="op">**</span>kwargs):</span>
-<span id="cb502-2"><a href="library-and-functions.html#cb502-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs)</span>
-<span id="cb502-3"><a href="library-and-functions.html#cb502-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb502-4"><a href="library-and-functions.html#cb502-4" aria-hidden="true" tabindex="-1"></a>foo(a<span class="op">=</span><span class="dv">1</span>,b<span class="op">=</span><span class="dv">2</span>,c<span class="op">=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><strong>Example 1 - All goes into kwargs</strong></p>
+<div class="sourceCode" id="cb402"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb402-1"><a href="library-and-functions.html#cb402-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(<span class="op">**</span>kwargs):</span>
+<span id="cb402-2"><a href="library-and-functions.html#cb402-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs)</span>
+<span id="cb402-3"><a href="library-and-functions.html#cb402-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb402-4"><a href="library-and-functions.html#cb402-4" aria-hidden="true" tabindex="-1"></a>foo(a<span class="op">=</span><span class="dv">1</span>,b<span class="op">=</span><span class="dv">2</span>,c<span class="op">=</span><span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## {'a': 1, 'b': 2, 'c': 3}</code></pre>
-</div>
-<div id="example-2-1" class="section level4" number="6.3.8.2">
-<h4>
-<span class="header-section-number">6.3.8.2</span> Example 2<a class="anchor" aria-label="anchor" href="#example-2-1"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb504"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb504-1"><a href="library-and-functions.html#cb504-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(x,<span class="op">**</span>kwargs):</span>
-<span id="cb504-2"><a href="library-and-functions.html#cb504-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span>
-<span id="cb504-3"><a href="library-and-functions.html#cb504-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs)</span>
-<span id="cb504-4"><a href="library-and-functions.html#cb504-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb504-5"><a href="library-and-functions.html#cb504-5" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">9</span>,a<span class="op">=</span><span class="dv">1</span>,b<span class="op">=</span><span class="dv">2</span>,c<span class="op">=</span><span class="dv">3</span>)</span></code></pre></div>
+<p><strong>Example 2 - Tails overflow to kwargs</strong></p>
+<p>First param goes to x, the rest goes to kwargs.</p>
+<div class="sourceCode" id="cb404"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb404-1"><a href="library-and-functions.html#cb404-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(x,<span class="op">**</span>kwargs):</span>
+<span id="cb404-2"><a href="library-and-functions.html#cb404-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span>
+<span id="cb404-3"><a href="library-and-functions.html#cb404-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(kwargs)</span>
+<span id="cb404-4"><a href="library-and-functions.html#cb404-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb404-5"><a href="library-and-functions.html#cb404-5" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">9</span>,a<span class="op">=</span><span class="dv">1</span>,b<span class="op">=</span><span class="dv">2</span>,c<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb404-6"><a href="library-and-functions.html#cb404-6" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">9</span>)              <span class="co">## empty kwargs dictionary</span></span></code></pre></div>
 <pre><code>## 9
-## {'a': 1, 'b': 2, 'c': 3}</code></pre>
-<div class="sourceCode" id="cb506"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb506-1"><a href="library-and-functions.html#cb506-1" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">9</span>) <span class="co">#empty dictionary</span></span></code></pre></div>
-<pre><code>## 9
+## {'a': 1, 'b': 2, 'c': 3}
+## 9
 ## {}</code></pre>
-</div>
-<div id="example-3-1" class="section level4" number="6.3.8.3">
-<h4>
-<span class="header-section-number">6.3.8.3</span> Example 3<a class="anchor" aria-label="anchor" href="#example-3-1"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb508"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb508-1"><a href="library-and-functions.html#cb508-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(a,b,c,d<span class="op">=</span><span class="dv">1</span>):</span>
-<span id="cb508-2"><a href="library-and-functions.html#cb508-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(a)</span>
-<span id="cb508-3"><a href="library-and-functions.html#cb508-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(b)</span>
-<span id="cb508-4"><a href="library-and-functions.html#cb508-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(c)</span>
-<span id="cb508-5"><a href="library-and-functions.html#cb508-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(d)</span>
-<span id="cb508-6"><a href="library-and-functions.html#cb508-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb508-7"><a href="library-and-functions.html#cb508-7" aria-hidden="true" tabindex="-1"></a>foo(<span class="op">**</span>{<span class="st">"a"</span>:<span class="dv">2</span>,<span class="st">"b"</span>:<span class="dv">3</span>,<span class="st">"c"</span>:<span class="dv">4</span>})</span></code></pre></div>
-<pre><code>## 2
-## 3
-## 4
-## 1</code></pre>
-</div>
-</div>
-<div id="mixing-args-kwargs" class="section level3" number="6.3.9">
-<h3>
-<span class="header-section-number">6.3.9</span> Mixing *args, **kwargs<a class="anchor" aria-label="anchor" href="#mixing-args-kwargs"><i class="fas fa-link"></i></a>
-</h3>
-<p>Always put args <strong>before</strong> kwargs</p>
-<div id="example-1-2" class="section level4" number="6.3.9.1">
-<h4>
-<span class="header-section-number">6.3.9.1</span> Example 1<a class="anchor" aria-label="anchor" href="#example-1-2"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb510"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb510-1"><a href="library-and-functions.html#cb510-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(x,y<span class="op">=</span><span class="dv">1</span>,<span class="op">**</span>kwargs):</span>
-<span id="cb510-2"><a href="library-and-functions.html#cb510-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
-<span id="cb510-3"><a href="library-and-functions.html#cb510-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
-<span id="cb510-4"><a href="library-and-functions.html#cb510-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (kwargs)</span>
-<span id="cb510-5"><a href="library-and-functions.html#cb510-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb510-6"><a href="library-and-functions.html#cb510-6" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">1</span>,<span class="dv">2</span>,c<span class="op">=</span><span class="dv">3</span>,d<span class="op">=</span><span class="dv">4</span>)</span></code></pre></div>
-<pre><code>## 1
-## 2
-## {'c': 3, 'd': 4}</code></pre>
-</div>
-<div id="example-2-2" class="section level4" number="6.3.9.2">
-<h4>
-<span class="header-section-number">6.3.9.2</span> Example 2<a class="anchor" aria-label="anchor" href="#example-2-2"><i class="fas fa-link"></i></a>
-</h4>
-<div class="sourceCode" id="cb512"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb512-1"><a href="library-and-functions.html#cb512-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(x,y<span class="op">=</span><span class="dv">2</span>,<span class="op">*</span>args,<span class="op">**</span>kwargs):</span>
-<span id="cb512-2"><a href="library-and-functions.html#cb512-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x)</span>
-<span id="cb512-3"><a href="library-and-functions.html#cb512-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (y)</span>
-<span id="cb512-4"><a href="library-and-functions.html#cb512-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (args)</span>
-<span id="cb512-5"><a href="library-and-functions.html#cb512-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (kwargs)</span>
-<span id="cb512-6"><a href="library-and-functions.html#cb512-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb512-7"><a href="library-and-functions.html#cb512-7" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,c<span class="op">=</span><span class="dv">6</span>,d<span class="op">=</span><span class="dv">7</span>)</span></code></pre></div>
-<pre><code>## 1
-## 2
-## (3, 4, 5)
-## {'c': 6, 'd': 7}</code></pre>
-
-</div>
+<p><strong>Mixing args, kwargs</strong></p>
+<p>Always put <code>args</code> <strong>before</strong> <code>kwargs</code>, otherwise there will be an Error.</p>
+<div class="sourceCode" id="cb406"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb406-1"><a href="library-and-functions.html#cb406-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> foo(x,y<span class="op">=</span><span class="dv">2</span>,<span class="op">*</span>args,<span class="op">**</span>kwargs):</span>
+<span id="cb406-2"><a href="library-and-functions.html#cb406-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (x,y, args, kwargs)</span>
+<span id="cb406-3"><a href="library-and-functions.html#cb406-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb406-4"><a href="library-and-functions.html#cb406-4" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,c<span class="op">=</span><span class="dv">6</span>,d<span class="op">=</span><span class="dv">7</span>)  <span class="co">## ok</span></span>
+<span id="cb406-5"><a href="library-and-functions.html#cb406-5" aria-hidden="true" tabindex="-1"></a>foo(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,c<span class="op">=</span><span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">5</span>,d<span class="op">=</span><span class="dv">7</span>)  <span class="co">## ERROR, always puts args before kwargs</span></span></code></pre></div>
+<pre><code>## positional argument follows keyword argument (&lt;string&gt;, line 5)</code></pre>
 </div>
 </div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></div>
-<div class="next"><a href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></div>
+<div class="next"><a href="built-in-functions-1.html"><span class="header-section-number">7</span> Built-in Functions</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -437,22 +347,18 @@
 </li>
 <li>
 <a class="nav-link" href="#importing-library"><span class="header-section-number">6.2</span> Importing Library</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#import-entire-library"><span class="header-section-number">6.2.1</span> Import Entire Library</a></li>
-<li><a class="nav-link" href="#import-specific-function"><span class="header-section-number">6.2.2</span> Import Specific Function</a></li>
-<li><a class="nav-link" href="#machine-learning-packages"><span class="header-section-number">6.2.3</span> Machine Learning Packages</a></li>
+<li><a class="nav-link" href="#standalone-namespace"><span class="header-section-number">6.2.1</span> Standalone Namespace</a></li>
+<li><a class="nav-link" href="#global-namespace"><span class="header-section-number">6.2.2</span> Global Namespace</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#define-function"><span class="header-section-number">6.3</span> Define Function</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#function-arguments"><span class="header-section-number">6.3.1</span> Function Arguments</a></li>
+<a class="nav-link" href="#functions"><span class="header-section-number">6.3</span> Functions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#define"><span class="header-section-number">6.3.1</span> Define</a></li>
 <li><a class="nav-link" href="#list-within-function"><span class="header-section-number">6.3.2</span> List Within Function</a></li>
 <li><a class="nav-link" href="#return-statement"><span class="header-section-number">6.3.3</span> Return Statement</a></li>
-<li><a class="nav-link" href="#no-return-statement"><span class="header-section-number">6.3.4</span> No Return Statement</a></li>
-<li><a class="nav-link" href="#return-multiple-value"><span class="header-section-number">6.3.5</span> Return Multiple Value</a></li>
-<li><a class="nav-link" href="#passing-function-as-argument"><span class="header-section-number">6.3.6</span> Passing Function as Argument</a></li>
-<li><a class="nav-link" href="#arguments"><span class="header-section-number">6.3.7</span> Arguments</a></li>
-<li><a class="nav-link" href="#keyword-arguments"><span class="header-section-number">6.3.8</span> keyword arguments</a></li>
-<li><a class="nav-link" href="#mixing-args-kwargs"><span class="header-section-number">6.3.9</span> Mixing *args, **kwargs</a></li>
+<li><a class="nav-link" href="#argument"><span class="header-section-number">6.3.4</span> Argument</a></li>
+<li><a class="nav-link" href="#argument-args"><span class="header-section-number">6.3.5</span> Argument: args</a></li>
+<li><a class="nav-link" href="#argument-kwargs"><span class="header-section-number">6.3.6</span> Argument: kwargs</a></li>
 </ul>
 </li>
 </ul>
@@ -472,7 +378,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -1,0 +1,232 @@
+
+# Control and Loops
+
+## If Statement
+
+### Multiline If.. Statements
+
+```{python}
+price = 102
+if price <100:
+    print ('buy')
+elif price < 110:
+    print ('hold')
+elif price < 120:
+    print ('think about it')
+else:
+    print ('sell')
+print('end of programming')
+```
+
+### Single Line If .. Statement
+
+#### if ... In One Statement
+
+```{python}
+price = 70
+if price<80: print('buy')
+```
+
+#### Ternary Statemnt
+
+This statement return a value with simple condition
+
+```{python}
+price = 85
+'buy' if (price<80) else 'dont buy'
+```
+
+
+## For Loops
+
+### For .. Else Construct
+
+**`else`** is only executed when the for loop **completed all cycles**
+
+```{python}
+
+mylist = [1,2,3,4,5]
+
+for i in mylist:
+  print (i)
+else:
+  print('Hooray, the loop is completed successfully')
+```
+
+In below exmaple, for loop encountered **`break`**, hence the **`else`** section is not executed.
+
+```{python}
+for i in mylist:
+  if i < 4:
+    print (i)
+  else:
+    print('Oops, I am breaking out half way in the loop')
+    break
+else:
+  print('Hooray, the loop is completed successfully')
+```
+### Loop thorugh 'range'
+
+```{python}
+for i in range (1,10,2):
+    print ('Odds Number : ',i) 
+```
+
+
+### Loop through 'list'
+
+#### Standard For Loop
+
+```{python}
+letters = ['a','b','c','d']
+for e in letters:
+    print ('Letter : ',e)
+```
+
+
+#### List Comprehension
+
+Iterate through existing list, and **build new list** based on condition  
+```new_list = [expression(i) for i in old_list]```
+
+```{python}
+s = ['abc','abcd','bcde','bcdee','cdefg']
+[x.upper() for x in s]
+```
+
+
+Extend list comprehension can be extended with **```if```** condition**  
+```new_list = [expression(i) for i in old_list if filter(i)]```
+
+```{python}
+old_list    = ['abc','abcd','bcde','bcdee','cdefg']
+matching = [ x.upper() for x in old_list if 'bcd' in x ]
+print( matching )
+```
+
+
+### Loop Through 'Dictionary'
+
+Looping through dict will picup **key**
+
+```{python, jupyter_meta = list(scrolled = TRUE)}
+d = {"x": 1, "y": 2}
+for key in d:
+    print (key, d[key])
+```
+
+
+## Generators
+
+
+- Generator is lazy, produce items only if asked for, hence more memory efficient
+- Generator is **function** with 'yield' instead of 'return'  
+- Generator contains one or more yields statement  
+- When called, it returns an object (iterator) but **does not start execution** immediately  
+- Methods like __iter__() and __next__() are implemented automatically. So we can iterate through the items using **next()**  
+- Once the function yields, the **function is paused** and the control is transferred to the caller  
+- Local variables and their states are **remembered** between successive calls  
+- Finally, when the function **terminates**, **StopIteration** is raised automatically on further calls
+
+
+### Basic Generator Function
+Below example give clear understanding of how generator works
+
+```{python}
+def my_gen():
+    n = 1
+    print('This is printed first')
+    # Generator function contains yield statements
+    yield n
+
+    n += 1
+    print('This is printed second')
+    yield n
+
+    n += 1
+    print('This is printed at last')
+    yield n
+```
+
+```{python}
+a = my_gen()
+type(a)
+```
+
+```{python}
+next(a)
+```
+
+```{python}
+next(a)
+```
+
+
+### Useful Generator Fuction
+Generator is only useful when it uses **for-loop**
+- for-loop within generator
+- for-loop to iterate through a generator
+
+```{python}
+def rev_str(my_str):
+    length = len(my_str)
+    for i in range(length - 1,-1,-1):
+        yield my_str[i]
+```
+
+```{python}
+for c in rev_str("hello"):
+     print(c)
+```
+
+### Generator Expression
+Use () to create an annonymous generator function
+
+```{python}
+my_list = [1, 3, 6, 10]
+a = (x**2 for x in my_list)
+```
+
+```{python}
+next(a)
+```
+
+```{python}
+next(a)
+```
+
+```{python}
+sum(a) # sum the power of 6,10
+```
+
+
+### Compare to Iterator Class
+
+```{python}
+class PowTwo:
+    def __init__(self, max = 0):
+        self.max = max
+
+    def __iter__(self):
+        self.n = 0
+        return self
+
+    def __next__(self):
+        if self.n > self.max:
+            raise StopIteration
+
+        result = 2 ** self.n
+        self.n += 1
+        return result
+```
+
+
+**Obviously, Generator is more concise and cleaner**
+
+```{python}
+def PowTwoGen(max = 0):
+    n = 0
+    while n < max:
+        yield 2 ** n
+        n += 1
+```

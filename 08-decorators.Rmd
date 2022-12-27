@@ -1,0 +1,102 @@
+# Decorator
+
+
+## Definition
+- **Decorator** is a function that accept callable as the **only argument**
+- The main purpose of decarator is to **enhance** the program of the decorated function
+- It returns a **callable**
+
+## Examples
+
+### Example 1 - Plain decorator function
+- Many times, it is useful to register a function elsewhere - for example, registering a task in a task runner, or a functin with signal handler
+- **register** is a decarator, it accept **decorated** as the only argument
+- foo() and bar() are the **decorated function** of **register**
+
+```{python}
+registry = []
+
+def register(decorated):
+    registry.append(decorated)
+    return decorated
+
+@register
+def foo():
+    return 3
+
+@register
+def bar():
+    return 5
+```
+
+```{python}
+registry
+```
+
+```{python}
+registry[0]()
+```
+
+```{python}
+registry[1]()
+```
+
+### Example 2 - Decorator with Class
+- Extending the use case above
+- register is the **decarator**, it has only one argument
+
+```{python}
+class Registry(object):
+    def __init__(self):
+        self._functions = []
+    def register(self,decorated):
+        self._functions.append(decorated)
+        return decorated
+    def run_all(self,*args,**kwargs):
+        return_values = []
+        for func in self._functions:
+            return_values.append(func(*args,**kwargs))
+        return return_values
+```
+
+
+The decorator will decorate two functions, for both object **a** and **b**
+
+```{python}
+a = Registry()
+b = Registry()
+
+@a.register
+def foo(x=3):
+    return x
+
+@b.register
+def bar(x=5):
+    return x
+
+@a.register
+@b.register
+def bax(x=7):
+    return x
+```
+
+Observe the result
+
+```{python}
+print (a._functions)
+print (b._functions)
+```
+
+```{python}
+print (a.run_all())
+print (b.run_all())
+```
+
+```{python}
+
+```
+
+```{python}
+print ( a.run_all(x=9) )
+print ( b.run_all(x=9) )
+```

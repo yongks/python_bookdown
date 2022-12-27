@@ -1,0 +1,319 @@
+
+# Library and Functions
+Library are group of functions
+
+
+## Package Source
+
+
+### Conda
+- Package manager for any language  
+- Install binaries
+
+
+### PIP
+- Package manager python only  
+- Compile from source  
+- Stands for Pip Installs Packages  
+- Python's officially-sanctioned package manager, and is most commonly used to install packages published on the **Python Package Index (PyPI)**  
+- Both pip and PyPI are governed and supported by the Python Packaging Authority (PyPA).
+
+
+## Importing Library
+
+There are two methods to import library functions:  
+
+**Standalone Namespace**
+```
+- import <libName>                        # access function through: libName.functionName
+- import <libName> as <shortName>         # access function through: shortName.functionName
+```
+**Global Namespace**
+```
+- from   <libName> import *               # all functions available at global namespace
+- from   <libName> import <functionName>  # access function through: functionName    
+- from   <libName> import <functionName> as <shortFunctionName>  # access function through shortFunctionName
+```
+
+
+### Import Entire Library
+
+
+#### Import Into Standalone Namespace
+
+```{python}
+import math
+math.sqrt(9)
+```
+
+
+Use **as** for aliasing library name. This is useful if you have conflicting library name
+
+```{python}
+import math as m
+m.sqrt(9)
+```
+
+
+#### Import Into Global Name Space
+All functions in the library accessible through global namespace
+```
+from <libName> import *
+```
+
+
+### Import Specific Function
+
+```{python}
+from math import sqrt
+print (sqrt(9))
+```
+
+
+Use **as** for aliasing function name
+
+```{python}
+from math import sqrt as sq
+print (sq(9))
+```
+
+
+### Machine Learning Packages
+
+![alt text](img/ml_libraries.jpg)
+
+
+## Define Function
+
+### Function Arguments
+By default, arguments are assigned to function left to right
+
+```{python}
+def myfun(x,y):
+    print ('x:',x)
+    print ('y:',y)
+    
+myfun(5,8)
+```
+
+However, you can also specify the argument assigment during function call
+
+```{python}
+myfun (y=8,x=5)
+```
+
+
+Function can have **default argement value**
+
+```{python}
+def myfun(x=1,y=1):  # default argument value is 1
+    print ('x:',x)
+    print ('y:',y)
+    
+myfun(5)  # pass only one argument
+```
+
+
+### List Within Function
+
+Consider a function is an object, its variable (some_list) is immutable and hence its reference won't change, even data changes
+
+```{python}
+def spam (elem, some_list=[]):
+    some_list.append(elem)
+    return some_list
+
+print (spam(1))
+print (spam(2))
+print (spam(3))
+```
+
+
+### Return Statement
+
+```{python}
+def bigger(x,y):
+    if (x>y):
+        return x
+    else:
+        return y
+    
+print (bigger(5,8))
+```
+
+
+### No Return Statement
+if no **return** statement, python return **None**
+
+```{python}
+def dummy():
+    print ('This is a dummy function, return no value')
+
+dummy()
+```
+
+
+### Return Multiple Value
+Multiple value is returned as **tuple**. Use multiple assignment to assign to multiple variable
+
+```{python}
+def minmax(x,y,z):
+    return min(x,y,z), max(x,y,z)
+
+a,b = minmax(7,8,9)     # multiple assignment
+c   = minmax(7,8,9)     # tuple
+
+print (a,b)
+print (c)    
+```
+
+
+### Passing Function as Argument 
+You can pass a function name as an argument to a function
+
+```{python}
+def myfun(x,y,f):
+    f(x,y)
+
+myfun('hello',54,print)
+```
+
+
+### Arguments
+
+args is a **tuple**
+
+
+#### Example 1
+Error example, too many parameters passed over to function
+
+
+#### Example 2
+First argument goes to x, remaining goes to args as tuple
+
+```{python}
+def myfun(x,*args):
+    print (x)
+    print (args)     #tuple
+    
+myfun(1,2,3,4,5,'abc')
+```
+
+
+#### Example 3
+First argument goes to x, second argument goest to y, remaining goes to args
+
+```{python}
+def myfun(x,y,*args):
+    print (x)
+    print (y)
+    print (args)     #tuple
+    
+myfun(1,2,3)
+```
+
+
+#### Example 4
+
+```{python}
+def myfun(x,*args, y=9):
+    print (x)
+    print (y)
+    print (args)     #tuple
+    
+myfun(1,2,3,4,5)
+```
+
+
+#### Example 5
+All goes to args
+
+```{python}
+def myfun(*args):
+    print (args)     #tuple
+    
+myfun(1,2,3,4,5)
+```
+
+
+#### Example 6 Empty args
+
+```{python}
+def myfun(x,y,*args):
+    print (x)
+    print (y)
+    print (args)
+    
+myfun(1,2)
+```
+
+
+### keyword arguments
+kwargs is a **dictionary**
+
+
+#### Example 1
+
+```{python}
+def foo(**kwargs):
+    print(kwargs)
+    
+foo(a=1,b=2,c=3)
+```
+
+
+#### Example 2
+
+```{python}
+def foo(x,**kwargs):
+    print(x)
+    print(kwargs)
+    
+foo(9,a=1,b=2,c=3)
+```
+
+```{python}
+foo(9) #empty dictionary
+```
+
+
+#### Example 3
+
+```{python}
+def foo(a,b,c,d=1):
+    print(a)
+    print(b)
+    print(c)
+    print(d)
+    
+foo(**{"a":2,"b":3,"c":4})
+```
+
+
+### Mixing *args, **kwargs
+
+Always put args **before** kwargs
+
+#### Example 1
+
+```{python}
+def foo(x,y=1,**kwargs):
+    print (x)
+    print (y)
+    print (kwargs)
+    
+foo(1,2,c=3,d=4)
+```
+
+
+#### Example 2
+
+```{python}
+def foo(x,y=2,*args,**kwargs):
+    print (x)
+    print (y)
+    print (args)
+    print (kwargs)
+    
+foo(1,2,3,4,5,c=6,d=7)
+```

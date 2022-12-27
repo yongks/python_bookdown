@@ -1,0 +1,756 @@
+
+
+# Built-in Data Types
+
+## Numbers
+Two types of built-in number type, **integer and float**.
+
+### Integer
+
+```{python}
+n = 123
+type (n)
+```
+
+### Float
+
+```{python}
+f = 123.4
+type (f)
+```
+
+### Number Operators
+
+In general, when the operation potentially return **float**, the result is float type. Otherwise it return **integer**.
+
+**Division** always return float
+
+```{python, }
+print(4/2)  # return float
+type(4/2)
+```
+
+**Integer Division** by integer return inter. Integer division by float return float.
+
+```{python, }
+print (8//3,'\n',    # return int
+       8//3.2)       # return float
+```
+
+**Remainder** by integer return **integer**.  
+Remainder by float return **float**
+
+```{python, }
+print (8%3, '\n',    # return int
+       8%3.2)        # return float
+```
+
+**Power** return int or float
+
+```{python, }
+print (2**3)    # return int
+print (2.1**3)  # return float
+print (2**3.1)  # return float
+```
+
+## String
+
+String is an object class 'str'. It is an **ordered collection of letters**, an **array** of object type **str**
+
+```{python}
+import string
+s = 'abcde'
+print( '\nvar type  = ', type(s),
+       '\nelems     = ',s[0], s[1], s[2],
+       '\nlen       = ', len(s),
+       '\nelem type = ',type(s[1]))
+```
+
+### Constructor
+
+#### Classical Method
+
+```class str(object='')```
+
+```{python}
+my_string = str()        ## empty string
+```
+
+```class str(object=b'', encoding='utf-8', errors='strict')```
+
+```{python}
+my_string = str('abc')
+```
+
+#### Shortcut Method
+
+```{python}
+my_string = 'abc'
+```
+
+#### Multiline Method
+
+```{python}
+my_string = '''
+This is me.
+Yong Keh Soon
+'''
+print(my_string)
+```
+Note that the variable contain **```\n```** front and end of the string.
+
+```{python}
+my_string
+```
+
+
+#### Immutability
+
+- String is **immuatable**. Changing its content will result in **error** 
+
+```{python}
+s = 'abcde'
+print ('s : ', id(s))
+#s[1] = 'z'               # immutable, result in error
+```
+
+- Changing the variable completley change the reference (for new object)
+
+```{python}
+s = 'efgh'
+print ('s : ', id(s))
+```
+
+### Class Constants
+
+#### Letters
+
+```{python}
+print( 'letters = ', string.ascii_letters,
+        '\nlowercase = ',string.ascii_lowercase,
+        '\nuppercase = ',string.ascii_uppercase )
+```
+
+#### Digits
+
+```{python}
+string.digits
+```
+
+#### White Spaces
+
+```{python}
+string.whitespace
+```
+
+### Instance Methods
+
+#### Substitution : **```format()```**
+
+**By Positional**
+
+```{python}
+print( '{} + {} = {}'.format('a', 'b', 'c'),         # auto sequence
+       '\n{0} + {1} = {2}'.format('aa', 'bb', 'cc')) # manual sequence
+```
+
+**By Name**
+
+```{python}
+'Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W') ## constant
+```
+
+**By Dictionary Name**
+
+```{python}
+coord = {'latitude': '37.24N', 'longitude': '-115.81W'} ## dictionary key/value
+'Coordinates: {latitude}, {longitude}'.format(**coord)
+```
+
+**Formatting Number** 
+
+Float
+
+```{python}
+'{:+f}; {:+f}'.format(3.14, -3.14)  # show it always
+```
+
+```{python}
+'{: f}; {: f}'.format(3.14, -3.14)  # show a space for positive numbers
+```
+
+```{python}
+'Correct answers: {:.2f}'.format(55676.345345)
+```
+
+Integer, Percentage
+
+```{python}
+'{0:,}   {0:.2%}   {0:,.2%}'.format(1234567890.4455)
+```
+
+**Alignment**
+
+```{python}
+'{0:<20}   {0:<<20}'.format('left aligned')
+```
+
+```{python}
+'{0:>20}  {0:$>20}'.format('right aligned')
+```
+
+```{python}
+'{:^30}'.format('centered')  # use '*' as a fill char
+```
+
+#### Substitution : **```f-string```**
+
+```{python}
+my_name = 'Yong Keh Soon'
+salary  = 11123.346
+f'Hello, {my_name}, your salary is {salary:,.2f} !'
+```
+
+#### Conversion: ```upper() lower()```
+
+```{python}
+'myEXEel.xls'.upper()
+```
+
+```{python}
+'myEXEel.xls'.lower()
+```
+
+#### ```find()``` pattern position
+```
+string.find() return position of first occurance. -1 if not found
+```
+
+```{python}
+s='I love karaoke, I know you love it oo'
+print (s.find('lov'))
+print (s.find('kemuning'))
+```
+
+
+#### ```strip()``` off blank spaces
+
+```{python}
+filename = '  myexce l.   xls   '
+filename.strip()
+```
+
+
+#### List Related: ```split()```
+
+Splitting delimeter is specified. Observe the empty spaces were conserved in result array
+
+```{python}
+animals = 'a1,a2 ,a3, a4'
+animals.split(',')
+```
+
+#### List Related: ```join()```
+
+```{python}
+'-'.join(['1', '2', '3', '4'])
+```
+
+#### Replacement: `.replace()`
+
+```{python}
+string = "geeks for geeks geeks geeks geeks" 
+   
+# Prints the string by replacing geeks by Geeks  
+print(string.replace("geeks", "Geeks"))  
+  
+# Prints the string by replacing only 3 occurrence of Geeks   
+print(string.replace("geeks", "GeeksforGeeks", 3)) 
+```
+ 
+
+### Operator
+
+#### ```%``` Old Style Substitution
+
+https://docs.python.org/3/library/stdtypes.html#old-string-formatting
+
+```{python}
+my_name = 'Yong Keh Soon'
+salary  = 11123.346
+'Hello, %s, your salary is %.2f !' %(my_name, salary)
+```
+
+#### ```+``` Concatenation
+
+```{python}
+'this is ' + 'awesome'
+```
+
+#### ```in```  matching
+
+For single string, **partial match**
+
+```{python}
+print( 'abc' in '123abcdefg' )
+```
+
+For list of strings, **exact match** (even though only one element in list).  
+For partial match, workaround is to **convert list to single string**
+
+```{python}
+print( 'abc' in ['abcdefg'],             # false
+       'abc' in ['abcdefg','123'],       # fakse
+       'abc' in ['123','abc','def'],     # true
+       'abc' in str(['123','abcdefg']))  # true
+```
+
+#### Comparitor
+
+Comparitor compares the memory address.
+
+```{python}
+a='abc'
+b='abc'
+print('id(a) = ', id(a), 
+      '\nid(b) = ', id(b),
+      '\na == b  ', a==b)
+```
+
+### Iterations
+```
+string[start:end:step]  # default start:0, end:last, step:1
+```
+If step is negative (reverse), end value must be lower than start value
+
+```{python}
+s = 'abcdefghijk'
+print (s[0])       # first later
+print (s[:3])      # first 3 letters
+print (s[2:8 :2])  # stepping
+print (s[-1])      # last letter
+print (s[-3:])     # last three letters
+print (s[:   :-1]) # reverse everything
+print (s[8:2 :-1])
+print (s[8:2])     # return NOTHING
+```
+
+
+## Boolean
+
+```{python}
+b = False
+
+if (b):
+    print ('It is true')
+else:
+    print ('It is fake')
+```
+
+### What is Considered False ?
+
+Everything below are false, **anything else are true**
+
+```{python}
+print ( bool(0),      # zero
+        bool(None),  # none
+        bool(''),    # empty string
+        bool([]),    # empty list
+        bool(()),    # empty tupple
+        bool(False), # False
+        bool(2-2))    # expression that return any value above
+```
+
+### ```and``` operator
+
+BEWARE !  
+
+- **and** can return different data types  
+- If evaluated result is **True**, the last **True Value** is returned (because python need to evaluate up to the last value)  
+- If evaluated result is **False**, the first **False Value** will be returned (because python return it immediately when detecting False value)
+
+```{python}
+print (123 and 2 and 1,
+       123 and [] and 2)
+```
+
+### ```not``` operator
+
+```{python}
+not (True)
+not (True or False)
+not (False)
+not (True and False)
+~(False)
+```
+
+### ```or``` operator
+- **or** can return different data type  
+- If evaluated result is True, first **True Value** will be returned  (right hand side value **need not be evaluated**)  
+- If evaluated result is False, last **Fasle Value** will be returned (need to evalute all items before concluding False)
+
+```{python}
+print (1 or 2)
+print (0 or 1 or 1)
+print (0 or () or [])
+```
+
+
+## None
+
+### None is an Object
+
+- None is a Python **object NonType**  
+- Any operation to None object will result in **error**  
+- For array data with None elements, verification is required to check through iteration to determine if the item is not None. It is very computaionaly heavy 
+
+```{python}
+type(None)
+```
+
+```{python}
+import numpy as np
+
+t1 = np.array([1, 2, 3, 4, 5])
+t2= np.array([1, 2, 3, None, 4, 5])
+print( t1.dtype  , '\n\n',    # it's an object
+       t2.dtype)
+```
+
+### Comparing None
+
+**Not Prefered Method**
+
+```{python}
+null_variable = None
+print( null_variable == None )
+```
+
+**Prefered**
+
+```{python}
+print( null_variable is None )
+print( null_variable is not None )
+```
+
+### Operation on None
+
+Any operator (except `is`) on None results in error.
+
+```{python, error = TRUE}
+None & None
+```
+
+
+
+
+# datetime Standard Library
+This is a built-in library by Python. There is no need to install this library.
+
+## ISO8601
+
+https://en.wikipedia.org/wiki/ISO_8601#Time_zone_designators
+
+### Date Time
+```UTC:   "2007-04-05T14:30Z"      #notice Z
+GMT+8:  "2007-04-05T12:30+08:00  #notice +08:00
+GMT+8:  "2007-04-05T12:30+0800   #notice +0800
+GMT+8:  "2007-04-05T12:30+08     #notice +08```
+
+### Date
+2019-02-04 #notice no timezone available
+
+
+## Module Import
+
+```{python}
+from datetime import date     # module for date object
+from datetime import time     # module for time object
+from datetime import datetime # module for datetime object
+from datetime import timedelta
+```
+
+
+## Class
+datetime library contain **three class of objects**:  
+- **date** (year,month,day)  
+- **time** (hour,minute,second)  
+- **datetime** (year,month,day,hour,minute,second)  
+- **timedelta**: duration between two datetime or date object
+
+## date
+
+### Constructor
+
+```{python}
+print( date(2000,1,1) )
+print( date(year=2000,month=1,day=1) )
+print( type(date(year=2000,month=1,day=1)))
+```
+
+
+### Class Method
+
+#### ```today```
+This is **local date** (not UTC)
+
+```{python}
+date.today()
+```
+
+```{python}
+print( date.today() )
+```
+
+
+#### Convert From ISO ```fromisoformat```
+```strptime``` is **not available for date** conversion. It is only for datetime conversion
+
+```{python}
+date.fromisoformat('2011-11-11')
+```
+
+To convert **non-iso format** date string to date object, **convert to datetime first**, then to date
+
+### Instance Method
+
+#### ```replace()```
+- Replace **year/month/day** with specified parameter, non specified params will remain unchange.  
+- Example below change only month. You can change year or day in combination
+
+```{python}
+print( date.today() )
+print( date.today().replace(month=8) )
+```
+
+#### ```weekday(), isoweekday()```
+For ```weekday()```, Zero being Monday   
+For ```isoweekday()```, Zero being Sunday
+
+```{python}
+print( date.today().weekday() )
+print( date.today().isoweekday() )
+```
+
+```{python}
+weekdays = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+wd = date.today().weekday()
+print( date.today(), "is day", wd ,"which is", weekdays[wd] )
+```
+
+#### Formating with ```isoformat()```
+```isoformat()``` return **ISO 8601 String (YYYY-MM-DD)**
+
+```{python}
+date.today().isoformat() # return string
+```
+
+#### Formating with ```strftime```
+For complete directive, see below:  
+https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
+
+```{python}
+date.today().strftime("%m/%d")
+```
+
+#### ```isocalendar()```
+```isocalendar``` return a 3-tuple, **(ISO year, ISO week number, ISO weekday)**.
+
+```{python}
+date.today().isocalendar() ## return tuple 
+```
+
+### Attributes
+
+```{python}
+print( date.today().year )
+print( date.today().month )
+print( date.today().day )
+```
+
+
+## date and datetime
+
+### Constructor
+
+```{python}
+import datetime as dt
+
+print( 
+    dt.date(2000,1,1,), '\n',
+    dt.datetime(2000,1,1,0,0,0), '\n',
+    dt.datetime(year=2000,month=1,day=1,hour=23,minute=15,second=55),'\n',
+    type(dt.date(2000,1,1)),'\n',
+    type(dt.datetime(2000,1,1,0,0,0)))
+```
+
+### Class Method
+
+#### ```now``` and ```today```
+Both ```now()``` and ```today()``` return current **system local**  datetime, no timezone
+
+```{python}
+print(  dt.datetime.now(), '\n',
+        dt.datetime.now().date())
+```
+
+```{python}
+dt.datetime.today()
+```
+
+#### ```utcnow```
+
+```{python}
+dt.datetime.utcnow()
+```
+
+#### ```combine()``` date and time
+
+Apply ```datetime.combine()``` module method on both **date and time**  object to get **datetime**
+
+```{python}
+now = dt.datetime.now()
+dt.datetime.combine(now.date(), now.time())
+```
+
+#### Convert from String ```strptime()```
+
+Use **```strptime```** to convert string into **datetime** object
+
+```
+%I : 12-hour
+%H : 24-hour
+%M : Minute
+%p : AM/PM
+%y : 18
+%Y : 2018
+%b : Mar
+%m : month (1 to 12)
+%d : day
+```
+
+```{python}
+datetime.strptime('2011-02-25','%Y-%m-%d')
+```
+
+```{python}
+datetime.strptime('9-01-18','%d-%m-%y')
+```
+
+```{python}
+datetime.strptime('09-Mar-2018','%d-%b-%Y')
+```
+
+```{python}
+datetime.strptime('2/5/2018 4:49 PM', '%m/%d/%Y %I:%M %p')
+```
+
+#### Convert from ISO ```fromisoformat```
+
+- ```fromisoformat()``` is intend to be reverse of ```isoformat()```  
+-  It actually **not ISO compliance**: when Z or +8 is included at the end of the string, error occur
+
+```{python}
+#s = dt.datetime.now().isoformat()
+dt.datetime.fromisoformat("2019-02-05T10:22:33")
+```
+
+### Instance Method
+
+#### ```weekday```
+
+```{python}
+datetime.now().weekday()
+```
+
+#### ```replace```
+
+```{python}
+datetime.now().replace(year=1999)
+```
+
+#### convert to ```.time()```
+
+```{python, jupyter_meta = list(scrolled = TRUE)}
+datetime.now().time()
+```
+
+#### Convert to ```.date()```
+
+```{python}
+datetime.now().date()
+```
+
+#### Convert to String
+
+**```str```**
+
+```{python}
+str( datetime.now() )
+```
+
+**Use ```strftime()```**
+
+```{python, jupyter_meta = list(scrolled = TRUE)}
+dt.datetime.now().strftime('%d-%b-%Y')
+```
+
+```{python}
+dt.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ')  ## ISO 8601 UTC
+```
+
+**Use ```isoformat()```**
+
+```{python}
+dt.datetime.utcnow().isoformat()
+```
+
+### Attributes
+
+```{python}
+print( datetime.now().year )
+print( datetime.now().month )
+print( datetime.now().day )
+print( datetime.now().hour )
+print( datetime.now().minute )
+```
+
+## time
+
+### Constructor
+
+```{python}
+print( time(2) )    #default single arugement, hour
+print( time(2,15) ) #default two arguments, hour, minute
+print( time(hour=2,minute=15,second=30) )
+```
+
+### Class Method
+#### ```now()```
+There is unfortunately no single function to extract the current time. Use **time()** function of an **datetime** object
+
+```{python}
+datetime.now().time()
+```
+
+### Attributes
+
+```{python}
+print( datetime.now().time().hour )
+print( datetime.now().time().minute )
+print( datetime.now().time().second )
+```
+
+## timedelta
+- **years** argument is **not supported**  
+- Apply timedelta on **datetime** object  
+- timedelta **cannot** be applied on **time object**  , because timedelta potentially go beyond single day (24H)
+
+```{python}
+delt = timedelta(days=365,minutes=33,seconds=15)
+```
+
+```{python}
+now = datetime.now()
+print ('delt+now : ', now+delt)
+```

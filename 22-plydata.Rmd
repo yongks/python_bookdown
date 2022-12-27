@@ -1,0 +1,186 @@
+
+# Plydata (dplyr for Python)
+
+## Sample Data
+
+```{python, }
+import pandas as pd
+import numpy as np
+from plydata import define, query, if_else, ply, select, rename, arrange, group_by, summarize
+
+n = 200
+comp = ['C' + i for i in np.random.randint( 1,4, size  = n).astype(str)] # 3x Company
+dept = ['D' + i for i in np.random.randint( 1,6, size  = n).astype(str)] # 5x Department
+grp =  ['G' + i for i in np.random.randint( 1,3, size  = n).astype(str)] # 2x Groups
+value1 = np.random.normal( loc=50 , scale=5 , size = n)
+value2 = np.random.normal( loc=20 , scale=3 , size = n)
+#value3 = np.random.normal( loc=5 , scale=30 , size = n)
+
+mydf = pd.DataFrame({
+    'comp':comp, 
+    'dept':dept, 
+    'grp': grp,
+    'value1':value1, 
+    'value2':value2
+    #'value3':value3 
+})
+mydf.head()
+```
+
+## Column Manipulation
+
+### Copy Column
+
+```{python, }
+mydf >> define(newcol = 'value1')                 # simple method for one column
+```
+
+```{python, jupyter_meta = list(hidden = TRUE, scrolled = TRUE)}
+mydf >> define (('newcol1', 'value1'), newcol2='value2')  # method for muiltiple new columns
+```
+
+<!-- jupyter_markdown,  -->
+### New Column from existing Column
+
+<!-- jupyter_markdown,  -->
+**Without specify the new column name**, it will be derived from expression
+
+```{python, }
+mydf >> define ('value1*2')
+```
+
+<!-- jupyter_markdown,  -->
+**Specify the new column name**
+
+```{python, }
+mydf >> define(value3 = 'value1*2')
+```
+
+<!-- jupyter_markdown,  -->
+Define **multiple** new columns in one go. Observe there are three ways to specify the new columns
+
+```{python, }
+mydf >> define('value1*2',('newcol2','value2*2'),newcol3='value2*3')
+```
+
+<!-- jupyter_markdown,  -->
+### Select Column(s)
+
+```{python, }
+mydf2 = mydf >> define(newcol1='value1',newcol2='value2')
+mydf2.info()
+```
+
+<!-- jupyter_markdown,  -->
+#### By Column Names
+**Exact Coumn Name**
+
+```{python, }
+mydf2 >> select ('comp','dept','value1')
+```
+
+**Column Name Starts With** ...
+
+```{python, }
+mydf2 >> select ('comp', startswith='val')
+```
+
+**Column Name Ends With ...**
+
+```{python, }
+mydf2 >> select ('comp',endswith=('1','2','3'))
+```
+
+**Column Name Contains ...**
+
+```{python, }
+mydf2 >> select('comp', contains=('col','val'))
+```
+
+#### Specify Column Range
+
+```{python, }
+mydf2 >> select ('comp', slice('value1','newcol2'))
+```
+
+### Drop Column(s)
+
+```{python, }
+mydf2 >> select('newcol1','newcol2',drop=True)
+```
+
+
+```{python, }
+mydf >> rename( {'val.1' : 'value1',
+                 'val.2' : 'value2' })
+```
+
+**Combined Method**  
+Combine both assignment and dictionary method
+
+```{python, }
+mydf >> rename( {'val.1' : 'value1',
+                 'val.2' : 'value2'
+              }, group = 'grp' )
+```
+
+## Sorting (arrange)
+Use **'-colName'** for decending
+
+```{python, }
+mydf >> arrange('comp', '-value1')
+```
+
+```{python, }
+
+```
+
+```{python, }
+
+```
+
+## Grouping
+
+```{python, }
+mydf.info()
+```
+
+```{python, }
+gdf = mydf >> group_by('comp','dept')
+type(gdf)
+```
+
+## Summarization
+
+### Simple Method
+**Passing Multiple Expressions**
+
+```{python, }
+gdf >> summarize('n()','sum(value1)','mean(value2)')
+```
+
+### Specify Summarized Column Name
+
+**Assignment Method**  
+- Passing colName='expression'**  
+- Column name cannot contain special character
+
+```{python, }
+gdf >> summarize(count='n()',v1sum='sum(value1)',v2_mean='mean(value2)')
+```
+
+**Tuple Method ('colName','expression')**  
+Use when the column name contain special character
+
+```{python, }
+gdf >> summarize(('count','n()'),('v1.sum','sum(value1)'),('s2.sum','sum(value2)'),v2mean=np.mean(value2))
+```
+
+
+### Number of Rows in Group
+- n()        : total rows in group  
+- n_unique() : total of rows with unique value
+
+```{python, }
+gdf >> summarize(count='n()', va11_unique='n_unique(value1)')
+```

@@ -1,0 +1,74 @@
+
+
+# Object Oriented Programming
+
+## Defining Class
+
+- Every function within a class **must have** at least one parameter - **self**  
+- Use **init** as the constructor function. **init** is optional
+
+```{python}
+class Person:
+  wallet = 0  # 
+  def __init__(self, myname,money=0):   # constructor
+      self.name = myname
+      self.wallet=money
+      print('I\'m in Person Constructor: {}'.format(myname))
+  def say_hi(self):
+      print('Hello, my name is : ', self.name)
+  def say_bye(self):
+      print('Goodbye', Person.ID)
+  def take(self,amount):
+      self.wallet+=amount
+  def balance(self):
+      print('Wallet Balance:',self.wallet)
+  def MakeCry(self):
+      self.Cry()
+      
+class Kid(Person):
+  def __init__(self, myname, money=0):
+      print('I\'m in Kid Constructor: {}'.format(myname))
+      super().__init__(myname=myname, money=money)
+  def Cry(self):
+      print('Kid is crying')
+```
+
+## Constructor
+
+```{python}
+p1 = Person('Yong')  
+p2 = Person('Gan',200)
+p3 = Kid('Jolin',50)
+```
+
+## Calling Method
+
+```{python}
+p1.say_hi()
+p1.balance()
+p3.Cry()
+p3.MakeCry()
+```
+
+```{python}
+p2.say_hi()
+p2.balance()
+```
+
+## Getting Property
+
+```{python}
+p1.wallet
+```
+
+```{python}
+p2.wallet
+```
+
+
+## Setting Property
+
+```{python}
+p1.wallet = 900
+p1.wallet
+```

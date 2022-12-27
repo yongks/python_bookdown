@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 1 Fundamentals | Python Bookdown</title>
 <meta name="author" content="Yong Keh Soon">
-<meta name="description" content="1.1 Library Management  1.1.1 Built-In Libraries import string import datetime as dt  1.1.2 Common External Libraries import numpy as np import pandas as pd import datetime as dt import matplotlib...">
+<meta name="description" content="1.1 Library Management  1.1.1 Built-In Libraries import string import datetime as dt import os #os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = &quot;C:\ProgramData\Anaconda3\Library\plugins\platforms&quot; ...">
 <meta name="generator" content="bookdown 0.31 with bs4_book()">
 <meta property="og:title" content="Chapter 1 Fundamentals | Python Bookdown">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/yongks/python_bookdown/fundamentals.html">
-<meta property="og:description" content="1.1 Library Management  1.1.1 Built-In Libraries import string import datetime as dt  1.1.2 Common External Libraries import numpy as np import pandas as pd import datetime as dt import matplotlib...">
+<meta property="og:description" content="1.1 Library Management  1.1.1 Built-In Libraries import string import datetime as dt import os #os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = &quot;C:\ProgramData\Anaconda3\Library\plugins\platforms&quot; ...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 1 Fundamentals | Python Bookdown">
-<meta name="twitter:description" content="1.1 Library Management  1.1.1 Built-In Libraries import string import datetime as dt  1.1.2 Common External Libraries import numpy as np import pandas as pd import datetime as dt import matplotlib...">
+<meta name="twitter:description" content="1.1 Library Management  1.1.1 Built-In Libraries import string import datetime as dt import os #os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = &quot;C:\ProgramData\Anaconda3\Library\plugins\platforms&quot; ...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -46,22 +46,21 @@
 <li><a class="" href="index.html">About This Book</a></li>
 <li><a class="active" href="fundamentals.html"><span class="header-section-number">1</span> Fundamentals</a></li>
 <li><a class="" href="built-in-data-types.html"><span class="header-section-number">2</span> Built-in Data Types</a></li>
-<li><a class="" href="built-in-data-structure.html"><span class="header-section-number">3</span> Built-In Data Structure</a></li>
-<li><a class="" href="control-and-loops.html"><span class="header-section-number">4</span> Control and Loops</a></li>
-<li><a class="" href="library-and-functions.html"><span class="header-section-number">5</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">6</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">7</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">8</span> Decorator</a></li>
-<li><a class="" href="datetime-standard-library.html"><span class="header-section-number">9</span> datetime Standard Library</a></li>
-<li><a class="" href="getting-external-data.html"><span class="header-section-number">10</span> Getting External Data</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">11</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="numpy-1.html"><span class="header-section-number">12</span> numpy</a></li>
-<li><a class="" href="pandas-1.html"><span class="header-section-number">13</span> pandas</a></li>
-<li><a class="" href="matplotlib-1.html"><span class="header-section-number">14</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">15</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">16</span> plotnine</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
+<li><a class="" href="datetime-standard-library.html"><span class="header-section-number">3</span> datetime Standard Library</a></li>
+<li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
+<li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
+<li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -82,131 +81,70 @@
 <span class="header-section-number">1.1.1</span> Built-In Libraries<a class="anchor" aria-label="anchor" href="#built-in-libraries"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="fundamentals.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> string</span>
-<span id="cb1-2"><a href="fundamentals.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime <span class="im">as</span> dt</span></code></pre></div>
+<span id="cb1-2"><a href="fundamentals.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime <span class="im">as</span> dt</span>
+<span id="cb1-3"><a href="fundamentals.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-4"><a href="fundamentals.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "C:\ProgramData\Anaconda3\Library\plugins\platforms"</span></span></code></pre></div>
 </div>
-<div id="common-external-libraries" class="section level3" number="1.1.2">
+<div id="external-libraries" class="section level3" number="1.1.2">
 <h3>
-<span class="header-section-number">1.1.2</span> Common External Libraries<a class="anchor" aria-label="anchor" href="#common-external-libraries"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.1.2</span> External Libraries<a class="anchor" aria-label="anchor" href="#external-libraries"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="fundamentals.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a href="fundamentals.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-3"><a href="fundamentals.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime <span class="im">as</span> dt</span>
-<span id="cb2-4"><a href="fundamentals.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="fundamentals.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
-<span id="cb2-6"><a href="fundamentals.html#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-7"><a href="fundamentals.html#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="fundamentals.html#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plydata <span class="im">import</span> define, query, select, group_by, summarize, arrange, head, rename</span>
-<span id="cb2-9"><a href="fundamentals.html#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotnine</span>
-<span id="cb2-10"><a href="fundamentals.html#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb2-11"><a href="fundamentals.html#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="fundamentals.html#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb2-13"><a href="fundamentals.html#cb2-13" aria-hidden="true" tabindex="-1"></a>os.environ[<span class="st">'QT_QPA_PLATFORM_PLUGIN_PATH'</span>] <span class="op">=</span> <span class="st">"C:\ProgramData\Anaconda3\Library\plugins\platforms"</span></span></code></pre></div>
-<div id="numpy" class="section level4" number="1.1.2.1">
-<h4>
-<span class="header-section-number">1.1.2.1</span> numpy<a class="anchor" aria-label="anchor" href="#numpy"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>large multi-dimensional array and matrices<br>
-</li>
-<li>High level mathematical funcitons to operate on them</li>
-<li>Efficient array computation, modeled after matlab<br>
-</li>
-<li>Support vectorized array math functions (built on C, hence faster than python for loop and list)</li>
-</ul>
-</div>
-<div id="scipy" class="section level4" number="1.1.2.2">
-<h4>
-<span class="header-section-number">1.1.2.2</span> scipy<a class="anchor" aria-label="anchor" href="#scipy"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>Collection of mathematical algorithms and convenience functions built on the numpy extension<br>
-</li>
-<li>Built upon <strong>numpy</strong>
-</li>
-</ul>
-</div>
-<div id="pandas" class="section level4" number="1.1.2.3">
-<h4>
-<span class="header-section-number">1.1.2.3</span> Pandas<a class="anchor" aria-label="anchor" href="#pandas"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>Data manipulation and analysis</li>
-<li>Offer data structures and operations for manipulating numerical tables and time series<br>
-</li>
-<li>Good for analyzing tabular data<br>
-</li>
-<li>Use for exploratory data analysis, data pre-processing, statistics and visualization</li>
-<li>Built upon <strong>numpy</strong>
-</li>
-</ul>
-</div>
-<div id="scikit-learn" class="section level4" number="1.1.2.4">
-<h4>
-<span class="header-section-number">1.1.2.4</span> scikit-learn<a class="anchor" aria-label="anchor" href="#scikit-learn"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>Machine learning functions<br>
-</li>
-<li>Built on top of scipy</li>
-</ul>
-</div>
-<div id="matplotlib" class="section level4" number="1.1.2.5">
-<h4>
-<span class="header-section-number">1.1.2.5</span> matplotlib<a class="anchor" aria-label="anchor" href="#matplotlib"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li>Data Visualization</li>
-</ul>
-</div>
+<p>Here are some of the popular external libraries.</p>
+<p><strong>numpy</strong>
+- large multi-dimensional array and matrices<br>
+- High level mathematical funcitons to operate on them
+- Efficient array computation, modeled after matlab<br>
+- Support vectorized array math functions (built on C, hence faster than python for loop and list)</p>
+<p><strong>scipy</strong>
+- Collection of mathematical algorithms and convenience functions built on the numpy extension<br>
+- Built upon <strong>numpy</strong></p>
+<p><strong>Pandas</strong>
+- Data manipulation and analysis
+- Offer data structures and operations for manipulating numerical tables and time series<br>
+- Good for analyzing tabular data<br>
+- Use for exploratory data analysis, data pre-processing, statistics and visualization
+- Built upon <strong>numpy</strong></p>
+<p><strong>scikit-learn</strong>
+- Machine learning functions<br>
+- Built on top of <strong>scipy</strong></p>
+<p><strong>matplotlib</strong>
+- Data Visualization</p>
 </div>
 <div id="package-management" class="section level3" number="1.1.3">
 <h3>
 <span class="header-section-number">1.1.3</span> Package Management<a class="anchor" aria-label="anchor" href="#package-management"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="conda" class="section level3" number="1.1.4">
+<div id="anaconda" class="section level3" number="1.1.4">
 <h3>
-<span class="header-section-number">1.1.4</span> Conda<a class="anchor" aria-label="anchor" href="#conda"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.1.4</span> Anaconda<a class="anchor" aria-label="anchor" href="#anaconda"><i class="fas fa-link"></i></a>
 </h3>
-<div id="conda-environment" class="section level4" number="1.1.4.1">
-<h4>
-<span class="header-section-number">1.1.4.1</span> Conda Environment<a class="anchor" aria-label="anchor" href="#conda-environment"><i class="fas fa-link"></i></a>
+<div id="conda-environment" class="section level4 unnumbered">
+<h4>Conda Environment<a class="anchor" aria-label="anchor" href="#conda-environment"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/system.html">system</a></span><span class="op">(</span><span class="st">"conda info"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 0</code></pre>
+<p>Anaconda is a popular package management system for python. Interaction with anaconda is through command prompt “conda”.</p>
+<pre><code>conda info ## check the installed conda version and directories
+conda list ## list all installed python modules, and its version</code></pre>
 </div>
-<div id="package-version" class="section level4" number="1.1.4.2">
-<h4>
-<span class="header-section-number">1.1.4.2</span> Package Version<a class="anchor" aria-label="anchor" href="#package-version"><i class="fas fa-link"></i></a>
+<div id="package-installation" class="section level4 unnumbered">
+<h4>Package Installation<a class="anchor" aria-label="anchor" href="#package-installation"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/system.html">system</a></span><span class="op">(</span><span class="st">"conda list"</span><span class="op">)</span> </span></code></pre></div>
-<pre><code>## [1] 0</code></pre>
-</div>
-<div id="package-installation" class="section level4" number="1.1.4.3">
-<h4>
-<span class="header-section-number">1.1.4.3</span> Package Installation<a class="anchor" aria-label="anchor" href="#package-installation"><i class="fas fa-link"></i></a>
-</h4>
-<p>Conda is recommended distribution.</p>
-<p>To install from <strong>official</strong> conda channel:</p>
-<pre><code>conda install &lt;package_name&gt;  # always install latest
-conda install &lt;package_name=version_number&gt;
+<p>Conda is recommended distribution. To install from <strong>official</strong> conda channel:</p>
+<pre><code>## Syntax
+conda install &lt;package_name&gt;                 # always install latest
+conda install &lt;package_name=version_number&gt;  ## install specific version
 
-## Example: Install From conda official channel
-conda install numpy
-conda install scipy
-conda install pandas
-conda install matpotlib
-conda install scikit-learn
-conda install seaborn
-conda install pip</code></pre>
-<p>To install from <strong>conda-forge community</strong> channel:</p>
+## Example
+conda install scipy        ## official channel
+conda install scipy=1.2.3  ## official channel</code></pre>
+<p>To install from <strong>conda-forge</strong> community channel:</p>
 <pre><code>conda install -c conda-forge &lt;package_name&gt;
 conda install -c conda-forge &lt;package_name=version_number&gt;
 
 ## Example: Install From conda community:
-conda install -c conda-forge plotnine</code></pre>
+conda install -c conda-forge plotnine
+conda install -c conda-forge plotnine=1.2.3
+</code></pre>
 </div>
 </div>
 <div id="pip" class="section level3" number="1.1.5">
@@ -214,65 +152,69 @@ conda install -c conda-forge plotnine</code></pre>
 <span class="header-section-number">1.1.5</span> PIP<a class="anchor" aria-label="anchor" href="#pip"><i class="fas fa-link"></i></a>
 </h3>
 <p>PIP is python open repository (not part of conda). Use <strong>pip</strong> if the package is not available in conda.</p>
-<div id="package-version-1" class="section level4" number="1.1.5.1">
-<h4>
-<span class="header-section-number">1.1.5.1</span> Package Version<a class="anchor" aria-label="anchor" href="#package-version-1"><i class="fas fa-link"></i></a>
+<div id="package-version" class="section level4 unnumbered">
+<h4>Package Version<a class="anchor" aria-label="anchor" href="#package-version"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/system.html">system</a></span><span class="op">(</span><span class="st">"pip list"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] 0</code></pre>
+<pre><code>pip list ## list all installed module</code></pre>
 </div>
-<div id="package-installation-1" class="section level4" number="1.1.5.2">
+<div id="package-installation-1" class="section level4" number="1.1.5.1">
 <h4>
-<span class="header-section-number">1.1.5.2</span> Package Installation<a class="anchor" aria-label="anchor" href="#package-installation-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.1.5.1</span> Package Installation<a class="anchor" aria-label="anchor" href="#package-installation-1"><i class="fas fa-link"></i></a>
 </h4>
 <pre><code>pip install &lt;package_name&gt;
-## Example: pip install plydata</code></pre>
+pip install &lt;package_name=version_numner&gt;
+
+## Example: 
+pip install plydata
+pip install plydata=1.2.3</code></pre>
 </div>
 </div>
 </div>
-<div id="everything-is-object" class="section level2" number="1.2">
+<div id="variables-are-objects" class="section level2" number="1.2">
 <h2>
-<span class="header-section-number">1.2</span> Everything Is Object<a class="anchor" aria-label="anchor" href="#everything-is-object"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.2</span> Variables Are Objects<a class="anchor" aria-label="anchor" href="#variables-are-objects"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
-<li>Every varibales in python are <strong>objects</strong><br>
+<li>All variables in python are <strong>objects</strong><br>
 </li>
 <li>Every variable assginment is <strong>reference based</strong>, that is, each object value is the reference to memory block of data</li>
 </ul>
-<p>In the below exmaple, <strong>a, b and c </strong> refer to the <strong>same memory location</strong>:<br>
-- Notice when an object assigned to another object, they refer to the same memory location<br>
-- When two variable refers to the same value, they refer to the same memory location</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="fundamentals.html#cb12-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">123</span></span>
-<span id="cb12-2"><a href="fundamentals.html#cb12-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">123</span>  </span>
-<span id="cb12-3"><a href="fundamentals.html#cb12-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a</span>
-<span id="cb12-4"><a href="fundamentals.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Data of a ='</span>,  a,</span>
-<span id="cb12-5"><a href="fundamentals.html#cb12-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">Data of b ='</span>,b,</span>
-<span id="cb12-6"><a href="fundamentals.html#cb12-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">Data of c ='</span>,c,</span>
-<span id="cb12-7"><a href="fundamentals.html#cb12-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">ID of a = '</span>, <span class="bu">id</span>(a),</span>
-<span id="cb12-8"><a href="fundamentals.html#cb12-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">ID of b = '</span>, <span class="bu">id</span>(b),</span>
-<span id="cb12-9"><a href="fundamentals.html#cb12-9" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">ID of c = '</span>, <span class="bu">id</span>(c)</span>
-<span id="cb12-10"><a href="fundamentals.html#cb12-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>In the below example, <strong>a, b and c </strong> refer to the <strong>same memory location</strong>:</p>
+<ul>
+<li>Notice when an object assigned to another object, they refer to the same memory location<br>
+</li>
+<li>When two variable refers to the same value, they refer to the same memory location</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="fundamentals.html#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">123</span></span>
+<span id="cb7-2"><a href="fundamentals.html#cb7-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">123</span>  </span>
+<span id="cb7-3"><a href="fundamentals.html#cb7-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a</span>
+<span id="cb7-4"><a href="fundamentals.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Data of a ='</span>,  a,</span>
+<span id="cb7-5"><a href="fundamentals.html#cb7-5" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">Data of b ='</span>,b,</span>
+<span id="cb7-6"><a href="fundamentals.html#cb7-6" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">Data of c ='</span>,c,</span>
+<span id="cb7-7"><a href="fundamentals.html#cb7-7" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">ID of a = '</span>, <span class="bu">id</span>(a),</span>
+<span id="cb7-8"><a href="fundamentals.html#cb7-8" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">ID of b = '</span>, <span class="bu">id</span>(b),</span>
+<span id="cb7-9"><a href="fundamentals.html#cb7-9" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n</span><span class="st">ID of c = '</span>, <span class="bu">id</span>(c)</span>
+<span id="cb7-10"><a href="fundamentals.html#cb7-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## Data of a = 123 
 ## Data of b = 123 
 ## Data of c = 123 
-## ID of a =  2216281856176 
-## ID of b =  2216281856176 
-## ID of c =  2216281856176</code></pre>
+## ID of a =  2292051499184 
+## ID of b =  2292051499184 
+## ID of c =  2292051499184</code></pre>
 <p>Changing data value (using assignment) changes <strong>the reference</strong></p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="fundamentals.html#cb14-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">123</span></span>
-<span id="cb14-2"><a href="fundamentals.html#cb14-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
-<span id="cb14-3"><a href="fundamentals.html#cb14-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">456</span>  <span class="co"># reassignemnt changed a memory reference</span></span>
-<span id="cb14-4"><a href="fundamentals.html#cb14-4" aria-hidden="true" tabindex="-1"></a>         <span class="co"># b memory reference not changed</span></span>
-<span id="cb14-5"><a href="fundamentals.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Data of a ='</span>,a,</span>
-<span id="cb14-6"><a href="fundamentals.html#cb14-6" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">Data of b ='</span>,b,</span>
-<span id="cb14-7"><a href="fundamentals.html#cb14-7" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">ID of a = '</span>, <span class="bu">id</span>(a),</span>
-<span id="cb14-8"><a href="fundamentals.html#cb14-8" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">ID of b = '</span>, <span class="bu">id</span>(b)</span>
-<span id="cb14-9"><a href="fundamentals.html#cb14-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="fundamentals.html#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">123</span></span>
+<span id="cb9-2"><a href="fundamentals.html#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
+<span id="cb9-3"><a href="fundamentals.html#cb9-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">456</span>  <span class="co"># reassignemnt changed a memory reference</span></span>
+<span id="cb9-4"><a href="fundamentals.html#cb9-4" aria-hidden="true" tabindex="-1"></a>         <span class="co"># b memory reference not changed</span></span>
+<span id="cb9-5"><a href="fundamentals.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'Data of a ='</span>,a,</span>
+<span id="cb9-6"><a href="fundamentals.html#cb9-6" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">Data of b ='</span>,b,</span>
+<span id="cb9-7"><a href="fundamentals.html#cb9-7" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">ID of a = '</span>, <span class="bu">id</span>(a),</span>
+<span id="cb9-8"><a href="fundamentals.html#cb9-8" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">ID of b = '</span>, <span class="bu">id</span>(b)</span>
+<span id="cb9-9"><a href="fundamentals.html#cb9-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## Data of a = 456 
 ## Data of b = 123 
-## ID of a =  2216601682960 
-## ID of b =  2216281856176</code></pre>
+## ID of a =  2292353468144 
+## ID of b =  2292051499184</code></pre>
 </div>
 <div id="assignment" class="section level2" number="1.3">
 <h2>
@@ -283,25 +225,25 @@ conda install -c conda-forge plotnine</code></pre>
 <span class="header-section-number">1.3.1</span> Multiple Assignment<a class="anchor" aria-label="anchor" href="#multiple-assignment"><i class="fas fa-link"></i></a>
 </h3>
 <p>Assign multiple variable at the same time with same value. Note that all object created using this method refer to the <strong>same memory location</strong>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="fundamentals.html#cb16-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> y <span class="op">=</span> <span class="st">'same mem loc'</span></span>
-<span id="cb16-2"><a href="fundamentals.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'x = '</span>, x,</span>
-<span id="cb16-3"><a href="fundamentals.html#cb16-3" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">y = '</span>, y,</span>
-<span id="cb16-4"><a href="fundamentals.html#cb16-4" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">id(x) = '</span>, <span class="bu">id</span>(x), </span>
-<span id="cb16-5"><a href="fundamentals.html#cb16-5" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">id(y) = '</span>, <span class="bu">id</span>(y)</span>
-<span id="cb16-6"><a href="fundamentals.html#cb16-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="fundamentals.html#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> y <span class="op">=</span> <span class="st">'same mem loc'</span></span>
+<span id="cb11-2"><a href="fundamentals.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'x = '</span>, x,</span>
+<span id="cb11-3"><a href="fundamentals.html#cb11-3" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">y = '</span>, y,</span>
+<span id="cb11-4"><a href="fundamentals.html#cb11-4" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">id(x) = '</span>, <span class="bu">id</span>(x), </span>
+<span id="cb11-5"><a href="fundamentals.html#cb11-5" aria-hidden="true" tabindex="-1"></a>     <span class="st">'</span><span class="ch">\n</span><span class="st">id(y) = '</span>, <span class="bu">id</span>(y)</span>
+<span id="cb11-6"><a href="fundamentals.html#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## x =  same mem loc 
 ## y =  same mem loc 
-## id(x) =  2216601746544 
-## id(y) =  2216601746544</code></pre>
+## id(x) =  2292353593840 
+## id(y) =  2292353593840</code></pre>
 </div>
 <div id="augmented-assignment" class="section level3" number="1.3.2">
 <h3>
 <span class="header-section-number">1.3.2</span> Augmented Assignment<a class="anchor" aria-label="anchor" href="#augmented-assignment"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="fundamentals.html#cb18-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb18-2"><a href="fundamentals.html#cb18-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb18-3"><a href="fundamentals.html#cb18-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb18-4"><a href="fundamentals.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'y = '</span>, y)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="fundamentals.html#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb13-2"><a href="fundamentals.html#cb13-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb13-3"><a href="fundamentals.html#cb13-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb13-4"><a href="fundamentals.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'y = '</span>, y)</span></code></pre></div>
 <pre><code>## y =  3</code></pre>
 </div>
 <div id="unpacking-assingment" class="section level3" number="1.3.3">
@@ -309,9 +251,10 @@ conda install -c conda-forge plotnine</code></pre>
 <span class="header-section-number">1.3.3</span> Unpacking Assingment<a class="anchor" aria-label="anchor" href="#unpacking-assingment"><i class="fas fa-link"></i></a>
 </h3>
 <p>Assign multiple value to multiple variabels at the same time.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="fundamentals.html#cb20-1" aria-hidden="true" tabindex="-1"></a>x,y <span class="op">=</span> <span class="dv">1</span>,<span class="dv">3</span></span>
-<span id="cb20-2"><a href="fundamentals.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (x,y)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="fundamentals.html#cb15-1" aria-hidden="true" tabindex="-1"></a>x,y <span class="op">=</span> <span class="dv">1</span>,<span class="dv">3</span></span>
+<span id="cb15-2"><a href="fundamentals.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (x,y)</span></code></pre></div>
 <pre><code>## 1 3</code></pre>
+
 </div>
 </div>
 </div>
@@ -325,13 +268,13 @@ conda install -c conda-forge plotnine</code></pre>
 <li>
 <a class="nav-link" href="#library-management"><span class="header-section-number">1.1</span> Library Management</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#built-in-libraries"><span class="header-section-number">1.1.1</span> Built-In Libraries</a></li>
-<li><a class="nav-link" href="#common-external-libraries"><span class="header-section-number">1.1.2</span> Common External Libraries</a></li>
+<li><a class="nav-link" href="#external-libraries"><span class="header-section-number">1.1.2</span> External Libraries</a></li>
 <li><a class="nav-link" href="#package-management"><span class="header-section-number">1.1.3</span> Package Management</a></li>
-<li><a class="nav-link" href="#conda"><span class="header-section-number">1.1.4</span> Conda</a></li>
+<li><a class="nav-link" href="#anaconda"><span class="header-section-number">1.1.4</span> Anaconda</a></li>
 <li><a class="nav-link" href="#pip"><span class="header-section-number">1.1.5</span> PIP</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#everything-is-object"><span class="header-section-number">1.2</span> Everything Is Object</a></li>
+<li><a class="nav-link" href="#variables-are-objects"><span class="header-section-number">1.2</span> Variables Are Objects</a></li>
 <li>
 <a class="nav-link" href="#assignment"><span class="header-section-number">1.3</span> Assignment</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#multiple-assignment"><span class="header-section-number">1.3.1</span> Multiple Assignment</a></li>
@@ -356,7 +299,7 @@ conda install -c conda-forge plotnine</code></pre>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-26.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

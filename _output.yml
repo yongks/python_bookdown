@@ -40,9 +40,9 @@ bookdown::bs4_book:
   extra_dependencies: null
   split_bib: false
   ## customize here: https://rstudio.github.io/bslib/reference/bs_theme.html
-  theme:
+  ##theme:
     ## bootswatch styling: https://bootswatch.com/
-    bootswatch: darkly
+    ##bootswatch: darkly
   ## show up link to repo at the right most column
   repo:
     base: https://github.com/yongks/python_bookdown

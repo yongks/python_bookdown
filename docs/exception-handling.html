@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 6 Exception Handling | Python Bookdown</title>
+<title>Chapter 7 Exception Handling | Python Bookdown</title>
 <meta name="author" content="Yong Keh Soon">
 <meta name="description" content="The try statement works as follows: - First, the try clause (the statement(s) between the try and except keywords) is executed - If no exception occurs, the except clause is skipped and execution...">
 <meta name="generator" content="bookdown 0.31 with bs4_book()">
-<meta property="og:title" content="Chapter 6 Exception Handling | Python Bookdown">
+<meta property="og:title" content="Chapter 7 Exception Handling | Python Bookdown">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/yongks/python_bookdown/exception-handling.html">
 <meta property="og:description" content="The try statement works as follows: - First, the try clause (the statement(s) between the try and except keywords) is executed - If no exception occurs, the except clause is skipped and execution...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 6 Exception Handling | Python Bookdown">
+<meta name="twitter:title" content="Chapter 7 Exception Handling | Python Bookdown">
 <meta name="twitter:description" content="The try statement works as follows: - First, the try clause (the statement(s) between the try and except keywords) is executed - If no exception occurs, the except clause is skipped and execution...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -46,22 +46,21 @@
 <li><a class="" href="index.html">About This Book</a></li>
 <li><a class="" href="fundamentals.html"><span class="header-section-number">1</span> Fundamentals</a></li>
 <li><a class="" href="built-in-data-types.html"><span class="header-section-number">2</span> Built-in Data Types</a></li>
-<li><a class="" href="built-in-data-structure.html"><span class="header-section-number">3</span> Built-In Data Structure</a></li>
-<li><a class="" href="control-and-loops.html"><span class="header-section-number">4</span> Control and Loops</a></li>
-<li><a class="" href="library-and-functions.html"><span class="header-section-number">5</span> Library and Functions</a></li>
-<li><a class="active" href="exception-handling.html"><span class="header-section-number">6</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">7</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">8</span> Decorator</a></li>
-<li><a class="" href="datetime-standard-library.html"><span class="header-section-number">9</span> datetime Standard Library</a></li>
-<li><a class="" href="getting-external-data.html"><span class="header-section-number">10</span> Getting External Data</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">11</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="numpy-1.html"><span class="header-section-number">12</span> numpy</a></li>
-<li><a class="" href="pandas-1.html"><span class="header-section-number">13</span> pandas</a></li>
-<li><a class="" href="matplotlib-1.html"><span class="header-section-number">14</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">15</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">16</span> plotnine</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
+<li><a class="" href="datetime-standard-library.html"><span class="header-section-number">3</span> datetime Standard Library</a></li>
+<li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
+<li><a class="" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
+<li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
+<li><a class="active" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -69,9 +68,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="exception-handling" class="section level1" number="6">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="exception-handling" class="section level1" number="7">
 <h1>
-<span class="header-section-number">6</span> Exception Handling<a class="anchor" aria-label="anchor" href="#exception-handling"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7</span> Exception Handling<a class="anchor" aria-label="anchor" href="#exception-handling"><i class="fas fa-link"></i></a>
 </h1>
 <p>The try statement works as follows:<br>
 - First, the try clause (the statement(s) between the try and except keywords) is executed<br>
@@ -79,61 +78,62 @@
 - If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then if its type matches the exception named after the except keyword, the except clause is executed, and then execution continues after the try statement<br>
 - If an exception occurs which does not match the exception named in the except clause, it is passed on to outer try statements; if no handler is found, it is an unhandled exception and execution stops with a message as shown above</p>
 <p>A try statement may have more than one except clause, to specify handlers for different exceptions.</p>
-<div id="catching-error" class="section level2" number="6.1">
+<div id="catching-error" class="section level2" number="7.1">
 <h2>
-<span class="header-section-number">6.1</span> Catching Error<a class="anchor" aria-label="anchor" href="#catching-error"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.1</span> Catching Error<a class="anchor" aria-label="anchor" href="#catching-error"><i class="fas fa-link"></i></a>
 </h2>
 <p>Different exception object has different attributes.</p>
-<div class="sourceCode" id="cb420"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb420-1"><a href="exception-handling.html#cb420-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb420-2"><a href="exception-handling.html#cb420-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="st">'a'</span></span>
-<span id="cb420-3"><a href="exception-handling.html#cb420-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb420-4"><a href="exception-handling.html#cb420-4" aria-hidden="true" tabindex="-1"></a><span class="co">## known error  </span></span>
-<span id="cb420-5"><a href="exception-handling.html#cb420-5" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">TypeError</span> <span class="im">as</span> err:</span>
-<span id="cb420-6"><a href="exception-handling.html#cb420-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'I know this error !!!!'</span>,</span>
-<span id="cb420-7"><a href="exception-handling.html#cb420-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'</span><span class="ch">\n</span><span class="st"> Error: '</span>, err,</span>
-<span id="cb420-8"><a href="exception-handling.html#cb420-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'</span><span class="ch">\n</span><span class="st"> Args:  '</span>, err.args,</span>
-<span id="cb420-9"><a href="exception-handling.html#cb420-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'</span><span class="ch">\n</span><span class="st"> Type:  '</span>, <span class="bu">type</span>(err))</span>
-<span id="cb420-10"><a href="exception-handling.html#cb420-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb420-11"><a href="exception-handling.html#cb420-11" aria-hidden="true" tabindex="-1"></a><span class="co">## all other error</span></span>
-<span id="cb420-12"><a href="exception-handling.html#cb420-12" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> err:</span>
-<span id="cb420-13"><a href="exception-handling.html#cb420-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( <span class="st">'Error: '</span>, err,</span>
-<span id="cb420-14"><a href="exception-handling.html#cb420-14" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Args:  '</span>, err.args,</span>
-<span id="cb420-15"><a href="exception-handling.html#cb420-15" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Type:  '</span>, <span class="bu">type</span>(err))</span></code></pre></div>
+<div class="sourceCode" id="cb514"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb514-1"><a href="exception-handling.html#cb514-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb514-2"><a href="exception-handling.html#cb514-2" aria-hidden="true" tabindex="-1"></a>  a <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="st">'a'</span></span>
+<span id="cb514-3"><a href="exception-handling.html#cb514-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb514-4"><a href="exception-handling.html#cb514-4" aria-hidden="true" tabindex="-1"></a><span class="co">## known error  </span></span>
+<span id="cb514-5"><a href="exception-handling.html#cb514-5" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">TypeError</span> <span class="im">as</span> err:</span>
+<span id="cb514-6"><a href="exception-handling.html#cb514-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'I know this error !!!!'</span>,</span>
+<span id="cb514-7"><a href="exception-handling.html#cb514-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'</span><span class="ch">\n</span><span class="st"> Error: '</span>, err,</span>
+<span id="cb514-8"><a href="exception-handling.html#cb514-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'</span><span class="ch">\n</span><span class="st"> Args:  '</span>, err.args,</span>
+<span id="cb514-9"><a href="exception-handling.html#cb514-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'</span><span class="ch">\n</span><span class="st"> Type:  '</span>, <span class="bu">type</span>(err))</span>
+<span id="cb514-10"><a href="exception-handling.html#cb514-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb514-11"><a href="exception-handling.html#cb514-11" aria-hidden="true" tabindex="-1"></a><span class="co">## all other error</span></span>
+<span id="cb514-12"><a href="exception-handling.html#cb514-12" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> err:</span>
+<span id="cb514-13"><a href="exception-handling.html#cb514-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( <span class="st">'Error: '</span>, err,</span>
+<span id="cb514-14"><a href="exception-handling.html#cb514-14" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Args:  '</span>, err.args,</span>
+<span id="cb514-15"><a href="exception-handling.html#cb514-15" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Type:  '</span>, <span class="bu">type</span>(err))</span></code></pre></div>
 <pre><code>## I know this error !!!! 
 ##  Error:  unsupported operand type(s) for +: 'int' and 'str' 
 ##  Args:   ("unsupported operand type(s) for +: 'int' and 'str'",) 
 ##  Type:   &lt;class 'TypeError'&gt;</code></pre>
 </div>
-<div id="custom-exception" class="section level2" number="6.2">
+<div id="custom-exception" class="section level2" number="7.2">
 <h2>
-<span class="header-section-number">6.2</span> Custom Exception<a class="anchor" aria-label="anchor" href="#custom-exception"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.2</span> Custom Exception<a class="anchor" aria-label="anchor" href="#custom-exception"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb422"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb422-1"><a href="exception-handling.html#cb422-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb422-2"><a href="exception-handling.html#cb422-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="st">'bloody'</span>, <span class="st">'hell'</span>)  <span class="co">#simulate exception</span></span>
-<span id="cb422-3"><a href="exception-handling.html#cb422-3" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> err:</span>
-<span id="cb422-4"><a href="exception-handling.html#cb422-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( <span class="st">'Error: '</span>, err,</span>
-<span id="cb422-5"><a href="exception-handling.html#cb422-5" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Args:  '</span>, err.args,</span>
-<span id="cb422-6"><a href="exception-handling.html#cb422-6" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Type:  '</span>, <span class="bu">type</span>(err))</span></code></pre></div>
+<div class="sourceCode" id="cb516"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb516-1"><a href="exception-handling.html#cb516-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb516-2"><a href="exception-handling.html#cb516-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="st">'bloody'</span>, <span class="st">'hell'</span>)  <span class="co">#simulate exception</span></span>
+<span id="cb516-3"><a href="exception-handling.html#cb516-3" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> err:</span>
+<span id="cb516-4"><a href="exception-handling.html#cb516-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>( <span class="st">'Error: '</span>, err,</span>
+<span id="cb516-5"><a href="exception-handling.html#cb516-5" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Args:  '</span>, err.args,</span>
+<span id="cb516-6"><a href="exception-handling.html#cb516-6" aria-hidden="true" tabindex="-1"></a>         <span class="st">'</span><span class="ch">\n</span><span class="st">Type:  '</span>, <span class="bu">type</span>(err))</span></code></pre></div>
 <pre><code>## Error:  ('bloody', 'hell') 
 ## Args:   ('bloody', 'hell') 
 ## Type:   &lt;class 'Exception'&gt;</code></pre>
+
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="library-and-functions.html"><span class="header-section-number">5</span> Library and Functions</a></div>
-<div class="next"><a href="object-oriented-programming.html"><span class="header-section-number">7</span> Object Oriented Programming</a></div>
+<div class="prev"><a href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></div>
+<div class="next"><a href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#exception-handling"><span class="header-section-number">6</span> Exception Handling</a></li>
-<li><a class="nav-link" href="#catching-error"><span class="header-section-number">6.1</span> Catching Error</a></li>
-<li><a class="nav-link" href="#custom-exception"><span class="header-section-number">6.2</span> Custom Exception</a></li>
+<li><a class="nav-link" href="#exception-handling"><span class="header-section-number">7</span> Exception Handling</a></li>
+<li><a class="nav-link" href="#catching-error"><span class="header-section-number">7.1</span> Catching Error</a></li>
+<li><a class="nav-link" href="#custom-exception"><span class="header-section-number">7.2</span> Custom Exception</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/yongks/python_bookdown/blob/master/01-fundamental.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/yongks/python_bookdown/edit/master/01-fundamental.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/yongks/python_bookdown/blob/master/06-exception_handling.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/yongks/python_bookdown/edit/master/06-exception_handling.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -145,7 +145,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-26.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

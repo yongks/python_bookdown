@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 4 Control and Loops | Python Bookdown</title>
+<title>Chapter 5 Control and Loops | Python Bookdown</title>
 <meta name="author" content="Yong Keh Soon">
-<meta name="description" content="4.1 If Statement  4.1.1 Multiline If.. Statements price = 102 if price &lt;100:   print ('buy') elif price &lt; 110:   print ('hold') elif price &lt; 120:   print ('think about it') else:   print ('sell')...">
+<meta name="description" content="5.1 If Statement  5.1.1 Multiline If.. Statements price = 102 if price &lt;100:   print ('buy') elif price &lt; 110:   print ('hold') elif price &lt; 120:   print ('think about it') else:   print ('sell')...">
 <meta name="generator" content="bookdown 0.31 with bs4_book()">
-<meta property="og:title" content="Chapter 4 Control and Loops | Python Bookdown">
+<meta property="og:title" content="Chapter 5 Control and Loops | Python Bookdown">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://github.com/yongks/python_bookdown/control-and-loops.html">
-<meta property="og:description" content="4.1 If Statement  4.1.1 Multiline If.. Statements price = 102 if price &lt;100:   print ('buy') elif price &lt; 110:   print ('hold') elif price &lt; 120:   print ('think about it') else:   print ('sell')...">
+<meta property="og:description" content="5.1 If Statement  5.1.1 Multiline If.. Statements price = 102 if price &lt;100:   print ('buy') elif price &lt; 110:   print ('hold') elif price &lt; 120:   print ('think about it') else:   print ('sell')...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 4 Control and Loops | Python Bookdown">
-<meta name="twitter:description" content="4.1 If Statement  4.1.1 Multiline If.. Statements price = 102 if price &lt;100:   print ('buy') elif price &lt; 110:   print ('hold') elif price &lt; 120:   print ('think about it') else:   print ('sell')...">
+<meta name="twitter:title" content="Chapter 5 Control and Loops | Python Bookdown">
+<meta name="twitter:description" content="5.1 If Statement  5.1.1 Multiline If.. Statements price = 102 if price &lt;100:   print ('buy') elif price &lt; 110:   print ('hold') elif price &lt; 120:   print ('think about it') else:   print ('sell')...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -46,22 +46,21 @@
 <li><a class="" href="index.html">About This Book</a></li>
 <li><a class="" href="fundamentals.html"><span class="header-section-number">1</span> Fundamentals</a></li>
 <li><a class="" href="built-in-data-types.html"><span class="header-section-number">2</span> Built-in Data Types</a></li>
-<li><a class="" href="built-in-data-structure.html"><span class="header-section-number">3</span> Built-In Data Structure</a></li>
-<li><a class="active" href="control-and-loops.html"><span class="header-section-number">4</span> Control and Loops</a></li>
-<li><a class="" href="library-and-functions.html"><span class="header-section-number">5</span> Library and Functions</a></li>
-<li><a class="" href="exception-handling.html"><span class="header-section-number">6</span> Exception Handling</a></li>
-<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">7</span> Object Oriented Programming</a></li>
-<li><a class="" href="decorator.html"><span class="header-section-number">8</span> Decorator</a></li>
-<li><a class="" href="datetime-standard-library.html"><span class="header-section-number">9</span> datetime Standard Library</a></li>
-<li><a class="" href="getting-external-data.html"><span class="header-section-number">10</span> Getting External Data</a></li>
-<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">11</span> Plydata (dplyr for Python)</a></li>
-<li><a class="" href="numpy-1.html"><span class="header-section-number">12</span> numpy</a></li>
-<li><a class="" href="pandas-1.html"><span class="header-section-number">13</span> pandas</a></li>
-<li><a class="" href="matplotlib-1.html"><span class="header-section-number">14</span> matplotlib</a></li>
-<li><a class="" href="seaborn.html"><span class="header-section-number">15</span> seaborn</a></li>
-<li><a class="" href="plotnine.html"><span class="header-section-number">16</span> plotnine</a></li>
-<li><a class="" href="sklearn.html"><span class="header-section-number">17</span> sklearn</a></li>
-<li><a class="" href="web-scrapping.html"><span class="header-section-number">18</span> Web Scrapping</a></li>
+<li><a class="" href="datetime-standard-library.html"><span class="header-section-number">3</span> datetime Standard Library</a></li>
+<li><a class="" href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></li>
+<li><a class="active" href="control-and-loops.html"><span class="header-section-number">5</span> Control and Loops</a></li>
+<li><a class="" href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></li>
+<li><a class="" href="exception-handling.html"><span class="header-section-number">7</span> Exception Handling</a></li>
+<li><a class="" href="object-oriented-programming.html"><span class="header-section-number">8</span> Object Oriented Programming</a></li>
+<li><a class="" href="decorator.html"><span class="header-section-number">9</span> Decorator</a></li>
+<li><a class="" href="matplotlib.html"><span class="header-section-number">10</span> matplotlib</a></li>
+<li><a class="" href="seaborn.html"><span class="header-section-number">11</span> seaborn</a></li>
+<li><a class="" href="plotnine.html"><span class="header-section-number">12</span> plotnine</a></li>
+<li><a class="" href="numpy.html"><span class="header-section-number">13</span> numpy</a></li>
+<li><a class="" href="pandas.html"><span class="header-section-number">14</span> pandas</a></li>
+<li><a class="" href="plydata-dplyr-for-python.html"><span class="header-section-number">15</span> Plydata (dplyr for Python)</a></li>
+<li><a class="" href="sklearn.html"><span class="header-section-number">16</span> sklearn</a></li>
+<li><a class="" href="web-scrapping.html"><span class="header-section-number">17</span> Web Scrapping</a></li>
 </ul>
 
         <div class="book-extra">
@@ -69,70 +68,70 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="control-and-loops" class="section level1" number="4">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="control-and-loops" class="section level1" number="5">
 <h1>
-<span class="header-section-number">4</span> Control and Loops<a class="anchor" aria-label="anchor" href="#control-and-loops"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5</span> Control and Loops<a class="anchor" aria-label="anchor" href="#control-and-loops"><i class="fas fa-link"></i></a>
 </h1>
-<div id="if-statement" class="section level2" number="4.1">
+<div id="if-statement" class="section level2" number="5.1">
 <h2>
-<span class="header-section-number">4.1</span> If Statement<a class="anchor" aria-label="anchor" href="#if-statement"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1</span> If Statement<a class="anchor" aria-label="anchor" href="#if-statement"><i class="fas fa-link"></i></a>
 </h2>
-<div id="multiline-if..-statements" class="section level3" number="4.1.1">
+<div id="multiline-if..-statements" class="section level3" number="5.1.1">
 <h3>
-<span class="header-section-number">4.1.1</span> Multiline If.. Statements<a class="anchor" aria-label="anchor" href="#multiline-if..-statements"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1.1</span> Multiline If.. Statements<a class="anchor" aria-label="anchor" href="#multiline-if..-statements"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb324"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb324-1"><a href="control-and-loops.html#cb324-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">102</span></span>
-<span id="cb324-2"><a href="control-and-loops.html#cb324-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> price <span class="op">&lt;</span><span class="dv">100</span>:</span>
-<span id="cb324-3"><a href="control-and-loops.html#cb324-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'buy'</span>)</span>
-<span id="cb324-4"><a href="control-and-loops.html#cb324-4" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> price <span class="op">&lt;</span> <span class="dv">110</span>:</span>
-<span id="cb324-5"><a href="control-and-loops.html#cb324-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'hold'</span>)</span>
-<span id="cb324-6"><a href="control-and-loops.html#cb324-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> price <span class="op">&lt;</span> <span class="dv">120</span>:</span>
-<span id="cb324-7"><a href="control-and-loops.html#cb324-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'think about it'</span>)</span>
-<span id="cb324-8"><a href="control-and-loops.html#cb324-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb324-9"><a href="control-and-loops.html#cb324-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'sell'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb418"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb418-1"><a href="control-and-loops.html#cb418-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">102</span></span>
+<span id="cb418-2"><a href="control-and-loops.html#cb418-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> price <span class="op">&lt;</span><span class="dv">100</span>:</span>
+<span id="cb418-3"><a href="control-and-loops.html#cb418-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'buy'</span>)</span>
+<span id="cb418-4"><a href="control-and-loops.html#cb418-4" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> price <span class="op">&lt;</span> <span class="dv">110</span>:</span>
+<span id="cb418-5"><a href="control-and-loops.html#cb418-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'hold'</span>)</span>
+<span id="cb418-6"><a href="control-and-loops.html#cb418-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> price <span class="op">&lt;</span> <span class="dv">120</span>:</span>
+<span id="cb418-7"><a href="control-and-loops.html#cb418-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'think about it'</span>)</span>
+<span id="cb418-8"><a href="control-and-loops.html#cb418-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb418-9"><a href="control-and-loops.html#cb418-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'sell'</span>)</span></code></pre></div>
 <pre><code>## hold</code></pre>
-<div class="sourceCode" id="cb326"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb326-1"><a href="control-and-loops.html#cb326-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'end of programming'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb420"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb420-1"><a href="control-and-loops.html#cb420-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'end of programming'</span>)</span></code></pre></div>
 <pre><code>## end of programming</code></pre>
 </div>
-<div id="single-line-if-..-statement" class="section level3" number="4.1.2">
+<div id="single-line-if-..-statement" class="section level3" number="5.1.2">
 <h3>
-<span class="header-section-number">4.1.2</span> Single Line If .. Statement<a class="anchor" aria-label="anchor" href="#single-line-if-..-statement"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1.2</span> Single Line If .. Statement<a class="anchor" aria-label="anchor" href="#single-line-if-..-statement"><i class="fas fa-link"></i></a>
 </h3>
-<div id="if-in-one-statement" class="section level4" number="4.1.2.1">
+<div id="if-in-one-statement" class="section level4" number="5.1.2.1">
 <h4>
-<span class="header-section-number">4.1.2.1</span> if … In One Statement<a class="anchor" aria-label="anchor" href="#if-in-one-statement"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1.2.1</span> if … In One Statement<a class="anchor" aria-label="anchor" href="#if-in-one-statement"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb328"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb328-1"><a href="control-and-loops.html#cb328-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">70</span></span>
-<span id="cb328-2"><a href="control-and-loops.html#cb328-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> price<span class="op">&lt;</span><span class="dv">80</span>: <span class="bu">print</span>(<span class="st">'buy'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb422"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb422-1"><a href="control-and-loops.html#cb422-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">70</span></span>
+<span id="cb422-2"><a href="control-and-loops.html#cb422-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> price<span class="op">&lt;</span><span class="dv">80</span>: <span class="bu">print</span>(<span class="st">'buy'</span>)</span></code></pre></div>
 <pre><code>## buy</code></pre>
 </div>
-<div id="ternary-statemnt" class="section level4" number="4.1.2.2">
+<div id="ternary-statemnt" class="section level4" number="5.1.2.2">
 <h4>
-<span class="header-section-number">4.1.2.2</span> Ternary Statemnt<a class="anchor" aria-label="anchor" href="#ternary-statemnt"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1.2.2</span> Ternary Statemnt<a class="anchor" aria-label="anchor" href="#ternary-statemnt"><i class="fas fa-link"></i></a>
 </h4>
 <p>This statement return a value with simple condition</p>
-<div class="sourceCode" id="cb330"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb330-1"><a href="control-and-loops.html#cb330-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">85</span></span>
-<span id="cb330-2"><a href="control-and-loops.html#cb330-2" aria-hidden="true" tabindex="-1"></a><span class="co">'buy'</span> <span class="cf">if</span> (price<span class="op">&lt;</span><span class="dv">80</span>) <span class="cf">else</span> <span class="st">'dont buy'</span></span></code></pre></div>
+<div class="sourceCode" id="cb424"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb424-1"><a href="control-and-loops.html#cb424-1" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="dv">85</span></span>
+<span id="cb424-2"><a href="control-and-loops.html#cb424-2" aria-hidden="true" tabindex="-1"></a><span class="co">'buy'</span> <span class="cf">if</span> (price<span class="op">&lt;</span><span class="dv">80</span>) <span class="cf">else</span> <span class="st">'dont buy'</span></span></code></pre></div>
 <pre><code>## 'dont buy'</code></pre>
 </div>
 </div>
 </div>
-<div id="for-loops" class="section level2" number="4.2">
+<div id="for-loops" class="section level2" number="5.2">
 <h2>
-<span class="header-section-number">4.2</span> For Loops<a class="anchor" aria-label="anchor" href="#for-loops"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2</span> For Loops<a class="anchor" aria-label="anchor" href="#for-loops"><i class="fas fa-link"></i></a>
 </h2>
-<div id="for-..-else-construct" class="section level3" number="4.2.1">
+<div id="for-..-else-construct" class="section level3" number="5.2.1">
 <h3>
-<span class="header-section-number">4.2.1</span> For .. Else Construct<a class="anchor" aria-label="anchor" href="#for-..-else-construct"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.1</span> For .. Else Construct<a class="anchor" aria-label="anchor" href="#for-..-else-construct"><i class="fas fa-link"></i></a>
 </h3>
 <p><strong><code>else</code></strong> is only executed when the for loop <strong>completed all cycles</strong></p>
-<div class="sourceCode" id="cb332"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb332-1"><a href="control-and-loops.html#cb332-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb332-2"><a href="control-and-loops.html#cb332-2" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
-<span id="cb332-3"><a href="control-and-loops.html#cb332-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb332-4"><a href="control-and-loops.html#cb332-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> mylist:</span>
-<span id="cb332-5"><a href="control-and-loops.html#cb332-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (i)</span>
-<span id="cb332-6"><a href="control-and-loops.html#cb332-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb332-7"><a href="control-and-loops.html#cb332-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'Hooray, the loop is completed successfully'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb426"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb426-1"><a href="control-and-loops.html#cb426-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb426-2"><a href="control-and-loops.html#cb426-2" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb426-3"><a href="control-and-loops.html#cb426-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb426-4"><a href="control-and-loops.html#cb426-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> mylist:</span>
+<span id="cb426-5"><a href="control-and-loops.html#cb426-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (i)</span>
+<span id="cb426-6"><a href="control-and-loops.html#cb426-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb426-7"><a href="control-and-loops.html#cb426-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'Hooray, the loop is completed successfully'</span>)</span></code></pre></div>
 <pre><code>## 1
 ## 2
 ## 3
@@ -140,77 +139,77 @@
 ## 5
 ## Hooray, the loop is completed successfully</code></pre>
 <p>In below exmaple, for loop encountered <strong><code><a href="https://rdrr.io/r/base/Control.html">break</a></code></strong>, hence the <strong><code>else</code></strong> section is not executed.</p>
-<div class="sourceCode" id="cb334"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb334-1"><a href="control-and-loops.html#cb334-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> mylist:</span>
-<span id="cb334-2"><a href="control-and-loops.html#cb334-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">4</span>:</span>
-<span id="cb334-3"><a href="control-and-loops.html#cb334-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (i)</span>
-<span id="cb334-4"><a href="control-and-loops.html#cb334-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
-<span id="cb334-5"><a href="control-and-loops.html#cb334-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Oops, I am breaking out half way in the loop'</span>)</span>
-<span id="cb334-6"><a href="control-and-loops.html#cb334-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span></span>
-<span id="cb334-7"><a href="control-and-loops.html#cb334-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb334-8"><a href="control-and-loops.html#cb334-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'Hooray, the loop is completed successfully'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb428"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb428-1"><a href="control-and-loops.html#cb428-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> mylist:</span>
+<span id="cb428-2"><a href="control-and-loops.html#cb428-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">4</span>:</span>
+<span id="cb428-3"><a href="control-and-loops.html#cb428-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (i)</span>
+<span id="cb428-4"><a href="control-and-loops.html#cb428-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb428-5"><a href="control-and-loops.html#cb428-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Oops, I am breaking out half way in the loop'</span>)</span>
+<span id="cb428-6"><a href="control-and-loops.html#cb428-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span></span>
+<span id="cb428-7"><a href="control-and-loops.html#cb428-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb428-8"><a href="control-and-loops.html#cb428-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'Hooray, the loop is completed successfully'</span>)</span></code></pre></div>
 <pre><code>## 1
 ## 2
 ## 3
 ## Oops, I am breaking out half way in the loop</code></pre>
 </div>
-<div id="loop-thorugh-range" class="section level3" number="4.2.2">
+<div id="loop-thorugh-range" class="section level3" number="5.2.2">
 <h3>
-<span class="header-section-number">4.2.2</span> Loop thorugh ‘range’<a class="anchor" aria-label="anchor" href="#loop-thorugh-range"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.2</span> Loop thorugh ‘range’<a class="anchor" aria-label="anchor" href="#loop-thorugh-range"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb336"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb336-1"><a href="control-and-loops.html#cb336-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>):</span>
-<span id="cb336-2"><a href="control-and-loops.html#cb336-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'Odds Number : '</span>,i) </span></code></pre></div>
+<div class="sourceCode" id="cb430"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb430-1"><a href="control-and-loops.html#cb430-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">2</span>):</span>
+<span id="cb430-2"><a href="control-and-loops.html#cb430-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'Odds Number : '</span>,i) </span></code></pre></div>
 <pre><code>## Odds Number :  1
 ## Odds Number :  3
 ## Odds Number :  5
 ## Odds Number :  7
 ## Odds Number :  9</code></pre>
 </div>
-<div id="loop-through-list" class="section level3" number="4.2.3">
+<div id="loop-through-list" class="section level3" number="5.2.3">
 <h3>
-<span class="header-section-number">4.2.3</span> Loop through ‘list’<a class="anchor" aria-label="anchor" href="#loop-through-list"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.3</span> Loop through ‘list’<a class="anchor" aria-label="anchor" href="#loop-through-list"><i class="fas fa-link"></i></a>
 </h3>
-<div id="standard-for-loop" class="section level4" number="4.2.3.1">
+<div id="standard-for-loop" class="section level4" number="5.2.3.1">
 <h4>
-<span class="header-section-number">4.2.3.1</span> Standard For Loop<a class="anchor" aria-label="anchor" href="#standard-for-loop"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.3.1</span> Standard For Loop<a class="anchor" aria-label="anchor" href="#standard-for-loop"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb338"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb338-1"><a href="control-and-loops.html#cb338-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>]</span>
-<span id="cb338-2"><a href="control-and-loops.html#cb338-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> e <span class="kw">in</span> letters:</span>
-<span id="cb338-3"><a href="control-and-loops.html#cb338-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'Letter : '</span>,e)</span></code></pre></div>
+<div class="sourceCode" id="cb432"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb432-1"><a href="control-and-loops.html#cb432-1" aria-hidden="true" tabindex="-1"></a>letters <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>]</span>
+<span id="cb432-2"><a href="control-and-loops.html#cb432-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> e <span class="kw">in</span> letters:</span>
+<span id="cb432-3"><a href="control-and-loops.html#cb432-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (<span class="st">'Letter : '</span>,e)</span></code></pre></div>
 <pre><code>## Letter :  a
 ## Letter :  b
 ## Letter :  c
 ## Letter :  d</code></pre>
 </div>
-<div id="list-comprehension-1" class="section level4" number="4.2.3.2">
+<div id="list-comprehension-1" class="section level4" number="5.2.3.2">
 <h4>
-<span class="header-section-number">4.2.3.2</span> List Comprehension<a class="anchor" aria-label="anchor" href="#list-comprehension-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.3.2</span> List Comprehension<a class="anchor" aria-label="anchor" href="#list-comprehension-1"><i class="fas fa-link"></i></a>
 </h4>
 <p>Iterate through existing list, and <strong>build new list</strong> based on condition<br><code>new_list = [expression(i) for i in old_list]</code></p>
-<div class="sourceCode" id="cb340"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb340-1"><a href="control-and-loops.html#cb340-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
-<span id="cb340-2"><a href="control-and-loops.html#cb340-2" aria-hidden="true" tabindex="-1"></a>[x.upper() <span class="cf">for</span> x <span class="kw">in</span> s]</span></code></pre></div>
+<div class="sourceCode" id="cb434"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb434-1"><a href="control-and-loops.html#cb434-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
+<span id="cb434-2"><a href="control-and-loops.html#cb434-2" aria-hidden="true" tabindex="-1"></a>[x.upper() <span class="cf">for</span> x <span class="kw">in</span> s]</span></code></pre></div>
 <pre><code>## ['ABC', 'ABCD', 'BCDE', 'BCDEE', 'CDEFG']</code></pre>
 <p>Extend list comprehension can be extended with <strong><code>if</code></strong> condition**<br><code>new_list = [expression(i) for i in old_list if filter(i)]</code></p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="control-and-loops.html#cb342-1" aria-hidden="true" tabindex="-1"></a>old_list    <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
-<span id="cb342-2"><a href="control-and-loops.html#cb342-2" aria-hidden="true" tabindex="-1"></a>matching <span class="op">=</span> [ x.upper() <span class="cf">for</span> x <span class="kw">in</span> old_list <span class="cf">if</span> <span class="st">'bcd'</span> <span class="kw">in</span> x ]</span>
-<span id="cb342-3"><a href="control-and-loops.html#cb342-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( matching )</span></code></pre></div>
+<div class="sourceCode" id="cb436"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb436-1"><a href="control-and-loops.html#cb436-1" aria-hidden="true" tabindex="-1"></a>old_list    <span class="op">=</span> [<span class="st">'abc'</span>,<span class="st">'abcd'</span>,<span class="st">'bcde'</span>,<span class="st">'bcdee'</span>,<span class="st">'cdefg'</span>]</span>
+<span id="cb436-2"><a href="control-and-loops.html#cb436-2" aria-hidden="true" tabindex="-1"></a>matching <span class="op">=</span> [ x.upper() <span class="cf">for</span> x <span class="kw">in</span> old_list <span class="cf">if</span> <span class="st">'bcd'</span> <span class="kw">in</span> x ]</span>
+<span id="cb436-3"><a href="control-and-loops.html#cb436-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( matching )</span></code></pre></div>
 <pre><code>## ['ABCD', 'BCDE', 'BCDEE']</code></pre>
 </div>
 </div>
-<div id="loop-through-dictionary" class="section level3" number="4.2.4">
+<div id="loop-through-dictionary" class="section level3" number="5.2.4">
 <h3>
-<span class="header-section-number">4.2.4</span> Loop Through ‘Dictionary’<a class="anchor" aria-label="anchor" href="#loop-through-dictionary"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.4</span> Loop Through ‘Dictionary’<a class="anchor" aria-label="anchor" href="#loop-through-dictionary"><i class="fas fa-link"></i></a>
 </h3>
 <p>Looping through dict will picup <strong>key</strong></p>
-<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="control-and-loops.html#cb344-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">"x"</span>: <span class="dv">1</span>, <span class="st">"y"</span>: <span class="dv">2</span>}</span>
-<span id="cb344-2"><a href="control-and-loops.html#cb344-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> d:</span>
-<span id="cb344-3"><a href="control-and-loops.html#cb344-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (key, d[key])</span></code></pre></div>
+<div class="sourceCode" id="cb438"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb438-1"><a href="control-and-loops.html#cb438-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">"x"</span>: <span class="dv">1</span>, <span class="st">"y"</span>: <span class="dv">2</span>}</span>
+<span id="cb438-2"><a href="control-and-loops.html#cb438-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> d:</span>
+<span id="cb438-3"><a href="control-and-loops.html#cb438-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span> (key, d[key])</span></code></pre></div>
 <pre><code>## x 1
 ## y 2</code></pre>
 </div>
 </div>
-<div id="generators" class="section level2" number="4.3">
+<div id="generators" class="section level2" number="5.3">
 <h2>
-<span class="header-section-number">4.3</span> Generators<a class="anchor" aria-label="anchor" href="#generators"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3</span> Generators<a class="anchor" aria-label="anchor" href="#generators"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>Generator is lazy, produce items only if asked for, hence more memory efficient</li>
@@ -228,130 +227,131 @@
 </li>
 <li>Finally, when the function <strong>terminates</strong>, <strong>StopIteration</strong> is raised automatically on further calls</li>
 </ul>
-<div id="basic-generator-function" class="section level3" number="4.3.1">
+<div id="basic-generator-function" class="section level3" number="5.3.1">
 <h3>
-<span class="header-section-number">4.3.1</span> Basic Generator Function<a class="anchor" aria-label="anchor" href="#basic-generator-function"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3.1</span> Basic Generator Function<a class="anchor" aria-label="anchor" href="#basic-generator-function"><i class="fas fa-link"></i></a>
 </h3>
 <p>Below example give clear understanding of how generator works</p>
-<div class="sourceCode" id="cb346"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb346-1"><a href="control-and-loops.html#cb346-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_gen():</span>
-<span id="cb346-2"><a href="control-and-loops.html#cb346-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb346-3"><a href="control-and-loops.html#cb346-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'This is printed first'</span>)</span>
-<span id="cb346-4"><a href="control-and-loops.html#cb346-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generator function contains yield statements</span></span>
-<span id="cb346-5"><a href="control-and-loops.html#cb346-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> n</span>
-<span id="cb346-6"><a href="control-and-loops.html#cb346-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb346-7"><a href="control-and-loops.html#cb346-7" aria-hidden="true" tabindex="-1"></a>    n <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb346-8"><a href="control-and-loops.html#cb346-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'This is printed second'</span>)</span>
-<span id="cb346-9"><a href="control-and-loops.html#cb346-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> n</span>
-<span id="cb346-10"><a href="control-and-loops.html#cb346-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb346-11"><a href="control-and-loops.html#cb346-11" aria-hidden="true" tabindex="-1"></a>    n <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb346-12"><a href="control-and-loops.html#cb346-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'This is printed at last'</span>)</span>
-<span id="cb346-13"><a href="control-and-loops.html#cb346-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> n</span></code></pre></div>
-<div class="sourceCode" id="cb347"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb347-1"><a href="control-and-loops.html#cb347-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> my_gen()</span>
-<span id="cb347-2"><a href="control-and-loops.html#cb347-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb440"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb440-1"><a href="control-and-loops.html#cb440-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_gen():</span>
+<span id="cb440-2"><a href="control-and-loops.html#cb440-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb440-3"><a href="control-and-loops.html#cb440-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'This is printed first'</span>)</span>
+<span id="cb440-4"><a href="control-and-loops.html#cb440-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generator function contains yield statements</span></span>
+<span id="cb440-5"><a href="control-and-loops.html#cb440-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> n</span>
+<span id="cb440-6"><a href="control-and-loops.html#cb440-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb440-7"><a href="control-and-loops.html#cb440-7" aria-hidden="true" tabindex="-1"></a>    n <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb440-8"><a href="control-and-loops.html#cb440-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'This is printed second'</span>)</span>
+<span id="cb440-9"><a href="control-and-loops.html#cb440-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> n</span>
+<span id="cb440-10"><a href="control-and-loops.html#cb440-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb440-11"><a href="control-and-loops.html#cb440-11" aria-hidden="true" tabindex="-1"></a>    n <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb440-12"><a href="control-and-loops.html#cb440-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'This is printed at last'</span>)</span>
+<span id="cb440-13"><a href="control-and-loops.html#cb440-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">yield</span> n</span></code></pre></div>
+<div class="sourceCode" id="cb441"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb441-1"><a href="control-and-loops.html#cb441-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> my_gen()</span>
+<span id="cb441-2"><a href="control-and-loops.html#cb441-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(a)</span></code></pre></div>
 <pre><code>## &lt;class 'generator'&gt;</code></pre>
-<div class="sourceCode" id="cb349"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb349-1"><a href="control-and-loops.html#cb349-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb443"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb443-1"><a href="control-and-loops.html#cb443-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
 <pre><code>## This is printed first
 ## 1</code></pre>
-<div class="sourceCode" id="cb351"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb351-1"><a href="control-and-loops.html#cb351-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb445"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb445-1"><a href="control-and-loops.html#cb445-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
 <pre><code>## This is printed second
 ## 2</code></pre>
 </div>
-<div id="useful-generator-fuction" class="section level3" number="4.3.2">
+<div id="useful-generator-fuction" class="section level3" number="5.3.2">
 <h3>
-<span class="header-section-number">4.3.2</span> Useful Generator Fuction<a class="anchor" aria-label="anchor" href="#useful-generator-fuction"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3.2</span> Useful Generator Fuction<a class="anchor" aria-label="anchor" href="#useful-generator-fuction"><i class="fas fa-link"></i></a>
 </h3>
 <p>Generator is only useful when it uses <strong>for-loop</strong>
 - for-loop within generator
 - for-loop to iterate through a generator</p>
-<div class="sourceCode" id="cb353"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb353-1"><a href="control-and-loops.html#cb353-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rev_str(my_str):</span>
-<span id="cb353-2"><a href="control-and-loops.html#cb353-2" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> <span class="bu">len</span>(my_str)</span>
-<span id="cb353-3"><a href="control-and-loops.html#cb353-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(length <span class="op">-</span> <span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb353-4"><a href="control-and-loops.html#cb353-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> my_str[i]</span></code></pre></div>
-<div class="sourceCode" id="cb354"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb354-1"><a href="control-and-loops.html#cb354-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> rev_str(<span class="st">"hello"</span>):</span>
-<span id="cb354-2"><a href="control-and-loops.html#cb354-2" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(c)</span></code></pre></div>
+<div class="sourceCode" id="cb447"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb447-1"><a href="control-and-loops.html#cb447-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rev_str(my_str):</span>
+<span id="cb447-2"><a href="control-and-loops.html#cb447-2" aria-hidden="true" tabindex="-1"></a>    length <span class="op">=</span> <span class="bu">len</span>(my_str)</span>
+<span id="cb447-3"><a href="control-and-loops.html#cb447-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(length <span class="op">-</span> <span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb447-4"><a href="control-and-loops.html#cb447-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> my_str[i]</span></code></pre></div>
+<div class="sourceCode" id="cb448"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb448-1"><a href="control-and-loops.html#cb448-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> rev_str(<span class="st">"hello"</span>):</span>
+<span id="cb448-2"><a href="control-and-loops.html#cb448-2" aria-hidden="true" tabindex="-1"></a>     <span class="bu">print</span>(c)</span></code></pre></div>
 <pre><code>## o
 ## l
 ## l
 ## e
 ## h</code></pre>
 </div>
-<div id="generator-expression" class="section level3" number="4.3.3">
+<div id="generator-expression" class="section level3" number="5.3.3">
 <h3>
-<span class="header-section-number">4.3.3</span> Generator Expression<a class="anchor" aria-label="anchor" href="#generator-expression"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3.3</span> Generator Expression<a class="anchor" aria-label="anchor" href="#generator-expression"><i class="fas fa-link"></i></a>
 </h3>
 <p>Use () to create an annonymous generator function</p>
-<div class="sourceCode" id="cb356"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb356-1"><a href="control-and-loops.html#cb356-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>]</span>
-<span id="cb356-2"><a href="control-and-loops.html#cb356-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> my_list)</span></code></pre></div>
-<div class="sourceCode" id="cb357"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb357-1"><a href="control-and-loops.html#cb357-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb450"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb450-1"><a href="control-and-loops.html#cb450-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">10</span>]</span>
+<span id="cb450-2"><a href="control-and-loops.html#cb450-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (x<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> x <span class="kw">in</span> my_list)</span></code></pre></div>
+<div class="sourceCode" id="cb451"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb451-1"><a href="control-and-loops.html#cb451-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
 <pre><code>## 1</code></pre>
-<div class="sourceCode" id="cb359"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb359-1"><a href="control-and-loops.html#cb359-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb453"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb453-1"><a href="control-and-loops.html#cb453-1" aria-hidden="true" tabindex="-1"></a><span class="bu">next</span>(a)</span></code></pre></div>
 <pre><code>## 9</code></pre>
-<div class="sourceCode" id="cb361"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb361-1"><a href="control-and-loops.html#cb361-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(a) <span class="co"># sum the power of 6,10</span></span></code></pre></div>
+<div class="sourceCode" id="cb455"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb455-1"><a href="control-and-loops.html#cb455-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(a) <span class="co"># sum the power of 6,10</span></span></code></pre></div>
 <pre><code>## 136</code></pre>
 </div>
-<div id="compare-to-iterator-class" class="section level3" number="4.3.4">
+<div id="compare-to-iterator-class" class="section level3" number="5.3.4">
 <h3>
-<span class="header-section-number">4.3.4</span> Compare to Iterator Class<a class="anchor" aria-label="anchor" href="#compare-to-iterator-class"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3.4</span> Compare to Iterator Class<a class="anchor" aria-label="anchor" href="#compare-to-iterator-class"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb363"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb363-1"><a href="control-and-loops.html#cb363-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PowTwo:</span>
-<span id="cb363-2"><a href="control-and-loops.html#cb363-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, <span class="bu">max</span> <span class="op">=</span> <span class="dv">0</span>):</span>
-<span id="cb363-3"><a href="control-and-loops.html#cb363-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.<span class="bu">max</span> <span class="op">=</span> <span class="bu">max</span></span>
-<span id="cb363-4"><a href="control-and-loops.html#cb363-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb363-5"><a href="control-and-loops.html#cb363-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__iter__</span>(<span class="va">self</span>):</span>
-<span id="cb363-6"><a href="control-and-loops.html#cb363-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.n <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb363-7"><a href="control-and-loops.html#cb363-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span></span>
-<span id="cb363-8"><a href="control-and-loops.html#cb363-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb363-9"><a href="control-and-loops.html#cb363-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__next__</span>(<span class="va">self</span>):</span>
-<span id="cb363-10"><a href="control-and-loops.html#cb363-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.n <span class="op">&gt;</span> <span class="va">self</span>.<span class="bu">max</span>:</span>
-<span id="cb363-11"><a href="control-and-loops.html#cb363-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">StopIteration</span></span>
-<span id="cb363-12"><a href="control-and-loops.html#cb363-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb363-13"><a href="control-and-loops.html#cb363-13" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="dv">2</span> <span class="op">**</span> <span class="va">self</span>.n</span>
-<span id="cb363-14"><a href="control-and-loops.html#cb363-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.n <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb363-15"><a href="control-and-loops.html#cb363-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span></code></pre></div>
+<div class="sourceCode" id="cb457"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb457-1"><a href="control-and-loops.html#cb457-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PowTwo:</span>
+<span id="cb457-2"><a href="control-and-loops.html#cb457-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, <span class="bu">max</span> <span class="op">=</span> <span class="dv">0</span>):</span>
+<span id="cb457-3"><a href="control-and-loops.html#cb457-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.<span class="bu">max</span> <span class="op">=</span> <span class="bu">max</span></span>
+<span id="cb457-4"><a href="control-and-loops.html#cb457-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb457-5"><a href="control-and-loops.html#cb457-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__iter__</span>(<span class="va">self</span>):</span>
+<span id="cb457-6"><a href="control-and-loops.html#cb457-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb457-7"><a href="control-and-loops.html#cb457-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span></span>
+<span id="cb457-8"><a href="control-and-loops.html#cb457-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb457-9"><a href="control-and-loops.html#cb457-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__next__</span>(<span class="va">self</span>):</span>
+<span id="cb457-10"><a href="control-and-loops.html#cb457-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.n <span class="op">&gt;</span> <span class="va">self</span>.<span class="bu">max</span>:</span>
+<span id="cb457-11"><a href="control-and-loops.html#cb457-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">StopIteration</span></span>
+<span id="cb457-12"><a href="control-and-loops.html#cb457-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb457-13"><a href="control-and-loops.html#cb457-13" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="dv">2</span> <span class="op">**</span> <span class="va">self</span>.n</span>
+<span id="cb457-14"><a href="control-and-loops.html#cb457-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.n <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb457-15"><a href="control-and-loops.html#cb457-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span></code></pre></div>
 <p><strong>Obviously, Generator is more concise and cleaner</strong></p>
-<div class="sourceCode" id="cb364"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb364-1"><a href="control-and-loops.html#cb364-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> PowTwoGen(<span class="bu">max</span> <span class="op">=</span> <span class="dv">0</span>):</span>
-<span id="cb364-2"><a href="control-and-loops.html#cb364-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb364-3"><a href="control-and-loops.html#cb364-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> n <span class="op">&lt;</span> <span class="bu">max</span>:</span>
-<span id="cb364-4"><a href="control-and-loops.html#cb364-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> <span class="dv">2</span> <span class="op">**</span> n</span>
-<span id="cb364-5"><a href="control-and-loops.html#cb364-5" aria-hidden="true" tabindex="-1"></a>        n <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb458"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb458-1"><a href="control-and-loops.html#cb458-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> PowTwoGen(<span class="bu">max</span> <span class="op">=</span> <span class="dv">0</span>):</span>
+<span id="cb458-2"><a href="control-and-loops.html#cb458-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb458-3"><a href="control-and-loops.html#cb458-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> n <span class="op">&lt;</span> <span class="bu">max</span>:</span>
+<span id="cb458-4"><a href="control-and-loops.html#cb458-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">yield</span> <span class="dv">2</span> <span class="op">**</span> n</span>
+<span id="cb458-5"><a href="control-and-loops.html#cb458-5" aria-hidden="true" tabindex="-1"></a>        n <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div>
+
 </div>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="built-in-data-structure.html"><span class="header-section-number">3</span> Built-In Data Structure</a></div>
-<div class="next"><a href="library-and-functions.html"><span class="header-section-number">5</span> Library and Functions</a></div>
+<div class="prev"><a href="built-in-data-structure.html"><span class="header-section-number">4</span> Built-In Data Structure</a></div>
+<div class="next"><a href="library-and-functions.html"><span class="header-section-number">6</span> Library and Functions</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#control-and-loops"><span class="header-section-number">4</span> Control and Loops</a></li>
+<li><a class="nav-link" href="#control-and-loops"><span class="header-section-number">5</span> Control and Loops</a></li>
 <li>
-<a class="nav-link" href="#if-statement"><span class="header-section-number">4.1</span> If Statement</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#multiline-if..-statements"><span class="header-section-number">4.1.1</span> Multiline If.. Statements</a></li>
-<li><a class="nav-link" href="#single-line-if-..-statement"><span class="header-section-number">4.1.2</span> Single Line If .. Statement</a></li>
+<a class="nav-link" href="#if-statement"><span class="header-section-number">5.1</span> If Statement</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#multiline-if..-statements"><span class="header-section-number">5.1.1</span> Multiline If.. Statements</a></li>
+<li><a class="nav-link" href="#single-line-if-..-statement"><span class="header-section-number">5.1.2</span> Single Line If .. Statement</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#for-loops"><span class="header-section-number">4.2</span> For Loops</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#for-..-else-construct"><span class="header-section-number">4.2.1</span> For .. Else Construct</a></li>
-<li><a class="nav-link" href="#loop-thorugh-range"><span class="header-section-number">4.2.2</span> Loop thorugh ‘range’</a></li>
-<li><a class="nav-link" href="#loop-through-list"><span class="header-section-number">4.2.3</span> Loop through ‘list’</a></li>
-<li><a class="nav-link" href="#loop-through-dictionary"><span class="header-section-number">4.2.4</span> Loop Through ‘Dictionary’</a></li>
+<a class="nav-link" href="#for-loops"><span class="header-section-number">5.2</span> For Loops</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#for-..-else-construct"><span class="header-section-number">5.2.1</span> For .. Else Construct</a></li>
+<li><a class="nav-link" href="#loop-thorugh-range"><span class="header-section-number">5.2.2</span> Loop thorugh ‘range’</a></li>
+<li><a class="nav-link" href="#loop-through-list"><span class="header-section-number">5.2.3</span> Loop through ‘list’</a></li>
+<li><a class="nav-link" href="#loop-through-dictionary"><span class="header-section-number">5.2.4</span> Loop Through ‘Dictionary’</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#generators"><span class="header-section-number">4.3</span> Generators</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#basic-generator-function"><span class="header-section-number">4.3.1</span> Basic Generator Function</a></li>
-<li><a class="nav-link" href="#useful-generator-fuction"><span class="header-section-number">4.3.2</span> Useful Generator Fuction</a></li>
-<li><a class="nav-link" href="#generator-expression"><span class="header-section-number">4.3.3</span> Generator Expression</a></li>
-<li><a class="nav-link" href="#compare-to-iterator-class"><span class="header-section-number">4.3.4</span> Compare to Iterator Class</a></li>
+<a class="nav-link" href="#generators"><span class="header-section-number">5.3</span> Generators</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#basic-generator-function"><span class="header-section-number">5.3.1</span> Basic Generator Function</a></li>
+<li><a class="nav-link" href="#useful-generator-fuction"><span class="header-section-number">5.3.2</span> Useful Generator Fuction</a></li>
+<li><a class="nav-link" href="#generator-expression"><span class="header-section-number">5.3.3</span> Generator Expression</a></li>
+<li><a class="nav-link" href="#compare-to-iterator-class"><span class="header-section-number">5.3.4</span> Compare to Iterator Class</a></li>
 </ul>
 </li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/yongks/python_bookdown/blob/master/01-fundamental.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/yongks/python_bookdown/edit/master/01-fundamental.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/yongks/python_bookdown/blob/master/04-control_and_loops.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/yongks/python_bookdown/edit/master/04-control_and_loops.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -363,7 +363,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-26.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

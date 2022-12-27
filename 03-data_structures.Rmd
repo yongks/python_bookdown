@@ -1,0 +1,528 @@
+# Built-In Data Structure
+
+## Tuple
+
+Tuple is an **immutable list**. Any attempt to change/update tuple will return error. It can contain **different types** of object.
+
+Benefits of tuple against List are:
+- **Faster** than list
+- **Protects** your data against accidental change
+- Can be used as key in dictionaries, list can't
+
+
+### Creating
+
+
+#### Constructor 
+
+```{python}
+mylist = [1,2,3]
+tuple(mylist)
+```
+
+#### Assignment
+
+**With or Without `()` **  
+
+This is a formal syntax for defining tuple, items inside (  ) notation. Assignment although works without `()`, it is not recommended.
+
+```{python}
+t1 = (1,2,3,'o','apple')
+t2 = 1,2,3,'o','apple'
+
+print(type(t1), type(t2))
+```
+
+### Accessing
+
+```{python}
+print( t1[1], t1[1:3] )
+```
+
+### Duplicating
+
+Use normal assignment `=` to duplicate. Reference of the memory address is copied. Data is actually not duplicated in memory.
+```{python}
+original = (1,2,3,4,5)
+copy_test = original
+print(original)
+print(copy_test)
+```
+The copy and original has the same memory location.
+```{python}
+print('Original ID: ', id(original))
+print('Copy ID:     ', id(copy_test))
+```
+
+## List
+
+- List is a collection of **ordered** items, where the items **can be different data types**  
+- You can pack list of items by placing them into []  
+- List is mutable
+
+### Creating List
+
+#### Empty List
+
+```{python}
+empty = []      # literal assignment method
+empty = list()  # constructor method
+print (empty)
+```
+
+#### Literal Assignment
+
+- **Multiple data types** is allowed in a list
+
+```{python}
+[123,'abc',456, None]
+```
+
+**Constructor**  
+
+- Note that **list(string)** will split the string into letters
+
+```{python}
+list('hello')
+```
+
+### Accessing Items
+
+**Access specific index number**
+
+```{python}
+food = ['bread', 'noodle', 'rice', 'biscuit','jelly','cake']
+print (food[2])  # 3rd item
+print (food[-1]) # last item
+```
+
+
+**Access range of indexes**
+
+```{python}
+print (food[:4])     # first 3 items
+print (food[-3:])    # last 3 items
+print (food[1:5])    # item 1 to 4
+print (food[5:2:-1]) # item 3 to 5, reverse order
+print (food[::-1])   # reverse order
+```
+
+### Methods
+
+#### Remove Item(s)
+
+Removal of non-existance item will result in error
+
+**Search and remove first matching item**
+
+```{python}
+food = list(['bread', 'noodle', 'rice', 'biscuit','jelly','cake','noodle'])
+food.remove('noodle')
+print (food)
+```
+
+**Remove last item**
+
+```{python}
+food.pop()
+print (food)
+```
+
+**Remove item at specific position**
+
+```{python}
+food.pop(1)  # counter start from 0
+print(food)
+```
+
+```{python}
+food.remove('jelly')
+print(food)
+```
+
+#### Appending Item (s)
+
+**Append One Item**
+
+```{python}
+food.append('jelly')
+print (food)
+```
+
+**Append Multiple Items**  **```extend()```** will expand the list/tupple argument and append as multiple items
+
+```{python}
+food.extend(['nand','puff'])
+print (food)
+```
+
+
+
+#### Other Methods
+
+**Reversing the order of the items**
+
+```{python}
+food.reverse()
+food
+```
+
+**Locating the Index Number of An Item**
+
+```{python}
+food.index('biscuit')
+```
+
+**Count occurance**
+
+```{python}
+test = ['a','a','a','b','c']
+test.count('a')
+```
+
+**Sorting The Order of Items**
+
+```{python}
+food.sort()
+print (food)
+```
+
+### Operator
+
+#### Concatenation
+
+**Concatenating Lists**
+
+Two lists can be concatenanted using '+' operator.
+
+```{python}
+['dog','cat','horse'] + ['elephant','tiger'] + ['sheep']
+```
+
+### List is Mutable
+
+The reference of list variable won't change after adding/removing its item
+
+```{python}
+food = ['cake','jelly','roti','noodle']
+print ('food : ',id(food))
+food += ['salad','chicken']
+print ('food : ',id(food))
+```
+
+A function is actually an **object**, which reference never change, hence **mutable**
+
+```{python}
+def spam (elem, some_list=['a','b']):
+    some_list.append(elem)
+    return some_list
+
+print (spam(1,['x']))
+print (spam(2)) ## second parameter is not passed
+print (spam(3)) ##  notice the default was remembered
+```
+
+### Duplicate or Reference
+
+**Use =** : It just copy the refernce. IDs are similar
+
+```{python}
+original = [1,2,3,4,5]
+copy_test = original
+print('Original ID: ', id(original))
+print('Copy ID:     ', id(copy_test))                          
+```
+
+```{python}
+original[0]=999   ## change original
+print(original)
+print(copy_test)  ## copy affected
+```
+
+
+**Duplicate A List Object** with **```copy()```**. Resulting IDs are different
+
+```{python}
+original = [1,2,3,4,5]
+copy_test = original.copy()
+print(original)
+print(copy_test)
+```
+
+```{python}
+print('Original ID: ', id(original))
+print('Copy ID:     ', id(copy_test))
+```
+
+```{python}
+original[0] = 999  ## change original
+print(original)    
+print(copy_test)   ## copy not affected
+```
+
+
+**Passing To Function As Reference**
+
+```{python, jupyter_meta = list(scrolled = TRUE)}
+def func(x):
+    print (x)
+    print('ID in Function:      ', id(x))
+    x.append(6)    ## modify the refrence
+    
+my_list = [1,2,3,4,5]
+print('ID outside Function: ', id(my_list))
+
+func(my_list)  ## call the function, pass the reference
+print(my_list) ## content was altered
+```
+
+
+### List Is Iterable
+
+#### For Loop
+
+```{python}
+s = ['abc','abcd','bcde','bcdee','cdefg']
+for x in s:
+    if 'abc' in x:
+        print (x)
+```
+#### List Comprehension
+
+This code below is a shorform method of **for loop and if**.
+
+```{python}
+old_list = ['abc','abcd','bcde','bcdee','cdefg']
+[x for x in old_list if 'abc' in x]
+```
+
+Compare to traditional version of code below:
+
+```{python}
+new_list = []
+old_list = ['abc','abcd','bcde','bcdee','cdefg']
+for x in old_list:
+    if 'abc' in x:
+        new_list.append(x)
+        
+print( new_list )
+```
+
+### Conversion
+
+Convert mutable list to immutable **tuple** with **```tuple()```**
+
+```{python}
+original = [1,2,3]
+original_tuple = tuple(original)
+print( id(original),
+       id(original_tuple))
+```
+
+### Built-In Functions Applicable To List
+
+**Number of Elements**
+
+```{python}
+len(food)
+```
+
+**Max Value**
+
+```{python}
+test = [1,2,3,5,5,3,2,1]
+m = max(test)
+test.index(m)  ## only first occurance is found
+```
+
+## Dictionaries
+
+Dictionary is a list of index-value items.
+
+### Creating dict
+
+#### From Literals
+
+**Simple Dictionary**
+
+```{python}
+animal_counts = { 'cats' : 2, 'dogs' : 5, 'horses':4}
+print (animal_counts)
+print( type(animal_counts) )
+```
+
+**Dictionary with list**
+
+```{python}
+animal_names = {'cats':   ['Walter','Ra'],
+                'dogs':   ['Jim','Roy','John','Lucky','Row'],
+                'horses': ['Sax','Jack','Ann','Jeep']
+               }
+animal_names
+```
+
+#### From Variables
+
+```{python}
+cat_names = ['Walter','Ra','Jim']
+dog_names = ['Jim','Roy','John','Lucky','Row']
+horse_names= ['Sax','Jack','Ann','Jeep']
+animal_names = {'cats': cat_names, 'dogs': dog_names, 'horses': horse_names}
+animal_names
+```
+
+### Accessing dict
+
+#### Get All Keys
+
+```{python}
+print (animal_names.keys())
+print (sorted(animal_names.keys()))
+```
+
+#### Get All Values
+
+```{python}
+print (animal_names.values())
+print (sorted(animal_names.values()))
+```
+
+#### Access value with Specific Key
+
+Use **`[ key ]`** notation. However, this will return **Error** if key does not exist
+
+```{python}
+animal_names['dogs']
+```
+
+Use  **`get( key )`** notation. will return None if key does not exist
+
+```{python}
+print (animal_counts.get('cow'))
+```
+
+### Dict Is Mutable
+
+#### Update/Append
+
+Use **[key]** notation to **update** o **append** the content of element. 
+
+```{python}
+animal_names['dogs'] = ['Ali','Abu','Bakar']
+animal_names
+```
+
+Use **```clear()```** to erase all elements
+
+```{python}
+animal_names.clear()
+```
+
+### Iterating Elements
+
+Loop through **`.items()`**
+
+```{python}
+animal_dict = { 'cats' : 2, 'dogs' : 5, 'horses':4}
+
+for key,val in animal_dict.items():
+  print( key, val )
+```
+
+## Sets
+
+Set is **unordered** collection of **unique items**. Set is **mutable**
+
+### Creation
+
+Set can be declared with `{}`, unlike list creation uses '[]'.
+
+```{python}
+myset = {'a','b','c','d','a','b','e','f','g'}
+print (myset) # notice no repetition values
+```
+
+Set can be created from list, and then converted back to list
+
+```{python}
+mylist = ['a','b','c','d','a','b','e','f','g']
+myset = set(mylist)
+my_unique_list = list(myset)
+print (
+  'Original List       : ', mylist,
+  '\nConvert to set      : ', myset,
+  '\nConvert back to list: ', my_unique_list) # notice no repetition values
+```
+
+### Membership Test
+
+```{python}
+print ('a' in myset)      # is member ?
+print ('f' not in myset)  # is not member ?
+```
+
+### Subset Test
+Subset Test : <=  
+Proper Subset Test : <
+
+```{python}
+mysubset = {'d','g'}
+mysubset <= myset
+```
+
+Proper Subset test that the master set **contain at least one element** which is not in the subset
+
+```{python}
+mysubset = {'b','a','d','c','e','f','g'}
+print ('Is Subset : ', mysubset <= myset)
+print ('Is Proper Subet : ', mysubset < myset)
+```
+
+### Union using `|`
+
+```{python}
+{'a','b','c'} | {'a','e','f'}
+```
+
+### Intersection using `&`
+
+Any elments that exist in both left and right set
+
+```{python}
+{'a','b','c','d'} & {'c','d','e','f'}
+```
+
+### Difference using `-`
+
+Remove **right** from **left**
+
+```{python}
+{'a','b','c','d'} - {'c','d','e','f'}
+```
+
+## range
+**range(X)** generates sequence of integer object
+```
+range (lower_bound, upper_bound, step_size)  
+# lower bound is optional, default = 0
+# upper bound is not included in result
+# step is optional, default = 1
+```
+
+
+**Use list() to convert in order to view actual sequence of data**
+
+```{python}
+r = range(10)     # default lower bound =0, step =1
+print (type (r))
+print (r)
+print (list(r))
+```
+
+
+**More Examples**
+
+```{python}
+print (list(range(2,8)))    # step not specified, default 1
+print ('Odds Number : ' , list(range(1,10,2))) # generate odds number
+```

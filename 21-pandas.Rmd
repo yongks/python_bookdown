@@ -240,22 +240,25 @@ s3 = pd.Series(['C1','C2','C3','C4'], name='C')
 
 #### Column-Wise
 
-**Combinining Multiple Series Into A New DataFrame**  
-- Added series will have 0,1,2,... column names (if Series are not named originally)  
-- None series will be ignored  
+**Combining Multiple Series Into A New DataFrame**  
+
+- Series name will become column name in DataFrame.
+- If Series has no name, default column names in DataFrame will be 0,1,2,3
 - `axis=1` means column-wise
 
 ```{python}
-pd.concat([s1,s2,s3, None], axis=1)
+pd.concat([s1,s2,s3, None], axis=1)  ## observed that None is ignored
 ```
 
 **Add Multiple Series Into An Existing DataFrame**  
-- No change to original data frame column name  
+
+- No change to original DataFrame column name  
 - Added columns from series will have 0,1,2,3,.. column name
 
 ```{python}
 df = pd.DataFrame({ 'A': s1, 'B': s2})
-pd.concat([df,s3,s1, None],axis=1)
+df
+pd.concat([df,s3,s2,s1, None],axis=1)
 ```
 
 #### Row-Wise
@@ -1218,12 +1221,15 @@ s.dt.hour  # extract hour as integer
 s.dt.minute # extract minute as integer
 ```
 
-
 ## Class: DataFrame
 
-### Constructor
+### Constructor (Creation)
 
-pd.DataFrame() constructor creates DataFrame object.
+- pd.DataFrame() constructor creates DataFrame object.
+- When index (row label) and column names are not specified (or cannot be induced from data source), it will default to 0,1,2,3...
+- Specify Row Label and Column Header with **`columns`** and **`index`** parameters in constructor.
+- When **`columns`** is specified AND data source has keys that can be used as column names, pandas will select those column names and order specified in **`columns`** parameter.
+- **index** and **row label** are used interchangeably in this book
 
 #### Empty DataFrame
 
@@ -1237,8 +1243,7 @@ empty_df1
 id(empty_df1)
 id(empty_df2)
 ```
-
-However, you can also initialize an empty DataFrame with Index and/or Columns.
+Even though it is empty, you can still initialize it with Index Columns.
 
 ```{python, results='hold'}
 ## empty dataframe with columns
@@ -1247,20 +1252,17 @@ empty_df  ## index is empty
 
 ## empty dataframe with columns and index
 empty_df = pd.DataFrame(columns=['A','B','C'], index=[1,2,3])
-print('\n',empty_df)
+empty_df
 
 ```
+When initializing multiple empty DataFrame at once (in one line), all the empty DataFrame refers to **same memory location**. Meaning they contain similar data.
 
-Take note that in below empty_df1 and empty_df2 refers to **same memory location**. Meaning they contain similar data.
-
-```{python}
+```{python, results='hold'}
 empty_df1 = empty_df2 = pd.DataFrame()
-print(id(empty_df1), id(empty_df2))
+id(empty_df1)
+id(empty_df2)
 ```
-
 #### From Row Oriented Data (List of Lists)
-
-Create DataFrame object from **List of Lists**
 
 ```
 DataFrame( [row_list1, row_list2, row_list3] )
@@ -1268,53 +1270,59 @@ DataFrame( [row_list1, row_list2, row_list3], column = columnName_list )
 DataFrame( [row_list1, row_list2, row_list3], index  = row_label_list )
 ```
 
-**Basic DataFrame with default Row Label and Column Header**, which default to 0,1,2,... numbering.
+- Create DataFrame object from **List of Lists**
+- Use **`columns'** to select the columns and preferred order.
 
 ```{python}
-data = [[101,'Alice',40000,2017],
-               [102,'Bob',  24000, 2017], 
-               [103,'Charles',31000,2017]]
+data = [  [101, 'Alice',  40000, 2017],
+          [102, 'Bob',    24000, 2017], 
+          [103, 'Charles',31000, 2017]]
+
+## Initialize with default row label and column names  
 pd.DataFrame(data)
 ```
-**Specify Row Label and Column Header** with `columns` and `index` parameters.
 
 ```{python}
-pd.DataFrame(data, 
-  columns = ['empID','name','salary','year'],
-  index   = ['r1','r2','r3'])
+## Initialize with column names and row index
+col_names  =  ['empID','name','salary','year']
+row_labels =  ['r1','r2','r3']
+pd.DataFrame(data, columns=col_names, index=row_labels)
 ```
 
-#### From Record Oriented Data (List of Dict)
 
-Create DataFrame object from List of Dicts.
+#### From Record Oriented Data (List of Dict)
 
 ```
 DataFrame( [dict1, dict2, dict3] )
 DataFrame( [dict1, dict2, dict3], column = column_list )
 DataFrame( [dict1, dict2, dict3], index  = row_label_list )
-
-by default,keys will become collumn names, and autosorted
 ```
 
-**Default Column Name Follow Dictionary Key**, and **index** is integer starting from 0.  
-Note that missing data is assumed as NaN
-
-**Specify Column  during Creation** can acts as column filter and manual arrangement. 
+- Create DataFrame object from List of Dicts.
+- By default,  **Column Name will follow Dictionary Key**, unless manually specified.
+- Certain dict object may have missing keys, these are assumed as NaN by pandas.
+- Use **`columns'** to select the columns and preferred order.
 
 ```{python}
-data = [{"name":"Yong", "id":1,"zkey":101},{"name":"Gan",  "id":2   }]
+data = [
+  {"name":"Yong", "id":1,"zkey":101},
+  {"name":"Gan",  "id":2           }]  ## missing zkey in this record
 
 ## Default Index and include all detected columns
 pd.DataFrame(data)
+```
+
+```{python}
 ## specify Index, must be same length of DataFrame
 pd.DataFrame(data, index=['row1','row2'])
-## Filter Which Columns To Include
+```
+
+```{python}
+## Filter Which Columns To Include, in the prefered order
 pd.DataFrame(data, columns=['zkey','name'])
 ```
 
 #### From Column Oriented Data (Dict of Lists)
-
-Create DataFrame object from Dict of Lists.
 
 ```
 DataFrame(  data = {'column1': list1,
@@ -1323,26 +1331,34 @@ DataFrame(  data = {'column1': list1,
             index    = row_label_list, 
             columns  = column_list)
 ```
-By default, DataFrame will **arrange the columns according to the dict keys order**, unless **columns** is specified. Index by default starts from 0 if not specified.
+- Create DataFrame object from Dict of Lists.
+- Constructor will arrange the columns according to the **dict keys order** by default, unless **`columns`** is specified. 
+- Use **`columns'** to select the columns in preferred order. NaN column is returned if not exist.
 
 ```{python}
-## columns arrangement defaul to dict's keys
+## columns arrangement default to dict's keys
 data = {'empID':  [100,      101,    102,      103,     104],
-        'year':   [2017,     2017,   2017,      2018,    2018],
+        'year1':   [2017,     2017,   2017,      2018,    2018],
+        'year2':   [2027,     2027,   2027,      2028,    2028],
         'salary': [40000,    24000,  31000,     20000,   30000],
         'name':   ['Alice', 'Bob',  'Charles', 'David', 'Eric']}
 
 ## Default Index and Include All Columns
 pd.DataFrame(data)
-## Select What Columns To Show. Specify row label.
-pd.DataFrame(data, columns=['name','salary','year'], index=data.get('empID'))
+```
+
+```{python}
+## Select What Columns To Show (and its order) Specify row label.
+pd.DataFrame(data, columns=['name','salary','year1','year2','not_exist'], index=data.get('empID'))
 ```
 
 ### Operators
 
-#### The Data
+#### Sample Data
 
-Two dataframe is created, each with 3 columns and 3 rows. However, only two **matching column and row** names We shall notice that the operator will perform cell-wise, **honoring the row/column name**.
+- Two dataframes are created, each with 3 columns and 3 rows. 
+- However, there are only two **matching column and row** names. 
+- We shall notice that the operator will perform cell-wise, **honoring the row/column name**.
 
 ```{python, results = 'hold'}
 df1 = pd.DataFrame(data=
@@ -1355,8 +1371,7 @@ df2 = pd.DataFrame(data=
   {'idx': ['row1','row2','row4'],
    'x': [13, 23, 33],
    'z': [0.1, 0.2, 0.3],
-   'k': [11,21,31]
-   }).set_index('idx')
+   'k': [11,21,31]}).set_index('idx')
 ```
 
 #### Addition
@@ -1364,22 +1379,27 @@ df2 = pd.DataFrame(data=
 **Adding Two DataFrame**
 
 - When Using `+` operator, non-matching row/column names will result in **NA**. 
-- **`.add()`**, has the same result as **`+`**. 
-- However, when **`fill_value`** is specified, ONE-SIDED none matching cells is assumed to have value specified in **`fill_value`**. Only BOTH-SIDED non matching cells will results in NaN. 
+- **`.add()`**, has the same result as **`+`** by default.
+- However, `add` supports **`fill_value=`** parameter. When specified, ONE-SIDED none matching cells is assumed to have value specified in **`fill_value`**. Only BOTH-SIDED non matching cells will results in NaN. 
 
 ```{python, results='hold'}
 df1 + df2
 df1.add(df2)
 df1.add(df2, fill_value=1)
 ```
+
 **Adding Series To DataFrame**
 
-Specify the **appropriate `axis`** depending on the orientation of the series data. Column and Row names are respected in this operation. However, `fill_value` is **not applicable** when apply on Series.  
-
-Note that columns or rows in Series that are not found in DataFrame, it still be created as the result. This is similar behavior as operating DataFrame with Dataframe.
+- Specify the **appropriate `axis`** depending on the orientation of the series data. 
+- Column and Row names are respected in this operation. 
+- However, `fill_value` is **not applicable** is not available on Series.  
+- Columns or rows in Series that are non-matching in DataFrame, they will be created as the result. This behavior is similar to adding two DataFrames.
 
 ```{python, results='hold'}
+## Series to add into Rows
 s3 = pd.Series([1,1,1], index=['row1','row2','row4'])
+
+## Series to add into Columns
 s4 = pd.Series([3,3,3], index=['x','y','s'])
 
 print('Original DataFrame:\n',df1,'\n\n',
@@ -1394,6 +1414,7 @@ Refer to `.add()` above for `fill_value` explanation.
 df2 - df1
 df2.sub(df1,fill_value=1000)
 ```
+
 #### Operator `&`
 
 - Non matching columns returns NaN.
@@ -1405,14 +1426,10 @@ df1>5
 df2<20
 (df1>5) & (df2<20)
 ```
+
 ### Attributes
 
 ```{python}
-data = { 'empID':  [100,      101,    102,      103,     104],
-         'year1':  [2017,     2017,   2017,      2018,    2018],
-         'name':   ['Alice',  'Bob',  'Charles','David', 'Eric'],
-         'year2':  [2001,     1907,   2003,      1998,    2011],
-         'salary': [40000,    24000,  31000,     20000,   30000] }
 df = pd.DataFrame(data)
 df
 ```
@@ -1428,12 +1445,9 @@ df.values         ## array of list
 
 ### Index Manipulation
 
-**index** and **row label** are used interchangeably in this book
-
 #### Sample Data
 
 ```{python}
-df = pd.DataFrame(data)
 df
 ```
 #### Convert Column To Index
@@ -1447,17 +1461,17 @@ set_index('column_name', inplace=False)
 - **inplace=False** means return a new DataFrame
 
 ```{python, results='hold'}
-df.index
+df.index   ## 0,1,2,3,...
 df.set_index('empID',inplace=True)
-df.index
+df.index   ## 100,101,102,etc
 df
 ```
 
-#### Convert Index Back To Column
+#### Convert Index To Column
 
-- Resetting index will resequence the index as 0,1,2 etc  
-- Old index column will be converted back as normal column  
-- Operation support **inplace** option
+- Resetting index will re-sequence the index as 0,1,2 etc.
+- Old index column will be converted back as normal column, its name retained as column name.
+- Operation support **inplace** option.
 
 ```{python}
 df.reset_index(inplace=True)
@@ -1466,38 +1480,41 @@ df
 
 #### Updating Index ( .index= )
 
-- Updating index **doesn't reorder** the data sequence. To reorder, use **`.reindex()`** instead.
-- Number of elements before and after reorder must match, otherwise **error**.
+- This simply **replace** all index with the new values.
+- Number of elements in the new index must match length of DataFrame, otherwise **error**.
 - Although same label are **allowed to repeat**, it will be deprecated in future.
 - This operation not reversible.
 
 ```{python}
-df.index = [201, 202, 203, 204, 204]
+df.index = [201, 202, 203, 204, 205]
 df
 ```
+
 #### Reordering Index (.reindex )
 
-- Reindex will **reorder** the rows according to new index  
-- The operation is not reversible
+- Returns new DataFrame according to the order specified. NO 'inplace' option.
 - Doesn't work if **duplicate** labels exists (Error)
+- Only matching rows are returned. 
+- Non matching index number will results in NaN, without Error.
 
 **Change the order of Index**, always return a new dataframe
 
-```{python, results='hold'}
-## before reindex
-df.index = (200,201,202,203,204)
-df
-## after reindex, the order is re-arranged
-df.reindex([203,202,201,204,200])
+
+```{python}
+df.reindex([203,202,300])
 ```
+
 #### Rename Axis
 
 - Example below renamed the axis of index.
-- Use `axis=0` for row index (default), use `axis=1` for column index.
+- Use **`axis=0`** for row index (default), use **`axis=1`** for column index.
+= Use **`inplace`** option to apply changes to the DataFrame, otherwise it will return the a new DataFrame
 
 ```{python}
-df.rename_axis('super_id', axis=0)
+df.rename_axis('super_id', axis=0, inplace=True)
+df
 ```
+
 ### Subsetting Rows
 
 ```
@@ -1514,41 +1531,52 @@ dataframe.sample(frac=)             # frac = 0.6 means sampling 60% of rows rand
 
 #### Sample Data
 
-```{python}
-df = pd.DataFrame(data).set_index('empID')
+```{python, results='hold'}
+df  = pd.DataFrame(data).set_index('empID')
 df
 df2 = pd.DataFrame(data, index = ['row2','row3','row1','row5','row4'])
 df2
 ```
 #### Using Row Label (loc)
 
-**Row Label** is number
+- Non matching single row label will result in **KeyError**.
+- Non matching **range** of row labels will not trigger error.
 
-```{python, }
+Row Label is **number**
+
+```{python, error=TRUE}
 df.loc[ 101]         # by single row label, return Series
 df.loc[ [100,103] ]  # by multiple row labels, returns DataFrame
 df.loc[ 100:103   ]  # by range of row labels, returns DataFrame
+df.loc[ 999:9999  ]  # invalid range, No Error !!
+df.loc[ 999 ]        # invalid key, KeyError
 ```
-**Row Label** is string
 
-```{python}
+Row Label is **string**
+
+```{python, error=TRUE}
 df2.loc[ 'row3' ]          # by single row label, return Series
 df2.loc[ ['row1','row3'] ] # by multiple row labels, returns DataFrame
 df2.loc[ 'row1':'row3'  ]  # by range of row labels, return empty DataFrame because there is no row3 after row1
 df2.loc[ 'row1':'row4'  ]  # by range of row labels, returns DataFrame
+df2.loc[ 'row1':'baba'  ]  # Invalid range, KeyError
 ```
+
 #### Using Row Number (iloc)
 
 Multiple rows **returned as dataframe** object
 
-```{python}
-df.iloc[1]           # by single row number
+```{python, results='hold', error=TRUE}
+df.iloc[1]          # by single row number
 df.iloc[ [0,3] ]    # by row numbers
 df.iloc[  0:3  ]    # by row number range
+df.iloc[ 0:999 ]    # invalid range, no error
+df.iloc[999]        # invalid row, IndexError
 ```
+
 #### Using Boolean List
 
-```{python}
+```{python, results='hold'}
 criteria = (df.salary > 30000) & (df.year1==2017)
 print (criteria)
 print (df.loc[criteria])
@@ -1559,7 +1587,9 @@ print (df.loc[criteria])
 `.query(expr, inplace=False)`
 
 ```{python}
-df.query('salary<=31000 and year1 == 2017')
+num1 = 31000
+num2 = 2017
+df.query(f'salary<={num1} and year1=={num2}')
 ```
 
 #### Sampling (.sample)
@@ -1573,9 +1603,12 @@ df.sample(frac=0.7) ## randomly pick 70% of rows, without replacement
 
 ### Row Manipulation
 
+#### Sample Data
+
 ```{python, results='hold'}
 df
 ```
+
 #### Append Rows
 
 **`.append()`** has been deprecated. Refer to **Concatenating** section.
@@ -1606,7 +1639,7 @@ df
 Construct the new column names, **ensure there is no missing** column names, which will result in error.
 
 ```{python}
-new_columns = ['empID', 'year.1','salary','year.2','glamour']
+new_columns = ['empID', 'year.1','year.2','salary', 'glamour']
 df.columns = new_columns
 df.head(2)
 ```
@@ -1614,37 +1647,20 @@ df.head(2)
 **Method 2 : Renaming Specific Column (.rename (columns=) )** 
 
 - Change column name through **rename** function.  
-- Support **inpalce** option.
-- Specify only column that require name change.
-- No matching columns **will not** return error. That is great.
+- Support **inplace** option.
+- Specify only columns that require name change.
+- Non matching columns **will not** return error. That is great.
 
 ```{python}
 df.rename( columns={'year.1':'year1', 'year.2':'year2'}, inplace=True)
-df
+df.head(2)
 ```
 
 #### Reordering Columns
 
+- Reordering columns is basically returning a new DataFrame with the speicified column list in order preferred.
+- Refer to Sub-setting Column section.
 
-**Method 1 - reindex(columns = .. )**  
-
-`.reindex()` has both functions of **rearranging**  and **fileter** columns.
-- It returns a new dataframe.  There is **no inplace option** for reordering columns  
-- **Non Matching** columns names will result in **NA** values
-
-
-**Method 2 - [ ] notation**  
-
-- **Non Matching** columns will result in **ERROR**  
-
-```{python, results='hold', error=TRUE}
-new_colorder = [ 'salary', 'year1', 'year2', 'baba']
-
-## Both methods returns the same result
-df.reindex(columns = new_colorder)  ## no Error, even though 'baba' doesn't exist
-df[new_colorder]       ## Error necause 'baba' columns does not exist
-df[new_colorder[:-1]]  ## Fixed, removed 'baba' from the column list
-```
 #### Create New Column
 
 - **New Column** will be created instantly using **[] notation**  
@@ -1665,13 +1681,14 @@ dataframe.drop( index='row_label',         inplace=True/False)   # delete single
 dataframe.drop( index= list_of_row_labels, inplace=True/False)   # delete multiple rows
 
 ```
+
 **inplace=True** means column will be deleted from original dataframe. **Default is False**, which return a copy of dataframe  
 
 **By Column Name(s)**
 
-```{python}
+```{python, results='hold'}
 df.drop( columns='year1')           # drop single column
-df.drop( columns=['year2','year3'])  # drop multiple columns
+df.drop( columns=['year1','year2'])  # drop multiple columns
 ```
 
 **By Column Number(s)**   
@@ -1704,7 +1721,7 @@ dataframe.iloc[ : , col_number_list ]  # multiple columns, dataframe
 dataframe.iloc[ : , number_range    ]  # multiple columns, dataframe
 ```
 
-#### Select Single Column
+#### Select Single Column (.loc, iloc)
 
 Selecting single column always return as **`panda::Series`**, except using **`[[ ]]`** notation.
 
@@ -1715,14 +1732,14 @@ df['name']
 df.loc[:, 'name']
 df.iloc[:, 3]
 ```
-#### Select Multiple Columns
+#### Select Multiple Columns (.loc, iloc)
 
 Multiple columns return as **panda::Dataframe** object`  
 
 Example below returns DataFrame with Single Column
 
 ```{python, results='hold'}
-df[['name']]  # return one column dataframe
+df[['name']]                # return one column dataframe
 df[['name','year1']] 
 df.loc[:,['name','year1']]
 ```
@@ -1735,20 +1752,20 @@ df.loc[ : , ['empID','year2']] ## select two columns only
 df.iloc[ : , 1:4]              ## by range of column number
 df.iloc[ : , [0,3]]            ## select two columns only
 ```
-#### By Column Name (.filter)
+#### By Column Name (.filter, .reindex)
 
-`.filter(items=None, like=None, regex=None, axis=1)`
+**`.filter(items=None, like=None, regex=None, axis=1)`**
 
-**Filter by `like` - Substring Matching**, always return DataFrame.
+**Filter by `like` - Sub string Matching**, always return DataFrame.
 
 ```{python}
 df.filter( like='year', axis=1)  ## or axis = 1
-df.filter(like='name')
+df.filter( like='name')
 ```
 **Filter by `items` - list of exact column names**
 
 ```{python}
-df.filter( items=('year1','year2', 'name'),  axis=1)  ## or axis = 1
+df.filter( items=('year1','year2', 'name', 'not_exist'),  axis=1)
 ```
 **Filter by regex = Regular Expression Matching column names**   
 
@@ -1757,8 +1774,18 @@ Select column names that contain integer.
 ```{python}
 df.filter(regex='\d')  ## default axis=1 if DataFrame
 ```
+**`.reindex(columns = .. )`**
 
-#### By Data Type (.select_dtypes)
+- It returns a new dataframe.  There is **no inplace option** for reordering columns  
+- **Non Matching** columns names will result in **NA** values
+
+
+```{python, results='hold', error=TRUE}
+new_colorder = [ 'salary', 'year1', 'baba']
+df.reindex(columns = new_colorder)  ## Non matching column name returns as NaN
+```
+
+#### By Data Types (.select_dtypes)
 
 Always return **panda::DataFrame**, even though only single column matches.  Allowed types are:
 
@@ -1907,7 +1934,7 @@ df.where(df>4, other=0)
 
 ### Iteration
 
-#### Loop Through Rows (.iterrows)
+#### Iterating Rows (.iterrows)
 
 ```{python}
 df = pd.DataFrame(data=
@@ -1919,7 +1946,7 @@ for idx, row in df.iterrows():
   print(idx, row.Name)
 ```
 
-#### Loop Through Columns (.items)
+#### Iterating Columns (.items)
 
 ```{python}
 for label, content in df.items():
@@ -1928,7 +1955,7 @@ for label, content in df.items():
 ```
 ### Data Structure
 
-#### Instance Methods - Structure
+#### Inspect Structure
 
 Find out the column names, data type in a summary. Output is for display only, not a data object
 
@@ -1950,6 +1977,10 @@ df.to_dict('index')   ## dict of dict by row index
 df.to_dict('list')    ## dict of list
 df.to_dict('records') ## list of dict
 ```
+### Import/Export
+
+#### CSV
+
 ```{python}
 df.to_csv()
 ```
@@ -2413,12 +2444,11 @@ temp_cat#array
 - The underlying data can be string or pd.Categorical  
 - It produces a **new pd.DataFrame**
 
-
 ### Sample Data
 
 ```{python}
 df = pd.DataFrame (
-    {'A': ['A1', 'A2', 'A3','A1','A3','A1'], 
+    {'A': ['A1','A2','A3','A1','A3','A1'], 
      'B': ['B1','B2','B3','B1','B1','B3'],
      'C': ['C1','C2','C3','C1',np.nan,np.nan]})
 df
@@ -2433,7 +2463,6 @@ pd.get_dummies(df.A)
 
 
 ### Dummies on DataFrame (multiple columns)
-
 
 #### All Columns
 
@@ -2451,6 +2480,7 @@ pd.get_dummies(df[cols])
 
 
 ### Dummies with na
+
 By default, nan values are ignored
 
 ```{python}
@@ -2516,7 +2546,7 @@ type(com_dep_grp)
 com_dep_grp.ngroups
 ```
 
-#### Row Numbers Associated For Each Group
+#### Row Numbers Association
 
 `.groups` property is a dictionary containing group key (identifying the group) and its values (underlying row indexes for the group)
 
@@ -2693,8 +2723,6 @@ grp.transform( lambda x:x+10 )
 ## Fundamental Analysis
 
 ## Missing Data
-
-### What Is Considered Missing Data ? 
 
 ### Sample Data
 

@@ -81,55 +81,55 @@
 <h3>
 <span class="header-section-number">18.1.1</span> Creating A Session<a class="anchor" aria-label="anchor" href="#creating-a-session"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb1654"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1654-1"><a href="web-scrapping.html#cb1654-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
-<span id="cb1654-2"><a href="web-scrapping.html#cb1654-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> requests.adapters <span class="im">import</span> HTTPAdapter</span>
-<span id="cb1654-3"><a href="web-scrapping.html#cb1654-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> urllib3.util.retry <span class="im">import</span> Retry</span>
-<span id="cb1654-4"><a href="web-scrapping.html#cb1654-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
-<span id="cb1654-5"><a href="web-scrapping.html#cb1654-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1654-6"><a href="web-scrapping.html#cb1654-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1654-7"><a href="web-scrapping.html#cb1654-7" aria-hidden="true" tabindex="-1"></a>_retries <span class="op">=</span> Retry(<span class="ex">connect</span><span class="op">=</span><span class="dv">10</span>,read<span class="op">=</span><span class="dv">10</span>,backoff_factor<span class="op">=</span><span class="dv">1</span>)   <span class="co"># backoff is incremental interval in seconds between retries</span></span>
-<span id="cb1654-8"><a href="web-scrapping.html#cb1654-8" aria-hidden="true" tabindex="-1"></a>_timeout <span class="op">=</span> (<span class="dv">10</span>,<span class="dv">10</span>)  <span class="co">## connect, read timeout in seconds</span></span>
-<span id="cb1654-9"><a href="web-scrapping.html#cb1654-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1654-10"><a href="web-scrapping.html#cb1654-10" aria-hidden="true" tabindex="-1"></a>rqs <span class="op">=</span> requests.Session()</span>
-<span id="cb1654-11"><a href="web-scrapping.html#cb1654-11" aria-hidden="true" tabindex="-1"></a>rqs.mount( <span class="st">'http://'</span> ,  HTTPAdapter(max_retries<span class="op">=</span> _retries))</span>
-<span id="cb1654-12"><a href="web-scrapping.html#cb1654-12" aria-hidden="true" tabindex="-1"></a>rqs.mount( <span class="st">'https://'</span> , HTTPAdapter(max_retries<span class="op">=</span> _retries))</span></code></pre></div>
-<div class="sourceCode" id="cb1655"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1655-1"><a href="web-scrapping.html#cb1655-1" aria-hidden="true" tabindex="-1"></a>link1 <span class="op">=</span> <span class="st">'https://www.yahoo.com'</span></span>
-<span id="cb1655-2"><a href="web-scrapping.html#cb1655-2" aria-hidden="true" tabindex="-1"></a>link2 <span class="op">=</span> <span class="st">'http://mamamia777.com.au'</span></span>
-<span id="cb1655-3"><a href="web-scrapping.html#cb1655-3" aria-hidden="true" tabindex="-1"></a><span class="co">#user_agent = {'User-Agent': random.choice(_USER_AGENTS)}</span></span>
-<span id="cb1655-4"><a href="web-scrapping.html#cb1655-4" aria-hidden="true" tabindex="-1"></a><span class="co">#response1  = rqs.get(link1, timeout=_timeout)</span></span>
-<span id="cb1655-5"><a href="web-scrapping.html#cb1655-5" aria-hidden="true" tabindex="-1"></a><span class="co">#response2  = rqs.get(link2, timeout=_timeout)  </span></span></code></pre></div>
-<div class="sourceCode" id="cb1656"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1656-1"><a href="web-scrapping.html#cb1656-1" aria-hidden="true" tabindex="-1"></a><span class="co">#print (page1.status_code)</span></span></code></pre></div>
+<div class="sourceCode" id="cb1650"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1650-1"><a href="web-scrapping.html#cb1650-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb1650-2"><a href="web-scrapping.html#cb1650-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> requests.adapters <span class="im">import</span> HTTPAdapter</span>
+<span id="cb1650-3"><a href="web-scrapping.html#cb1650-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> urllib3.util.retry <span class="im">import</span> Retry</span>
+<span id="cb1650-4"><a href="web-scrapping.html#cb1650-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb1650-5"><a href="web-scrapping.html#cb1650-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1650-6"><a href="web-scrapping.html#cb1650-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1650-7"><a href="web-scrapping.html#cb1650-7" aria-hidden="true" tabindex="-1"></a>_retries <span class="op">=</span> Retry(<span class="ex">connect</span><span class="op">=</span><span class="dv">10</span>,read<span class="op">=</span><span class="dv">10</span>,backoff_factor<span class="op">=</span><span class="dv">1</span>)   <span class="co"># backoff is incremental interval in seconds between retries</span></span>
+<span id="cb1650-8"><a href="web-scrapping.html#cb1650-8" aria-hidden="true" tabindex="-1"></a>_timeout <span class="op">=</span> (<span class="dv">10</span>,<span class="dv">10</span>)  <span class="co">## connect, read timeout in seconds</span></span>
+<span id="cb1650-9"><a href="web-scrapping.html#cb1650-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1650-10"><a href="web-scrapping.html#cb1650-10" aria-hidden="true" tabindex="-1"></a>rqs <span class="op">=</span> requests.Session()</span>
+<span id="cb1650-11"><a href="web-scrapping.html#cb1650-11" aria-hidden="true" tabindex="-1"></a>rqs.mount( <span class="st">'http://'</span> ,  HTTPAdapter(max_retries<span class="op">=</span> _retries))</span>
+<span id="cb1650-12"><a href="web-scrapping.html#cb1650-12" aria-hidden="true" tabindex="-1"></a>rqs.mount( <span class="st">'https://'</span> , HTTPAdapter(max_retries<span class="op">=</span> _retries))</span></code></pre></div>
+<div class="sourceCode" id="cb1651"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1651-1"><a href="web-scrapping.html#cb1651-1" aria-hidden="true" tabindex="-1"></a>link1 <span class="op">=</span> <span class="st">'https://www.yahoo.com'</span></span>
+<span id="cb1651-2"><a href="web-scrapping.html#cb1651-2" aria-hidden="true" tabindex="-1"></a>link2 <span class="op">=</span> <span class="st">'http://mamamia777.com.au'</span></span>
+<span id="cb1651-3"><a href="web-scrapping.html#cb1651-3" aria-hidden="true" tabindex="-1"></a><span class="co">#user_agent = {'User-Agent': random.choice(_USER_AGENTS)}</span></span>
+<span id="cb1651-4"><a href="web-scrapping.html#cb1651-4" aria-hidden="true" tabindex="-1"></a><span class="co">#response1  = rqs.get(link1, timeout=_timeout)</span></span>
+<span id="cb1651-5"><a href="web-scrapping.html#cb1651-5" aria-hidden="true" tabindex="-1"></a><span class="co">#response2  = rqs.get(link2, timeout=_timeout)  </span></span></code></pre></div>
+<div class="sourceCode" id="cb1652"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1652-1"><a href="web-scrapping.html#cb1652-1" aria-hidden="true" tabindex="-1"></a><span class="co">#print (page1.status_code)</span></span></code></pre></div>
 </div>
 <div id="rotating-broswer" class="section level3" number="18.1.2">
 <h3>
 <span class="header-section-number">18.1.2</span> Rotating Broswer<a class="anchor" aria-label="anchor" href="#rotating-broswer"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb1657"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1657-1"><a href="web-scrapping.html#cb1657-1" aria-hidden="true" tabindex="-1"></a>_USER_AGENTS <span class="op">=</span> [</span>
-<span id="cb1657-2"><a href="web-scrapping.html#cb1657-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">#Chrome</span></span>
-<span id="cb1657-3"><a href="web-scrapping.html#cb1657-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'</span>,</span>
-<span id="cb1657-4"><a href="web-scrapping.html#cb1657-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'</span>,</span>
-<span id="cb1657-5"><a href="web-scrapping.html#cb1657-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'</span>,</span>
-<span id="cb1657-6"><a href="web-scrapping.html#cb1657-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'</span>,</span>
-<span id="cb1657-7"><a href="web-scrapping.html#cb1657-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'</span>,</span>
-<span id="cb1657-8"><a href="web-scrapping.html#cb1657-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'</span>,</span>
-<span id="cb1657-9"><a href="web-scrapping.html#cb1657-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'</span>,</span>
-<span id="cb1657-10"><a href="web-scrapping.html#cb1657-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'</span>,</span>
-<span id="cb1657-11"><a href="web-scrapping.html#cb1657-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'</span>,</span>
-<span id="cb1657-12"><a href="web-scrapping.html#cb1657-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'</span>,</span>
-<span id="cb1657-13"><a href="web-scrapping.html#cb1657-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Firefox</span></span>
-<span id="cb1657-14"><a href="web-scrapping.html#cb1657-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)'</span>,</span>
-<span id="cb1657-15"><a href="web-scrapping.html#cb1657-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
-<span id="cb1657-16"><a href="web-scrapping.html#cb1657-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)'</span>,</span>
-<span id="cb1657-17"><a href="web-scrapping.html#cb1657-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
-<span id="cb1657-18"><a href="web-scrapping.html#cb1657-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
-<span id="cb1657-19"><a href="web-scrapping.html#cb1657-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
-<span id="cb1657-20"><a href="web-scrapping.html#cb1657-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)'</span>,</span>
-<span id="cb1657-21"><a href="web-scrapping.html#cb1657-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
-<span id="cb1657-22"><a href="web-scrapping.html#cb1657-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'</span>,</span>
-<span id="cb1657-23"><a href="web-scrapping.html#cb1657-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
-<span id="cb1657-24"><a href="web-scrapping.html#cb1657-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)'</span>,</span>
-<span id="cb1657-25"><a href="web-scrapping.html#cb1657-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'</span>,</span>
-<span id="cb1657-26"><a href="web-scrapping.html#cb1657-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)'</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb1653"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1653-1"><a href="web-scrapping.html#cb1653-1" aria-hidden="true" tabindex="-1"></a>_USER_AGENTS <span class="op">=</span> [</span>
+<span id="cb1653-2"><a href="web-scrapping.html#cb1653-2" aria-hidden="true" tabindex="-1"></a>   <span class="co">#Chrome</span></span>
+<span id="cb1653-3"><a href="web-scrapping.html#cb1653-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'</span>,</span>
+<span id="cb1653-4"><a href="web-scrapping.html#cb1653-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'</span>,</span>
+<span id="cb1653-5"><a href="web-scrapping.html#cb1653-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'</span>,</span>
+<span id="cb1653-6"><a href="web-scrapping.html#cb1653-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'</span>,</span>
+<span id="cb1653-7"><a href="web-scrapping.html#cb1653-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'</span>,</span>
+<span id="cb1653-8"><a href="web-scrapping.html#cb1653-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'</span>,</span>
+<span id="cb1653-9"><a href="web-scrapping.html#cb1653-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'</span>,</span>
+<span id="cb1653-10"><a href="web-scrapping.html#cb1653-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'</span>,</span>
+<span id="cb1653-11"><a href="web-scrapping.html#cb1653-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'</span>,</span>
+<span id="cb1653-12"><a href="web-scrapping.html#cb1653-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'</span>,</span>
+<span id="cb1653-13"><a href="web-scrapping.html#cb1653-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Firefox</span></span>
+<span id="cb1653-14"><a href="web-scrapping.html#cb1653-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)'</span>,</span>
+<span id="cb1653-15"><a href="web-scrapping.html#cb1653-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
+<span id="cb1653-16"><a href="web-scrapping.html#cb1653-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)'</span>,</span>
+<span id="cb1653-17"><a href="web-scrapping.html#cb1653-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
+<span id="cb1653-18"><a href="web-scrapping.html#cb1653-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
+<span id="cb1653-19"><a href="web-scrapping.html#cb1653-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
+<span id="cb1653-20"><a href="web-scrapping.html#cb1653-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0)'</span>,</span>
+<span id="cb1653-21"><a href="web-scrapping.html#cb1653-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
+<span id="cb1653-22"><a href="web-scrapping.html#cb1653-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'</span>,</span>
+<span id="cb1653-23"><a href="web-scrapping.html#cb1653-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko'</span>,</span>
+<span id="cb1653-24"><a href="web-scrapping.html#cb1653-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)'</span>,</span>
+<span id="cb1653-25"><a href="web-scrapping.html#cb1653-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'</span>,</span>
+<span id="cb1653-26"><a href="web-scrapping.html#cb1653-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)'</span>]</span></code></pre></div>
 </div>
 </div>
 <div id="beautifulsoup" class="section level2" number="18.2">
@@ -140,32 +140,32 @@
 <h3>
 <span class="header-section-number">18.2.1</span> Module Import<a class="anchor" aria-label="anchor" href="#module-import-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb1658"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1658-1"><a href="web-scrapping.html#cb1658-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span></code></pre></div>
+<div class="sourceCode" id="cb1654"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1654-1"><a href="web-scrapping.html#cb1654-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span></code></pre></div>
 </div>
 <div id="html-tag-parsing" class="section level3" number="18.2.2">
 <h3>
 <span class="header-section-number">18.2.2</span> HTML Tag Parsing<a class="anchor" aria-label="anchor" href="#html-tag-parsing"><i class="fas fa-link"></i></a>
 </h3>
-<div id="sample-data-25" class="section level4" number="18.2.2.1">
+<div id="sample-data-27" class="section level4" number="18.2.2.1">
 <h4>
-<span class="header-section-number">18.2.2.1</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data-25"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.2.2.1</span> Sample Data<a class="anchor" aria-label="anchor" href="#sample-data-27"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb1659"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1659-1"><a href="web-scrapping.html#cb1659-1" aria-hidden="true" tabindex="-1"></a>my_html <span class="op">=</span> <span class="st">'''</span></span>
-<span id="cb1659-2"><a href="web-scrapping.html#cb1659-2" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;div id="my-id1" class='title'&gt; </span></span>
-<span id="cb1659-3"><a href="web-scrapping.html#cb1659-3" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;p&gt;This Is My Title&lt;/p&gt;</span></span>
-<span id="cb1659-4"><a href="web-scrapping.html#cb1659-4" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
-<span id="cb1659-5"><a href="web-scrapping.html#cb1659-5" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div id="my-id2" class='subtitle' custom_attr='funny'&gt;</span></span>
-<span id="cb1659-6"><a href="web-scrapping.html#cb1659-6" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;p&gt;This is Subtitle&lt;/p&gt;</span></span>
-<span id="cb1659-7"><a href="web-scrapping.html#cb1659-7" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
-<span id="cb1659-8"><a href="web-scrapping.html#cb1659-8" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
-<span id="cb1659-9"><a href="web-scrapping.html#cb1659-9" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div id="my-id3" class='title',   custom_attr='funny'&gt;</span></span>
-<span id="cb1659-10"><a href="web-scrapping.html#cb1659-10" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;p&gt;This is paragraph1&lt;/p&gt;</span></span>
-<span id="cb1659-11"><a href="web-scrapping.html#cb1659-11" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;p&gt;This is paragraph2&lt;/p&gt;</span></span>
-<span id="cb1659-12"><a href="web-scrapping.html#cb1659-12" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;h3&gt;This is paragraph3&lt;/h3&gt;</span></span>
-<span id="cb1659-13"><a href="web-scrapping.html#cb1659-13" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
-<span id="cb1659-14"><a href="web-scrapping.html#cb1659-14" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/div&gt;</span></span>
-<span id="cb1659-15"><a href="web-scrapping.html#cb1659-15" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
-<span id="cb1659-16"><a href="web-scrapping.html#cb1659-16" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_html)</span></code></pre></div>
+<div class="sourceCode" id="cb1655"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1655-1"><a href="web-scrapping.html#cb1655-1" aria-hidden="true" tabindex="-1"></a>my_html <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb1655-2"><a href="web-scrapping.html#cb1655-2" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;div id="my-id1" class='title'&gt; </span></span>
+<span id="cb1655-3"><a href="web-scrapping.html#cb1655-3" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;p&gt;This Is My Title&lt;/p&gt;</span></span>
+<span id="cb1655-4"><a href="web-scrapping.html#cb1655-4" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb1655-5"><a href="web-scrapping.html#cb1655-5" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div id="my-id2" class='subtitle' custom_attr='funny'&gt;</span></span>
+<span id="cb1655-6"><a href="web-scrapping.html#cb1655-6" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;p&gt;This is Subtitle&lt;/p&gt;</span></span>
+<span id="cb1655-7"><a href="web-scrapping.html#cb1655-7" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
+<span id="cb1655-8"><a href="web-scrapping.html#cb1655-8" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb1655-9"><a href="web-scrapping.html#cb1655-9" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div id="my-id3" class='title',   custom_attr='funny'&gt;</span></span>
+<span id="cb1655-10"><a href="web-scrapping.html#cb1655-10" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;p&gt;This is paragraph1&lt;/p&gt;</span></span>
+<span id="cb1655-11"><a href="web-scrapping.html#cb1655-11" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;p&gt;This is paragraph2&lt;/p&gt;</span></span>
+<span id="cb1655-12"><a href="web-scrapping.html#cb1655-12" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;h3&gt;This is paragraph3&lt;/h3&gt;</span></span>
+<span id="cb1655-13"><a href="web-scrapping.html#cb1655-13" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/div&gt;</span></span>
+<span id="cb1655-14"><a href="web-scrapping.html#cb1655-14" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/div&gt;</span></span>
+<span id="cb1655-15"><a href="web-scrapping.html#cb1655-15" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb1655-16"><a href="web-scrapping.html#cb1655-16" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_html)</span></code></pre></div>
 </div>
 <div id="first-match" class="section level4" number="18.2.2.2">
 <h4>
@@ -173,7 +173,7 @@
 </h4>
 <p><strong>ID Selector</strong><br>
 Everthing under the selected tag will be returned.</p>
-<div class="sourceCode" id="cb1660"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1660-1"><a href="web-scrapping.html#cb1660-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="bu">id</span><span class="op">=</span><span class="st">'my-id1'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1656"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1656-1"><a href="web-scrapping.html#cb1656-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="bu">id</span><span class="op">=</span><span class="st">'my-id1'</span>)</span></code></pre></div>
 <pre><code>## &lt;div class="title" id="my-id1"&gt;
 ## &lt;p&gt;This Is My Title&lt;/p&gt;
 ## &lt;div class="subtitle" custom_attr="funny" id="my-id2"&gt;
@@ -186,20 +186,20 @@ Everthing under the selected tag will be returned.</p>
 ## &lt;/div&gt;
 ## &lt;/div&gt;</code></pre>
 <p><strong>Class Selector</strong></p>
-<div class="sourceCode" id="cb1662"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1662-1"><a href="web-scrapping.html#cb1662-1" aria-hidden="true" tabindex="-1"></a>soup.find(class_<span class="op">=</span><span class="st">'subtitle'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1658"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1658-1"><a href="web-scrapping.html#cb1658-1" aria-hidden="true" tabindex="-1"></a>soup.find(class_<span class="op">=</span><span class="st">'subtitle'</span>)</span></code></pre></div>
 <pre><code>## &lt;div class="subtitle" custom_attr="funny" id="my-id2"&gt;
 ## &lt;p&gt;This is Subtitle&lt;/p&gt;
 ## &lt;/div&gt;</code></pre>
 <p><strong>Attribute Selector</strong></p>
-<div class="sourceCode" id="cb1664"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1664-1"><a href="web-scrapping.html#cb1664-1" aria-hidden="true" tabindex="-1"></a>soup.find(custom_attr<span class="op">=</span><span class="st">'funny'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1660"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1660-1"><a href="web-scrapping.html#cb1660-1" aria-hidden="true" tabindex="-1"></a>soup.find(custom_attr<span class="op">=</span><span class="st">'funny'</span>)</span></code></pre></div>
 <pre><code>## &lt;div class="subtitle" custom_attr="funny" id="my-id2"&gt;
 ## &lt;p&gt;This is Subtitle&lt;/p&gt;
 ## &lt;/div&gt;</code></pre>
-<div class="sourceCode" id="cb1666"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1666-1"><a href="web-scrapping.html#cb1666-1" aria-hidden="true" tabindex="-1"></a>soup.find(       custom_attr<span class="op">=</span><span class="st">'funny'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1662"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1662-1"><a href="web-scrapping.html#cb1662-1" aria-hidden="true" tabindex="-1"></a>soup.find(       custom_attr<span class="op">=</span><span class="st">'funny'</span>)</span></code></pre></div>
 <pre><code>## &lt;div class="subtitle" custom_attr="funny" id="my-id2"&gt;
 ## &lt;p&gt;This is Subtitle&lt;/p&gt;
 ## &lt;/div&gt;</code></pre>
-<div class="sourceCode" id="cb1668"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1668-1"><a href="web-scrapping.html#cb1668-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'div'</span>, custom_attr<span class="op">=</span><span class="st">'funny'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1664"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1664-1"><a href="web-scrapping.html#cb1664-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'div'</span>, custom_attr<span class="op">=</span><span class="st">'funny'</span>)</span></code></pre></div>
 <pre><code>## &lt;div class="subtitle" custom_attr="funny" id="my-id2"&gt;
 ## &lt;p&gt;This is Subtitle&lt;/p&gt;
 ## &lt;/div&gt;</code></pre>
@@ -209,10 +209,10 @@ Everthing under the selected tag will be returned.</p>
 <span class="header-section-number">18.2.2.3</span> Find All Matches<a class="anchor" aria-label="anchor" href="#find-all-matches"><i class="fas fa-link"></i></a>
 </h4>
 <p><strong><code>find_all</code></strong></p>
-<div class="sourceCode" id="cb1670"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1670-1"><a href="web-scrapping.html#cb1670-1" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_html)</span>
-<span id="cb1670-2"><a href="web-scrapping.html#cb1670-2" aria-hidden="true" tabindex="-1"></a>multiple_result <span class="op">=</span> soup.find_all(class_<span class="op">=</span><span class="st">'title'</span>)</span>
-<span id="cb1670-3"><a href="web-scrapping.html#cb1670-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'Item 0: </span><span class="ch">\n</span><span class="st">'</span>,     multiple_result[<span class="dv">0</span>],</span>
-<span id="cb1670-4"><a href="web-scrapping.html#cb1670-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n\n</span><span class="st">Item 1: </span><span class="ch">\n</span><span class="st">'</span>, multiple_result[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb1666"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1666-1"><a href="web-scrapping.html#cb1666-1" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_html)</span>
+<span id="cb1666-2"><a href="web-scrapping.html#cb1666-2" aria-hidden="true" tabindex="-1"></a>multiple_result <span class="op">=</span> soup.find_all(class_<span class="op">=</span><span class="st">'title'</span>)</span>
+<span id="cb1666-3"><a href="web-scrapping.html#cb1666-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'Item 0: </span><span class="ch">\n</span><span class="st">'</span>,     multiple_result[<span class="dv">0</span>],</span>
+<span id="cb1666-4"><a href="web-scrapping.html#cb1666-4" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n\n</span><span class="st">Item 1: </span><span class="ch">\n</span><span class="st">'</span>, multiple_result[<span class="dv">1</span>])</span></code></pre></div>
 <pre><code>## Item 0: 
 ##  &lt;div class="title" id="my-id1"&gt;
 ## &lt;p&gt;This Is My Title&lt;/p&gt;
@@ -234,9 +234,9 @@ Everthing under the selected tag will be returned.</p>
 ## &lt;/div&gt;</code></pre>
 <p><strong>CSS Selector using <code>select()</code></strong></p>
 <p>Above can be achieved using css selector. It return an array of result (multiple matches).</p>
-<div class="sourceCode" id="cb1672"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1672-1"><a href="web-scrapping.html#cb1672-1" aria-hidden="true" tabindex="-1"></a>multiple_result <span class="op">=</span> soup.select(<span class="st">'.title'</span>)</span>
-<span id="cb1672-2"><a href="web-scrapping.html#cb1672-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'Item 0: </span><span class="ch">\n</span><span class="st">'</span>,     multiple_result[<span class="dv">0</span>],</span>
-<span id="cb1672-3"><a href="web-scrapping.html#cb1672-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n\n</span><span class="st">Item 1: </span><span class="ch">\n</span><span class="st">'</span>, multiple_result[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb1668"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1668-1"><a href="web-scrapping.html#cb1668-1" aria-hidden="true" tabindex="-1"></a>multiple_result <span class="op">=</span> soup.select(<span class="st">'.title'</span>)</span>
+<span id="cb1668-2"><a href="web-scrapping.html#cb1668-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">'Item 0: </span><span class="ch">\n</span><span class="st">'</span>,     multiple_result[<span class="dv">0</span>],</span>
+<span id="cb1668-3"><a href="web-scrapping.html#cb1668-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'</span><span class="ch">\n\n</span><span class="st">Item 1: </span><span class="ch">\n</span><span class="st">'</span>, multiple_result[<span class="dv">1</span>])</span></code></pre></div>
 <pre><code>## Item 0: 
 ##  &lt;div class="title" id="my-id1"&gt;
 ## &lt;p&gt;This Is My Title&lt;/p&gt;
@@ -257,18 +257,18 @@ Everthing under the selected tag will be returned.</p>
 ## &lt;h3&gt;This is paragraph3&lt;/h3&gt;
 ## &lt;/div&gt;</code></pre>
 <p>More granular exmaple of css selector.</p>
-<div class="sourceCode" id="cb1674"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1674-1"><a href="web-scrapping.html#cb1674-1" aria-hidden="true" tabindex="-1"></a>soup.select(<span class="st">'#my-id1 div.subtitle'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1670"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1670-1"><a href="web-scrapping.html#cb1670-1" aria-hidden="true" tabindex="-1"></a>soup.select(<span class="st">'#my-id1 div.subtitle'</span>)</span></code></pre></div>
 <pre><code>## [&lt;div class="subtitle" custom_attr="funny" id="my-id2"&gt;
 ## &lt;p&gt;This is Subtitle&lt;/p&gt;
 ## &lt;/div&gt;]</code></pre>
 <p>Using <strong><code>contains()</code></strong></p>
-<div class="sourceCode" id="cb1676"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1676-1"><a href="web-scrapping.html#cb1676-1" aria-hidden="true" tabindex="-1"></a>soup.select(<span class="st">"p:contains('This is paragraph')"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1672"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1672-1"><a href="web-scrapping.html#cb1672-1" aria-hidden="true" tabindex="-1"></a>soup.select(<span class="st">"p:contains('This is paragraph')"</span>)</span></code></pre></div>
 <pre><code>## [&lt;p&gt;This is paragraph1&lt;/p&gt;, &lt;p&gt;This is paragraph2&lt;/p&gt;]
 ## 
 ## C:\PROGRA~3\Anaconda3\lib\site-packages\soupsieve\css_parser.py:876: FutureWarning: The pseudo class ':contains' is deprecated, ':-soup-contains' should be used moving forward.
 ##   warnings.warn(</code></pre>
 <p>Combining ID, Class and Custom Attribute in the selector</p>
-<div class="sourceCode" id="cb1678"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1678-1"><a href="web-scrapping.html#cb1678-1" aria-hidden="true" tabindex="-1"></a>soup.select(<span class="st">"div#my-id3.title[custom_attr='funny']:contains('This is paragraph')"</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1674"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1674-1"><a href="web-scrapping.html#cb1674-1" aria-hidden="true" tabindex="-1"></a>soup.select(<span class="st">"div#my-id3.title[custom_attr='funny']:contains('This is paragraph')"</span>)</span></code></pre></div>
 <pre><code>## [&lt;div class="title" custom_attr="funny" id="my-id3"&gt;
 ## &lt;p&gt;This is paragraph1&lt;/p&gt;
 ## &lt;p&gt;This is paragraph2&lt;/p&gt;
@@ -280,18 +280,18 @@ Everthing under the selected tag will be returned.</p>
 <h3>
 <span class="header-section-number">18.2.3</span> Meta Parsing<a class="anchor" aria-label="anchor" href="#meta-parsing"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb1680"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1680-1"><a href="web-scrapping.html#cb1680-1" aria-hidden="true" tabindex="-1"></a>my_meta <span class="op">=</span> <span class="st">'''</span></span>
-<span id="cb1680-2"><a href="web-scrapping.html#cb1680-2" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;meta property="description"   content="KUALA LUMPUR: blah blah"   category="Malaysia"&gt;</span></span>
-<span id="cb1680-3"><a href="web-scrapping.html#cb1680-3" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;meta property="publish-date"  content="2012-01-03"&gt;</span></span>
-<span id="cb1680-4"><a href="web-scrapping.html#cb1680-4" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
-<span id="cb1680-5"><a href="web-scrapping.html#cb1680-5" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_meta)</span>
-<span id="cb1680-6"><a href="web-scrapping.html#cb1680-6" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, <span class="bu">property</span><span class="op">=</span><span class="st">'description'</span>)[<span class="st">'content'</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb1676"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1676-1"><a href="web-scrapping.html#cb1676-1" aria-hidden="true" tabindex="-1"></a>my_meta <span class="op">=</span> <span class="st">'''</span></span>
+<span id="cb1676-2"><a href="web-scrapping.html#cb1676-2" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;meta property="description"   content="KUALA LUMPUR: blah blah"   category="Malaysia"&gt;</span></span>
+<span id="cb1676-3"><a href="web-scrapping.html#cb1676-3" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;meta property="publish-date"  content="2012-01-03"&gt;</span></span>
+<span id="cb1676-4"><a href="web-scrapping.html#cb1676-4" aria-hidden="true" tabindex="-1"></a><span class="st">'''</span></span>
+<span id="cb1676-5"><a href="web-scrapping.html#cb1676-5" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_meta)</span>
+<span id="cb1676-6"><a href="web-scrapping.html#cb1676-6" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, <span class="bu">property</span><span class="op">=</span><span class="st">'description'</span>)[<span class="st">'content'</span>]</span></code></pre></div>
 <pre><code>## 'KUALA LUMPUR: blah blah'</code></pre>
-<div class="sourceCode" id="cb1682"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1682-1"><a href="web-scrapping.html#cb1682-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, <span class="bu">property</span><span class="op">=</span><span class="st">'description'</span>)[<span class="st">'category'</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb1678"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1678-1"><a href="web-scrapping.html#cb1678-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, <span class="bu">property</span><span class="op">=</span><span class="st">'description'</span>)[<span class="st">'category'</span>]</span></code></pre></div>
 <pre><code>## 'Malaysia'</code></pre>
-<div class="sourceCode" id="cb1684"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1684-1"><a href="web-scrapping.html#cb1684-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, <span class="bu">property</span><span class="op">=</span><span class="st">'publish-date'</span>)[<span class="st">'content'</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb1680"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1680-1"><a href="web-scrapping.html#cb1680-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, <span class="bu">property</span><span class="op">=</span><span class="st">'publish-date'</span>)[<span class="st">'content'</span>]</span></code></pre></div>
 <pre><code>## '2012-01-03'</code></pre>
-<div class="sourceCode" id="cb1686"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1686-1"><a href="web-scrapping.html#cb1686-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, category<span class="op">=</span><span class="st">'Malaysia'</span>)[<span class="st">'property'</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb1682"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1682-1"><a href="web-scrapping.html#cb1682-1" aria-hidden="true" tabindex="-1"></a>soup.find(<span class="st">'meta'</span>, category<span class="op">=</span><span class="st">'Malaysia'</span>)[<span class="st">'property'</span>]</span></code></pre></div>
 <pre><code>## 'description'</code></pre>
 </div>
 <div id="getting-content" class="section level3" number="18.2.4">
@@ -308,14 +308,14 @@ Everthing under the selected tag will be returned.</p>
 <li>Use <strong>`separator=‘’</strong> to specify a string to be used to join the bits of text together</li>
 <li>It is recommended to use <code>strip=True, separator='\n'</code> so that result from different operating system will be consistant</li>
 </ul>
-<div class="sourceCode" id="cb1688"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1688-1"><a href="web-scrapping.html#cb1688-1" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_html)</span>
-<span id="cb1688-2"><a href="web-scrapping.html#cb1688-2" aria-hidden="true" tabindex="-1"></a>elem <span class="op">=</span> soup.find(<span class="bu">id</span> <span class="op">=</span> <span class="st">"my-id3"</span>)</span>
-<span id="cb1688-3"><a href="web-scrapping.html#cb1688-3" aria-hidden="true" tabindex="-1"></a>elem.get_text(strip<span class="op">=</span><span class="va">False</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1684"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1684-1"><a href="web-scrapping.html#cb1684-1" aria-hidden="true" tabindex="-1"></a>soup <span class="op">=</span> BeautifulSoup(my_html)</span>
+<span id="cb1684-2"><a href="web-scrapping.html#cb1684-2" aria-hidden="true" tabindex="-1"></a>elem <span class="op">=</span> soup.find(<span class="bu">id</span> <span class="op">=</span> <span class="st">"my-id3"</span>)</span>
+<span id="cb1684-3"><a href="web-scrapping.html#cb1684-3" aria-hidden="true" tabindex="-1"></a>elem.get_text(strip<span class="op">=</span><span class="va">False</span>)</span></code></pre></div>
 <pre><code>## '\nThis is paragraph1\nThis is paragraph2\nThis is paragraph3\n'</code></pre>
 <ul>
 <li>strip=True combine with separator will retain only the user readable text portion of each tag, with separator seperating them</li>
 </ul>
-<div class="sourceCode" id="cb1690"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1690-1"><a href="web-scrapping.html#cb1690-1" aria-hidden="true" tabindex="-1"></a>elem.get_text(strip<span class="op">=</span><span class="va">True</span>, separator<span class="op">=</span><span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1686"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1686-1"><a href="web-scrapping.html#cb1686-1" aria-hidden="true" tabindex="-1"></a>elem.get_text(strip<span class="op">=</span><span class="va">True</span>, separator<span class="op">=</span><span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre></div>
 <pre><code>## 'This is paragraph1\nThis is paragraph2\nThis is paragraph3'</code></pre>
 </div>
 <div id="splitting-content" class="section level4" number="18.2.4.2">
@@ -323,8 +323,8 @@ Everthing under the selected tag will be returned.</p>
 <span class="header-section-number">18.2.4.2</span> Splitting Content<a class="anchor" aria-label="anchor" href="#splitting-content"><i class="fas fa-link"></i></a>
 </h4>
 <p>It is useful to split using separator into list of string.</p>
-<div class="sourceCode" id="cb1692"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1692-1"><a href="web-scrapping.html#cb1692-1" aria-hidden="true" tabindex="-1"></a>elem <span class="op">=</span> soup.find(<span class="bu">id</span> <span class="op">=</span> <span class="st">"my-id3"</span>)</span>
-<span id="cb1692-2"><a href="web-scrapping.html#cb1692-2" aria-hidden="true" tabindex="-1"></a>elem.get_text(strip<span class="op">=</span><span class="va">True</span>, separator<span class="op">=</span><span class="st">'</span><span class="ch">\n</span><span class="st">'</span>).split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1688"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1688-1"><a href="web-scrapping.html#cb1688-1" aria-hidden="true" tabindex="-1"></a>elem <span class="op">=</span> soup.find(<span class="bu">id</span> <span class="op">=</span> <span class="st">"my-id3"</span>)</span>
+<span id="cb1688-2"><a href="web-scrapping.html#cb1688-2" aria-hidden="true" tabindex="-1"></a>elem.get_text(strip<span class="op">=</span><span class="va">True</span>, separator<span class="op">=</span><span class="st">'</span><span class="ch">\n</span><span class="st">'</span>).split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre></div>
 <pre><code>## ['This is paragraph1', 'This is paragraph2', 'This is paragraph3']</code></pre>
 </div>
 </div>
@@ -336,9 +336,9 @@ Everthing under the selected tag will be returned.</p>
 <h4>
 <span class="header-section-number">18.2.5.1</span> Get The Element<a class="anchor" aria-label="anchor" href="#get-the-element"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb1694"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1694-1"><a href="web-scrapping.html#cb1694-1" aria-hidden="true" tabindex="-1"></a>elems <span class="op">=</span> soup.select(<span class="st">"div#my-id3.title[custom_attr='funny']:contains('This is paragraph')"</span>)</span>
-<span id="cb1694-2"><a href="web-scrapping.html#cb1694-2" aria-hidden="true" tabindex="-1"></a>elem <span class="op">=</span> elems[<span class="dv">0</span>]</span>
-<span id="cb1694-3"><a href="web-scrapping.html#cb1694-3" aria-hidden="true" tabindex="-1"></a>elem</span></code></pre></div>
+<div class="sourceCode" id="cb1690"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1690-1"><a href="web-scrapping.html#cb1690-1" aria-hidden="true" tabindex="-1"></a>elems <span class="op">=</span> soup.select(<span class="st">"div#my-id3.title[custom_attr='funny']:contains('This is paragraph')"</span>)</span>
+<span id="cb1690-2"><a href="web-scrapping.html#cb1690-2" aria-hidden="true" tabindex="-1"></a>elem <span class="op">=</span> elems[<span class="dv">0</span>]</span>
+<span id="cb1690-3"><a href="web-scrapping.html#cb1690-3" aria-hidden="true" tabindex="-1"></a>elem</span></code></pre></div>
 <pre><code>## &lt;div class="title" custom_attr="funny" id="my-id3"&gt;
 ## &lt;p&gt;This is paragraph1&lt;/p&gt;
 ## &lt;p&gt;This is paragraph2&lt;/p&gt;
@@ -350,7 +350,7 @@ Everthing under the selected tag will be returned.</p>
 <span class="header-section-number">18.2.5.2</span> Traversing Children<a class="anchor" aria-label="anchor" href="#traversing-children"><i class="fas fa-link"></i></a>
 </h4>
 <p><strong>All Children In List <code>findChildren()</code></strong></p>
-<div class="sourceCode" id="cb1696"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1696-1"><a href="web-scrapping.html#cb1696-1" aria-hidden="true" tabindex="-1"></a>elem.findChildren()</span></code></pre></div>
+<div class="sourceCode" id="cb1692"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1692-1"><a href="web-scrapping.html#cb1692-1" aria-hidden="true" tabindex="-1"></a>elem.findChildren()</span></code></pre></div>
 <pre><code>## [&lt;p&gt;This is paragraph1&lt;/p&gt;, &lt;p&gt;This is paragraph2&lt;/p&gt;, &lt;h3&gt;This is paragraph3&lt;/h3&gt;]</code></pre>
 <p><strong>Next Children <code>findNext()</code></strong></p>
 <ul>
@@ -358,10 +358,10 @@ Everthing under the selected tag will be returned.</p>
 </li>
 <li>If the element has no children, this will find the next element in the hierechy</li>
 </ul>
-<div class="sourceCode" id="cb1698"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1698-1"><a href="web-scrapping.html#cb1698-1" aria-hidden="true" tabindex="-1"></a>first_child <span class="op">=</span> elem.fin</span>
-<span id="cb1698-2"><a href="web-scrapping.html#cb1698-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( </span>
-<span id="cb1698-3"><a href="web-scrapping.html#cb1698-3" aria-hidden="true" tabindex="-1"></a>elem.findNext().get_text(strip<span class="op">=</span><span class="va">True</span>), <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>, </span>
-<span id="cb1698-4"><a href="web-scrapping.html#cb1698-4" aria-hidden="true" tabindex="-1"></a>elem.findNext().findNext().get_text(strip<span class="op">=</span><span class="va">True</span>), <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1694"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1694-1"><a href="web-scrapping.html#cb1694-1" aria-hidden="true" tabindex="-1"></a>first_child <span class="op">=</span> elem.fin</span>
+<span id="cb1694-2"><a href="web-scrapping.html#cb1694-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( </span>
+<span id="cb1694-3"><a href="web-scrapping.html#cb1694-3" aria-hidden="true" tabindex="-1"></a>elem.findNext().get_text(strip<span class="op">=</span><span class="va">True</span>), <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>, </span>
+<span id="cb1694-4"><a href="web-scrapping.html#cb1694-4" aria-hidden="true" tabindex="-1"></a>elem.findNext().findNext().get_text(strip<span class="op">=</span><span class="va">True</span>), <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre></div>
 <pre><code>## This is paragraph1 
 ##  This is paragraph2</code></pre>
 </div>
@@ -369,8 +369,8 @@ Everthing under the selected tag will be returned.</p>
 <h4>
 <span class="header-section-number">18.2.5.3</span> Traversing To Parent <code>parent()</code><a class="anchor" aria-label="anchor" href="#traversing-to-parent-parent"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb1700"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1700-1"><a href="web-scrapping.html#cb1700-1" aria-hidden="true" tabindex="-1"></a>elem_parent <span class="op">=</span> elem.parent</span>
-<span id="cb1700-2"><a href="web-scrapping.html#cb1700-2" aria-hidden="true" tabindex="-1"></a>elem_parent.attrs</span></code></pre></div>
+<div class="sourceCode" id="cb1696"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1696-1"><a href="web-scrapping.html#cb1696-1" aria-hidden="true" tabindex="-1"></a>elem_parent <span class="op">=</span> elem.parent</span>
+<span id="cb1696-2"><a href="web-scrapping.html#cb1696-2" aria-hidden="true" tabindex="-1"></a>elem_parent.attrs</span></code></pre></div>
 <pre><code>## {'id': 'my-id1', 'class': ['title']}</code></pre>
 </div>
 <div id="get-the-sibling-findprevioussibling" class="section level4" number="18.2.5.4">
@@ -378,8 +378,8 @@ Everthing under the selected tag will be returned.</p>
 <span class="header-section-number">18.2.5.4</span> Get The Sibling <code>findPreviousSibling()</code><a class="anchor" aria-label="anchor" href="#get-the-sibling-findprevioussibling"><i class="fas fa-link"></i></a>
 </h4>
 <p>Sibling is element at the same level of hierachy</p>
-<div class="sourceCode" id="cb1702"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1702-1"><a href="web-scrapping.html#cb1702-1" aria-hidden="true" tabindex="-1"></a>elem_prev_sib <span class="op">=</span> elem.findPreviousSibling()</span>
-<span id="cb1702-2"><a href="web-scrapping.html#cb1702-2" aria-hidden="true" tabindex="-1"></a>elem_prev_sib.attrs</span></code></pre></div>
+<div class="sourceCode" id="cb1698"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1698-1"><a href="web-scrapping.html#cb1698-1" aria-hidden="true" tabindex="-1"></a>elem_prev_sib <span class="op">=</span> elem.findPreviousSibling()</span>
+<span id="cb1698-2"><a href="web-scrapping.html#cb1698-2" aria-hidden="true" tabindex="-1"></a>elem_prev_sib.attrs</span></code></pre></div>
 <pre><code>## {'id': 'my-id2', 'class': ['subtitle'], 'custom_attr': 'funny'}</code></pre>
 
 </div>
@@ -425,7 +425,7 @@ Everthing under the selected tag will be returned.</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-29.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

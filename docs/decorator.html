@@ -115,7 +115,7 @@
 <span id="cb449-12"><a href="decorator.html#cb449-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bar():</span>
 <span id="cb449-13"><a href="decorator.html#cb449-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">5</span></span></code></pre></div>
 <div class="sourceCode" id="cb450"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb450-1"><a href="decorator.html#cb450-1" aria-hidden="true" tabindex="-1"></a>registry</span></code></pre></div>
-<pre><code>## [&lt;function foo at 0x00000215FFB68700&gt;, &lt;function bar at 0x00000215FFBA75E0&gt;]</code></pre>
+<pre><code>## [&lt;function foo at 0x000001EDF5FF8700&gt;, &lt;function bar at 0x000001EDF60375E0&gt;]</code></pre>
 <div class="sourceCode" id="cb452"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb452-1"><a href="decorator.html#cb452-1" aria-hidden="true" tabindex="-1"></a>registry[<span class="dv">0</span>]()</span></code></pre></div>
 <pre><code>## 3</code></pre>
 <div class="sourceCode" id="cb454"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb454-1"><a href="decorator.html#cb454-1" aria-hidden="true" tabindex="-1"></a>registry[<span class="dv">1</span>]()</span></code></pre></div>
@@ -158,9 +158,9 @@
 <span id="cb457-15"><a href="decorator.html#cb457-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code></pre></div>
 <p>Observe the result</p>
 <div class="sourceCode" id="cb458"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb458-1"><a href="decorator.html#cb458-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a._functions)</span></code></pre></div>
-<pre><code>## [&lt;function foo at 0x00000215FFBA7670&gt;, &lt;function bax at 0x00000215FFBA7940&gt;]</code></pre>
+<pre><code>## [&lt;function foo at 0x000001EDF6037670&gt;, &lt;function bax at 0x000001EDF6037940&gt;]</code></pre>
 <div class="sourceCode" id="cb460"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb460-1"><a href="decorator.html#cb460-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (b._functions)</span></code></pre></div>
-<pre><code>## [&lt;function bar at 0x00000215FFBA78B0&gt;, &lt;function bax at 0x00000215FFBA7940&gt;]</code></pre>
+<pre><code>## [&lt;function bar at 0x000001EDF60378B0&gt;, &lt;function bax at 0x000001EDF6037940&gt;]</code></pre>
 <div class="sourceCode" id="cb462"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb462-1"><a href="decorator.html#cb462-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (a.run_all())</span></code></pre></div>
 <pre><code>## [3, 7]</code></pre>
 <div class="sourceCode" id="cb464"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb464-1"><a href="decorator.html#cb464-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (b.run_all())</span></code></pre></div>
@@ -204,7 +204,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-28.</p>
+    <p>"<strong>Python Bookdown</strong>" was written by Yong Keh Soon. It was last built on 2022-12-29.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

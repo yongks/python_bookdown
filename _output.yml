@@ -3,7 +3,7 @@ bookdown::gitbook:
   css: custom.css
   config:
     toc:
-      collapse: subsection
+      collapse: section
       scroll_highlight: yes
       before: |
         <li><a href="./">Python Bookdown</a></li>
@@ -16,7 +16,7 @@ bookdown::gitbook:
     download: null
     search: yes
     fontsettings:
-      theme: night
+      theme: white
       family: sans
       size: 2
     sharing:

@@ -1240,7 +1240,7 @@ empty_df1 = empty_df2 = pd.DataFrame()
 id(empty_df1)
 id(empty_df2)
 ```
-#### From Row Oriented Data (List of Lists)
+#### From Row Oriented Data
 
 ```
 DataFrame( [row_list1, row_list2, row_list3] )
@@ -1268,7 +1268,7 @@ pd.DataFrame(data, columns=col_names, index=row_labels)
 ```
 
 
-#### From Record Oriented Data (List of Dict)
+#### From Record Oriented Data
 
 ```
 DataFrame( [dict1, dict2, dict3] )
@@ -1300,7 +1300,7 @@ pd.DataFrame(data, index=['row1','row2'])
 pd.DataFrame(data, columns=['zkey','name'])
 ```
 
-#### From Column Oriented Data (Dict of Lists)
+#### From Column Oriented Data
 
 ```
 DataFrame(  data = {'column1': list1,
@@ -1699,7 +1699,9 @@ dataframe.iloc[ : , col_number_list ]  # multiple columns, dataframe
 dataframe.iloc[ : , number_range    ]  # multiple columns, dataframe
 ```
 
-#### Select Single Column (.loc, iloc)
+#### By Number (.iloc) and Label (.loc)
+
+**Get Single Column (.loc, iloc)**
 
 Selecting single column always return as **`panda::Series`**, except using **`[[ ]]`** notation.
 
@@ -1710,9 +1712,9 @@ df['name']
 df.loc[:, 'name']
 df.iloc[:, 3]
 ```
-#### Select Multiple Columns (.loc, iloc)
+**Get Multiple Columns (.loc, iloc)**
 
-Multiple columns return as **panda::Dataframe** object`  
+Selecting multiple columns return as **panda::Dataframe** object`  
 
 Example below returns DataFrame with Single Column
 

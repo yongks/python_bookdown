@@ -1,6 +1,23 @@
 /*************************************************
+Content
+*************************************************/
+/* content block */
+.book-body{
+  left: 350px;
+}
+
+/* content */
+.page-inner {
+  max-width: 1200px;
+}
+
+/*************************************************
 TOC
 *************************************************/
+/* entire TOC column */
+.book-summary {
+  width: 350px;
+}
 
 /* first level TOC */
 .book .book-summary ul.summary li.chapter a {
@@ -29,7 +46,6 @@ TOC
   padding-bottom: 3px    !important;
   font-size:      1.3rem !important;
 }
-
 
 /*************************************************
 Source Code
@@ -106,3 +122,5 @@ Output Block
 *************************************************/
 
 /* Outer Box*/
+
+

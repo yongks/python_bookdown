@@ -1,12 +1,22 @@
-div.container-fluid {
-  max-width: 100%;
+/* Make Navigation Panel Wider for Large Screen*/
+@media screen and (min-width: 1200px) {
+
+  div.container-fluid {
+    max-width: 100%;
+  }
+
+  div.sidebar-chapter {
+    max-width: 30rem;
+    box-sizing:  content-box !important;
+  }
+
+  .container-fluid main  {
+    max-width: 55rem;
+  }
 }
 
-div.sidebar-chapter {
-  max-width: 30rem;
-  box-sizing:  content-box !important;
-}
-
+/* Make Fonts A Bit Smaller */
 .container-fluid main  {
-  max-width: 55rem;
+  font-size: 0.95rem;
 }
+

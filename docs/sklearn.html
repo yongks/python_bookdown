@@ -375,11 +375,11 @@ It has useful data (array) in the form of properties:<br>
 - Take two DFs, split into 4 DF</p>
 <div class="sourceCode" id="cb1562"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1562-1"><a href="sklearn.html#cb1562-1" aria-hidden="true" tabindex="-1"></a>mydf.head()</span></code></pre></div>
 <pre><code>##       y  x1  x2  x3
-## 0  32.2  18  12  20
-## 1  30.0   1  12  15
-## 2  14.0   3   1  15
-## 3  27.9  20  14  17
-## 4  17.0   4   1  18</code></pre>
+## 0  31.0   9  17   9
+## 1  31.3  20   8  19
+## 2  13.2   8  18   6
+## 3  23.5  15  18  18
+## 4  24.9  10  10   3</code></pre>
 <div id="method-1-split-one-dataframe-into-two-train-test" class="section level4" number="17.6.2.1">
 <h4>
 <span class="header-section-number">17.6.2.1</span> Method 1: Split One Dataframe Into Two (Train &amp; Test)<a class="anchor" aria-label="anchor" href="#method-1-split-one-dataframe-into-two-train-test"><i class="fas fa-link"></i></a>
@@ -441,13 +441,13 @@ It has useful data (array) in the form of properties:<br>
 <div class="sourceCode" id="cb1580"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1580-1"><a href="sklearn.html#cb1580-1" aria-hidden="true" tabindex="-1"></a>kf <span class="op">=</span> KFold(n_splits<span class="op">=</span><span class="dv">7</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb1581"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1581-1"><a href="sklearn.html#cb1581-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> train_index, test_index <span class="kw">in</span> kf.split(X):</span>
 <span id="cb1581-2"><a href="sklearn.html#cb1581-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (train_index, test_index)</span></code></pre></div>
-<pre><code>## [ 0  2  3  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19] [ 1  4 20]
-## [ 0  1  2  3  4  6  7  8  9 10 11 13 14 15 16 17 19 20] [ 5 12 18]
-## [ 0  1  2  4  5  6  7  9 10 11 12 14 15 16 17 18 19 20] [ 3  8 13]
+<pre><code>## [ 0  1  3  4  5  6  7  8  9 10 11 12 14 15 16 17 18 19] [ 2 13 20]
+## [ 1  2  3  4  5  6  7  8 10 11 12 13 14 15 16 17 19 20] [ 0  9 18]
+## [ 0  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 18 20] [ 1 17 19]
+## [ 0  1  2  3  4  5  6  9 10 11 12 13 14 16 17 18 19 20] [ 7  8 15]
+## [ 0  1  2  3  6  7  8  9 10 11 12 13 14 15 17 18 19 20] [ 4  5 16]
 ## [ 0  1  2  3  4  5  7  8  9 10 12 13 15 16 17 18 19 20] [ 6 11 14]
-## [ 0  1  3  4  5  6  7  8 10 11 12 13 14 15 16 18 19 20] [ 2  9 17]
-## [ 1  2  3  4  5  6  7  8  9 11 12 13 14 16 17 18 19 20] [ 0 10 15]
-## [ 0  1  2  3  4  5  6  8  9 10 11 12 13 14 15 17 18 20] [ 7 16 19]</code></pre>
+## [ 0  1  2  4  5  6  7  8  9 11 13 14 15 16 17 18 19 20] [ 3 10 12]</code></pre>
 </div>
 <div id="leave-one-out" class="section level3" number="17.6.4">
 <h3>
@@ -484,17 +484,17 @@ It has useful data (array) in the form of properties:<br>
 ## [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19] [20]</code></pre>
 <div class="sourceCode" id="cb1586"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1586-1"><a href="sklearn.html#cb1586-1" aria-hidden="true" tabindex="-1"></a>X</span></code></pre></div>
 <pre><code>##     x1  x2  x3
-## 0   18  12  20
-## 1    1  12  15
-## 2    3   1  15
-## 3   20  14  17
-## 4    4   1  18
+## 0    9  17   9
+## 1   20   8  19
+## 2    8  18   6
+## 3   15  18  18
+## 4   10  10   3
 ## ..  ..  ..  ..
-## 16   3   4   5
-## 17   3  11   2
-## 18   5   8  20
-## 19   1  15   6
-## 20  20  15  10
+## 16  12   6  13
+## 17   1   9   8
+## 18   7   9  13
+## 19   7  15   2
+## 20  18   2  15
 ## 
 ## [21 rows x 3 columns]</code></pre>
 </div>
@@ -673,11 +673,11 @@ We can remove this problem by scaling down all the features to a same range.</p>
 <div class="sourceCode" id="cb1609"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1609-1"><a href="sklearn.html#cb1609-1" aria-hidden="true" tabindex="-1"></a>X<span class="op">=</span>mydf.<span class="bu">filter</span>(like<span class="op">=</span><span class="st">'x'</span>)[:<span class="dv">5</span>]</span>
 <span id="cb1609-2"><a href="sklearn.html#cb1609-2" aria-hidden="true" tabindex="-1"></a>X</span></code></pre></div>
 <pre><code>##    x1  x2  x3
-## 0  18  12  20
-## 1   1  12  15
-## 2   3   1  15
-## 3  20  14  17
-## 4   4   1  18</code></pre>
+## 0   9  17   9
+## 1  20   8  19
+## 2   8  18   6
+## 3  15  18  18
+## 4  10  10   3</code></pre>
 </div>
 <div id="minmax-scaler" class="section level3" number="17.9.2">
 <h3>
@@ -690,11 +690,11 @@ We can remove this problem by scaling down all the features to a same range.</p>
 <div class="sourceCode" id="cb1612"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1612-1"><a href="sklearn.html#cb1612-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler()</span></code></pre></div>
 <p><strong>Transform Data</strong></p>
 <div class="sourceCode" id="cb1613"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1613-1"><a href="sklearn.html#cb1613-1" aria-hidden="true" tabindex="-1"></a>scaler.fit_transform(X)</span></code></pre></div>
-<pre><code>## array([[0.89473684, 0.84615385, 1.        ],
-##        [0.        , 0.84615385, 0.        ],
-##        [0.10526316, 0.        , 0.        ],
-##        [1.        , 1.        , 0.4       ],
-##        [0.15789474, 0.        , 0.6       ]])</code></pre>
+<pre><code>## array([[0.08333333, 0.9       , 0.375     ],
+##        [1.        , 0.        , 1.        ],
+##        [0.        , 1.        , 0.1875    ],
+##        [0.58333333, 1.        , 0.9375    ],
+##        [0.16666667, 0.2       , 0.        ]])</code></pre>
 <p><strong>Scaler Attributes</strong></p>
 <pre><code>data_min_: minimum value of the feature (before scaling)  
 data_max_: maximum value of the feature (before scaling)  </code></pre>
@@ -702,9 +702,9 @@ data_max_: maximum value of the feature (before scaling)  </code></pre>
 <span id="cb1616-2"><a href="sklearn.html#cb1616-2" aria-hidden="true" tabindex="-1"></a>             columns<span class="op">=</span>[<span class="st">'data_min'</span>,<span class="st">'data_max'</span>], </span>
 <span id="cb1616-3"><a href="sklearn.html#cb1616-3" aria-hidden="true" tabindex="-1"></a>             index<span class="op">=</span>X.columns)</span></code></pre></div>
 <pre><code>##     data_min  data_max
-## x1       1.0      20.0
-## x2       1.0      14.0
-## x3      15.0      20.0</code></pre>
+## x1       8.0      20.0
+## x2       8.0      18.0
+## x3       3.0      19.0</code></pre>
 </div>
 <div id="standard-scaler" class="section level3" number="17.9.3">
 <h3>
@@ -719,20 +719,20 @@ data_max_: maximum value of the feature (before scaling)  </code></pre>
 <div class="sourceCode" id="cb1619"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1619-1"><a href="sklearn.html#cb1619-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span></code></pre></div>
 <p><strong>Transform Data</strong></p>
 <div class="sourceCode" id="cb1620"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1620-1"><a href="sklearn.html#cb1620-1" aria-hidden="true" tabindex="-1"></a>scaler.fit_transform(X)</span></code></pre></div>
-<pre><code>## array([[ 1.08849553,  0.69421013,  1.58113883],
-##        [-1.01427993,  0.69421013, -1.05409255],
-##        [-0.76689458, -1.21486774, -1.05409255],
-##        [ 1.33588088,  1.0413152 ,  0.        ],
-##        [-0.6432019 , -1.21486774,  0.52704628]])</code></pre>
+<pre><code>## array([[-0.75574218,  0.64993368, -0.31158848],
+##        [ 1.68930605, -1.43913887,  1.24635391],
+##        [-0.97801929,  0.88205286, -0.77897119],
+##        [ 0.57792049,  0.88205286,  1.09055967],
+##        [-0.53346507, -0.97490053, -1.24635391]])</code></pre>
 <p><strong>Scaler Attributes</strong><br>
 After the data transformation step above, scaler will have the mean and variance information for each feature.</p>
 <div class="sourceCode" id="cb1622"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1622-1"><a href="sklearn.html#cb1622-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(<span class="bu">list</span>(<span class="bu">zip</span>(scaler.mean_, scaler.var_)), </span>
 <span id="cb1622-2"><a href="sklearn.html#cb1622-2" aria-hidden="true" tabindex="-1"></a>             columns<span class="op">=</span>[<span class="st">'mean'</span>,<span class="st">'variance'</span>], </span>
 <span id="cb1622-3"><a href="sklearn.html#cb1622-3" aria-hidden="true" tabindex="-1"></a>             index<span class="op">=</span>X.columns)</span></code></pre></div>
 <pre><code>##     mean  variance
-## x1   9.2     65.36
-## x2   8.0     33.20
-## x3  17.0      3.60</code></pre>
+## x1  12.4     20.24
+## x2  14.2     18.56
+## x3  11.0     41.20</code></pre>
 </div>
 </div>
 <div id="pipeline" class="section level2" number="17.10">
@@ -762,11 +762,11 @@ After the data transformation step above, scaler will have the mean and variance
 </h3>
 <div class="sourceCode" id="cb1625"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1625-1"><a href="sklearn.html#cb1625-1" aria-hidden="true" tabindex="-1"></a>X</span></code></pre></div>
 <pre><code>##    x1  x2  x3
-## 0  18  12  20
-## 1   1  12  15
-## 2   3   1  15
-## 3  20  14  17
-## 4   4   1  18</code></pre>
+## 0   9  17   9
+## 1  20   8  19
+## 2   8  18   6
+## 3  15  18  18
+## 4  10  10   3</code></pre>
 <div class="sourceCode" id="cb1627"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1627-1"><a href="sklearn.html#cb1627-1" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>## array([14, 16, -1,  8, -5])</code></pre>
 </div>
@@ -892,9 +892,9 @@ Specify the scorer
 <div class="sourceCode" id="cb1645"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1645-1"><a href="sklearn.html#cb1645-1" aria-hidden="true" tabindex="-1"></a>cv_results2.keys()</span></code></pre></div>
 <pre><code>## dict_keys(['fit_time', 'score_time', 'test_neg_mean_absolute_error', 'test_neg_mean_squared_error', 'test_r2'])</code></pre>
 <div class="sourceCode" id="cb1647"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1647-1"><a href="sklearn.html#cb1647-1" aria-hidden="true" tabindex="-1"></a>cv_results1</span></code></pre></div>
-<pre><code>## {'fit_time': array([0.00353432, 0.        , 0.        , 0.01106906, 0.        ]), 'score_time': array([0.00532031, 0.        , 0.        , 0.        , 0.        ]), 'test_score': array([0.28349006, 0.35157952, 0.35338233, 0.33481253, 0.36453239])}</code></pre>
+<pre><code>## {'fit_time': array([0.00855398, 0.        , 0.00099993, 0.        , 0.00099802]), 'score_time': array([0.0010016 , 0.00100017, 0.        , 0.00100183, 0.        ]), 'test_score': array([0.28349006, 0.35157952, 0.35338233, 0.33481253, 0.36453239])}</code></pre>
 <div class="sourceCode" id="cb1649"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1649-1"><a href="sklearn.html#cb1649-1" aria-hidden="true" tabindex="-1"></a>cv_results2</span></code></pre></div>
-<pre><code>## {'fit_time': array([0.        , 0.        , 0.        , 0.        , 0.01403451]), 'score_time': array([0.01633716, 0.        , 0.        , 0.        , 0.002774  ]), 'test_neg_mean_absolute_error': array([-50.09006473, -52.54118496, -55.02819607, -50.8112893 ,
+<pre><code>## {'fit_time': array([0.00099993, 0.00100136, 0.        , 0.        , 0.0009985 ]), 'score_time': array([0.00100017, 0.00099993, 0.00104046, 0.00201106, 0.00100207]), 'test_neg_mean_absolute_error': array([-50.09006473, -52.54118496, -55.02819607, -50.8112893 ,
 ##        -55.60479053]), 'test_neg_mean_squared_error': array([-3491.74208572, -4113.86049974, -4046.91135088, -3489.75176794,
 ##        -4111.92674103]), 'test_r2': array([0.28349006, 0.35157952, 0.35338233, 0.33481253, 0.36453239])}</code></pre>
 

@@ -57,7 +57,8 @@ pd.set_option( 'display.width', 90)         # number of characters per row
 
 ### Creating Timestamp
 
-Pandas **`to_datetime()`** can:  
+Pandas **`to_datetime()`** can: 
+
 - Convert list of dates to **DateTimeIndex**  
 - Convert list of dates to **Series of Timestamps**  
 - Convert single date into **Timestamp** Object
@@ -98,7 +99,7 @@ print( pd.to_datetime('2011-01-03'), '\n',
        '\nElement Type: ', type(pd.to_datetime(datetime(2011,1,3,5,30))))
 ```
 
-### Generate Timestamp Sequence
+### Creating DateTimeIndex
 
 The function `date_range()` return **`DateTimeIndex`** object. Use `Series()` to convert into Series if desired.
 
@@ -429,187 +430,181 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html
 #### From Number
 
 ```{python}
-print( pd.Timestamp(year=2017, month=1, day=1),'\n',  #date-like numbers
-       pd.Timestamp(2017,1,1), '\n',                  # date-like numbers
-       pd.Timestamp(2017,12,11,5,45),'\n',            # datetime-like numbers
-       pd.Timestamp(2017,12,11,5,45,55,999),'\n',     # + microseconds
-       pd.Timestamp(2017,12,11,5,45,55,999,8),'\n',   # + nanoseconds
-       type(pd.Timestamp(2017,12,11,5,45,55,999,8)),'\n')
+type(pd.Timestamp(2017,12,11))
+```
+
+```{python, results='hold'}
+pd.Timestamp(year=2017, month=1, day=1)  # date-like numbers
+pd.Timestamp(2017,1,1)                   # date-like numbers
+pd.Timestamp(2017,12,11,5,45)            # datetime-like numbers
+pd.Timestamp(2017,12,11,5,45,55,999)     # + microseconds
+pd.Timestamp(2017,12,11,5,45,55,999,8)   # + nanoseconds
 ```
 
 #### From String
 
 Observe that pandas support many string input format  
 
-**Year Month Day**, default has no timezone
-```{python}
-print( pd.Timestamp('2017-12-11'),'\n',   # date-like string: year-month-day
-       pd.Timestamp('2017 12 11'),'\n',   # date-like string: year-month-day
-       pd.Timestamp('2017 Dec 11'),'\n',  # date-like string: year-month-day
-       pd.Timestamp('Dec 11, 2017'))      # date-like string: year-month-day
+**Year Month Day**
+
+```{python, results='hold'}
+pd.Timestamp('2017-12-11')   # date-like string: year-month-day
+pd.Timestamp('2017 12 11')   # date-like string: year-month-day
+pd.Timestamp('2017 Dec 11')  # date-like string: year-month-day
+pd.Timestamp('Dec 11, 2017') # date-like string: year-month-day
 ```
 
 **YMD Hour Minute Second Ms**
 
-```{python}
-print( pd.Timestamp('2017-12-11 0545'),'\n',     ## hour minute
-       pd.Timestamp('2017-12-11-05:45'),'\n',
-       pd.Timestamp('2017-12-11T0545'),'\n',
-       pd.Timestamp('2017-12-11 054533'),'\n',   ## hour minute seconds
-       pd.Timestamp('2017-12-11 05:45:33'))
+```{python, results='hold'}
+pd.Timestamp('2017-12-11 0545')     ## hour minute
+pd.Timestamp('2017-12-11-05:45')
+pd.Timestamp('2017-12-11T0545')
+pd.Timestamp('2017-12-11 054533')   ## hour minute seconds
+pd.Timestamp('2017-12-11 05:45:33')
 ```
 
 **With Timezone** can be included in various ways.
 
-```{python}
-print( pd.Timestamp('2017-01-01T0545Z'),'\n',  # GMT 
-       pd.Timestamp('2017-01-01T0545+9'),'\n', # GMT+9
-       pd.Timestamp('2017-01-01T0545+0800'),'\n',   # GMT+0800
-       pd.Timestamp('2017-01-01 0545', tz='Asia/Singapore'),'\n')
+```{python, results='hold'}
+pd.Timestamp('2017-01-01T0545Z'),    # GMT 
+pd.Timestamp('2017-01-01T0545+9')    # GMT+9
+pd.Timestamp('2017-01-01T0545+0800') # GMT+0800
+pd.Timestamp('2017-01-01 0545', tz='Asia/Singapore')
 ```
 
-#### From Standard Library ```datetime``` and ```date``` Object
+#### From `datetime / date`
 
-```{python}
-print( pd.Timestamp(date(2017,3,5)),'\n',           # from date
-       pd.Timestamp(datetime(2017,3,5,4,30)),'\n',  # from datetime
-       pd.Timestamp(datetime(2017,3,5,4,30), tz='Asia/Kuala_Lumpur')) # from datetime, + tz
+```{python, results='hold'}
+pd.Timestamp(date(2017,3,5))          # from date
+pd.Timestamp(datetime(2017,3,5,4,30)) # from datetime
+pd.Timestamp(datetime(2017,3,5,4,30), tz='Asia/Kuala_Lumpur') # from datetime, + tz
 ```
 
 ### Attributes
 
-We can tell many things about a Timestamp object.
+We can tell many things about a Timestamp object. Note that timezone (tz) is a **pytz object**.
 
-```{python}
+```{python, results='hold'}
 ts = pd.Timestamp('2017-01-01T054533+0800') # GMT+0800
-print( ts.month, '\n',
-       ts.day, '\n',
-       ts.year, '\n',
-       ts.hour, '\n',
-       ts.minute, '\n',
-       ts.second, '\n',
-       ts.microsecond, '\n',
-       ts.nanosecond, '\n',
-       ts.tz, '\n',
-       ts.daysinmonth,'\n',
-       ts.dayofyear, '\n',
-       ts.is_leap_year, '\n',
-       ts.is_month_end, '\n',
-       ts.is_month_start, '\n',
-       ts.dayofweek)
+ts.month
+ts.day
+ts.year
+ts.hour
+ts.minute
+ts.second
+ts.microsecond
+ts.nanosecond
+ts.dayofweek
+ts.dayofyear
+ts.daysinmonth
+ts.is_leap_year
+ts.is_month_end
+ts.is_month_start
+ts.dayofweek
+ts.tz                 ## pytz object
+type(ts.tz)
+
 ```
-
-Note that timezone (tz) is a **pytz object**.
-
-```{python}
-ts1 = pd.Timestamp(datetime(2017,3,5,4,30), tz='Asia/Kuala_Lumpur')   # from datetime, + tz
-ts2 = pd.Timestamp('2017-01-01T054533+0800') # GMT+0800
-ts3 = pd.Timestamp('2017-01-01T0545')
-
-print( ts1.tz, 'Type:', type(ts1.tz), '\n',
-       ts2.tz, 'Type:', type(ts2.tz), '\n',
-       ts3.tz, 'Type:', type(ts3.tz)  )
-```
-
-### Instance Methods
-
-#### Atribute-like Methods
-
-```{python}
-ts = pd.Timestamp(2017,1,1)
-print( ' Weekday:    ', ts.weekday(), '\n',
-       'ISO Weekday:',  ts.isoweekday(), '\n',
-       'Day Name:   ',  ts.day_name(), '\n',
-       'ISO Calendar:',  ts.isocalendar()
-       )
-```
-
-#### Timezones
+### Timezones
 
 **Adding Timezones and Clock Shifting**  
 
-- `tz_localize` will add the timezone, however will not shift the clock.  
-- Once a timestamp had gotten a timezone, you can easily shift the clock to another timezone using `tz_convert()`  
+- Use `tz_localize` to make a timestamp zone aware. It will not shift the clock.
+- Once gotten a timezone, you can easily shift the clock to another timezone using `tz_convert()`.
 
-```{python}
-ts = pd.Timestamp(2017,1,10,10,34)        ## No timezone
-ts1 = ts.tz_localize('Asia/Kuala_Lumpur')  ## Add timezone
-ts2 = ts1.tz_convert('UTC')                 ## Convert timezone
-print(' Origininal Timestamp           :', ts,  '\n',
-      'Loacalized Timestamp (added TZ):', ts1, '\n',
-      'Converted Timestamp (shifted)  :',ts2)
+```{python, results='hold'}
+ts  = pd.Timestamp(2017,1,10,10,34)  ## No timezone
+ts
+ts1 = ts.tz_localize('Asia/Kuala_Lumpur')  ## Add timezone, retain time
+ts1
+ts1.tz_convert('UTC')                ## Convert to diff timezone
 ```
 
 **Removing Timezone**
 
-Just apply **None with `tz_localize`** to remove TZ infomration.
+Just apply **None with `tz_localize`** to remove TZ info.
 
-```{python}
-ts = pd.Timestamp(2017,1,10,10,34)        ## No timezone
-ts = ts.tz_localize('Asia/Kuala_Lumpur')  ## Add timezone
-ts = ts.tz_localize(None)                 ## Convert timezone
+```{python, results='hold'}
+ts = pd.Timestamp(2017,1,10,10,34).tz_localize('Asia/Kuala_Lumpur')
 ts
+ts.tz_localize(None)   ## no longer TZ aware
 ```
 
-#### Formatting 
+### Formatting 
 
 **`strftime`**  
 
-Use **```strftime()```** to customize string format. For complete directive, see below: https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior
+Use **```strftime()```** to customize string format. For complete directive, see [here](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior).
 
-```{python}
-ts = pd.Timestamp(2017,1,10,10,34)        ## No timezone
-ts = ts.tz_localize('Asia/Kuala_Lumpur')  ## Add timezone
-ts.strftime("%m/%d")
+```{python, results='hold'}
+ts = pd.Timestamp(2017,1,10,15,34,10).tz_localize('Asia/Kuala_Lumpur')
+ts
+ts.strftime("%Y-%m-%d %b %I:%M:%S %p")
 ```
 
 **`isoformat`**  
 
 Use **```isoformat()```** to format ISO string (**without timezone**)
 
-```{python}
-ts = pd.Timestamp(2017,1,10,10,34)        
+```{python, results='hold'}
+ts = pd.Timestamp(2017,1,10,15,34,10)
 ts1 = ts.tz_localize('Asia/Kuala_Lumpur') 
-print( ' ISO Format without TZ:', ts.isoformat(), '\n',
-       'ISO Format with TZ   :', ts1.isoformat())
+
+ts.isoformat()   ## without TZ
+ts1.isoformat()  ## with Tz
 ```
 
-#### Type Conversion
+### Conversion
 
-**Convert To `datetime.datetime/date`**
+#### Convert To `datetime`
 
 Use `to_pydatetime()` to convert into standard library **`datetime.datetime`**.  From the 'datetime' object, apply `date()` to get **`datetime.date`**
 
-```{python}
-ts = pd.Timestamp(2017,1,10,7,30,52)
-print(
-  'Datetime:',  ts.to_pydatetime(), '\n',
-  'Date Only:', ts.to_pydatetime().date())
+```{python, results='hold'}
+ts = pd.Timestamp(2017,1,10,7,30,52).tz_localize('Asia/Kuala_Lumpur') 
+ts                          ## Timestamp, wtih TZ
+ts.to_pydatetime()          ## datetime, with TZ
+ts.to_pydatetime().date()   ## datetime.date (no TZ)
+ts.date()                   ## same as above (no TZ)
 ```
 
-**Convert To `numpy.datetime64`**
+#### Convert To `numpy.datetime64`
 
 Use `to_datetime64()` to convert into ```numpy.datetime64```
 
-```{python}
+```{python, results='hold'}
 ts = pd.Timestamp(2017,1,10,7,30,52)
 ts.to_datetime64()
 ```
-
-
-#### `ceil`
-
-```{python}
-print( ts.ceil(freq='D') ) # ceiling to day
-```
-
-#### Updating
+### Updating
 
 `replace()`
 
-```{python}
+```{python, results='hold'}
 ts.replace(year=2000, month=1,day=1)
 ```
+
+### Other Utilities
+
+#### Attribute Like Methods
+
+```{python, results='hold'}
+ts = pd.Timestamp('2017-01-01T054533+0800') # GMT+0800
+ts.day_name()
+ts.month_name()
+ts.date()   ## convert to datetime.date object
+ts.time()   ## convert to datetime.time object
+```
+
+#### celing - `ceil`
+
+```{python, results='hold'}
+ts
+ts.ceil(freq='D')  # ceiling to day
+```
+
+
 
 ## Class: DateTimeIndex
 
@@ -624,7 +619,7 @@ Refer to Pandas class method above.
 **Convert To datetime.datetime**  
 Use **```to_pydatetime```** to convert into python standard **datetime.datetime** object
 
-```{python}
+```{python, results='hold'}
 print('Converted to List:', dti.to_pydatetime(), '\n\n',
       'Converted Type:',    type(dti.to_pydatetime()))
 ```
@@ -656,7 +651,7 @@ print( dti.weekday, '\n',
        dti.daysinmonth)
 ```
 
-## class: Series
+## Class: Series
 
 Series allows different data types (object class) as its element
 
@@ -938,7 +933,7 @@ Use **```astype()```** to convert to another numpy supproted datatypes, results 
 s.astype('int8')
 ```
 
-### Series Operators
+### Operators
 
 The result of applying operator (arithmetic or logic) to Series object **returns a new Series object**
 
@@ -975,7 +970,7 @@ bs>3
 ~((bs>3) & (bs<8) | (bs>7))
 ```
 
-### Series `.str` Accesor
+### String Accesor `.str`
 
 If the underlying data is **str** type, then pandas exposed various properties and methos through **`str` accessor**. 
 
@@ -1110,7 +1105,7 @@ s.str[0].values    # first char
 s.str[0:2].values  # first and second char
 ```
 
-#### Series Substring Extraction
+#### Substring Extraction
 
 **Sample Data**
 
@@ -1128,7 +1123,7 @@ type(s.str.extract('([ab])(\d)', expand=False))
 ```
 
 
-### Series  `.dt` Accessor 
+### Date Accessor `.dt`
 
 If the underlying data is **datetime64** type, then pandas exposed various properties and methos through **```dt``` accessor**. 
 

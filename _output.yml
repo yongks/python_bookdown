@@ -32,19 +32,23 @@ bookdown::gitbook:
 
 
 bookdown::bs4_book:
+  ## Customize CSS, change the column sizes
   css: bs4_custom.css
-  ## default values, customize here: https://pkgs.rstudio.com/bookdown/reference/bs4_book.html
+
+  ## Default Values, Customize here: https://pkgs.rstudio.com/bookdown/reference/bs4_book.html
   footnotes_inline: true
   template: default
   lib_dir: "libs"
   pandoc_args: null
   extra_dependencies: null
   split_bib: false
-  ## customize here: https://rstudio.github.io/bslib/reference/bs_theme.html
+
+  ## Customize Theme here: https://rstudio.github.io/bslib/reference/bs_theme.html
   ##theme:
     ## bootswatch styling: https://bootswatch.com/
     ##bootswatch: darkly
-  ## show up link to repo at the right most column
+
+  ## Show up link to repo at the right most column
   repo:
     base: https://github.com/yongks/python_bookdown
     branch: master

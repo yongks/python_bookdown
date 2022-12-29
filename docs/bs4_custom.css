@@ -2,10 +2,11 @@ div.container-fluid {
   max-width: 100%;
 }
 
-div.sidebar-chaper {
+div.sidebar-chapter {
   max-width: 30rem;
+  box-sizing:  content-box !important;
 }
 
-[id=content] {
+.container-fluid main  {
   max-width: 55rem;
 }

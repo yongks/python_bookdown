@@ -187,13 +187,13 @@ Remainder by float return <strong>float</strong></p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="built-in-data-types.html#cb44-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'abcde'</span></span>
 <span id="cb44-2"><a href="built-in-data-types.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'s : '</span>, <span class="bu">id</span>(s))</span>
 <span id="cb44-3"><a href="built-in-data-types.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co">#s[1] = 'z'               # immutable, result in error</span></span></code></pre></div>
-<pre><code>## s :  2654769956208</code></pre>
+<pre><code>## s :  2248929494640</code></pre>
 <ul>
 <li>Changing the variable completley change the reference (for new object)</li>
 </ul>
 <div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="built-in-data-types.html#cb46-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="st">'efgh'</span></span>
 <span id="cb46-2"><a href="built-in-data-types.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">'s : '</span>, <span class="bu">id</span>(s))</span></code></pre></div>
-<pre><code>## s :  2654769960496</code></pre>
+<pre><code>## s :  2248929498928</code></pre>
 </div>
 </div>
 <div id="class-constants" class="section level3" number="2.2.2">
@@ -379,8 +379,8 @@ For partial match, workaround is to <strong>convert list to single string</stron
 <span id="cb103-3"><a href="built-in-data-types.html#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'id(a) = '</span>, <span class="bu">id</span>(a), </span>
 <span id="cb103-4"><a href="built-in-data-types.html#cb103-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">'</span><span class="ch">\n</span><span class="st">id(b) = '</span>, <span class="bu">id</span>(b),</span>
 <span id="cb103-5"><a href="built-in-data-types.html#cb103-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">'</span><span class="ch">\n</span><span class="st">a == b  '</span>, a<span class="op">==</span>b)</span></code></pre></div>
-<pre><code>## id(a) =  2654693094320 
-## id(b) =  2654693094320 
+<pre><code>## id(a) =  2248919016432 
+## id(b) =  2248919016432 
 ## a == b   True</code></pre>
 </div>
 </div>

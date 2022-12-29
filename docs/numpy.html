@@ -215,7 +215,7 @@ Note that the input string <strong>cannot be ISO8601 compliance</strong>, meanin
 <div class="sourceCode" id="cb625"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb625-1"><a href="numpy.html#cb625-1" aria-hidden="true" tabindex="-1"></a>np.datetime64( date.today() )</span></code></pre></div>
 <pre><code>## numpy.datetime64('2022-12-29')</code></pre>
 <div class="sourceCode" id="cb627"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb627-1"><a href="numpy.html#cb627-1" aria-hidden="true" tabindex="-1"></a>np.datetime64( datetime.now() )</span></code></pre></div>
-<pre><code>## numpy.datetime64('2022-12-29T15:01:21.398226')</code></pre>
+<pre><code>## numpy.datetime64('2022-12-29T15:39:46.860760')</code></pre>
 </div>
 <div id="instance-method-2" class="section level4" number="14.3.6.2">
 <h4>
@@ -841,15 +841,15 @@ np.random.randint( low, high )            # generate an integer, i, which  low &
 np.random.randint( low, high, size=1)     # generate an ndarray of integer, single dimension
 np.random.randint( low, high, size=(r,c)) # generate an ndarray of integer, two dimensions </code></pre>
 <div class="sourceCode" id="cb827"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb827-1"><a href="numpy.html#cb827-1" aria-hidden="true" tabindex="-1"></a>np.random.randint( <span class="dv">10</span> )</span></code></pre></div>
-<pre><code>## 3</code></pre>
+<pre><code>## 6</code></pre>
 <div class="sourceCode" id="cb829"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb829-1"><a href="numpy.html#cb829-1" aria-hidden="true" tabindex="-1"></a>np.random.randint( <span class="dv">10</span>, <span class="dv">20</span> )</span></code></pre></div>
-<pre><code>## 10</code></pre>
+<pre><code>## 19</code></pre>
 <div class="sourceCode" id="cb831"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb831-1"><a href="numpy.html#cb831-1" aria-hidden="true" tabindex="-1"></a>np.random.randint( <span class="dv">10</span>, high<span class="op">=</span><span class="dv">20</span>, size<span class="op">=</span><span class="dv">5</span>)   <span class="co"># single dimension</span></span></code></pre></div>
-<pre><code>## array([16, 17, 13, 16, 19])</code></pre>
+<pre><code>## array([17, 11, 10, 11, 11])</code></pre>
 <div class="sourceCode" id="cb833"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb833-1"><a href="numpy.html#cb833-1" aria-hidden="true" tabindex="-1"></a>np.random.randint( <span class="dv">10</span>, <span class="dv">20</span>, (<span class="dv">3</span>,<span class="dv">5</span>) )        <span class="co"># two dimensions</span></span></code></pre></div>
-<pre><code>## array([[11, 18, 17, 19, 16],
-##        [17, 18, 17, 19, 19],
-##        [12, 19, 19, 10, 11]])</code></pre>
+<pre><code>## array([[16, 17, 19, 12, 12],
+##        [19, 10, 13, 11, 19],
+##        [15, 13, 19, 15, 16]])</code></pre>
 <!-- jupyter_markdown -->
 </div>
 <div id="random-integer-with-or-without-replacement" class="section level4" number="14.5.1.2">
@@ -861,9 +861,9 @@ np.random.randint( low, high, size=(r,c)) # generate an ndarray of integer, two 
  #   if a is integer, then it is assumed sampling from arange(a)
  #   if a is an 1-D array, then sampling from this array</code></pre>
 <div class="sourceCode" id="cb836"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb836-1"><a href="numpy.html#cb836-1" aria-hidden="true" tabindex="-1"></a>np.random.choice(<span class="dv">10</span>,<span class="dv">5</span>, replace<span class="op">=</span><span class="va">False</span>) <span class="co"># take 5 samples from 0:19, without replacement</span></span></code></pre></div>
-<pre><code>## array([7, 6, 2, 8, 4])</code></pre>
+<pre><code>## array([8, 9, 1, 0, 5])</code></pre>
 <div class="sourceCode" id="cb838"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb838-1"><a href="numpy.html#cb838-1" aria-hidden="true" tabindex="-1"></a>np.random.choice( np.arange(<span class="dv">10</span>,<span class="dv">20</span>), <span class="dv">5</span>, replace<span class="op">=</span><span class="va">False</span>)</span></code></pre></div>
-<pre><code>## array([13, 14, 17, 10, 16])</code></pre>
+<pre><code>## array([16, 17, 19, 14, 10])</code></pre>
 <!-- jupyter_markdown -->
 </div>
 <div id="random-float" class="section level4" number="14.5.1.3">
@@ -873,7 +873,7 @@ np.random.randint( low, high, size=(r,c)) # generate an ndarray of integer, two 
 <p><strong>randf()</strong> Generate float numbers in <strong>between 0.0 and 1.0</strong></p>
 <pre><code>np.random.ranf(size=None)</code></pre>
 <div class="sourceCode" id="cb841"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb841-1"><a href="numpy.html#cb841-1" aria-hidden="true" tabindex="-1"></a>np.random.ranf(<span class="dv">4</span>)</span></code></pre></div>
-<pre><code>## array([0.29133069, 0.68149636, 0.6769486 , 0.78113796])</code></pre>
+<pre><code>## array([0.44220522, 0.41936874, 0.72739507, 0.86694452])</code></pre>
 <!-- jupyter_markdown -->
 <p><strong>uniform()</strong> Return random float from <strong>low (inclusive) to high (exclusive)</strong></p>
 <pre><code>np.random.uniform( low )                  # generate an float, i, which         f &lt; low
@@ -881,12 +881,12 @@ np.random.uniform( low, high )            # generate an float, i, which  low &lt
 np.random.uniform( low, high, size=1)     # generate an array of float, single dimension
 np.random.uniform( low, high, size=(r,c)) # generate an array of float, two dimensions </code></pre>
 <div class="sourceCode" id="cb844"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb844-1"><a href="numpy.html#cb844-1" aria-hidden="true" tabindex="-1"></a>np.random.uniform( <span class="dv">2</span> )</span></code></pre></div>
-<pre><code>## 1.6486212103846476</code></pre>
+<pre><code>## 1.3937149436871836</code></pre>
 <div class="sourceCode" id="cb846"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb846-1"><a href="numpy.html#cb846-1" aria-hidden="true" tabindex="-1"></a>np.random.uniform( <span class="dv">2</span>,<span class="dv">5</span>, size<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">4</span>) )</span></code></pre></div>
-<pre><code>## array([[3.73935599, 3.27852869, 4.16887145, 2.10216656],
-##        [4.00301017, 3.72814232, 4.6897219 , 4.97649882],
-##        [2.54140528, 2.4190437 , 3.48150324, 4.31595142],
-##        [2.00611579, 4.92580851, 2.1107683 , 4.09324433]])</code></pre>
+<pre><code>## array([[3.85905145, 3.11244323, 4.34402824, 2.93277419],
+##        [4.49710146, 4.3857246 , 2.22290681, 2.9655336 ],
+##        [3.11703047, 4.6091341 , 4.97921004, 2.96106118],
+##        [3.76494377, 2.28365297, 3.45304159, 2.61485945]])</code></pre>
 <!-- jupyter_markdown -->
 </div>
 </div>
@@ -907,17 +907,17 @@ numpy. random.normal         ( loc=0, scale=1, size=None) # loc = mean, scale = 
 <!-- jupyter_markdown -->
 <p><strong>One Dimension</strong></p>
 <div class="sourceCode" id="cb849"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb849-1"><a href="numpy.html#cb849-1" aria-hidden="true" tabindex="-1"></a>np.random.standard_normal(<span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## array([-0.70375452,  0.53053035, -1.87609398])</code></pre>
+<pre><code>## array([0.55873353, 0.90451921, 1.75805031])</code></pre>
 <div class="sourceCode" id="cb851"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb851-1"><a href="numpy.html#cb851-1" aria-hidden="true" tabindex="-1"></a>np.random.randn(<span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## array([0.38666756, 0.93977217, 0.67245593])</code></pre>
+<pre><code>## array([ 0.43066453, -1.41903378, -0.11473055])</code></pre>
 <!-- jupyter_markdown -->
 <p><strong>Two Dimensions</strong></p>
 <div class="sourceCode" id="cb853"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb853-1"><a href="numpy.html#cb853-1" aria-hidden="true" tabindex="-1"></a>np.random.randn(<span class="dv">2</span>,<span class="dv">4</span>)</span></code></pre></div>
-<pre><code>## array([[ 0.19419534, -1.58178563,  1.40679994,  1.22288073],
-##        [-1.17974396,  0.59848167,  0.5021601 ,  0.26611803]])</code></pre>
+<pre><code>## array([[ 0.32141564, -1.19983956, -1.63974219, -1.24840434],
+##        [-0.61675192, -0.86181465,  0.63990965,  1.17258761]])</code></pre>
 <div class="sourceCode" id="cb855"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb855-1"><a href="numpy.html#cb855-1" aria-hidden="true" tabindex="-1"></a>np.random.standard_normal((<span class="dv">2</span>,<span class="dv">4</span>))</span></code></pre></div>
-<pre><code>## array([[ 0.56794766,  0.94118701, -0.74332446, -1.61568935],
-##        [ 0.20941382, -1.71242473,  0.94806938,  0.61454969]])</code></pre>
+<pre><code>## array([[ 0.46875452, -0.02975357,  0.53683457, -0.53104805],
+##        [ 0.96188864,  0.34002256, -0.9239159 ,  2.73533991]])</code></pre>
 <!-- jupyter_markdown -->
 <p><strong>Observe:</strong> randn(), standard_normal() and normal() are able to generate standard normal numbers</p>
 <div class="sourceCode" id="cb857"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb857-1"><a href="numpy.html#cb857-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">15</span>)</span>

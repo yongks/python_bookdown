@@ -22,6 +22,7 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
+<link rel="stylesheet" href="bs4_custom.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -123,11 +124,11 @@
 <span id="cb471-15"><a href="matplotlib.html#cb471-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value3'</span>:value3 })</span>
 <span id="cb471-16"><a href="matplotlib.html#cb471-16" aria-hidden="true" tabindex="-1"></a>mydf.head()</span></code></pre></div>
 <pre><code>##   comp dept grp     value1     value2     value3
-## 0   C1   D4  G1  59.671506  18.748524  34.786317
-## 1   C3   D1  G2  61.527608  20.487909 -12.358891
-## 2   C2   D2  G1  51.211677  17.850960  32.553613
-## 3   C2   D4  G2  56.108482  21.303948   6.394290
-## 4   C1   D5  G1  61.781555  16.584359  21.058367</code></pre>
+## 0   C3   D4  G1  51.658816  20.475950   7.924439
+## 1   C1   D5  G2  55.275038  25.379146  -4.089964
+## 2   C3   D3  G1  48.096090  18.799671  18.013139
+## 3   C1   D5  G2  56.402108  21.478002   2.004319
+## 4   C2   D5  G1  55.537266  17.310106 -27.548142</code></pre>
 <div class="sourceCode" id="cb473"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb473-1"><a href="matplotlib.html#cb473-1" aria-hidden="true" tabindex="-1"></a>mydf.info()</span></code></pre></div>
 <pre><code>## &lt;class 'pandas.core.frame.DataFrame'&gt;
 ## RangeIndex: 200 entries, 0 to 199
@@ -442,9 +443,9 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 <span id="cb501-2"><a href="matplotlib.html#cb501-2" aria-hidden="true" tabindex="-1"></a>grpdf <span class="op">=</span> com_grp[<span class="st">'value1'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb501-3"><a href="matplotlib.html#cb501-3" aria-hidden="true" tabindex="-1"></a>grpdf</span></code></pre></div>
 <pre><code>##   comp       value1
-## 0   C1  3777.589693
-## 1   C2  3096.708192
-## 2   C3  3206.114243</code></pre>
+## 0   C1  2880.956907
+## 1   C2  3868.237073
+## 2   C3  3182.548585</code></pre>
 <div class="sourceCode" id="cb503"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb503-1"><a href="matplotlib.html#cb503-1" aria-hidden="true" tabindex="-1"></a>plt.bar(grpdf.comp, grpdf.value1)<span class="op">;</span></span>
 <span id="cb503-2"><a href="matplotlib.html#cb503-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Company'</span>)</span>
 <span id="cb503-3"><a href="matplotlib.html#cb503-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Sum of Value 1'</span>)</span>

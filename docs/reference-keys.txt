@@ -288,10 +288,10 @@ nan-missing-numerical-data
 pandas
 modules-import
 pandas-objects
-pandas-data-types
-pandas-data-structure
+types-of-objects
+series-and-dataframe
 class-method-4
-creating-timestamp-objects
+creating-timestamp
 from-list-to-datetimeindex
 from-list-to-series-of-timestamps
 from-scalar-to-timestamp

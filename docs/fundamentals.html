@@ -22,6 +22,7 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
+<link rel="stylesheet" href="bs4_custom.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -199,9 +200,9 @@ pip install plydata=1.2.3</code></pre>
 <pre><code>## Data of a = 123 
 ## Data of b = 123 
 ## Data of c = 123 
-## ID of a =  2219878275248 
-## ID of b =  2219878275248 
-## ID of c =  2219878275248</code></pre>
+## ID of a =  2732738238640 
+## ID of b =  2732738238640 
+## ID of c =  2732738238640</code></pre>
 <p>Changing data value (using assignment) changes <strong>the reference</strong></p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="fundamentals.html#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">123</span></span>
 <span id="cb9-2"><a href="fundamentals.html#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
@@ -214,8 +215,8 @@ pip install plydata=1.2.3</code></pre>
 <span id="cb9-9"><a href="fundamentals.html#cb9-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## Data of a = 456 
 ## Data of b = 123 
-## ID of a =  2220208948976 
-## ID of b =  2219878275248</code></pre>
+## ID of a =  2732866733808 
+## ID of b =  2732738238640</code></pre>
 </div>
 <div id="assignment" class="section level2" number="1.3">
 <h2>
@@ -234,8 +235,8 @@ pip install plydata=1.2.3</code></pre>
 <span id="cb11-6"><a href="fundamentals.html#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## x =  same mem loc 
 ## y =  same mem loc 
-## id(x) =  2220209077104 
-## id(y) =  2220209077104</code></pre>
+## id(x) =  2732866861936 
+## id(y) =  2732866861936</code></pre>
 </div>
 <div id="augmented-assignment" class="section level3" number="1.3.2">
 <h3>

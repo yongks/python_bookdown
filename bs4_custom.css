@@ -1,0 +1,11 @@
+div.container-fluid {
+  max-width: 100%;
+}
+
+div.sidebar-chaper {
+  max-width: 30rem;
+}
+
+[id=content] {
+  max-width: 55rem;
+}

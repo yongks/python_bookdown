@@ -32,6 +32,7 @@ bookdown::gitbook:
 
 
 bookdown::bs4_book:
+  css: bs4_custom.css
   ## default values, customize here: https://pkgs.rstudio.com/bookdown/reference/bs4_book.html
   footnotes_inline: true
   template: default

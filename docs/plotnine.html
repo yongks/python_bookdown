@@ -22,6 +22,7 @@
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
+<link rel="stylesheet" href="bs4_custom.css">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -83,17 +84,17 @@
 </h3>
 <pre><code>plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( bins=10 )
 plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</code></pre>
-<div class="sourceCode" id="cb542"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb542-1"><a href="plotnine.html#cb542-1" aria-hidden="true" tabindex="-1"></a>plotnine.options.figure_size <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb542-2"><a href="plotnine.html#cb542-2" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram()  <span class="co"># default bins = 10</span></span></code></pre></div>
-<pre><code>## &lt;ggplot: (172705142538)&gt;
+<div class="sourceCode" id="cb543"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb543-1"><a href="plotnine.html#cb543-1" aria-hidden="true" tabindex="-1"></a>plotnine.options.figure_size <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb543-2"><a href="plotnine.html#cb543-2" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram()  <span class="co"># default bins = 10</span></span></code></pre></div>
+<pre><code>## &lt;ggplot: (176789164036)&gt;
 ## 
 ## C:\PROGRA~3\Anaconda3\lib\site-packages\plotnine\stats\stat_bin.py:95: PlotnineWarning: 'stat_bin()' using 'bins = 8'. Pick better value with 'binwidth'.</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-50-103.png" width="288"></div>
-<div class="sourceCode" id="cb544"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb544-1"><a href="plotnine.html#cb544-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(bins <span class="op">=</span> <span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172707783280)&gt;</code></pre>
+<div class="sourceCode" id="cb545"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb545-1"><a href="plotnine.html#cb545-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(bins <span class="op">=</span> <span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176789048058)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-51-105.png" width="288"></div>
-<div class="sourceCode" id="cb546"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb546-1"><a href="plotnine.html#cb546-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(binwidth <span class="op">=</span> <span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172705184880)&gt;</code></pre>
+<div class="sourceCode" id="cb547"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb547-1"><a href="plotnine.html#cb547-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_histogram(binwidth <span class="op">=</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176794410355)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-52-107.png" width="288"></div>
 </div>
 <div id="xnumeric-1xcategorical" class="section level3" number="13.1.2">
@@ -104,8 +105,8 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
                     aes(x='colName'), 
                     fill='categorical-alike-colName') 
 + geom_histogram()</code></pre>
-<div class="sourceCode" id="cb549"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb549-1"><a href="plotnine.html#cb549-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_histogram(bins<span class="op">=</span><span class="dv">15</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172702390794)&gt;</code></pre>
+<div class="sourceCode" id="cb550"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb550-1"><a href="plotnine.html#cb550-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_histogram(bins<span class="op">=</span><span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176794889463)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-53-109.png" width="288"></div>
 </div>
 </div>
@@ -117,8 +118,8 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 <h3>
 <span class="header-section-number">13.2.1</span> 2x Numeric<a class="anchor" aria-label="anchor" href="#x-numeric-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb551"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb551-1"><a href="plotnine.html#cb551-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172702409572)&gt;</code></pre>
+<div class="sourceCode" id="cb552"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb552-1"><a href="plotnine.html#cb552-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176794953704)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-54-111.png" width="288"></div>
 </div>
 <div id="x-numeric-1x-categorical" class="section level3" number="13.2.2">
@@ -130,49 +131,49 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
         color='categorical-alike-colName',
         size='numberColName'
     ))</code></pre>
-<div class="sourceCode" id="cb554"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb554-1"><a href="plotnine.html#cb554-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point(aes(color<span class="op">=</span><span class="st">'grp'</span>))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172708398677)&gt;</code></pre>
+<div class="sourceCode" id="cb555"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb555-1"><a href="plotnine.html#cb555-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_point(aes(color<span class="op">=</span><span class="st">'grp'</span>))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176792443724)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-55-113.png" width="288"></div>
-<div class="sourceCode" id="cb556"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb556-1"><a href="plotnine.html#cb556-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>,color<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172701944001)&gt;</code></pre>
+<div class="sourceCode" id="cb557"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb557-1"><a href="plotnine.html#cb557-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>,color<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> geom_point()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176792456427)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-56-115.png" width="288"></div>
-<div class="sourceCode" id="cb558"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb558-1"><a href="plotnine.html#cb558-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb558-2"><a href="plotnine.html#cb558-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes(</span>
-<span id="cb558-3"><a href="plotnine.html#cb558-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span></span>
-<span id="cb558-4"><a href="plotnine.html#cb558-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172708326590)&gt;</code></pre>
+<div class="sourceCode" id="cb559"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb559-1"><a href="plotnine.html#cb559-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb559-2"><a href="plotnine.html#cb559-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes(</span>
+<span id="cb559-3"><a href="plotnine.html#cb559-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span></span>
+<span id="cb559-4"><a href="plotnine.html#cb559-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176789342064)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-57-117.png" width="288"></div>
 </div>
 <div id="x-numeric-1x-numeric-1x-categorical" class="section level3" number="13.2.3">
 <h3>
 <span class="header-section-number">13.2.3</span> 2x Numeric + 1x Numeric + 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-numeric-1x-categorical"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb560"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb560-1"><a href="plotnine.html#cb560-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb560-2"><a href="plotnine.html#cb560-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes( </span>
-<span id="cb560-3"><a href="plotnine.html#cb560-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span>, size<span class="op">=</span><span class="st">'value3'</span></span>
-<span id="cb560-4"><a href="plotnine.html#cb560-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172707971470)&gt;</code></pre>
+<div class="sourceCode" id="cb561"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb561-1"><a href="plotnine.html#cb561-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>,y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb561-2"><a href="plotnine.html#cb561-2" aria-hidden="true" tabindex="-1"></a>    geom_point(aes( </span>
+<span id="cb561-3"><a href="plotnine.html#cb561-3" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'grp'</span>, size<span class="op">=</span><span class="st">'value3'</span></span>
+<span id="cb561-4"><a href="plotnine.html#cb561-4" aria-hidden="true" tabindex="-1"></a>    ))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176789308880)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-58-119.png" width="288"></div>
 </div>
 <div id="overlay-smooth-line" class="section level3" number="13.2.4">
 <h3>
 <span class="header-section-number">13.2.4</span> Overlay Smooth Line<a class="anchor" aria-label="anchor" href="#overlay-smooth-line"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb562"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb562-1"><a href="plotnine.html#cb562-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb562-2"><a href="plotnine.html#cb562-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb562-3"><a href="plotnine.html#cb562-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth()          <span class="co"># default method='loess'</span></span></code></pre></div>
-<pre><code>## &lt;ggplot: (172702413102)&gt;
+<div class="sourceCode" id="cb563"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb563-1"><a href="plotnine.html#cb563-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb563-2"><a href="plotnine.html#cb563-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb563-3"><a href="plotnine.html#cb563-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth()          <span class="co"># default method='loess'</span></span></code></pre></div>
+<pre><code>## &lt;ggplot: (176788959642)&gt;
 ## 
 ## C:\PROGRA~3\Anaconda3\lib\site-packages\plotnine\stats\smoothers.py:321: PlotnineWarning: Confidence intervals are not yet implemented for lowess smoothings.</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-59-121.png" width="288"></div>
-<div class="sourceCode" id="cb564"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb564-1"><a href="plotnine.html#cb564-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>,fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb564-2"><a href="plotnine.html#cb564-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb564-3"><a href="plotnine.html#cb564-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth(</span>
-<span id="cb564-4"><a href="plotnine.html#cb564-4" aria-hidden="true" tabindex="-1"></a>        se<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb564-5"><a href="plotnine.html#cb564-5" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'red'</span>,</span>
-<span id="cb564-6"><a href="plotnine.html#cb564-6" aria-hidden="true" tabindex="-1"></a>        method<span class="op">=</span><span class="st">'lm'</span>, </span>
-<span id="cb564-7"><a href="plotnine.html#cb564-7" aria-hidden="true" tabindex="-1"></a>        level<span class="op">=</span><span class="fl">0.75</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172708675660)&gt;</code></pre>
+<div class="sourceCode" id="cb565"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb565-1"><a href="plotnine.html#cb565-1" aria-hidden="true" tabindex="-1"></a>ggplot(mydf, aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>,fill<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb565-2"><a href="plotnine.html#cb565-2" aria-hidden="true" tabindex="-1"></a>    geom_point() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb565-3"><a href="plotnine.html#cb565-3" aria-hidden="true" tabindex="-1"></a>    geom_smooth(</span>
+<span id="cb565-4"><a href="plotnine.html#cb565-4" aria-hidden="true" tabindex="-1"></a>        se<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb565-5"><a href="plotnine.html#cb565-5" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'red'</span>,</span>
+<span id="cb565-6"><a href="plotnine.html#cb565-6" aria-hidden="true" tabindex="-1"></a>        method<span class="op">=</span><span class="st">'lm'</span>, </span>
+<span id="cb565-7"><a href="plotnine.html#cb565-7" aria-hidden="true" tabindex="-1"></a>        level<span class="op">=</span><span class="fl">0.75</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176788608455)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-60-123.png" width="288"></div>
 </div>
 </div>
@@ -184,27 +185,27 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 <h3>
 <span class="header-section-number">13.3.1</span> 2x Numeric Data<a class="anchor" aria-label="anchor" href="#x-numeric-data"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb566"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb566-1"><a href="plotnine.html#cb566-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172707899862)&gt;</code></pre>
+<div class="sourceCode" id="cb567"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb567-1"><a href="plotnine.html#cb567-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176794949084)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-61-125.png" width="288"></div>
 </div>
 <div id="x-numeric-1x-categorical-1" class="section level3" number="13.3.2">
 <h3>
 <span class="header-section-number">13.3.2</span> 1x Numeric, 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical-1"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb568"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb568-1"><a href="plotnine.html#cb568-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172707912617)&gt;</code></pre>
+<div class="sourceCode" id="cb569"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb569-1"><a href="plotnine.html#cb569-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176794464386)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-62-127.png" width="288"></div>
-<div class="sourceCode" id="cb570"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb570-1"><a href="plotnine.html#cb570-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">30</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line( aes(group<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172708751773)&gt;</code></pre>
+<div class="sourceCode" id="cb571"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb571-1"><a href="plotnine.html#cb571-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">30</span>), aes(x<span class="op">=</span><span class="st">'dept'</span>, y<span class="op">=</span><span class="st">'value1'</span>)) <span class="op">+</span> geom_line( aes(group<span class="op">=</span><span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176796006054)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-63-129.png" width="288"></div>
 </div>
 <div id="x-numeric-1x-categorical-2" class="section level3" number="13.3.3">
 <h3>
 <span class="header-section-number">13.3.3</span> 2x Numeric, 1x Categorical<a class="anchor" aria-label="anchor" href="#x-numeric-1x-categorical-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb572"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb572-1"><a href="plotnine.html#cb572-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line( aes(color<span class="op">=</span><span class="st">'grp'</span>),size<span class="op">=</span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172708766468)&gt;</code></pre>
+<div class="sourceCode" id="cb573"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb573-1"><a href="plotnine.html#cb573-1" aria-hidden="true" tabindex="-1"></a>ggplot (mydf.head(<span class="dv">15</span>), aes(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>)) <span class="op">+</span> geom_line( aes(color<span class="op">=</span><span class="st">'grp'</span>),size<span class="op">=</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176796028305)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-64-131.png" width="288"></div>
 </div>
 </div>
@@ -217,13 +218,13 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 <span class="header-section-number">13.4.0.1</span> 1x Categorical<a class="anchor" aria-label="anchor" href="#x-categorical"><i class="fas fa-link"></i></a>
 </h4>
 <p>Single categorical variable produces frequency chart.</p>
-<div class="sourceCode" id="cb574"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb574-1"><a href="plotnine.html#cb574-1" aria-hidden="true" tabindex="-1"></a>tmpdf <span class="op">=</span> mydf.groupby([<span class="st">'comp'</span>],as_index<span class="op">=</span><span class="va">False</span>).count()</span>
-<span id="cb574-2"><a href="plotnine.html#cb574-2" aria-hidden="true" tabindex="-1"></a>tmpdf</span></code></pre></div>
+<div class="sourceCode" id="cb575"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb575-1"><a href="plotnine.html#cb575-1" aria-hidden="true" tabindex="-1"></a>tmpdf <span class="op">=</span> mydf.groupby([<span class="st">'comp'</span>],as_index<span class="op">=</span><span class="va">False</span>).count()</span>
+<span id="cb575-2"><a href="plotnine.html#cb575-2" aria-hidden="true" tabindex="-1"></a>tmpdf</span></code></pre></div>
 <pre><code>##   comp  dept  grp  value1  value2  value3
-## 0   C1    33   33      33      33      33
-## 1   C2    34   34      34      34      34
-## 2   C3    33   33      33      33      33</code></pre>
-<div class="sourceCode" id="cb576"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb576-1"><a href="plotnine.html#cb576-1" aria-hidden="true" tabindex="-1"></a>tmpdf.info()</span></code></pre></div>
+## 0   C1    35   35      35      35      35
+## 1   C2    31   31      31      31      31
+## 2   C3    34   34      34      34      34</code></pre>
+<div class="sourceCode" id="cb577"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb577-1"><a href="plotnine.html#cb577-1" aria-hidden="true" tabindex="-1"></a>tmpdf.info()</span></code></pre></div>
 <pre><code>## &lt;class 'pandas.core.frame.DataFrame'&gt;
 ## RangeIndex: 3 entries, 0 to 2
 ## Data columns (total 6 columns):
@@ -237,8 +238,8 @@ plotnine.ggplot( dataframe, aex(x='colName')) + geom_histogram( binwidth=? )</co
 ##  5   value3  3 non-null      int64 
 ## dtypes: int64(5), object(1)
 ## memory usage: 272.0+ bytes</code></pre>
-<div class="sourceCode" id="cb578"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb578-1"><a href="plotnine.html#cb578-1" aria-hidden="true" tabindex="-1"></a>ggplot (tmpdf, aes(x<span class="op">=</span><span class="st">'comp'</span>, y<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span>geom_col()</span></code></pre></div>
-<pre><code>## &lt;ggplot: (172705175396)&gt;</code></pre>
+<div class="sourceCode" id="cb579"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb579-1"><a href="plotnine.html#cb579-1" aria-hidden="true" tabindex="-1"></a>ggplot (tmpdf, aes(x<span class="op">=</span><span class="st">'comp'</span>, y<span class="op">=</span><span class="st">'grp'</span>)) <span class="op">+</span>geom_col()</span></code></pre></div>
+<pre><code>## &lt;ggplot: (176794410466)&gt;</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-67-133.png" width="288"></div>
 
 <!-- jupyter_markdown -->

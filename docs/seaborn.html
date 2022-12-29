@@ -106,11 +106,11 @@
 <span id="cb504-16"><a href="seaborn.html#cb504-16" aria-hidden="true" tabindex="-1"></a>})</span>
 <span id="cb504-17"><a href="seaborn.html#cb504-17" aria-hidden="true" tabindex="-1"></a>mydf.head()</span></code></pre></div>
 <pre><code>##   comp dept grp     value1     value2     value3
-## 0   C3   D2  G2  50.814122  18.363271  -8.515110
-## 1   C2   D1  G1  54.385902  20.038804 -28.940103
-## 2   C1   D3  G1  48.227088  24.483479  17.074484
-## 3   C3   D2  G1  46.529421  22.761242  21.628538
-## 4   C1   D3  G1  56.231549  21.725285  61.130685</code></pre>
+## 0   C3   D2  G1  52.066609  23.037681  24.642003
+## 1   C1   D3  G2  46.412695  20.880977   3.654197
+## 2   C2   D2  G1  48.613302  18.266190 -35.353663
+## 3   C3   D2  G2  49.691595  19.719636   4.741677
+## 4   C3   D1  G1  50.194966  18.610144  23.050494</code></pre>
 </div>
 <div id="scatter-plot-1" class="section level2" number="12.3">
 <h2>
@@ -121,11 +121,11 @@
 <span class="header-section-number">12.3.1</span> 2x Numeric<a class="anchor" aria-label="anchor" href="#x-numeric"><i class="fas fa-link"></i></a>
 </h3>
 <div class="sourceCode" id="cb506"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb506-1"><a href="seaborn.html#cb506-1" aria-hidden="true" tabindex="-1"></a>sns.lmplot(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>, data<span class="op">=</span>mydf)</span></code></pre></div>
-<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-31-43.png" width="244"></div>
+<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-31-43.png" width="245"></div>
 <div class="sourceCode" id="cb507"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb507-1"><a href="seaborn.html#cb507-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-31-44.png" width="480"></div>
 <div class="sourceCode" id="cb508"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb508-1"><a href="seaborn.html#cb508-1" aria-hidden="true" tabindex="-1"></a>sns.lmplot(x<span class="op">=</span><span class="st">'value1'</span>, y<span class="op">=</span><span class="st">'value2'</span>, fit_reg<span class="op">=</span><span class="va">False</span>, data<span class="op">=</span>mydf)<span class="op">;</span>  <span class="co">#hide regresion line</span></span></code></pre></div>
-<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-32-47.png" width="244"></div>
+<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-32-47.png" width="245"></div>
 <div class="sourceCode" id="cb509"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb509-1"><a href="seaborn.html#cb509-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-32-48.png" width="480"></div>
 </div>
@@ -220,9 +220,9 @@ Compare the size (height of each facet) with the above <strong>without</strong> 
 <span id="cb524-2"><a href="seaborn.html#cb524-2" aria-hidden="true" tabindex="-1"></a>grpdf <span class="op">=</span> com_grp[<span class="st">'value1'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb524-3"><a href="seaborn.html#cb524-3" aria-hidden="true" tabindex="-1"></a>grpdf</span></code></pre></div>
 <pre><code>##   comp       value1
-## 0   C1  1740.760131
-## 1   C2  1226.797552
-## 2   C3  1968.662692</code></pre>
+## 0   C1  1792.175028
+## 1   C2  1528.825925
+## 2   C3  1690.531563</code></pre>
 <div id="x-categorical-1x-numeric" class="section level3" number="12.5.1">
 <h3>
 <span class="header-section-number">12.5.1</span> 1x Categorical, 1x Numeric<a class="anchor" aria-label="anchor" href="#x-categorical-1x-numeric"><i class="fas fa-link"></i></a>
@@ -269,12 +269,12 @@ It support matplotlib as well as seaborn plotting utility.</p>
 </h3>
 <div class="sourceCode" id="cb529"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb529-1"><a href="seaborn.html#cb529-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.FacetGrid(mydf, col<span class="op">=</span><span class="st">"comp"</span>, row<span class="op">=</span><span class="st">'dept'</span>)</span>
 <span id="cb529-2"><a href="seaborn.html#cb529-2" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">map</span>(plt.hist, <span class="st">"value1"</span>)</span></code></pre></div>
-<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-45-79.png" width="448"></div>
+<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-45-79.png" width="445"></div>
 <div class="sourceCode" id="cb530"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb530-1"><a href="seaborn.html#cb530-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-45-80.png" width="864"></div>
 <div class="sourceCode" id="cb531"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb531-1"><a href="seaborn.html#cb531-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.FacetGrid(mydf, col<span class="op">=</span><span class="st">"comp"</span>, row<span class="op">=</span><span class="st">'dept'</span>)</span>
 <span id="cb531-2"><a href="seaborn.html#cb531-2" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">map</span>(plt.hist, <span class="st">"value1"</span>)</span></code></pre></div>
-<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-46-83.png" width="448"></div>
+<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-46-83.png" width="445"></div>
 <div class="sourceCode" id="cb532"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb532-1"><a href="seaborn.html#cb532-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-46-84.png" width="864"></div>
 </div>
@@ -301,7 +301,7 @@ It support matplotlib as well as seaborn plotting utility.</p>
 <div class="sourceCode" id="cb535"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb535-1"><a href="seaborn.html#cb535-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.PairGrid(mydf, hue<span class="op">=</span><span class="st">'comp'</span>)</span>
 <span id="cb535-2"><a href="seaborn.html#cb535-2" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">map</span>(plt.scatter)<span class="op">;</span></span>
 <span id="cb535-3"><a href="seaborn.html#cb535-3" aria-hidden="true" tabindex="-1"></a>g.add_legend()</span></code></pre></div>
-<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-48-91.png" width="410"></div>
+<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-48-91.png" width="409"></div>
 <div class="sourceCode" id="cb536"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb536-1"><a href="seaborn.html#cb536-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-48-92.png" width="786"></div>
 </div>
@@ -313,34 +313,10 @@ It support matplotlib as well as seaborn plotting utility.</p>
 <span id="cb537-2"><a href="seaborn.html#cb537-2" aria-hidden="true" tabindex="-1"></a>g.map_diag(plt.hist, bins<span class="op">=</span><span class="dv">15</span>)</span></code></pre></div>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-49-95.png" width="362"></div>
 <div class="sourceCode" id="cb538"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb538-1"><a href="seaborn.html#cb538-1" aria-hidden="true" tabindex="-1"></a>g.map_offdiag(plt.scatter)</span></code></pre></div>
-<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-49-96.png" width="367"></div>
+<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-49-96.png" width="366"></div>
 <div class="sourceCode" id="cb539"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb539-1"><a href="seaborn.html#cb539-1" aria-hidden="true" tabindex="-1"></a>g.add_legend()</span></code></pre></div>
-<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-49-97.png" width="410"></div>
+<div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-49-97.png" width="409"></div>
 <div class="sourceCode" id="cb540"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb540-1"><a href="seaborn.html#cb540-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<pre><code>## Traceback (most recent call last):
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\backends\backend_qt.py", line 454, in _draw_idle
-##     self.draw()
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\backends\backend_agg.py", line 405, in draw
-##     self.figure.draw(self.renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\artist.py", line 74, in draw_wrapper
-##     result = draw(artist, renderer, *args, **kwargs)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\artist.py", line 51, in draw_wrapper
-##     return draw(artist, renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\figure.py", line 3071, in draw
-##     mimage._draw_list_compositing_images(
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\image.py", line 131, in _draw_list_compositing_images
-##     a.draw(renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\artist.py", line 51, in draw_wrapper
-##     return draw(artist, renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axes\_base.py", line 3071, in draw
-##     self._update_title_position(renderer)
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axes\_base.py", line 3004, in _update_title_position
-##     if (ax.xaxis.get_ticks_position() in ['top', 'unknown']
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axis.py", line 2399, in get_ticks_position
-##     self._get_ticks_position()]
-##   File "C:\PROGRA~3\Anaconda3\lib\site-packages\matplotlib\axis.py", line 2112, in _get_ticks_position
-##     minor = self.minorTicks[0]
-## IndexError: list index out of range</code></pre>
 <div class="inline-figure"><img src="09-visualization_files/figure-html/unnamed-chunk-49-98.png" width="786"></div>
 </div>
 </div>

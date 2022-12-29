@@ -6,17 +6,17 @@
   }
 
   div.sidebar-chapter {
-    max-width: 30rem;
+    max-width: 25rem;
     box-sizing:  content-box !important;
   }
 
   .container-fluid main  {
-    max-width: 55rem;
+    max-width: 50rem;
   }
 }
 
 /* Make Fonts A Bit Smaller */
 .container-fluid main  {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 

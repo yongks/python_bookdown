@@ -301,12 +301,12 @@ first-day-of-month
 last-day-of-month
 frequency-table-crosstab
 sample-data-5
-one-dimensiontable
-two-dimension-table
+one-dimension-frequency-table
+two-dimension-frequency-table
 higher-dimension-table
 getting-margin
 getting-proportion
-concatination
+concatenation-1
 sample-data-6
 column-wise
 row-wise

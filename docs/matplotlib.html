@@ -124,11 +124,11 @@
 <span id="cb471-15"><a href="matplotlib.html#cb471-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'value3'</span>:value3 })</span>
 <span id="cb471-16"><a href="matplotlib.html#cb471-16" aria-hidden="true" tabindex="-1"></a>mydf.head()</span></code></pre></div>
 <pre><code>##   comp dept grp     value1     value2     value3
-## 0   C1   D3  G1  53.667340  19.345949  22.877155
-## 1   C3   D1  G2  41.250518  23.628090  32.777016
-## 2   C3   D4  G1  36.988426  18.485675   3.535553
-## 3   C2   D3  G1  54.428888  21.428187 -71.565557
-## 4   C1   D1  G1  46.949566  22.602958  24.361131</code></pre>
+## 0   C3   D3  G2  60.078835  21.959126 -33.385321
+## 1   C1   D1  G2  50.724329  20.189407 -11.865599
+## 2   C2   D4  G1  54.869794  18.723938  -9.802854
+## 3   C1   D1  G2  48.557141  23.697982  66.061390
+## 4   C3   D3  G2  47.763978  18.882684 -10.614113</code></pre>
 <div class="sourceCode" id="cb473"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb473-1"><a href="matplotlib.html#cb473-1" aria-hidden="true" tabindex="-1"></a>mydf.info()</span></code></pre></div>
 <pre><code>## &lt;class 'pandas.core.frame.DataFrame'&gt;
 ## RangeIndex: 200 entries, 0 to 199
@@ -443,9 +443,9 @@ Multile row grid means axes is an 2-D array. Hence can use two levels of <strong
 <span id="cb501-2"><a href="matplotlib.html#cb501-2" aria-hidden="true" tabindex="-1"></a>grpdf <span class="op">=</span> com_grp[<span class="st">'value1'</span>].<span class="bu">sum</span>().reset_index()</span>
 <span id="cb501-3"><a href="matplotlib.html#cb501-3" aria-hidden="true" tabindex="-1"></a>grpdf</span></code></pre></div>
 <pre><code>##   comp       value1
-## 0   C1  2829.169025
-## 1   C2  3329.669037
-## 2   C3  3759.831244</code></pre>
+## 0   C1  3067.587437
+## 1   C2  3122.534705
+## 2   C3  3722.823841</code></pre>
 <div class="sourceCode" id="cb503"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb503-1"><a href="matplotlib.html#cb503-1" aria-hidden="true" tabindex="-1"></a>plt.bar(grpdf.comp, grpdf.value1)<span class="op">;</span></span>
 <span id="cb503-2"><a href="matplotlib.html#cb503-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Company'</span>)</span>
 <span id="cb503-3"><a href="matplotlib.html#cb503-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Sum of Value 1'</span>)</span>

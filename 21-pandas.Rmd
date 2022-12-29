@@ -195,6 +195,7 @@ print( 'Under D2:\n', tb['D2'], '\n\n',
 ```
 
 #### Getting Margin
+
 Extend the crosstab with 'margin=True' to have sum of rows/columns, presented in **new column/row named 'All'**.
 
 ```{python}

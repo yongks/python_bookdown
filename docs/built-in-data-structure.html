@@ -125,11 +125,11 @@
 <span id="cb262-3"><a href="built-in-data-structure.html#cb262-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy and original has the same memory location.</span></span></code></pre></div>
 <pre><code>## (1, 2, 3, 4, 5)</code></pre>
 <div class="sourceCode" id="cb264"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb264-1"><a href="built-in-data-structure.html#cb264-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Original ID: '</span>, <span class="bu">id</span>(original))</span></code></pre></div>
-<pre><code>## Original ID:  2731840029296</code></pre>
+<pre><code>## Original ID:  2331477332192</code></pre>
 <div class="sourceCode" id="cb266"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb266-1"><a href="built-in-data-structure.html#cb266-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Copy ID:     '</span>, <span class="bu">id</span>(copy_test))</span></code></pre></div>
-<pre><code>## Copy ID:      2731840029296</code></pre>
+<pre><code>## Copy ID:      2331477332192</code></pre>
 <div class="sourceCode" id="cb268"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb268-1"><a href="built-in-data-structure.html#cb268-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Clone ID:    '</span>, <span class="bu">id</span>(clone_test))  <span class="co">## clone has different ID</span></span></code></pre></div>
-<pre><code>## Clone ID:     2731840286208</code></pre>
+<pre><code>## Clone ID:     2331477584928</code></pre>
 </div>
 </div>
 <div id="list" class="section level2" number="4.2">
@@ -232,16 +232,16 @@
 <span id="cb281-2"><a href="built-in-data-structure.html#cb281-2" aria-hidden="true" tabindex="-1"></a>animals <span class="op">+=</span> [<span class="st">'chicken'</span>]</span>
 <span id="cb281-3"><a href="built-in-data-structure.html#cb281-3" aria-hidden="true" tabindex="-1"></a>animals.pop()</span>
 <span id="cb281-4"><a href="built-in-data-structure.html#cb281-4" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(animals)  <span class="co">## ID had not changed</span></span></code></pre></div>
-<pre><code>## 2731834255232
+<pre><code>## 2331471550656
 ## 'chicken'
-## 2731834255232</code></pre>
+## 2331471550656</code></pre>
 <p><strong>Copy and Clone</strong></p>
 <p>Assignment to another variable always refers to the same data.Use <strong>copy()</strong> method if you wish to clone the data, with different ID.</p>
 <div class="sourceCode" id="cb283"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb283-1"><a href="built-in-data-structure.html#cb283-1" aria-hidden="true" tabindex="-1"></a>original   <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]      <span class="co">## original data</span></span>
 <span id="cb283-2"><a href="built-in-data-structure.html#cb283-2" aria-hidden="true" tabindex="-1"></a>copy_test  <span class="op">=</span> original         <span class="co">## same ID as Original</span></span>
 <span id="cb283-3"><a href="built-in-data-structure.html#cb283-3" aria-hidden="true" tabindex="-1"></a>clone_test <span class="op">=</span> original.copy()  <span class="co">## different ID</span></span>
 <span id="cb283-4"><a href="built-in-data-structure.html#cb283-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="bu">id</span>(original), <span class="bu">id</span>(copy_test), <span class="bu">id</span>(clone_test))</span></code></pre></div>
-<pre><code>## 2731840332288 2731840332288 2731840337664</code></pre>
+<pre><code>## 2331477631936 2331477631936 2331477637376</code></pre>
 <p><strong>Passing To Function As Reference</strong></p>
 <p>When passing list to functions, only the reference passed. Meaning all changes to the list within the function will be reflected outside the function.</p>
 <div class="sourceCode" id="cb285"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb285-1"><a href="built-in-data-structure.html#cb285-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
@@ -259,11 +259,11 @@
 <span id="cb285-13"><a href="built-in-data-structure.html#cb285-13" aria-hidden="true" tabindex="-1"></a>my_list        <span class="co">## content was altered</span></span>
 <span id="cb285-14"><a href="built-in-data-structure.html#cb285-14" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(my_list)</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4, 5]
-## 2731840337728
+## 2331477637440
 ## [1, 2, 3, 4, 5]
-## ID in Function:       2731840337728
+## ID in Function:       2331477637440
 ## [1, 2, 3, 4, 5, 6]
-## 2731840337728</code></pre>
+## 2331477637440</code></pre>
 </div>
 <div id="iteration" class="section level3" number="4.2.5">
 <h3>
@@ -416,7 +416,7 @@
 <p>Set can be declared with <strong><code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code></strong>, just like list creation uses <strong>‘[]’</strong>.</p>
 <div class="sourceCode" id="cb315"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb315-1"><a href="built-in-data-structure.html#cb315-1" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> {<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>}</span>
 <span id="cb315-2"><a href="built-in-data-structure.html#cb315-2" aria-hidden="true" tabindex="-1"></a>myset <span class="co"># notice no repetition values</span></span></code></pre></div>
-<pre><code>## {'g', 'a', 'b', 'e', 'c', 'f', 'd'}</code></pre>
+<pre><code>## {'a', 'e', 'b', 'f', 'c', 'g', 'd'}</code></pre>
 <p>Set can be created from list, and then converted back to list. This is the perfect way to make a list unique.</p>
 <div class="sourceCode" id="cb317"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb317-1"><a href="built-in-data-structure.html#cb317-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>,<span class="st">'g'</span>]</span>
 <span id="cb317-2"><a href="built-in-data-structure.html#cb317-2" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> <span class="bu">set</span>(mylist)</span>
@@ -426,8 +426,8 @@
 <span id="cb317-6"><a href="built-in-data-structure.html#cb317-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">'</span><span class="ch">\n</span><span class="st">Convert to set      : '</span>, myset,</span>
 <span id="cb317-7"><a href="built-in-data-structure.html#cb317-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">'</span><span class="ch">\n</span><span class="st">Convert back to list: '</span>, my_unique_list) <span class="co"># notice no repetition values</span></span></code></pre></div>
 <pre><code>## Original List       :  ['a', 'b', 'c', 'd', 'a', 'b', 'e', 'f', 'g'] 
-## Convert to set      :  {'g', 'c', 'd', 'a', 'b', 'f', 'e'} 
-## Convert back to list:  ['g', 'c', 'd', 'a', 'b', 'f', 'e']</code></pre>
+## Convert to set      :  {'e', 'a', 'g', 'd', 'c', 'f', 'b'} 
+## Convert back to list:  ['e', 'a', 'g', 'd', 'c', 'f', 'b']</code></pre>
 </div>
 <div id="operators-1" class="section level3" number="4.4.2">
 <h3>
@@ -452,7 +452,7 @@ Proper Subset Test : <strong><code>&lt;</code></strong></p>
 ## Is Proper Subet :  False</code></pre>
 <p><strong>Union using <code>|</code></strong></p>
 <div class="sourceCode" id="cb325"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb325-1"><a href="built-in-data-structure.html#cb325-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>} <span class="op">|</span> {<span class="st">'a'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>
-<pre><code>## {'a', 'b', 'c', 'f', 'e'}</code></pre>
+<pre><code>## {'a', 'e', 'c', 'f', 'b'}</code></pre>
 <p><strong>Intersection using <code>&amp;</code></strong></p>
 <p>Any elments that exist in both left and right set</p>
 <div class="sourceCode" id="cb327"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb327-1"><a href="built-in-data-structure.html#cb327-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>,<span class="st">'d'</span>} <span class="op">&amp;</span> {<span class="st">'c'</span>,<span class="st">'d'</span>,<span class="st">'e'</span>,<span class="st">'f'</span>}</span></code></pre></div>

@@ -55,53 +55,40 @@ pd.set_option( 'display.width', 90)         # number of characters per row
 
 ## Class Method
 
-### Creating Timestamp
+### Convertion
 
-Pandas **`to_datetime()`** can: 
+#### Convert To Timestamp
+
+Use **`to_datetime()`** to create various Timestamp related objects:
 
 - Convert list of dates to **DateTimeIndex**  
 - Convert list of dates to **Series of Timestamps**  
-- Convert single date into **Timestamp** Object
-. Source can be **string, date, datetime object**
+- Convert single date into **Timestamp**
+- Source can be **string, date, datetime object**
 
-#### From List to `DateTimeIndex`
+**Create Single Timestamp object**
 
-```{python}
-dti = pd.to_datetime(['2011-01-03',             # from string
-                       date(2018,4,13),         # from date
-                       datetime(2018,3,1,7,30)] # from datetime
-              )
-print( dti,
-      '\nObject Type:  ', type(dti),
-      '\nObject dtype: ', dti.dtype,
-      '\nElement Type: ', type(dti[1]))
+```{python, results='hold'}
+pd.to_datetime('2011-01-03')
+pd.to_datetime(date(2018,4,13))
+pd.to_datetime(datetime(2018,3,1,7,30))
 ```
+#### Convert To DateTimeIndex
 
-#### From List to Series of Timestamps
+```{python, results='hold'}
+data = ['2011-01-03',             # from string
+         date(2018,4,13),         # from date
+         datetime(2018,3,1,7,30)] # from datetime
+dti = pd.to_datetime(data)  ## Convert into DateTimeIndex
 
-```{python}
-sdt = pd.to_datetime(pd.Series(['2011-01-03',      # from string
-                                date(2018,4,13),        # from date
-                                datetime(2018,3,1,7,30)]# from datetime
-              ))
-print(sdt,
-      '\nObject Type:  ',type(sdt),
-      '\nObject dtype: ', sdt.dtype,
-      '\nElement Type: ',type(sdt[1]))
-```
-
-#### From Scalar to Timestamp
-
-```{python}
-print( pd.to_datetime('2011-01-03'), '\n',
-       pd.to_datetime(date(2011,1,3)), '\n',
-       pd.to_datetime(datetime(2011,1,3,5,30)), '\n',
-       '\nElement Type: ', type(pd.to_datetime(datetime(2011,1,3,5,30))))
+type(dti)      ## DateTimeIndex
+dti.dtype      ## <M8[ns]
+type(dti[1])   ## Elements are Timestamp objects
 ```
 
 ### Creating DateTimeIndex
 
-The function `date_range()` return **`DateTimeIndex`** object. Use `Series()` to convert into Series if desired.
+User `date_range()` to automatically generate range of Timestamps based on start/end/interval. The result is **`DateTimeIndex`** object which contains the range of Timestamps. 
 
 #### Hourly
 
@@ -121,31 +108,28 @@ print(
 When the **frequency is Day and time is not specified**, output is date distributed.  
 When time is specified, output will honor the time.
 
-```{python}
-print(
-  pd.date_range(date(2018,1,2), periods=3, freq='D'),
-  pd.date_range('2018-01-01-1230', periods=4, freq='D'))
+```{python, results='hold'}
+pd.date_range(date(2018,1,2), periods=3, freq='D'),
+pd.date_range('2018-01-01-1230', periods=4, freq='D')
 ```
 
 #### First Day Of Month
 
 Use `freq=MS`, M stands for montly, S stand for Start. If the **day** specified, the sequence start from first day of following month.
 
-```{python, jupyter_meta = list(scrolled = TRUE)}
-print(
-  pd.date_range('2018-01', periods=4, freq='MS'),
-  pd.date_range('2018-01-09', periods=4, freq='MS'),
-  pd.date_range('2018-01-09 12:30:00', periods=4, freq='MS') )
+```{python, results='hold'}
+pd.date_range('2018-01', periods=4, freq='MS'),
+pd.date_range('2018-01-09', periods=4, freq='MS'),
+pd.date_range('2018-01-09 12:30:00', periods=4, freq='MS')
 ```
 #### Last Day of Month
 
 Sequence always starts from the end of the specified month.
 
-```{python}
-print(
-  pd.date_range('2018-01', periods=4, freq='M'),
-  pd.date_range('2018-01-09', periods=4, freq='M'),
-  pd.date_range('2018-01-09 12:30:00', periods=4, freq='M'))
+```{python, results='hold'}
+pd.date_range('2018-01', periods=4, freq='M')
+pd.date_range('2018-01-09', periods=4, freq='M')
+pd.date_range('2018-01-09 12:30:00', periods=4, freq='M')
 ```
 
 ### Frequency Table (crosstab)
@@ -179,16 +163,15 @@ mydf = pd.DataFrame({
 mydf.head()
 ```
 
-#### One DimensionTable
+#### One Dimension Frequency Table
 
-```{python}
-## Frequency Countn For Company, Department
-print(
-  pd.crosstab(index=mydf.comp, columns='counter'),'\n\n',
-  pd.crosstab(index=mydf.dept, columns='counter'))
+```{python, results='hold'}
+pd.crosstab(index=mydf.comp, columns='counter')
 ```
 
-#### Two Dimension Table
+#### Two Dimension Frequency Table
+
+Row dimension uses **comp** variable, Column dimension uses **dept** variable.
 
 ```{python}
 pd.crosstab(index=mydf.comp, columns=mydf.dept)
@@ -196,12 +179,12 @@ pd.crosstab(index=mydf.comp, columns=mydf.dept)
 
 #### Higher Dimension Table
 
-Crosstab header is **multi-levels index** when more than one column specified.
+Crosstab header is **multi-levels index** when more than one column specified. The multilevel index consists of all permuation of of grp and dept variables.
 
-```{python}
+```{python, results='hold'}
 tb = pd.crosstab(index=mydf.comp, columns=[mydf.dept, mydf.grp])
-print( tb, '\n\n',
-       tb.columns )
+tb.columns   ## observe two levels of headers generated
+tb           ## two levels of headers
 ```
 
 Select **sub-dataframe** using multi-level referencing.
@@ -232,7 +215,7 @@ Use matrix operation divide each row with its respective column sum.
 tb/tb.loc['All']
 ```
 
-### Concatination
+### Concatenation
 
 #### Sample Data
 
@@ -557,7 +540,7 @@ ts1.isoformat()  ## with Tz
 
 ### Conversion
 
-#### Convert To `datetime`
+#### Convert To datetime
 
 Use `to_pydatetime()` to convert into standard library **`datetime.datetime`**.  From the 'datetime' object, apply `date()` to get **`datetime.date`**
 
@@ -569,7 +552,7 @@ ts.to_pydatetime().date()   ## datetime.date (no TZ)
 ts.date()                   ## same as above (no TZ)
 ```
 
-#### Convert To `numpy.datetime64`
+#### Convert To numpy.datetime64
 
 Use `to_datetime64()` to convert into ```numpy.datetime64```
 
@@ -604,17 +587,13 @@ ts
 ts.ceil(freq='D')  # ceiling to day
 ```
 
-
-
 ## Class: DateTimeIndex
 
 ### Creating 
 
 Refer to Pandas class method above.
 
-### Instance Method
-
-#### Data Type Conversion
+### Co Conversion
 
 **Convert To datetime.datetime**  
 Use **```to_pydatetime```** to convert into python standard **datetime.datetime** object
@@ -624,7 +603,7 @@ print('Converted to List:', dti.to_pydatetime(), '\n\n',
       'Converted Type:',    type(dti.to_pydatetime()))
 ```
 
-#### Structure Conversion
+### Structure Conversion
 
 **Convert To Series: `to_series`**  
 This creates a Series where **index and data** with the same value
@@ -1221,7 +1200,7 @@ s.dt.minute # extract minute as integer
 
 ## Class: DataFrame
 
-### Constructor (Creation)
+### Constructor
 
 - pd.DataFrame() constructor creates DataFrame object.
 - When index (row label) and column names are not specified (or cannot be induced from data source), it will default to 0,1,2,3...

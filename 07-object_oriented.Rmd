@@ -6,12 +6,19 @@
 - Use **__init__** as the constructor function (optional)
 
 ```{python}
+## Base Class
 class Person:
-  wallet = 0  # 
-  def __init__(self, myname,money=0):   # constructor
+  
+  ## this section defines the attributes (setter and getter possivle)
+  wallet = 0
+  
+  ## Constructor (Optional)
+  def __init__(self, myname, money=0):
       self.name = myname
       self.wallet=money
       print('I\'m in Person Constructor: {}'.format(myname))
+  
+  ## Here are the Methods (notice first parameter 'self' is mandatory)
   def say_hi(self):
       print('Hello, my name is : ', self.name)
   def say_bye(self):
@@ -21,8 +28,10 @@ class Person:
   def balance(self):
       print('Wallet Balance:',self.wallet)
   def MakeCry(self):
+      print('Parent making kid cry')
       self.Cry()
-      
+
+## Inherit From Base class
 class Kid(Person):
   def __init__(self, myname, money=0):
       print('I\'m in Kid Constructor: {}'.format(myname))
@@ -33,40 +42,44 @@ class Kid(Person):
 
 ## Constructor
 
-```{python}
+Calling a constructor will automatically call it's superclass contrustor.
+
+```{python, results='hold'}
 p1 = Person('Yong')  
 p2 = Person('Gan',200)
-p3 = Kid('Jolin',50)
+p3 = Kid('Jolin',50)    ## will call superclass constructor too
 ```
 
-## Calling Method
+## Methods
 
-```{python}
-p1.say_hi()
-p1.balance()
-p3.Cry()
-p3.MakeCry()
+A base class method can call its inherited class method (if available, otherwise Error)
+
+```{python, results='hold', error=TRUE}
+p1.say_hi()    ## p1 is initialized with a base class
+p1.balance()   ## this is a base class method
+p1.MakeCry()   ## Error ! because it is trying to call an inherited class which does not exist
 ```
 
-```{python}
-p2.say_hi()
-p2.balance()
+```{python, results='hold'}
+p3.Cry()       ## p3 is initialized with an inherited class
+p3.MakeCry()   ## Success ! this is the base class  method, calling inherited class method
 ```
 
-## Getting Property
+## Attributes 
 
-```{python}
+### Setter
+
+```{python, results='hold'}
+p1.wallet = 999
+p2.wallet = 999
+p3.wallet = 999
+```
+
+### Getter
+
+```{python, results='hold'}
 p1.wallet
-```
-
-```{python}
 p2.wallet
+p3.wallet
 ```
 
-
-## Setting Property
-
-```{python}
-p1.wallet = 900
-p1.wallet
-```

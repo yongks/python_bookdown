@@ -1,22 +1,28 @@
 /*************************************************
 Content
 *************************************************/
-/* outer content */
-.book-body{
-  left: 370px !important;
-}
 
-/* inner content */
-.page-inner {
-  max-width: 1200px !important;
+@media screen and (min-width: 1200px) {
+  /* outer content */
+  .book-body{
+    left: 370px !important;
+  }
+
+  /* inner content */
+  .page-inner {
+    max-width: 1200px !important;
+  }
 }
 
 /*************************************************
 TOC
 *************************************************/
-/* entire TOC column */
-.book-summary {
-  width: 370px !important;
+
+@media screen and (min-width: 1200px) {
+  /* entire TOC column */
+  .book-summary {
+    width: 370px !important;
+  }
 }
 
 /* first level TOC */

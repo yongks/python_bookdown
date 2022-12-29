@@ -111,9 +111,10 @@ custom-exception
 object-oriented-programming
 defining-class
 constructor-1
-calling-method
-getting-property
-setting-property
+methods-1
+attributes
+setter
+getter
 decorator
 definition
 examples
@@ -125,7 +126,7 @@ timezone-pytz
 constructor-2
 class-method
 making-datedatetime-timezone-aware-.localize
-attributes
+attributes-1
 date-and-datetime
 iso8601
 constructor-3
@@ -140,12 +141,12 @@ update-.replace
 convert-to-time-.time
 convert-to-date-.date
 convert-to-string-strftime-isoformat
-attributes-1
+attributes-2
 time
 constructor-4
 class-method-2
 now
-attributes-2
+attributes-3
 timedelta
 pandas
 modules-import
@@ -184,7 +185,7 @@ constructor-5
 from-number
 from-string
 from-datetime-date
-attributes-3
+attributes-4
 timezones
 formatting
 conversion
@@ -198,7 +199,7 @@ class-datetimeindex
 creating
 co-conversion
 structure-conversion
-attributes-4
+attributes-5
 class-series
 constructor-6
 empty-series
@@ -249,7 +250,7 @@ sample-data-4
 addition
 substraction
 operator-1
-attributes-5
+attributes-6
 index-manipulation-1
 sample-data-5
 convert-column-to-index
@@ -355,7 +356,7 @@ creating-groups
 properties-1
 number-of-groups
 row-numbers-association
-methods-1
+methods-2
 number-of-rows-in-each-group
 retrieve-rows
 retrieve-n-th-row-of-each-grou

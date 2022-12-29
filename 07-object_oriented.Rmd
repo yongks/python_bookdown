@@ -1,11 +1,9 @@
-
-
 # Object Oriented Programming
 
 ## Defining Class
 
 - Every function within a class **must have** at least one parameter - **self**  
-- Use **init** as the constructor function. **init** is optional
+- Use **__init__** as the constructor function (optional)
 
 ```{python}
 class Person:

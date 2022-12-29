@@ -24,7 +24,7 @@ rmd_files:
 - 08-decorators.Rmd
 - 10-datetime.Rmd
 - 20-pandas.Rmd
-- 21-numpy.Rmd
+#- 21-numpy.Rmd
 #- 02-numpy.Rmd
 #- 03-pandas.Rmd
 #- 04-visualization.Rmd

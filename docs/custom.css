@@ -1,14 +1,14 @@
 /*************************************************
 Content
 *************************************************/
-/* content block */
+/* outer content */
 .book-body{
-  left: 350px;
+  left: 370px !important;
 }
 
-/* content */
+/* inner content */
 .page-inner {
-  max-width: 1200px;
+  max-width: 1200px !important;
 }
 
 /*************************************************
@@ -16,7 +16,7 @@ TOC
 *************************************************/
 /* entire TOC column */
 .book-summary {
-  width: 350px;
+  width: 370px !important;
 }
 
 /* first level TOC */

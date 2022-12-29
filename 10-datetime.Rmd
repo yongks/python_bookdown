@@ -15,7 +15,9 @@ from datetime import date, datetime, time, timedelta
 
 **`pytz`** is **NOT** a built-in library.
 
-### Creating Timezone
+### Constructor
+
+**```pytz.timezone```** is the object class within **```pytz```**. 
 
 ```{python, results='hold'}
 MYTZ = timezone('Asia/Singapore')
@@ -26,11 +28,12 @@ MYTZ
 UTC
 UTC2
 ```
+
 ### Class Method
 
-#### localize() - Making date/datetime Timezone aware
+#### Making date/datetime Timezone aware (.localize)
 
-Use **```localize()```** to make a datetime/date timezone aware.
+Use **```timezone.localize()```** to make a datetime/date object timezone aware.
 
 ```{python, results='hold'}
 naive =  datetime(2019, 8, 19, 12, 0)
@@ -39,6 +42,7 @@ naive2 = datetime(2019, 8, 19)  ## will be assumed with time 00:00
 UTC.localize(naive)    ## make datetime TZ aware
 MYTZ.localize(naive2)  ## make date TZ aware
 ```
+
 ### Attributes
 
 **```pytz.all_timezones```** is a list of time zone names in string. Example below shows timezone name for all cities in Asia.
@@ -53,16 +57,34 @@ for x in pytz.all_timezones:
 
 ## date and datetime
 
+This is a built-in library by Python. There is no need to install this library.
+
 **`date`** and **`datetime`** are both standard built-in python library.
 
-**`datetime`** library contain three class of objects:
+**`datetime`** library contain four classes of objects:
 
-- date (year,month,day)
-- time (hour,minute,second)
-- datetime (year,month,day,hour,minute,second)
-- timedelta: duration between two datetime or date object
+- **date**: (year,month,day)
+- **time**: (hour,minute,second)
+- **datetime**: (year,month,day,hour,minute,second)
+- **timedelta**: duration between two datetime or date object
+
+### ISO8601
+
+Refer [ISO8601 in Wikipedia](https://en.wikipedia.org/wiki/ISO_8601#Time_zone_designators) to understand the common ISO on date/datetime formatting.
+
+```
+UTC:    "2007-04-05T14:30Z"      #notice Z
+GMT+8:  "2007-04-05T12:30+08:00  #notice +08:00
+GMT+8:  "2007-04-05T12:30+0800   #notice +0800
+GMT+8:  "2007-04-05T12:30+08     #notice +08```
+
+### Date
+2019-02-04 #notice no timezone available
+```
 
 ### Constructor
+
+Use constructor to create datetime / date object.
 
 ```{python, results='hold'}
 ## Date Only
@@ -112,30 +134,23 @@ Use **```strptime```** to convert string into **datetime** object
 %d : day
 ```
 
-```{python}
-datetime.strptime('2011-02-25','%Y-%m-%d')
-```
-
-```{python}
-datetime.strptime('9-01-18','%d-%m-%y')
-```
-
-```{python}
+```{python, results='hold'}
+datetime.strptime('2011-02-25', '%Y-%m-%d')
+datetime.strptime('9-01-18',    '%d-%m-%y')
 datetime.strptime('09-Mar-2018','%d-%b-%Y')
-```
-
-```{python}
 datetime.strptime('2/5/2018 4:49 PM', '%m/%d/%Y %I:%M %p')
 ```
 
 #### Convert from ISO ```fromisoformat```
 
-- ```fromisoformat()``` is intend to be reverse of ```isoformat()```  
+- ```fromisoformat()``` is the reverse of ```isoformat()```  
 -  It actually **not ISO compliance**: when Z or +8 is included at the end of the string, error occur
 
-```{python}
-#s = dt.datetime.now().isoformat()
-datetime.fromisoformat("2019-02-05T10:22:33")
+```{python, results='hold', error=TRUE}
+datetime.now().isoformat()                         ## checkout the iso format
+datetime.fromisoformat("2019-02-05T10:22:33")      ## Good
+datetime.fromisoformat("2019-02-05T10:22:33Z")     ## Error due to 'Z'
+datetime.fromisoformat("2019-02-05T10:22:33+0800") ## Errordue to '+0800'
 ```
 
 ### Instance Method
@@ -146,45 +161,32 @@ datetime.fromisoformat("2019-02-05T10:22:33")
 datetime.now().weekday()
 ```
 
-#### ```replace```
+#### Update (.replace)
 
 ```{python}
 datetime.now().replace(year=1999)
 ```
 
-#### convert to ```.time()```
+#### Convert to Time (.time)
 
 ```{python, jupyter_meta = list(scrolled = TRUE)}
 datetime.now().time()
 ```
 
-#### Convert to ```.date()```
+#### Convert to Date (.date)
 
 ```{python}
 datetime.now().date()
 ```
 
-#### Convert to String
+#### Convert to String (strftime, isoformat)
 
 **```str```**
 
-```{python}
+```{python, results='hold'}
 str( datetime.now() )
-```
-
-**Use ```strftime()```**
-
-```{python, results='hold'}
 datetime.now().strftime('%d-%b-%Y')
-```
-
-```{python, results='hold'}
 datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ')  ## ISO 8601 UTC
-```
-
-**Use ```isoformat()```**
-
-```{python, results='hold'}
 datetime.utcnow().isoformat()
 ```
 

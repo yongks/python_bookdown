@@ -6,7 +6,8 @@
 ## Library Import
 
 ```{python, results='hold'}
-from pytz import timezone, utc
+import pytz
+from pytz import timezone
 from datetime import date, datetime, time, timedelta
 ```
 
@@ -17,14 +18,19 @@ from datetime import date, datetime, time, timedelta
 ### Creating Timezone
 
 ```{python, results='hold'}
-MYTZ = pytz.timezone('Asia/Singapore')
-UTC = pytz.utc
+MYTZ = timezone('Asia/Singapore')
+UTC  = pytz.utc
+UTC2 = timezone('UTC')
 
 MYTZ
 UTC
+UTC2
 ```
+### Class Method
 
-#### Making date/datetime Timezone aware
+#### localize() - Making date/datetime Timezone aware
+
+Use **```localize()```** to make a datetime/date timezone aware.
 
 ```{python, results='hold'}
 naive =  datetime(2019, 8, 19, 12, 0)
@@ -35,7 +41,7 @@ MYTZ.localize(naive2)  ## make date TZ aware
 ```
 ### Attributes
 
-**```pytz.all_timezones```** is a list of time zone names in string.
+**```pytz.all_timezones```** is a list of time zone names in string. Example below shows timezone name for all cities in Asia.
 
 ```{python, results='hold'}
 
@@ -60,11 +66,11 @@ for x in pytz.all_timezones:
 
 ```{python, results='hold'}
 ## Date Only
-date      (2000,1,1,)
+date      (2000,1,1)
 type(date (2000,1,1))
 
 ## Datetime
-datetime  (2000,1,1,0,0,0)
+datetime  (2000,1,1,23,15,55)
 datetime  (year=2000,month=1,day=1,hour=23,minute=15,second=55)
 type(datetime(2000,1,1,0,0,0))
 ```

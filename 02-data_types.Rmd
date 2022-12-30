@@ -1,277 +1,293 @@
 
-
 # Built-in Data Types
 
-## Numbers
-Two types of built-in number type, **integer and float**.
-
-### Integer
+## Import Libraries
 
 ```{python}
-n = 123
-type (n)
+import string
 ```
 
-### Float
+## Numbers (int/float)
 
-```{python}
-f = 123.4
+Two types of built-in number type, **integer and float**.
+
+```{python results='hold'}
+n = 123       ## integer
+type (n)
+
+f = 123.4     ## float
 type (f)
 ```
 
 ### Number Operators
 
-In general, when the operation potentially return **float**, the result is float type. Otherwise it return **integer**.
+In general, when the operation potentially return **float**, the result is float.  Otherwise it return **integer**.
 
 **Division** always return float
 
-```{python, }
-print(4/2)  # return float
-type(4/2)
+```{python, results='hold'}
+4/2          ## return float
+type(4/2)   
 ```
 
-**Integer Division** by integer return inter. Integer division by float return float.
+**Integer Division** returns int or float
 
-```{python, }
-print (8//3,'\n',    # return int
-       8//3.2)       # return float
+```{python, results='hold'}
+8//3         ## div by int return int
+8//3.2       ## div by float return float
 ```
 
-**Remainder** by integer return **integer**.  
-Remainder by float return **float**
+**Remainder** returns int or float.
 
-```{python, }
-print (8%3, '\n',    # return int
-       8%3.2)        # return float
+```{python, results='hold'}
+8%3          ## remainder by int, returns int
+8%3.2        ## remainder by float, returns float
 ```
 
-**Power** return int or float
+**Power** returns int or float.
 
-```{python, }
-print (2**3)    # return int
-print (2.1**3)  # return float
-print (2**3.1)  # return float
+```{python, results='hold'}
+2**3         ## power of int to int returns int
+2**3.2       ## power to float returns float
+2.3**2       ## power of float returns float
 ```
 
-## String
+## String (str)
 
-String is an object class 'str'. It is an **ordered collection of letters**, an **array** of object type **str**
+Str is an **ordered collection of letters**. 
 
-```{python}
-import string
+```{python, results='hold'}
 s = 'abcde'
-print( '\nvar type  = ', type(s),
-       '\nelems     = ',s[0], s[1], s[2],
-       '\nlen       = ', len(s),
-       '\nelem type = ',type(s[1]))
+type(s)      ## class str
+type(s[0])   ## class str
+len(s)       ## number of characters
 ```
+
 
 ### Constructor
 
-#### Classical Method
-
-```class str(object='')```
-
-```{python}
-my_string = str()        ## empty string
+```
+class str(object='')
+class str(object=b'', encoding='utf-8', errors='strict')
 ```
 
-```class str(object=b'', encoding='utf-8', errors='strict')```
+```{python, results='hold'}
+## these are the same
+str()          ## empty string
+''             ## short hand
 
-```{python}
-my_string = str('abc')
+## these are the same
+str('abc')     ## constructor
+'abc'          ## short hand
 ```
 
-#### Shortcut Method
+**Multi-line**
+
+Note the result contains **```\n```** at the front of the string, due to a return at the beginning.
 
 ```{python}
-my_string = 'abc'
-```
-
-#### Multiline Method
-
-```{python}
-my_string = '''
-This is me.
-Yong Keh Soon
+## multiline
 '''
-print(my_string)
-```
-Note that the variable contain **```\n```** front and end of the string.
-
-```{python}
-my_string
+This is me.
+Yong Keh Soon'''
 ```
 
+### Immutable
 
-#### Immutability
+- **```str```** object is **immutable**. Reassigning a value completely reinitialize it with different memory location.
 
-- String is **immuatable**. Changing its content will result in **error** 
-
-```{python}
+```{python, results='hold'}
 s = 'abcde'
-print ('s : ', id(s))
-#s[1] = 'z'               # immutable, result in error
+id(s)
+
+s = '12345'   ## Reinitialize it as different object
+id(s)         ## hence the ID is now different
 ```
 
-- Changing the variable completley change the reference (for new object)
+### Index-able
 
-```{python}
-s = 'efgh'
-print ('s : ', id(s))
+Although String has **array** like indexable capability, it is not iterateable.
+
+```
+string[start:end:step]  # default start:0, end:last, step:1
+```
+If `step` is negative (reverse), `end` value must be lower than `start` value
+
+```{python, results='hold'}
+s = 'abcdefghijk'
+s[0]       # first later
+s[:3]      # first 3 letters
+s[2:8 :2]  # stepping
+s[-1]      # last letter
+s[-3:]     # last three letters
+s[:   :-1] # reverse everything
+s[8:2 :-1] # till the end
+s[8:2]     # return NOTHING
 ```
 
-### Class Constants
 
-#### Letters
+### Class Attributes
 
-```{python}
-print( 'letters = ', string.ascii_letters,
-        '\nlowercase = ',string.ascii_lowercase,
-        '\nuppercase = ',string.ascii_uppercase )
-```
-
-#### Digits
-
-```{python}
-string.digits
-```
-
-#### White Spaces
-
-```{python}
-string.whitespace
+```{python, results='hold'}
+string.ascii_letters     ## for ASCI chars
+string.ascii_lowercase   ## all lower case
+string.ascii_uppercase   ## all upper case
+string.digits            ## 0 - 9
+string.whitespace        ## all white spaces
 ```
 
 ### Instance Methods
 
-#### Substitution : **```format()```**
+#### Substitution & Formatting (format, fstring) {-}
 
-**By Positional**
+**By Variable Name** - supported by ```fstring()```
 
-```{python}
-print( '{} + {} = {}'.format('a', 'b', 'c'),         # auto sequence
-       '\n{0} + {1} = {2}'.format('aa', 'bb', 'cc')) # manual sequence
+```fstring``` is useful in a way that you can use variable name within the text directly, and you can format the output too.
+
+```{python, results='hold'}
+a = 'a'
+b = 'b'
+c = 'c'
+
+f"{a} + {b} = {c}"                        # fstring method
 ```
 
-**By Name**
+**By Positional** - supported by ```.format()```
 
-```{python}
-'Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W') ## constant
+```{python, results='hold'}
+"{} + {} = {}"   .format('a', 'b', 'c')   # format: auto sequence 
+"{0} + {1} = {2}".format('a', 'b', 'c')   # format: manual sequence
 ```
 
-**By Dictionary Name**
+**By Name of parameters or dict** - supported by ```.format()```
 
-```{python}
-coord = {'latitude': '37.24N', 'longitude': '-115.81W'} ## dictionary key/value
-'Coordinates: {latitude}, {longitude}'.format(**coord)
+```{python, results='hold'}
+longitude = '-115.81W'
+latitude = '37.24N'
+"Coordinates: {latitude}, {longitude}".format(latitude='37.24N', longitude='-115.81W') ## constant
+
+## dictionary key/value
+coord = {'latitude':  '37.24N', 
+         'longitude': '-115.81W'} 
+'Coordinates: {latitude}, {longitude}'.format(**coord)  ## dictionary key/value
+
 ```
 
 **Formatting Number** 
 
-Float
+With **```.format()```** Format numbers by using **```{: . , f %}```**.
 
-```{python}
-'{:+f}; {:+f}'.format(3.14, -3.14)  # show it always
+```{python, results='hold'}
+a = 3.14
+b =-3.14
+
+'{:+f}; {:+f}'.format(3.14, -3.14)     ## show +ve -ve sign
+'{: f}; {: f}'.format(3.14, -3.14)     ## show only -ve sign
+'{:.1f}; {:.1f}'.format(3.15, -3.16)   ## round down/up
+'{0:,}'.format(1234567890.4455)        ## show decimal and %
+'{0:,.2f}'.format(1234567890.4455)     ## show comma, float decimal
+'{0:,.2%}'.format(1234567890.4455)     ## show comma, % decimal
 ```
 
-```{python}
-'{: f}; {: f}'.format(3.14, -3.14)  # show a space for positive numbers
-```
+Similar result can be achieved using **```fstring```**, by just replacing by putting variable names inline.
 
-```{python}
-'Correct answers: {:.2f}'.format(55676.345345)
-```
+```{python, results='hold'}
+a = 3.14
+b =-3.14
+c = 1234567890.4455
 
-Integer, Percentage
-
-```{python}
-'{0:,}   {0:.2%}   {0:,.2%}'.format(1234567890.4455)
+f'{a:+f}; {b:+f}'       ## show +ve -ve sign
+f'{a: f}; {b: f}'       ## show only -ve sign
+f'{a:.1f}; {b:.1f}'     ## round down/up
+f'{c:,}'                ## show decimal and %
+f'{c:,.2f}'             ## show comma, float decimal
+f'{c:,.2%}'             ## show comma, % decimal
 ```
 
 **Alignment**
 
-```{python}
-'{0:<20}   {0:<<20}'.format('left aligned')
+```{python, results='hold'}
+'{:*^43}'.format('centered')                 ## '*' filler applied   
+'{0:<20}   {0:*<20}'.format('left aligned')  ## '*' filler applied   
+'{0:*>20}  {0:>20}'.format('right aligned')  ## '*' filler applied   
+''
+'{:^43}'.format('centered')                  ## no filler
+'{0:<20}   {0:<20}'.format('left aligned')   ## no filler
+'{0:>20}  {0:>20}'.format('right aligned')   ## no filler
 ```
 
-```{python}
-'{0:>20}  {0:$>20}'.format('right aligned')
+Similar result can be achieved using **```fstring```**, which is more concised.
+
+```{python, results='hold'}
+center = 'centered'
+left   = 'left aligned'
+right  = 'right aligned'
+
+f'{center:*^43}'                 ## '*' filler applied   
+f'{left:<20}   {left:*<20}'      ## '*' filler applied   
+f'{right:*>20}  {right:>20}'     ## '*' filler applied   
+f''
+f'{center:^43}'                  ## no filler
+f'{left:<20}   {left:<20}'       ## no filler
+f'{right:>20}  {right:>20}'      ## no filler
 ```
 
-```{python}
-'{:^30}'.format('centered')  # use '*' as a fill char
-```
+#### Case Conversion (upper/lower) {-}
 
-#### Substitution : **```f-string```**
-
-```{python}
-my_name = 'Yong Keh Soon'
-salary  = 11123.346
-f'Hello, {my_name}, your salary is {salary:,.2f} !'
-```
-
-#### Conversion: ```upper() lower()```
-
-```{python}
+```{python, results='hold'}
 'myEXEel.xls'.upper()
-```
-
-```{python}
 'myEXEel.xls'.lower()
 ```
 
-#### ```find()``` pattern position
+
+#### Searh Location (find)  {-}
+
+**```.find()```** returns position of first occurance, -1 if not found, and it is **case sensitive**.
+
+```{python, results='hold'}
+s='I love karaoke, I know you love it too'
+s.find('lov')         ## found
+s.find('Lov1')    ## not found, return -1
 ```
-string.find() return position of first occurance. -1 if not found
+
+#### Striping off blank spaces  (strip) {-}
+
+**Leading** and **trailing** blank spaces (newline, tab, cr) will be removed.
+
+```{python, results='hold'}
+'\n   myexce l.   xls   \r\t\n'.strip()   ## strip both leading and trailing
+'\n   myexce l.   xls   \r\t\n'.lstrip()  ## strip leading only
+'\n   myexce l.   xls   \r\t\n'.rstrip()  ## strip trailing only
 ```
+
+#### Split and Join (split, join)
+
+**```split('<delimiter>')```** breaks down string into a list by delimiter. Observe the empty spaces were conserved in result array
 
 ```{python}
-s='I love karaoke, I know you love it oo'
-print (s.find('lov'))
-print (s.find('kemuning'))
-```
-
-
-#### ```strip()``` off blank spaces
-
-```{python}
-filename = '  myexce l.   xls   '
-filename.strip()
-```
-
-
-#### List Related: ```split()```
-
-Splitting delimeter is specified. Observe the empty spaces were conserved in result array
-
-```{python}
-animals = 'a1,a2 ,a3, a4'
+animals = 'a1,a2 ,  a3 , a4'
 animals.split(',')
 ```
 
-#### List Related: ```join()```
+**```'<delimiter>.join()```** is the reverse of split.
 
 ```{python}
 '-'.join(['1', '2', '3', '4'])
 ```
 
-#### Replacement: `.replace()`
+#### Replacement (repalce) {-}
 
-```{python}
-string = "geeks for geeks geeks geeks geeks" 
-   
-# Prints the string by replacing geeks by Geeks  
-print(string.replace("geeks", "Geeks"))  
-  
-# Prints the string by replacing only 3 occurrence of Geeks   
-print(string.replace("geeks", "GeeksforGeeks", 3)) 
+**```replace`(old, new, count=-1)```** is case sensitive. By default, it replaces all occurances (count=-1).
+
+```{python, results='hold'}
+s = "geeks for geeks geeks geeks geeks" 
+s.replace("geeks", "Geeks")     ## default replace all
+s.replace("geeks", "Geeks", 3)  ## replace 3 times
 ```
  
+### Operators
 
-### Operator
-
-#### ```%``` Old Style Substitution
+#### Old Style Substitution (%)
 
 https://docs.python.org/3/library/stdtypes.html#old-string-formatting
 
@@ -281,13 +297,13 @@ salary  = 11123.346
 'Hello, %s, your salary is %.2f !' %(my_name, salary)
 ```
 
-#### ```+``` Concatenation
+#### Concatenation (+)
 
 ```{python}
 'this is ' + 'awesome'
 ```
 
-#### ```in```  matching
+#### Is Inside (in)
 
 For single string, **partial match**
 
@@ -309,32 +325,11 @@ print( 'abc' in ['abcdefg'],             # false
 
 Comparitor compares the memory address.
 
-```{python}
-a='abc'
-b='abc'
-print('id(a) = ', id(a), 
-      '\nid(b) = ', id(b),
-      '\na == b  ', a==b)
+```{python, results = 'hold'}
+a = str('abc')
+b = str('abc')
+id(a) == id(b)
 ```
-
-### Iterations
-```
-string[start:end:step]  # default start:0, end:last, step:1
-```
-If step is negative (reverse), end value must be lower than start value
-
-```{python}
-s = 'abcdefghijk'
-print (s[0])       # first later
-print (s[:3])      # first 3 letters
-print (s[2:8 :2])  # stepping
-print (s[-1])      # last letter
-print (s[-3:])     # last three letters
-print (s[:   :-1]) # reverse everything
-print (s[8:2 :-1])
-print (s[8:2])     # return NOTHING
-```
-
 
 ## Boolean
 

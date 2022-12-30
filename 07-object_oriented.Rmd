@@ -35,14 +35,15 @@ class Person:
 class Kid(Person):
   def __init__(self, myname, money=0):
       print('I\'m in Kid Constructor: {}'.format(myname))
-      super().__init__(myname=myname, money=money)
+      super().__init__(myname=myname, money=money)   ##  call the base constructor
+      
   def Cry(self):
       print('Kid is crying')
 ```
 
 ## Constructor
 
-Calling a constructor will automatically call it's superclass contrustor.
+Calling a constructor will **NOT** automatically call it's superclass contrustor. Example above use **```super()```** from child class to call base class constructor .
 
 ```{python, results='hold'}
 p1 = Person('Yong')  

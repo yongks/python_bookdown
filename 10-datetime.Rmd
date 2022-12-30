@@ -13,7 +13,7 @@ from datetime import date, datetime, time, timedelta
 
 ## Timezone (pytz)
 
-**`pytz`** is **NOT** a built-in library.
+**```pytz```** is **NOT** a built-in library.
 
 ### Constructor
 

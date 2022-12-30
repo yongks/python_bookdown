@@ -3,21 +3,6 @@
 
 Library are group of functions
 
-## Package Source
-
-### Conda
-
-- Package manager for any language  
-- Install binaries
-
-### PIP
-
-- Package manager python only  
-- Compile from source  
-- Stands for Pip Installs Packages  
-- Python's officially-sanctioned package manager, and is most commonly used to install packages published on the **Python Package Index (PyPI)**  
-- Both pip and PyPI are governed and supported by the Python Packaging Authority (PyPA).
-
 ## Importing Library
 
 There are two methods to import library functions:  

@@ -142,7 +142,7 @@ crosstab( index = <SeriesObj>, columns = [<SeriesObj1>, <SeriesObj2>] ) # multi 
 crosstab( index = <SeriesObj>, columns = <SeriesObj>, margines=True )   # add column and row margins
 ```
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 n = 200
@@ -163,13 +163,13 @@ mydf = pd.DataFrame({
 mydf.head()
 ```
 
-#### One Dimension Frequency Table
+#### One Dimension Frequency Table {-}
 
 ```{python, results='hold'}
 pd.crosstab(index=mydf.comp, columns='counter')
 ```
 
-#### Two Dimension Frequency Table
+#### Two Dimension Frequency Table {-}
 
 Row dimension uses **comp** variable, Column dimension uses **dept** variable.
 
@@ -177,7 +177,7 @@ Row dimension uses **comp** variable, Column dimension uses **dept** variable.
 pd.crosstab(index=mydf.comp, columns=mydf.dept)
 ```
 
-#### Higher Dimension Table
+#### Higher Dimension Table {-}
 
 Crosstab header is **multi-levels index** when more than one column specified. The multilevel index consists of all permuation of of grp and dept variables.
 
@@ -194,7 +194,7 @@ print( 'Under D2:\n', tb['D2'], '\n\n',
        'Under D2-G2:\n',tb['D2','G1'])
 ```
 
-#### Getting Margin
+#### Getting Margin {-}
 
 Extend the crosstab with 'margin=True' to have sum of rows/columns, presented in **new column/row named 'All'**.
 
@@ -209,7 +209,8 @@ print(
   '\n\nColumn Sums:\n', tb.loc['All'])
 ```
 
-#### Getting Proportion
+#### Getting Proportion {-}
+
 Use matrix operation divide each row with its respective column sum.
 
 ```{python}
@@ -218,7 +219,7 @@ tb/tb.loc['All']
 
 ### Concatenation
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 s1 = pd.Series(['A1','A2','A3','A4'])
@@ -226,7 +227,7 @@ s2 = pd.Series(['B1','B2','B3','B4'], name='B')
 s3 = pd.Series(['C1','C2','C3','C4'], name='C')
 ```
 
-#### Column-Wise
+#### Column-Wise {-}
 
 **Combining Multiple Series Into A New DataFrame**  
 
@@ -249,11 +250,11 @@ df
 pd.concat([df,s3,s2,s1, None],axis=1)
 ```
 
-#### Row-Wise
+#### Row-Wise {-}
 
 ### External Data
 
-#### `html_table` Parser
+#### `html_table` Parser {-}
 
 This method require **html5lib** library.  
 - Read the web page, create a list: which contain one or more dataframes that maps to each html table found  
@@ -273,7 +274,7 @@ print ('Total Table(s) Found : ', len(df_list), '\n',
        'First Table Found:      ',df)
 ```
 
-#### CSV Writing
+#### CSV Writing {-}
 
 **Syntax**  
 
@@ -386,7 +387,7 @@ goo3.info()
 
 ### Inspection
 
-#### Structure `info`
+#### Structure `info` {-}
 
 **info()** is a function that print information to screen. It doesn't return any object
 
@@ -398,7 +399,7 @@ dataframe.info()  # display columns and number of rows (that has no missing data
 goo.info()
 ```
 
-#### `head`
+#### `head` {-}
 
 ```{python, jupyter_meta = list(hidden = TRUE)}
 goo.head()
@@ -411,7 +412,7 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.html
 
 ### Constructor
 
-#### From Number
+#### From Number {-}
 
 ```{python}
 type(pd.Timestamp(2017,12,11))
@@ -425,7 +426,7 @@ pd.Timestamp(2017,12,11,5,45,55,999)     # + microseconds
 pd.Timestamp(2017,12,11,5,45,55,999,8)   # + nanoseconds
 ```
 
-#### From String
+#### From String {-}
 
 Observe that pandas support many string input format  
 
@@ -457,7 +458,7 @@ pd.Timestamp('2017-01-01T0545+0800') # GMT+0800
 pd.Timestamp('2017-01-01 0545', tz='Asia/Singapore')
 ```
 
-#### From `datetime / date`
+#### From `datetime / date` {-}
 
 ```{python, results='hold'}
 pd.Timestamp(date(2017,3,5))          # from date
@@ -541,7 +542,7 @@ ts1.isoformat()  ## with Tz
 
 ### Conversion
 
-#### Convert To datetime
+#### Convert To datetime {-}
 
 Use `to_pydatetime()` to convert into standard library **`datetime.datetime`**.  From the 'datetime' object, apply `date()` to get **`datetime.date`**
 
@@ -553,7 +554,7 @@ ts.to_pydatetime().date()   ## datetime.date (no TZ)
 ts.date()                   ## same as above (no TZ)
 ```
 
-#### Convert To numpy.datetime64
+#### Convert To numpy.datetime64 {-}
 
 Use `to_datetime64()` to convert into ```numpy.datetime64```
 
@@ -571,7 +572,7 @@ ts.replace(year=2000, month=1,day=1)
 
 ### Other Utilities
 
-#### Attribute Like Methods
+#### Attribute Like Methods {-}
 
 ```{python, results='hold'}
 ts = pd.Timestamp('2017-01-01T054533+0800') # GMT+0800
@@ -581,7 +582,7 @@ ts.date()   ## convert to datetime.date object
 ts.time()   ## convert to datetime.time object
 ```
 
-#### celing - `ceil`
+#### celing - `ceil` {-}
 
 ```{python, results='hold'}
 ts
@@ -643,7 +644,7 @@ pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath
 
 ### Constructor
 
-#### Empty Series
+#### Empty Series {-}
 
 Passing no data to constructor will result in empty series. By default, empty series dtype is float.
 
@@ -653,7 +654,7 @@ print (s, '\n',
        type(s))
 ```
 
-#### From Scalar
+#### From Scalar {-}
 
 If data is a scalar value, an **index must be provided**. The **value will be repeated** to match the length of index
 
@@ -661,7 +662,7 @@ If data is a scalar value, an **index must be provided**. The **value will be re
 pd.Series( 99, index = ['a','b','c','d'])
 ```
 
-#### From array-like
+#### From array-like {-}
 
 **From list**
 
@@ -698,7 +699,7 @@ Objerve that **missing data** (index without value) will be marked as NaN
 pd.Series({'a' : 0., 'c' : 1., 'b' : 2.},index = ['a','b','c','d'])
 ```
 
-#### Specify Index
+#### Specify Index {-}
 
 ```{python}
 pd.Series(['a','b','c','d','e'], index=[10,20,30,40,50])
@@ -737,14 +738,14 @@ series.loc ( single/list/range_of_row_label )
 series.iloc( single/list/range_of_row_number )
 ```
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 s = pd.Series([1,2,3,4,5],index=['a','b','c','d','e']) 
 s
 ```
 
-#### by Row Number(s)
+#### by Row Number(s) {-}
 
 **Single Item**. 
 Notice that inputing a number and list of number give different result.
@@ -781,7 +782,7 @@ s.iloc[-3:]
 s.iloc[2:3]
 ```
 
-#### by Index(es)
+#### by Index(es) {-}
 
 **Single Label**. Notice the difference referencing input: single index and list of index.  
 **Warning**: if index is invalid, this will result in error.
@@ -805,7 +806,7 @@ s.loc[['k','c']]
 s.loc['b':'d']
 ```
 
-#### Filtering
+#### Filtering {-}
 
 Use **logical array** to filter
 
@@ -828,7 +829,7 @@ print(s.where(s<4),'\n\n',
 
 ### Updating Series
 
-#### by Row Number(s)
+#### by Row Number(s) {-}
 
 ```{python}
 s = pd.Series(range(1,7), index=['a','b','c','d','e','f'])
@@ -837,7 +838,7 @@ s[[3,4]] = 888,777
 s
 ```
 
-#### by Index(es)
+#### by Index(es) {-}
 
 ```{python}
 s = pd.Series(range(1,7), index=['a','b','c','d','e','f'])
@@ -848,7 +849,7 @@ s
 
 ### Series Attributes
 
-#### The Data
+#### The Data {-}
 
 ```{python}
 s = pd.Series([1,2,3,4,5],index=['a','b','c','d','e'],name='SuperHero') 
@@ -867,7 +868,7 @@ print( ' Series Index:    ',s.index, '\n',
 
 ### Instance Methods
 
-#### Index Manipulation
+#### Index Manipulation {-}
 
 **`.rename_axis()`**
 
@@ -886,7 +887,7 @@ Resetting index will:
 s.reset_index()
 ```
 
-#### Structure Conversion
+#### Structure Conversion {-}
 
 - A series structure contain **`value`** (in numpy array), its **`dtype`** (data type of the numpy array).    
 - Use **`values`** to retrieve into ```numpy.ndarray``. Use **`dtype`** to understand the data type.  
@@ -904,7 +905,7 @@ Convert To List using **`.tolist()`**
 pd.Series.tolist(s)
 ```
 
-#### DataType Conversion
+#### DataType Conversion {-}
 
 Use **```astype()```** to convert to another numpy supproted datatypes, results in a new Series.  
 **Warning**: casting to incompatible type will result in **error**
@@ -917,7 +918,7 @@ s.astype('int8')
 
 The result of applying operator (arithmetic or logic) to Series object **returns a new Series object**
 
-#### Arithmetic Operator
+#### Arithmetic Operator {-}
 
 ```{python}
 s1 = pd.Series( [100,200,300,400,500] )
@@ -1013,7 +1014,7 @@ monte.str.startswith('T')
 monte.str[0:3]
 ```
 
-#### Splitting
+#### Splitting {-}
 
 Split strings around given separator/delimiter in either string or regex.
 
@@ -1055,7 +1056,7 @@ print( s.str.rsplit('_', expand=True, n=1) )
 ```
 
 
-#### Case Conversion
+#### Case Conversion {-}
 
 ```
 SeriesObj.str.upper()
@@ -1069,13 +1070,13 @@ print( s.str.upper(), '\n',
        s.str.capitalize())
 ```
 
-#### Number of Characters
+#### Number of Characters {-}
 
 ```{python}
 s.str.len()
 ```
 
-#### String Indexing
+#### String Indexing {-}
 
 This return specified character from each item.
 
@@ -1085,7 +1086,7 @@ s.str[0].values    # first char
 s.str[0:2].values  # first and second char
 ```
 
-#### Substring Extraction
+#### Substring Extraction {-}
 
 **Sample Data**
 
@@ -1108,7 +1109,7 @@ type(s.str.extract('([ab])(\d)', expand=False))
 If the underlying data is **datetime64** type, then pandas exposed various properties and methos through **```dt``` accessor**. 
 
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 s = pd.Series([
@@ -1122,7 +1123,7 @@ s
 ```
 
 
-#### Convert To 
+#### Convert To  {-}
 **datetime.datetime**  
 Use **```to_pydatetime()```** to convert into **```numpy.array```** of standard library **```datetime.datetime```**  
 
@@ -1209,7 +1210,7 @@ s.dt.minute # extract minute as integer
 - When **`columns`** is specified AND data source has keys that can be used as column names, pandas will select those column names and order specified in **`columns`** parameter.
 - **index** and **row label** are used interchangeably in this book
 
-#### Empty DataFrame
+#### Empty DataFrame {-}
 
 By default, An empty dataframe contain no columns and index.
 
@@ -1240,7 +1241,7 @@ empty_df1 = empty_df2 = pd.DataFrame()
 id(empty_df1)
 id(empty_df2)
 ```
-#### From Row Oriented Data
+#### From Row Oriented Data {-}
 
 ```
 DataFrame( [row_list1, row_list2, row_list3] )
@@ -1268,7 +1269,7 @@ pd.DataFrame(data, columns=col_names, index=row_labels)
 ```
 
 
-#### From Record Oriented Data
+#### From Record Oriented Data {-}
 
 ```
 DataFrame( [dict1, dict2, dict3] )
@@ -1300,7 +1301,7 @@ pd.DataFrame(data, index=['row1','row2'])
 pd.DataFrame(data, columns=['zkey','name'])
 ```
 
-#### From Column Oriented Data
+#### From Column Oriented Data {-}
 
 ```
 DataFrame(  data = {'column1': list1,
@@ -1352,7 +1353,7 @@ df2 = pd.DataFrame(data=
    'k': [11,21,31]}).set_index('idx')
 ```
 
-#### Addition
+#### Addition {-}
 
 **Adding Two DataFrame**
 
@@ -1384,7 +1385,7 @@ print('Original DataFrame:\n',df1,'\n\n',
       'Add Series as Rows: \n', df1.add(s3, axis=0), '\n\n',
       'Add Series as Columns: \n', df1.add(s4, axis=1))
 ```
-#### Substraction
+#### Substraction {-}
 
 Refer to `.add()` above for `fill_value` explanation.
 
@@ -1393,7 +1394,7 @@ df2 - df1
 df2.sub(df1,fill_value=1000)
 ```
 
-#### Operator `&`
+#### Operator `&` {-}
 
 - Non matching columns returns NaN.
 - Matching columns with both True value returns True
@@ -1423,12 +1424,12 @@ df.values         ## array of list
 
 ### Index Manipulation
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 df
 ```
-#### Convert Column To Index
+#### Convert Column To Index {-}
 
 ```
 set_index('column_name', inplace=False)
@@ -1445,7 +1446,7 @@ df.index   ## 100,101,102,etc
 df
 ```
 
-#### Convert Index To Column
+#### Convert Index To Column {-}
 
 - Resetting index will re-sequence the index as 0,1,2 etc.
 - Old index column will be converted back as normal column, its name retained as column name.
@@ -1456,7 +1457,7 @@ df.reset_index(inplace=True)
 df
 ```
 
-#### Updating Index ( .index= )
+#### Updating Index ( .index= ) {-}
 
 - This simply **replace** all index with the new values.
 - Number of elements in the new index must match length of DataFrame, otherwise **error**.
@@ -1468,7 +1469,7 @@ df.index = [201, 202, 203, 204, 205]
 df
 ```
 
-#### Reordering Index (.reindex )
+#### Reordering Index (.reindex ) {-}
 
 - Returns new DataFrame according to the order specified. NO 'inplace' option.
 - Doesn't work if **duplicate** labels exists (Error)
@@ -1482,7 +1483,7 @@ df
 df.reindex([203,202,300])
 ```
 
-#### Rename Axis
+#### Rename Axis {-}
 
 - Example below renamed the axis of index.
 - Use **`axis=0`** for row index (default), use **`axis=1`** for column index.
@@ -1507,7 +1508,7 @@ dataframe.iloc[ number_range     ]  # multiple rows
 dataframe.sample(frac=)             # frac = 0.6 means sampling 60% of rows randomly
 ```
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python, results='hold'}
 df  = pd.DataFrame(data).set_index('empID')
@@ -1515,7 +1516,7 @@ df
 df2 = pd.DataFrame(data, index = ['row2','row3','row1','row5','row4'])
 df2
 ```
-#### Using Row Label (loc)
+#### Using Row Label (loc) {-}
 
 - Non matching single row label will result in **KeyError**.
 - Non matching **range** of row labels will not trigger error.
@@ -1540,7 +1541,7 @@ df2.loc[ 'row1':'row4'  ]  # by range of row labels, returns DataFrame
 df2.loc[ 'row1':'baba'  ]  # Invalid range, KeyError
 ```
 
-#### Using Row Number (iloc)
+#### Using Row Number (iloc) {-}
 
 Multiple rows **returned as dataframe** object
 
@@ -1552,7 +1553,7 @@ df.iloc[ 0:999 ]    # invalid range, no error
 df.iloc[999]        # invalid row, IndexError
 ```
 
-#### Using Boolean List
+#### Using Boolean List {-}
 
 ```{python, results='hold'}
 criteria = (df.salary > 30000) & (df.year1==2017)
@@ -1560,7 +1561,7 @@ print (criteria)
 print (df.loc[criteria])
 ```
 
-#### Using Expression (.query)
+#### Using Expression (.query) {-}
 
 `.query(expr, inplace=False)`
 
@@ -1570,7 +1571,7 @@ num2 = 2017
 df.query(f'salary<={num1} and year1=={num2}')
 ```
 
-#### Sampling (.sample)
+#### Sampling (.sample) {-}
 
 Specify percentage of random rows to be returned.
 
@@ -1581,17 +1582,17 @@ df.sample(frac=0.7) ## randomly pick 70% of rows, without replacement
 
 ### Row Manipulation
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python, results='hold'}
 df
 ```
 
-#### Append Rows
+#### Append Rows {-}
 
 **`.append()`** has been deprecated. Refer to **Concatenating** section.
 
-#### Drop Rows (.drop)
+#### Drop Rows (.drop) {-}
 
 ```.drop(labels=None, axis=0, index=None, columns=None, level=None, inplace=False, errors='raise')```
 
@@ -1603,14 +1604,14 @@ df.drop(index=[100,103], columns='salary') # drop selected rows and columns
 ```
 ### Column Manipulation
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 df = pd.DataFrame(data)
 df
 ```
 
-#### Renaming Columns
+#### Renaming Columns {-}
 
 **Method 1 : Rename All Columns (.columns =)**. 
 
@@ -1634,12 +1635,12 @@ df.rename( columns={'year.1':'year1', 'year.2':'year2'}, inplace=True)
 df.head(2)
 ```
 
-#### Reordering Columns
+#### Reordering Columns {-}
 
 - Reordering columns is basically returning a new DataFrame with the speicified column list in order preferred.
 - Refer to Sub-setting Column section.
 
-#### Create New Column
+#### Create New Column {-}
 
 - **New Column** will be created instantly using **[] notation**  
 - **DO NOT USE dot Notation** because it is view only attribute
@@ -1649,7 +1650,7 @@ df['year3'] = df.year1
 df
 ```
 
-#### Dropping Columns (.drop)
+#### Dropping Columns (.drop) {-}
 
 ```
 dataframe.drop( columns='column_name',    inplace=True/False)   # delete single column
@@ -1699,7 +1700,7 @@ dataframe.iloc[ : , col_number_list ]  # multiple columns, dataframe
 dataframe.iloc[ : , number_range    ]  # multiple columns, dataframe
 ```
 
-#### By Number (.iloc) and Label (.loc)
+#### By Number (.iloc) and Label (.loc) {-}
 
 **Get Single Column (.loc, iloc)**
 
@@ -1732,7 +1733,7 @@ df.loc[ : , ['empID','year2']] ## select two columns only
 df.iloc[ : , 1:4]              ## by range of column number
 df.iloc[ : , [0,3]]            ## select two columns only
 ```
-#### By Column Name (.filter, .reindex)
+#### By Column Name (.filter, .reindex) {-}
 
 **`.filter(items=None, like=None, regex=None, axis=1)`**
 
@@ -1765,7 +1766,7 @@ new_colorder = [ 'salary', 'year1', 'baba']
 df.reindex(columns = new_colorder)  ## Non matching column name returns as NaN
 ```
 
-#### By Data Types (.select_dtypes)
+#### By Data Types (.select_dtypes) {-}
 
 Always return **panda::DataFrame**, even though only single column matches.  Allowed types are:
 
@@ -1822,7 +1823,8 @@ print("Original DataFrame:\n", my_df,
 df = pd.DataFrame(data).set_index('empID')
 df
 ```
-#### Getting One Cell  
+
+#### Getting One Cell   {-}
 
 **By Row Label and Column Name (loc)**
 
@@ -1836,7 +1838,7 @@ dataframe.iloc[ row_number, col_number ]    # by row and column number
 df.loc [102,'year1']  ## row label 102, column 'year1'
 df.iloc[2,0]          ## same result as above
 ```
-#### Getting Range of Cells
+#### Getting Range of Cells {-}
 
 Specify rows and columns (by individual or range)
 
@@ -1893,7 +1895,7 @@ df  ## notice row label 100 had not been updated, because data was updated on a 
 
 Slicing deals with square cells selection. Use `mask` or `where` to select specific cell(s). These function respect column and row names.
 
-#### `mask()`
+#### `mask()` {-}
 
 `mask()` replace cell value with `other=` when condition is met.
 
@@ -1904,7 +1906,7 @@ data={'x': [1,4,7],
 df = pd.DataFrame(data)
 df.mask(df>4, other=999)
 ```
-#### `where()`
+#### `where()` {-}
 
 This is reverse of `mask()`, it keep cell value where  **condition is met**. If not met, replace with `other` value.
 
@@ -1914,7 +1916,7 @@ df.where(df>4, other=0)
 
 ### Iteration
 
-#### Iterating Rows (.iterrows)
+#### Iterating Rows (.iterrows) {-}
 
 ```{python}
 df = pd.DataFrame(data=
@@ -1926,7 +1928,7 @@ for idx, row in df.iterrows():
   print(idx, row.Name)
 ```
 
-#### Iterating Columns (.items)
+#### Iterating Columns (.items) {-}
 
 ```{python}
 for label, content in df.items():
@@ -1935,7 +1937,7 @@ for label, content in df.items():
 ```
 ### Data Structure
 
-#### Inspect Structure
+#### Inspect Structure {-}
 
 Find out the column names, data type in a summary. Output is for display only, not a data object
 
@@ -1947,7 +1949,7 @@ df.info()  # return text output
 df.dtypes.value_counts() # return Series
 ```
 
-#### Format Conversion
+#### Format Conversion {-}
 
 **`.to_dict()`**
 
@@ -1959,7 +1961,7 @@ df.to_dict('records') ## list of dict
 ```
 ### Import/Export
 
-#### CSV
+#### CSV {-}
 
 ```{python}
 df.to_csv()
@@ -1984,7 +1986,7 @@ df
 
 ### Creating MultiIndex Object
 
-#### Create From Tuples
+#### Create From Tuples {-}
 
 MultiIndex can easily created from typles:  
 - Step 1: Create a MultiIndex object by splitting column name into tuples  
@@ -2003,7 +2005,7 @@ print(' Column Headers :\n\n',           my_tuples,
 
 ### MultiIndex Object
 
-#### Levels
+#### Levels {-}
 
 - MultiIndex object contain multiple leveels, each level (header) is an Index object.   
 - Use **`MultiIndex.get_level_values()`** to the entire header for the desired level. Note that each level is an Index object
@@ -2020,7 +2022,7 @@ print(df.columns.levels[0], '\n',
       df.columns.levels[1])
 ```
 
-#### Convert MultiIndex Back To Tuples
+#### Convert MultiIndex Back To Tuples {-}
 
 ```{python}
 df.columns.to_list()
@@ -2028,7 +2030,7 @@ df.columns.to_list()
 
 ### Selecting Column(s)
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 import itertools
@@ -2050,7 +2052,7 @@ test_df.columns = pd.MultiIndex.from_tuples(my_columns)
 print( test_df ) 
 ```
 
-#### Select Level0 Header(s)
+#### Select Level0 Header(s) {-}
 
 Use **`[L0]` notation**, where `L0` is list of header names
 
@@ -2069,7 +2071,7 @@ print( test_df.loc[:, ['Male','Pondan']] , '\n\n',  ## Multiple Level0 Header
        test_df.loc[:, 'Male'] )                     ## Single Level0 Header
 ```
 
-#### Selecting Level 1 Header(s)
+#### Selecting Level 1 Header(s) {-}
 
 Use  **`.loc[ :, (All, L1)]`**, where `L1` are list of headers names
 
@@ -2079,7 +2081,7 @@ print( test_df.loc[ : , (All, 'High')],  '\n\n',  ## Signle L1 header
        test_df.loc[ : , (All, ['High','Low'])] )  ## Multiple L1 headers
 ```
 
-#### Select Level 0 and Level1 Headers
+#### Select Level 0 and Level1 Headers {-}
 
 Use  **`.loc[ :, (L0, L1)]`**, where `L0` and `L1` are list of headers names
 
@@ -2087,7 +2089,7 @@ Use  **`.loc[ :, (L0, L1)]`**, where `L0` and `L1` are list of headers names
 test_df.loc[ : , (['Male','Pondan'], ['Medium','High'])]
 ```
 
-#### Select single L0,L1 Header
+#### Select single L0,L1 Header {-}
 
 Use **`.loc[:, (L0,  L1) ]`**, result is a **Series**  
 Use **`.loc[:, (L0 ,[L1])]`**, result is a **DataFrame**
@@ -2101,7 +2103,7 @@ print( test_df.loc[ : , ('Female', 'High')], '\n\n',
 
 Note that columns **order** specifeid by `[ ]` selection were not respected. This can be remediated either by Sorting and rearranging.
 
-#### Sort Headers
+#### Sort Headers {-}
 
 Use `.sort_index()` on DataFrame to sort the headers. Note that when level1 is sorted, it jumble up level0 headers.
 
@@ -2110,7 +2112,7 @@ test_df_sorted_l0 = test_df.sort_index(axis=1, level=0)
 test_df_sorted_l1 = test_df.sort_index(axis=1, level=1, ascending=False)
 print(test_df, '\n\n',test_df_sorted_l0, '\n\n', test_df_sorted_l1)
 ```
-#### Rearranging Headers
+#### Rearranging Headers {-}
 
 Use **`.reindex()**` on arrange columns in specific order. Example below shows how to control the specific order for level1 headers.
 
@@ -2125,7 +2127,7 @@ test_df.reindex(cats, level=1, axis=1)
 df.stack()
 ```
 
-#### Stacking Columns to Rows
+#### Stacking Columns to Rows {-}
 
 Stacking with **`DataFrame.stack(level_no)`** is moving wide columns into row.
 
@@ -2137,14 +2139,14 @@ print('Stacking Header Level 0: \n\n', df.stack(0),
 ### Exploratory Analysis
 
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 df
 ```
 
 
-#### All Stats in One  - .describe()
+#### All Stats in One  - .describe() {-}
 
 
 ```
@@ -2165,6 +2167,7 @@ When applied to DataFrame object, describe shows all **basic statistic** for **a
 
 
 **For Numeric Columns only**  
+
 You can **customize the percentiles requred**. Notice 0.5 percentile is always there although not specified
 
 ```{python}
@@ -2183,7 +2186,7 @@ df.describe(include='all')
 ```
 
 
-#### min/max/mean/median
+#### min/max/mean/median {-}
 
 ```{python}
 df.min()  # default axis=0, column-wise
@@ -2220,8 +2223,10 @@ df.sum(1)
 
 ### Creating
 
-#### From List
+#### From List {-}
+
 **Basic (Auto Category Mapping)**  
+
 Basic syntax return categorical index with sequence with code 0,1,2,3... mapping to first found category   
 In this case, **low(0), high(1), medium(2)**
 
@@ -2245,7 +2250,8 @@ temp_cat
 ```
 
 
-#### From Series
+#### From Series {-}
+
 - We can 'add' categorical structure into a Series. With these methods, additional property (.cat) is added as a **categorical accessor**  
 - Through this accessor, you gain access to various properties of the category such as .codes, .categories. But not .get_values() as the information is in the Series itself  
 - Can we manual map category ?????
@@ -2289,11 +2295,10 @@ temp_cat.codes
 temp_cat[0] < temp_cat[3]
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(heading_collapsed = TRUE) -->
 ### Properties
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
-#### .categories
+#### .categories {-}
+
 first element's code = 0  
 second element's code = 1  
 third element's code = 2
@@ -2302,19 +2307,18 @@ third element's code = 2
 temp_cat.categories
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
-#### .codes
+#### .codes {-}
+
 Codes are actual **integer** value stored as array. 1 represent 'high', 
 
 ```{python, jupyter_meta = list(hidden = TRUE)}
 temp_cat.codes
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(heading_collapsed = TRUE) -->
 ### Rename Category
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
-#### Renamce To New Category Object
+#### Renamce To New Category Object {-}
+
 **.rename_categories()** method return a new category object with new changed categories
 
 ```{python, jupyter_meta = list(hidden = TRUE)}
@@ -2327,7 +2331,6 @@ new_temp_cat
 temp_cat   # original category object categories not changed
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
 #### Rename Inplace
 Observe the original categories had been changed using **.rename()**
 
@@ -2336,8 +2339,8 @@ temp_cat.categories = ['sejuk','sederhana','panas']
 temp_cat   # original category object categories is changed
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(heading_collapsed = TRUE) -->
 ### Adding New Category
+
 This return a new category object with added categories
 
 ```{python, jupyter_meta = list(hidden = TRUE)}
@@ -2345,11 +2348,10 @@ temp_cat_more = temp_cat.add_categories(['susah','senang'])
 temp_cat_more
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(heading_collapsed = TRUE) -->
-### Removing Category
+### Removing Category {-}
+
 This is **not in place**, hence return a new categorical object  
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
 #### Remove Specific Categor(ies)
 Elements with its category removed will become **NaN**
 
@@ -2360,8 +2362,8 @@ temp_cat_removed = temp_cat.remove_categories('low')
 temp_cat_removed
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
-#### Remove Unused Category
+#### Remove Unused Category {-}
+
 Since categories removed are not used, there is no impact to the element
 
 ```{python, jupyter_meta = list(hidden = TRUE)}
@@ -2382,25 +2384,21 @@ temp_cat
 temp_cat.set_categories(['low','medium','sederhana','susah','senang'])
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(heading_collapsed = TRUE) -->
 ### Categorical Descriptive Analysis 
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
-#### At One Glance
+#### At One Glance {-}
 
 ```{python, jupyter_meta = list(hidden = TRUE)}
 temp_cat.describe()
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
-#### Frequency Count
+#### Frequency Count {-}
 
 ```{python, jupyter_meta = list(hidden = TRUE, scrolled = TRUE)}
 temp_cat.value_counts()
 ```
 
-<!-- jupyter_markdown, jupyter_meta = list(hidden = TRUE) -->
-#### Least Frequent Category, Most Frequent Category, and Most Frequent Category
+#### Least Frequent Category, Most Frequent Category, and Most Frequent Category {-}
 
 ```{python, jupyter_meta = list(hidden = TRUE)}
 ( temp_cat.min(), temp_cat.max(), temp_cat.mode() )
@@ -2410,7 +2408,8 @@ temp_cat.value_counts()
 ### Other Methods
 
 
-#### .get_values()
+#### .get_values() {-}
+
 Since actual value stored by categorical object are integer **codes**, get_values() function return values translated from *.codes** property
 
 ```{python}
@@ -2444,14 +2443,14 @@ pd.get_dummies(df.A)
 
 ### Dummies on DataFrame (multiple columns)
 
-#### All Columns
+#### All Columns {-}
 
 ```{python}
 pd.get_dummies(df)
 ```
 
 
-#### Selected Columns
+#### Selected Columns {-}
 
 ```{python}
 cols = ['A','B']
@@ -2520,13 +2519,13 @@ type(com_dep_grp)
 
 ### Properties
 
-#### Number of Groups
+#### Number of Groups {-}
 
 ```{python}
 com_dep_grp.ngroups
 ```
 
-#### Row Numbers Association
+#### Row Numbers Association {-}
 
 `.groups` property is a dictionary containing group key (identifying the group) and its values (underlying row indexes for the group)
 
@@ -2538,7 +2537,7 @@ print( gdict.keys()   , '\n\n',  # group identifier
 
 ### Methods
 
-#### Number of Rows In Each Group
+#### Number of Rows In Each Group {-}
 
 ```{python}
 com_dep_grp.size()  # return panda Series object
@@ -2546,7 +2545,7 @@ com_dep_grp.size()  # return panda Series object
 
 ### Retrieve Rows
 
-#### Retrieve n-th Row Of Each Grou
+#### Retrieve n-th Row Of Each Group {-}
 
 - Row number is 0-based  
 - For First row, use `.first()` or `nth(0)`  
@@ -2563,7 +2562,7 @@ print( com_dep_grp.nth(-1)  , '\n',
        com_dep_grp.last())
 ```
 
-#### Retrieve N Rows Of Each Groups
+#### Retrieve N Rows Of Each Groups {-}
 
 Example below retrieve 2 rows from each group
 
@@ -2571,7 +2570,7 @@ Example below retrieve 2 rows from each group
 com_dep_grp.head(2)
 ```
 
-#### Retrieve All Rows Of  Specific Group
+#### Retrieve All Rows Of  Specific Group {-}
 
 `get_group()` retrieves all rows within the specified group.
 
@@ -2581,7 +2580,7 @@ com_dep_grp.get_group(('C1','D3'))
 
 ### Single Statistic Per Group
 
-#### `count()` 
+#### `count()`  {-}
 
 `count()` for valid data (not null) for each fields within the group
 
@@ -2589,7 +2588,7 @@ com_dep_grp.get_group(('C1','D3'))
 com_dep_grp.count()  # return panda DataFrame object
 ```
 
-#### `sum()`
+#### `sum()` {-}
 
 This sums up all numeric columns for each group
 
@@ -2604,7 +2603,7 @@ When single column is selected, output is a **Series**
 com_dep_grp['Age'].sum()
 ```
 
-#### `mean()`
+#### `mean()` {-}
 
 This average up all numeric columns for each group
 
@@ -2621,7 +2620,7 @@ com_dep_grp['Age'].mean()
 
 ### Multi Statistic Per Group
 
-#### Single Function To Column(s)
+#### Single Function To Column(s) {-}
 
 - Instructions for aggregation are provided in the form of a dictionary. Dictionary keys specifies the **column name**, and value as the **function** to run  
 - Can use **`lambda x:`** to customize the calclulation on entire column (x)  
@@ -2635,7 +2634,7 @@ com_dep_grp.agg({
 })
 ```
 
-#### Multiple Function to Column(s)
+#### Multiple Function to Column(s) {-}
 
 - Use list of function names to specify functions to be applied on a particular column  
 - Notice that output columns are MultiIndex , indicating the name of funcitons appled on level 1  
@@ -2650,7 +2649,7 @@ ag = com_dep_grp.agg({
 print (ag, '\n\n', ag.columns)
 ```
 
-#### Column Relabling
+#### Column Relabling {-}
 
 Introduced in Pandas 0.25.0, groupby aggregation with relabelling is supported using “named aggregation” with **simple tuples**
 

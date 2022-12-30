@@ -64,7 +64,7 @@ div.sourceCode {
 
 /* Inner Box */
 pre.sourceCode {
-  border:           2px solid lightgray !important;
+  border:           2px solid darkgray  !important;
   border-radius:    5px;
   margin-bottom:    3px                 !important;
 }

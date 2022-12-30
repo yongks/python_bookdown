@@ -83,7 +83,7 @@ str('abc')     ## constructor
 
 **Multi-line**
 
-Note the result contains **```\n```** at the front of the string, due to a return at the beginning.
+Note the result contains **```\n```** at the front of the string, due to a return at the beginning of the source text.
 
 ```{python}
 ## multiline
@@ -138,11 +138,11 @@ string.whitespace        ## all white spaces
 
 ### Instance Methods
 
-#### Substitution & Formatting (format, fstring) {-}
+#### Substitution (format, fstring) {-}
 
 **By Variable Name** - supported by ```fstring()```
 
-```fstring``` is useful in a way that you can use variable name within the text directly, and you can format the output too.
+**```fstring```** is useful in a way that you can infer variable name within the text directly.
 
 ```{python, results='hold'}
 a = 'a'
@@ -162,9 +162,7 @@ f"{a} + {b} = {c}"                        # fstring method
 **By Name of parameters or dict** - supported by ```.format()```
 
 ```{python, results='hold'}
-longitude = '-115.81W'
-latitude = '37.24N'
-"Coordinates: {latitude}, {longitude}".format(latitude='37.24N', longitude='-115.81W') ## constant
+"Coordinates: {latitude}, {longitude}".format(latitude='37.24N', longitude='-115.81W') ## parameters
 
 ## dictionary key/value
 coord = {'latitude':  '37.24N', 
@@ -173,14 +171,11 @@ coord = {'latitude':  '37.24N',
 
 ```
 
-**Formatting Number** 
+#### Formatting (format, fstring) {-}
 
-With **```.format()```** Format numbers by using **```{: . , f %}```**.
+With **```.format()```**, format numbers by using **```{: . , f %}```**.
 
 ```{python, results='hold'}
-a = 3.14
-b =-3.14
-
 '{:+f}; {:+f}'.format(3.14, -3.14)     ## show +ve -ve sign
 '{: f}; {: f}'.format(3.14, -3.14)     ## show only -ve sign
 '{:.1f}; {:.1f}'.format(3.15, -3.16)   ## round down/up
@@ -204,7 +199,7 @@ f'{c:,.2f}'             ## show comma, float decimal
 f'{c:,.2%}'             ## show comma, % decimal
 ```
 
-**Alignment**
+**Text Alignment**
 
 ```{python, results='hold'}
 '{:*^43}'.format('centered')                 ## '*' filler applied   
@@ -242,15 +237,15 @@ f'{right:>20}  {right:>20}'      ## no filler
 
 #### Searh Location (find)  {-}
 
-**```.find()```** returns position of first occurance, -1 if not found, and it is **case sensitive**.
+**```.find()```** returns position of first occurrence, -1 if not found, and it is **case sensitive**.
 
 ```{python, results='hold'}
 s='I love karaoke, I know you love it too'
-s.find('lov')         ## found
+s.find('lov')     ## found
 s.find('Lov1')    ## not found, return -1
 ```
 
-#### Striping off blank spaces  (strip) {-}
+#### Strip Blank Spaces  (strip.lstrip,rstip) {-}
 
 **Leading** and **trailing** blank spaces (newline, tab, cr) will be removed.
 
@@ -260,7 +255,7 @@ s.find('Lov1')    ## not found, return -1
 '\n   myexce l.   xls   \r\t\n'.rstrip()  ## strip trailing only
 ```
 
-#### Split and Join (split, join)
+#### Split & Join (split, join) {-}
 
 **```split('<delimiter>')```** breaks down string into a list by delimiter. Observe the empty spaces were conserved in result array
 
@@ -287,41 +282,43 @@ s.replace("geeks", "Geeks", 3)  ## replace 3 times
  
 ### Operators
 
-#### Old Style Substitution (%)
+#### printf Style Substitution (%) {-}
 
-https://docs.python.org/3/library/stdtypes.html#old-string-formatting
+This is an [old style](https://docs.python.org/3/library/stdtypes.html#old-string-formatting) string substitution. Whenever possible, use **```fstring```** or **```.format()```** instead. They have better syntax and comes with richer formating/alignment capabilities.
 
 ```{python}
 my_name = 'Yong Keh Soon'
 salary  = 11123.346
-'Hello, %s, your salary is %.2f !' %(my_name, salary)
+'Hello, %s, your salary is %.2f.' % (my_name, salary)
 ```
 
-#### Concatenation (+)
+#### Concatenation (+) {-}
 
 ```{python}
 'this is ' + 'awesome'
 ```
 
-#### Is Inside (in)
+#### Is Inside (in) {-}
 
-For single string, **partial match**
-
-```{python}
-print( 'abc' in '123abcdefg' )
+```
+<substr> in <string>                          ## any partial match
+<substr> in [ <string>, <string>, <string> ]  ## any element with exact match
 ```
 
-For list of strings, **exact match** (even though only one element in list).  
-For partial match, workaround is to **convert list to single string**
+This is a boolean test:
+
+- For **string**, any partial match to substring will return True
+- For **list of string**, any element with **Exact** match will return True
 
 ```{python}
-print( 'abc' in ['abcdefg'],             # false
-       'abc' in ['abcdefg','123'],       # fakse
-       'abc' in ['123','abc','def'],     # true
-       'abc' in str(['123','abcdefg']))  # true
+'abc' in '123abcdefg'            # true
+'abc' in ['abcdefg']             # false
+'abc' in ['abcdefg','123']       # false
+'abc' in ['123','abc','def']     # true
+'abc' in str(['123','abcdefg'])  # true
 ```
 
-#### Comparitor
+#### Comparitor {-}
 
 Comparitor compares the memory address.
 
@@ -342,21 +339,23 @@ else:
     print ('It is fake')
 ```
 
-### What is Considered False ?
+### What is False ?
 
 Everything below are false, **anything else are true**
 
-```{python}
-print ( bool(0),      # zero
+```{python, results='hold'}
+print ( bool(0),     # zero
         bool(None),  # none
         bool(''),    # empty string
         bool([]),    # empty list
         bool(()),    # empty tupple
         bool(False), # False
-        bool(2-2))    # expression that return any value above
+        bool(2-2))   # expression that return any value above
 ```
 
-### ```and``` operator
+### Operators
+
+#### and {-}
 
 BEWARE !  
 
@@ -369,7 +368,7 @@ print (123 and 2 and 1,
        123 and [] and 2)
 ```
 
-### ```not``` operator
+#### not {-}
 
 ```{python}
 not (True)
@@ -379,7 +378,8 @@ not (True and False)
 ~(False)
 ```
 
-### ```or``` operator
+#### or {-}
+
 - **or** can return different data type  
 - If evaluated result is True, first **True Value** will be returned  (right hand side value **need not be evaluated**)  
 - If evaluated result is False, last **Fasle Value** will be returned (need to evalute all items before concluding False)
@@ -393,42 +393,15 @@ print (0 or () or [])
 
 ## None
 
-### None is an Object
+### None Is An Object
 
-- None is a Python **object NonType**  
-- Any operation to None object will result in **error**  
-- For array data with None elements, verification is required to check through iteration to determine if the item is not None. It is very computaionaly heavy 
+None is a Python object of **NonType**  
 
 ```{python}
 type(None)
 ```
 
-```{python}
-import numpy as np
-
-t1 = np.array([1, 2, 3, 4, 5])
-t2= np.array([1, 2, 3, None, 4, 5])
-print( t1.dtype  , '\n\n',    # it's an object
-       t2.dtype)
-```
-
-### Comparing None
-
-**Not Prefered Method**
-
-```{python}
-null_variable = None
-print( null_variable == None )
-```
-
-**Prefered**
-
-```{python}
-print( null_variable is None )
-print( null_variable is not None )
-```
-
-### Operation on None
+### Operators
 
 Any operator (except `is`) on None results in error.
 
@@ -436,3 +409,14 @@ Any operator (except `is`) on None results in error.
 None & None
 ```
 
+#### Comparitor {-}
+
+There are two ways to check if a variable is None, using **```== None```** or **```is None```**. The later is preferred.
+
+```{python, results='hold'}
+null_variable = None        ## less preferred
+null_variable == None
+
+null_variable is None       ## preferred
+null_variable is not None
+```

@@ -937,7 +937,7 @@ s1 - 100
 s1 - s2
 ```
 
-#### Logic Operator
+#### Logic Operator {-}
 
 - Apply logic operator to a Series return a **new Series** of boolean result  
 - This can be used for **Series or DataFrame filtering**
@@ -1333,7 +1333,7 @@ pd.DataFrame(data, columns=['name','salary','year1','year2','not_exist'], index=
 
 ### Operators
 
-#### Sample Data
+#### Sample Data {-}
 
 - Two dataframes are created, each with 3 columns and 3 rows. 
 - However, there are only two **matching column and row** names. 
@@ -1817,7 +1817,7 @@ print("Original DataFrame:\n", my_df,
 ```
 ### Slicing
 
-#### Sample Data
+#### Sample Data {-}
 
 ```{python}
 df = pd.DataFrame(data).set_index('empID')

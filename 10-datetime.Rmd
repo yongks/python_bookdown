@@ -1,7 +1,7 @@
 
 
 
-# Datetime and Timezone
+# Date, Time and Timezone
 
 ## Library Import
 
@@ -31,7 +31,7 @@ UTC2
 
 ### Class Method
 
-#### Making date/datetime Timezone aware (.localize)
+#### Making Timezone Aware (.localize) {-}
 
 Use **```timezone.localize()```** to make a datetime/date object timezone aware.
 
@@ -39,7 +39,7 @@ Use **```timezone.localize()```** to make a datetime/date object timezone aware.
 naive =  datetime(2019, 8, 19, 12, 0)
 naive2 = datetime(2019, 8, 19)  ## will be assumed with time 00:00
 
-UTC.localize(naive)    ## make datetime TZ aware
+UTC. localize(naive)  ## make datetime TZ aware
 MYTZ.localize(naive2)  ## make date TZ aware
 ```
 
@@ -55,7 +55,7 @@ for x in pytz.all_timezones:
 ```
 
 
-## date and datetime
+## Date and Datetime
 
 This is a built-in library by Python. There is no need to install this library.
 
@@ -97,9 +97,10 @@ datetime  (year=2000,month=1,day=1,hour=23,minute=15,second=55)
 type(datetime(2000,1,1,0,0,0))
 ```
 
-### Class Method
+### Class Methods
 
-#### ```now``` and ```today```
+#### Now and Today  {-}
+
 Both ```now()``` and ```today()``` return current **system local**  datetime, no timezone
 ```utcnow()``` returns UTC datetime.
 
@@ -109,19 +110,18 @@ datetime.today()       ## local datetime, same as above
 datetime.utcnow()      ## UTC datetime
 ```
 
-#### ```combine()``` date and time
+#### Combine Data and Time (combine) {-}
 
-Apply ```datetime.combine()``` module method on both **date and time**  object to get **datetime**
+Apply ```datetime.combine()``` class method on both **date and time**  objects to get **datetime**
 
 ```{python}
 now = datetime.now()
 datetime.combine(now.date(), now.time())
 ```
 
-#### Convert from String ```strptime()```
+#### Convert from String (strptime)  {-}
 
-Use **```strptime```** to convert string into **datetime** object
-
+Use **```strptime```** to convert string into **datetime** object. Refer [this cheatsheet](https://strftime.org/) for complete directives.
 ```
 %I : 12-hour
 %H : 24-hour
@@ -141,7 +141,7 @@ datetime.strptime('09-Mar-2018','%d-%b-%Y')
 datetime.strptime('2/5/2018 4:49 PM', '%m/%d/%Y %I:%M %p')
 ```
 
-#### Convert from ISO ```fromisoformat```
+#### Convert from ISO (fromisoformat) {-}
 
 - ```fromisoformat()``` is the reverse of ```isoformat()```  
 -  It actually **not ISO compliance**: when Z or +8 is included at the end of the string, error occur
@@ -153,9 +153,9 @@ datetime.fromisoformat("2019-02-05T10:22:33Z")     ## Error due to 'Z'
 datetime.fromisoformat("2019-02-05T10:22:33+0800") ## Errordue to '+0800'
 ```
 
-### Instance Method
+### Instance Methods
 
-#### ```weekday```
+#### weekday  {-}
 
 ```{python}
 datetime.now().weekday()
@@ -167,21 +167,21 @@ datetime.now().weekday()
 datetime.now().replace(year=1999)
 ```
 
-#### Convert to Time (.time)
+#### Convert to Time (.time)  {-}
 
 ```{python, jupyter_meta = list(scrolled = TRUE)}
 datetime.now().time()
 ```
 
-#### Convert to Date (.date)
+#### Convert to Date (.date)  {-}
 
 ```{python}
 datetime.now().date()
 ```
 
-#### Convert to String (strftime, isoformat)
+#### Convert to String (strftime, isoformat)  {-}
 
-**```str```**
+Refer [this cheatsheet](https://strftime.org/) for complete directives.
 
 ```{python, results='hold'}
 str( datetime.now() )
@@ -190,7 +190,7 @@ datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ')  ## ISO 8601 UTC
 datetime.utcnow().isoformat()
 ```
 
-### Attributes
+### Instance Attributes
 
 ```{python, results='hold'}
 datetime.now().year
@@ -200,7 +200,7 @@ datetime.now().hour
 datetime.now().minute
 ```
 
-## time
+## Time
 
 ### Constructor
 
@@ -210,32 +210,34 @@ print( time(2,15) ) #default two arguments, hour, minute
 print( time(hour=2,minute=15,second=30) )
 ```
 
-### Class Method
-#### ```now()```
-There is unfortunately no single function to extract the current time. Use **time()** function of an **datetime** object
-
-```{python}
-datetime.now().time()
-```
-
-### Attributes
+### Instance Attributes
 
 ```{python, results='hold'}
-datetime.now().time().hour
-datetime.now().time().minute
-datetime.now().time().second
+t = datetime.now().time()
+t.hour
+t.minute
+t.second
 ```
 
-## timedelta
-- **years** argument is **not supported**  
-- Apply timedelta on **datetime** object  
-- timedelta **cannot** be applied on **time object**  , because timedelta potentially go beyond single day (24H)
+## Timedelta
+
+### Constructor
+
+- Constructor does not support **years** argument.  
 
 ```{python, results='hold'}
 delt = timedelta(days=365,minutes=33,seconds=15)
 ```
 
+### Using With Datetime
+
+- Apply timedelta on **datetime** object  
+- Timedelta **Cannot** be applied on **time object**  , because it potentially go beyond single day (24H)
+
+
 ```{python, results='hold'}
 now = datetime.now()
-print ('delt+now : ', now+delt)
+now
+delt
+now+delt
 ```

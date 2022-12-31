@@ -23,7 +23,7 @@
 <meta name="author" content="Yong Keh Soon" />
 
 
-<meta name="date" content="2022-12-30" />
+<meta name="date" content="2022-12-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -341,19 +341,18 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html"><i class="fa fa-check"></i><b>10</b> Date, Time and Timezone</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#library-import"><i class="fa fa-check"></i><b>10.1</b> Library Import</a></li>
-<li class="chapter" data-level="10.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-pytz"><i class="fa fa-check"></i><b>10.2</b> Timezone (pytz)</a>
+<li class="chapter" data-level="10.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#zoneinfo"><i class="fa fa-check"></i><b>10.2</b> ZoneInfo</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-2"><i class="fa fa-check"></i><b>10.2.1</b> Constructor</a></li>
-<li class="chapter" data-level="10.2.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#class-method"><i class="fa fa-check"></i><b>10.2.2</b> Class Method</a>
-<ul>
-<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#making-timezone-aware-.localize"><i class="fa fa-check"></i>Making Timezone Aware (.localize)</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#attributes-1"><i class="fa fa-check"></i><b>10.2.3</b> Attributes</a></li>
+<li class="chapter" data-level="10.2.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes"><i class="fa fa-check"></i><b>10.2.2</b> Instance Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#date-and-datetime"><i class="fa fa-check"></i><b>10.3</b> Date and Datetime</a>
 <ul>
 <li class="chapter" data-level="10.3.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#iso8601"><i class="fa fa-check"></i><b>10.3.1</b> ISO8601</a></li>
-<li class="chapter" data-level="10.3.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-3"><i class="fa fa-check"></i><b>10.3.2</b> Constructor</a></li>
+<li class="chapter" data-level="10.3.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-3"><i class="fa fa-check"></i><b>10.3.2</b> Constructor</a>
+<ul>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-integration"><i class="fa fa-check"></i>Timezone Integration</a></li>
+</ul></li>
 <li class="chapter" data-level="10.3.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#class-methods"><i class="fa fa-check"></i><b>10.3.3</b> Class Methods</a>
 <ul>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#now-and-today"><i class="fa fa-check"></i>Now and Today</a></li>
@@ -361,20 +360,28 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-from-string-strptime"><i class="fa fa-check"></i>Convert from String (strptime)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-from-iso-fromisoformat"><i class="fa fa-check"></i>Convert from ISO (fromisoformat)</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-1"><i class="fa fa-check"></i><b>10.3.4</b> Instance Methods</a>
+<li class="chapter" data-level="10.3.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-1"><i class="fa fa-check"></i><b>10.3.4</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-1"><i class="fa fa-check"></i><b>10.3.5</b> Instance Methods</a>
 <ul>
-<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#weekday"><i class="fa fa-check"></i>weekday</a></li>
-<li class="chapter" data-level="10.3.4.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#update-.replace"><i class="fa fa-check"></i><b>10.3.4.1</b> Update (.replace)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#update-data.replace"><i class="fa fa-check"></i>Update Data(.replace)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-conversion-astimezone"><i class="fa fa-check"></i>Timezone Conversion (astimezone)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-time-.time"><i class="fa fa-check"></i>Convert to Time (.time)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-date-.date"><i class="fa fa-check"></i>Convert to Date (.date)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-string-strftime-isoformat"><i class="fa fa-check"></i>Convert to String (strftime, isoformat)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#weekday"><i class="fa fa-check"></i>Weekday</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes"><i class="fa fa-check"></i><b>10.3.5</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.6" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-2"><i class="fa fa-check"></i><b>10.3.6</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.7" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#operators-5"><i class="fa fa-check"></i><b>10.3.7</b> Operators</a>
+<ul>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#difference--"><i class="fa fa-check"></i>Difference (-)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#addition"><i class="fa fa-check"></i>Addition (+)</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#time"><i class="fa fa-check"></i><b>10.4</b> Time</a>
 <ul>
 <li class="chapter" data-level="10.4.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-4"><i class="fa fa-check"></i><b>10.4.1</b> Constructor</a></li>
-<li class="chapter" data-level="10.4.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-1"><i class="fa fa-check"></i><b>10.4.2</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.4.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-2"><i class="fa fa-check"></i><b>10.4.2</b> Instance Methods</a></li>
+<li class="chapter" data-level="10.4.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-3"><i class="fa fa-check"></i><b>10.4.3</b> Instance Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="10.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timedelta"><i class="fa fa-check"></i><b>10.5</b> Timedelta</a>
 <ul>
@@ -390,7 +397,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2.1" data-path="pandas.html"><a href="pandas.html#types-of-objects"><i class="fa fa-check"></i><b>11.2.1</b> Types of Objects</a></li>
 <li class="chapter" data-level="11.2.2" data-path="pandas.html"><a href="pandas.html#series-and-dataframe"><i class="fa fa-check"></i><b>11.2.2</b> Series and DataFrame</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="pandas.html"><a href="pandas.html#class-method-1"><i class="fa fa-check"></i><b>11.3</b> Class Method</a>
+<li class="chapter" data-level="11.3" data-path="pandas.html"><a href="pandas.html#class-method"><i class="fa fa-check"></i><b>11.3</b> Class Method</a>
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="pandas.html"><a href="pandas.html#convertion"><i class="fa fa-check"></i><b>11.3.1</b> Convertion</a>
 <ul>
@@ -439,7 +446,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-string"><i class="fa fa-check"></i>From String</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-datetime-date"><i class="fa fa-check"></i>From <code>datetime / date</code></a></li>
 </ul></li>
-<li class="chapter" data-level="11.4.2" data-path="pandas.html"><a href="pandas.html#attributes-2"><i class="fa fa-check"></i><b>11.4.2</b> Attributes</a></li>
+<li class="chapter" data-level="11.4.2" data-path="pandas.html"><a href="pandas.html#attributes-1"><i class="fa fa-check"></i><b>11.4.2</b> Attributes</a></li>
 <li class="chapter" data-level="11.4.3" data-path="pandas.html"><a href="pandas.html#timezones"><i class="fa fa-check"></i><b>11.4.3</b> Timezones</a></li>
 <li class="chapter" data-level="11.4.4" data-path="pandas.html"><a href="pandas.html#formatting"><i class="fa fa-check"></i><b>11.4.4</b> Formatting</a></li>
 <li class="chapter" data-level="11.4.5" data-path="pandas.html"><a href="pandas.html#conversion"><i class="fa fa-check"></i><b>11.4.5</b> Conversion</a>
@@ -459,7 +466,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.5.1" data-path="pandas.html"><a href="pandas.html#creating"><i class="fa fa-check"></i><b>11.5.1</b> Creating</a></li>
 <li class="chapter" data-level="11.5.2" data-path="pandas.html"><a href="pandas.html#co-conversion"><i class="fa fa-check"></i><b>11.5.2</b> Co Conversion</a></li>
 <li class="chapter" data-level="11.5.3" data-path="pandas.html"><a href="pandas.html#structure-conversion"><i class="fa fa-check"></i><b>11.5.3</b> Structure Conversion</a></li>
-<li class="chapter" data-level="11.5.4" data-path="pandas.html"><a href="pandas.html#attributes-3"><i class="fa fa-check"></i><b>11.5.4</b> Attributes</a></li>
+<li class="chapter" data-level="11.5.4" data-path="pandas.html"><a href="pandas.html#attributes-2"><i class="fa fa-check"></i><b>11.5.4</b> Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="pandas.html"><a href="pandas.html#class-series"><i class="fa fa-check"></i><b>11.6</b> Class: Series</a>
 <ul>
@@ -490,13 +497,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#the-data"><i class="fa fa-check"></i>The Data</a></li>
 <li class="chapter" data-level="11.6.4.1" data-path="pandas.html"><a href="pandas.html#the-attributes"><i class="fa fa-check"></i><b>11.6.4.1</b> The Attributes</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6.5" data-path="pandas.html"><a href="pandas.html#instance-methods-2"><i class="fa fa-check"></i><b>11.6.5</b> Instance Methods</a>
+<li class="chapter" data-level="11.6.5" data-path="pandas.html"><a href="pandas.html#instance-methods-3"><i class="fa fa-check"></i><b>11.6.5</b> Instance Methods</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#index-manipulation"><i class="fa fa-check"></i>Index Manipulation</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#structure-conversion-1"><i class="fa fa-check"></i>Structure Conversion</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#datatype-conversion"><i class="fa fa-check"></i>DataType Conversion</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6.6" data-path="pandas.html"><a href="pandas.html#operators-5"><i class="fa fa-check"></i><b>11.6.6</b> Operators</a>
+<li class="chapter" data-level="11.6.6" data-path="pandas.html"><a href="pandas.html#operators-6"><i class="fa fa-check"></i><b>11.6.6</b> Operators</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#arithmetic-operator"><i class="fa fa-check"></i>Arithmetic Operator</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#logic-operator"><i class="fa fa-check"></i>Logic Operator</a></li>
@@ -527,14 +534,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-record-oriented-data"><i class="fa fa-check"></i>From Record Oriented Data</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-column-oriented-data"><i class="fa fa-check"></i>From Column Oriented Data</a></li>
 </ul></li>
-<li class="chapter" data-level="11.7.2" data-path="pandas.html"><a href="pandas.html#operators-6"><i class="fa fa-check"></i><b>11.7.2</b> Operators</a>
+<li class="chapter" data-level="11.7.2" data-path="pandas.html"><a href="pandas.html#operators-7"><i class="fa fa-check"></i><b>11.7.2</b> Operators</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#sample-data-4"><i class="fa fa-check"></i>Sample Data</a></li>
-<li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#addition"><i class="fa fa-check"></i>Addition</a></li>
+<li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#addition-1"><i class="fa fa-check"></i>Addition</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#substraction"><i class="fa fa-check"></i>Substraction</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#operator"><i class="fa fa-check"></i>Operator <code>&amp;</code></a></li>
 </ul></li>
-<li class="chapter" data-level="11.7.3" data-path="pandas.html"><a href="pandas.html#attributes-4"><i class="fa fa-check"></i><b>11.7.3</b> Attributes</a></li>
+<li class="chapter" data-level="11.7.3" data-path="pandas.html"><a href="pandas.html#attributes-3"><i class="fa fa-check"></i><b>11.7.3</b> Attributes</a></li>
 <li class="chapter" data-level="11.7.4" data-path="pandas.html"><a href="pandas.html#index-manipulation-1"><i class="fa fa-check"></i><b>11.7.4</b> Index Manipulation</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#sample-data-5"><i class="fa fa-check"></i>Sample Data</a></li>
@@ -750,153 +757,38 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 10</span> Date, Time and Timezone<a href="date-time-and-timezone.html#date-time-and-timezone" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="library-import" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Library Import<a href="date-time-and-timezone.html#library-import" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb315"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb315-1"><a href="date-time-and-timezone.html#cb315-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pytz</span>
-<span id="cb315-2"><a href="date-time-and-timezone.html#cb315-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pytz <span class="im">import</span> timezone</span>
-<span id="cb315-3"><a href="date-time-and-timezone.html#cb315-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> date, datetime, time, timedelta</span></code></pre></div>
+<p>All below are built-in libraries. There is a popular library named <strong>pytz</strong> not covered in this chapter as it is being deprecated. The replacement of pytz is <strong>ZoneInfo</strong>.</p>
+<div class="sourceCode" id="cb315"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb315-1"><a href="date-time-and-timezone.html#cb315-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> date, datetime, timedelta, time</span>
+<span id="cb315-2"><a href="date-time-and-timezone.html#cb315-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> zoneinfo <span class="im">import</span> ZoneInfo</span></code></pre></div>
 </div>
-<div id="timezone-pytz" class="section level2 hasAnchor" number="10.2">
-<h2><span class="header-section-number">10.2</span> Timezone (pytz)<a href="date-time-and-timezone.html#timezone-pytz" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><strong><code>pytz</code></strong> is <strong>NOT</strong> a built-in library.</p>
+<div id="zoneinfo" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> ZoneInfo<a href="date-time-and-timezone.html#zoneinfo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>ZoneInfo</strong> is the recommended built-in library to deal with timezone for <strong>datetime</strong> object.</p>
 <div id="constructor-2" class="section level3 hasAnchor" number="10.2.1">
 <h3><span class="header-section-number">10.2.1</span> Constructor<a href="date-time-and-timezone.html#constructor-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong><code>pytz.timezone</code></strong> is the object class within <strong><code>pytz</code></strong>.</p>
-<div class="sourceCode" id="cb316"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb316-1"><a href="date-time-and-timezone.html#cb316-1" aria-hidden="true" tabindex="-1"></a>MYTZ <span class="op">=</span> timezone(<span class="st">&#39;Asia/Singapore&#39;</span>)</span>
-<span id="cb316-2"><a href="date-time-and-timezone.html#cb316-2" aria-hidden="true" tabindex="-1"></a>UTC  <span class="op">=</span> pytz.utc</span>
-<span id="cb316-3"><a href="date-time-and-timezone.html#cb316-3" aria-hidden="true" tabindex="-1"></a>UTC2 <span class="op">=</span> timezone(<span class="st">&#39;UTC&#39;</span>)</span>
+<p>Initialize with zone name as key: <strong><code>ZoneInfo(key='&lt;zone_name'&gt;)</code></strong>.</p>
+<div class="sourceCode" id="cb316"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb316-1"><a href="date-time-and-timezone.html#cb316-1" aria-hidden="true" tabindex="-1"></a>MY <span class="op">=</span> ZoneInfo(<span class="st">&#39;Asia/Kuala_Lumpur&#39;</span>)</span>
+<span id="cb316-2"><a href="date-time-and-timezone.html#cb316-2" aria-hidden="true" tabindex="-1"></a>NY <span class="op">=</span> ZoneInfo(<span class="st">&#39;America/New_York&#39;</span>)</span>
+<span id="cb316-3"><a href="date-time-and-timezone.html#cb316-3" aria-hidden="true" tabindex="-1"></a>UTC<span class="op">=</span> ZoneInfo(<span class="st">&#39;UTC&#39;</span>)</span>
 <span id="cb316-4"><a href="date-time-and-timezone.html#cb316-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb316-5"><a href="date-time-and-timezone.html#cb316-5" aria-hidden="true" tabindex="-1"></a>MYTZ</span>
-<span id="cb316-6"><a href="date-time-and-timezone.html#cb316-6" aria-hidden="true" tabindex="-1"></a>UTC</span>
-<span id="cb316-7"><a href="date-time-and-timezone.html#cb316-7" aria-hidden="true" tabindex="-1"></a>UTC2</span></code></pre></div>
-<pre><code>## &lt;DstTzInfo &#39;Asia/Singapore&#39; LMT+6:55:00 STD&gt;
-## &lt;UTC&gt;
-## &lt;UTC&gt;</code></pre>
+<span id="cb316-5"><a href="date-time-and-timezone.html#cb316-5" aria-hidden="true" tabindex="-1"></a>MY</span>
+<span id="cb316-6"><a href="date-time-and-timezone.html#cb316-6" aria-hidden="true" tabindex="-1"></a>NY</span>
+<span id="cb316-7"><a href="date-time-and-timezone.html#cb316-7" aria-hidden="true" tabindex="-1"></a>UTC</span></code></pre></div>
+<pre><code>## zoneinfo.ZoneInfo(key=&#39;Asia/Kuala_Lumpur&#39;)
+## zoneinfo.ZoneInfo(key=&#39;America/New_York&#39;)
+## zoneinfo.ZoneInfo(key=&#39;UTC&#39;)</code></pre>
 </div>
-<div id="class-method" class="section level3 hasAnchor" number="10.2.2">
-<h3><span class="header-section-number">10.2.2</span> Class Method<a href="date-time-and-timezone.html#class-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="making-timezone-aware-.localize" class="section level4 unnumbered hasAnchor">
-<h4>Making Timezone Aware (.localize)<a href="date-time-and-timezone.html#making-timezone-aware-.localize" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Use <strong><code>timezone.localize()</code></strong> to make a datetime/date object timezone aware.</p>
-<div class="sourceCode" id="cb318"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb318-1"><a href="date-time-and-timezone.html#cb318-1" aria-hidden="true" tabindex="-1"></a>naive <span class="op">=</span>  datetime(<span class="dv">2019</span>, <span class="dv">8</span>, <span class="dv">19</span>, <span class="dv">12</span>, <span class="dv">0</span>)</span>
-<span id="cb318-2"><a href="date-time-and-timezone.html#cb318-2" aria-hidden="true" tabindex="-1"></a>naive2 <span class="op">=</span> datetime(<span class="dv">2019</span>, <span class="dv">8</span>, <span class="dv">19</span>)  <span class="co">## will be assumed with time 00:00</span></span>
-<span id="cb318-3"><a href="date-time-and-timezone.html#cb318-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb318-4"><a href="date-time-and-timezone.html#cb318-4" aria-hidden="true" tabindex="-1"></a>UTC. localize(naive)  <span class="co">## make datetime TZ aware</span></span>
-<span id="cb318-5"><a href="date-time-and-timezone.html#cb318-5" aria-hidden="true" tabindex="-1"></a>MYTZ.localize(naive2)  <span class="co">## make date TZ aware</span></span></code></pre></div>
-<pre><code>## datetime.datetime(2019, 8, 19, 12, 0, tzinfo=&lt;UTC&gt;)
-## datetime.datetime(2019, 8, 19, 0, 0, tzinfo=&lt;DstTzInfo &#39;Asia/Singapore&#39; +08+8:00:00 STD&gt;)</code></pre>
-</div>
-</div>
-<div id="attributes-1" class="section level3 hasAnchor" number="10.2.3">
-<h3><span class="header-section-number">10.2.3</span> Attributes<a href="date-time-and-timezone.html#attributes-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong><code>pytz.all_timezones</code></strong> is a list of time zone names in string. Example below shows timezone name for all cities in Asia.</p>
-<div class="sourceCode" id="cb320"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb320-1"><a href="date-time-and-timezone.html#cb320-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> pytz.all_timezones:</span>
-<span id="cb320-2"><a href="date-time-and-timezone.html#cb320-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> x.startswith(<span class="st">&#39;Asia&#39;</span>):</span>
-<span id="cb320-3"><a href="date-time-and-timezone.html#cb320-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x)</span></code></pre></div>
-<pre><code>## Asia/Aden
-## Asia/Almaty
-## Asia/Amman
-## Asia/Anadyr
-## Asia/Aqtau
-## Asia/Aqtobe
-## Asia/Ashgabat
-## Asia/Ashkhabad
-## Asia/Atyrau
-## Asia/Baghdad
-## Asia/Bahrain
-## Asia/Baku
-## Asia/Bangkok
-## Asia/Barnaul
-## Asia/Beirut
-## Asia/Bishkek
-## Asia/Brunei
-## Asia/Calcutta
-## Asia/Chita
-## Asia/Choibalsan
-## Asia/Chongqing
-## Asia/Chungking
-## Asia/Colombo
-## Asia/Dacca
-## Asia/Damascus
-## Asia/Dhaka
-## Asia/Dili
-## Asia/Dubai
-## Asia/Dushanbe
-## Asia/Famagusta
-## Asia/Gaza
-## Asia/Harbin
-## Asia/Hebron
-## Asia/Ho_Chi_Minh
-## Asia/Hong_Kong
-## Asia/Hovd
-## Asia/Irkutsk
-## Asia/Istanbul
-## Asia/Jakarta
-## Asia/Jayapura
-## Asia/Jerusalem
-## Asia/Kabul
-## Asia/Kamchatka
-## Asia/Karachi
-## Asia/Kashgar
-## Asia/Kathmandu
-## Asia/Katmandu
-## Asia/Khandyga
-## Asia/Kolkata
-## Asia/Krasnoyarsk
-## Asia/Kuala_Lumpur
-## Asia/Kuching
-## Asia/Kuwait
-## Asia/Macao
-## Asia/Macau
-## Asia/Magadan
-## Asia/Makassar
-## Asia/Manila
-## Asia/Muscat
-## Asia/Nicosia
-## Asia/Novokuznetsk
-## Asia/Novosibirsk
-## Asia/Omsk
-## Asia/Oral
-## Asia/Phnom_Penh
-## Asia/Pontianak
-## Asia/Pyongyang
-## Asia/Qatar
-## Asia/Qostanay
-## Asia/Qyzylorda
-## Asia/Rangoon
-## Asia/Riyadh
-## Asia/Saigon
-## Asia/Sakhalin
-## Asia/Samarkand
-## Asia/Seoul
-## Asia/Shanghai
-## Asia/Singapore
-## Asia/Srednekolymsk
-## Asia/Taipei
-## Asia/Tashkent
-## Asia/Tbilisi
-## Asia/Tehran
-## Asia/Tel_Aviv
-## Asia/Thimbu
-## Asia/Thimphu
-## Asia/Tokyo
-## Asia/Tomsk
-## Asia/Ujung_Pandang
-## Asia/Ulaanbaatar
-## Asia/Ulan_Bator
-## Asia/Urumqi
-## Asia/Ust-Nera
-## Asia/Vientiane
-## Asia/Vladivostok
-## Asia/Yakutsk
-## Asia/Yangon
-## Asia/Yekaterinburg
-## Asia/Yerevan</code></pre>
+<div id="instance-attributes" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Instance Attributes<a href="date-time-and-timezone.html#instance-attributes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb318"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb318-1"><a href="date-time-and-timezone.html#cb318-1" aria-hidden="true" tabindex="-1"></a>MY.key</span></code></pre></div>
+<pre><code>## &#39;Asia/Kuala_Lumpur&#39;</code></pre>
 </div>
 </div>
 <div id="date-and-datetime" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> Date and Datetime<a href="date-time-and-timezone.html#date-and-datetime" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This is a built-in library by Python. There is no need to install this library.</p>
 <p><strong><code>date</code></strong> and <strong><code>datetime</code></strong> are both standard built-in python library.</p>
-<p><strong><code>datetime</code></strong> library contain four classes of objects:</p>
+<p><strong><code>datetime</code></strong> library contain four object classes:</p>
 <ul>
 <li><strong>date</strong>: (year,month,day)</li>
 <li><strong>time</strong>: (hour,minute,second)</li>
@@ -916,40 +808,61 @@ GMT+8:  &quot;2007-04-05T12:30+08     #notice +08```
 </div>
 <div id="constructor-3" class="section level3 hasAnchor" number="10.3.2">
 <h3><span class="header-section-number">10.3.2</span> Constructor<a href="date-time-and-timezone.html#constructor-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Use constructor to create datetime / date object.</p>
-<div class="sourceCode" id="cb323"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb323-1"><a href="date-time-and-timezone.html#cb323-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Date Only</span></span>
-<span id="cb323-2"><a href="date-time-and-timezone.html#cb323-2" aria-hidden="true" tabindex="-1"></a>date      (<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
-<span id="cb323-3"><a href="date-time-and-timezone.html#cb323-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(date (<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb323-4"><a href="date-time-and-timezone.html#cb323-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb323-5"><a href="date-time-and-timezone.html#cb323-5" aria-hidden="true" tabindex="-1"></a><span class="co">## Datetime</span></span>
-<span id="cb323-6"><a href="date-time-and-timezone.html#cb323-6" aria-hidden="true" tabindex="-1"></a>datetime  (<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">23</span>,<span class="dv">15</span>,<span class="dv">55</span>)</span>
-<span id="cb323-7"><a href="date-time-and-timezone.html#cb323-7" aria-hidden="true" tabindex="-1"></a>datetime  (year<span class="op">=</span><span class="dv">2000</span>,month<span class="op">=</span><span class="dv">1</span>,day<span class="op">=</span><span class="dv">1</span>,hour<span class="op">=</span><span class="dv">23</span>,minute<span class="op">=</span><span class="dv">15</span>,second<span class="op">=</span><span class="dv">55</span>)</span>
-<span id="cb323-8"><a href="date-time-and-timezone.html#cb323-8" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(datetime(<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span></code></pre></div>
+<p>Use constructor to create datetime / date object. You can make it timezone aware with <code>tzinfo</code> parameter, which is an <strong>ZoneInfo</strong> object.</p>
+<div class="sourceCode" id="cb321"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb321-1"><a href="date-time-and-timezone.html#cb321-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Date Only</span></span>
+<span id="cb321-2"><a href="date-time-and-timezone.html#cb321-2" aria-hidden="true" tabindex="-1"></a>date      (<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb321-3"><a href="date-time-and-timezone.html#cb321-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(date (<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb321-4"><a href="date-time-and-timezone.html#cb321-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb321-5"><a href="date-time-and-timezone.html#cb321-5" aria-hidden="true" tabindex="-1"></a><span class="co">## Datetime - TImezone Naive</span></span>
+<span id="cb321-6"><a href="date-time-and-timezone.html#cb321-6" aria-hidden="true" tabindex="-1"></a>datetime  (<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">23</span>,<span class="dv">15</span>,<span class="dv">55</span>)</span>
+<span id="cb321-7"><a href="date-time-and-timezone.html#cb321-7" aria-hidden="true" tabindex="-1"></a>datetime  (year<span class="op">=</span><span class="dv">2000</span>,month<span class="op">=</span><span class="dv">1</span>,day<span class="op">=</span><span class="dv">1</span>,hour<span class="op">=</span><span class="dv">23</span>,minute<span class="op">=</span><span class="dv">15</span>,second<span class="op">=</span><span class="dv">55</span>)</span>
+<span id="cb321-8"><a href="date-time-and-timezone.html#cb321-8" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(datetime(<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span></code></pre></div>
 <pre><code>## datetime.date(2000, 1, 1)
 ## &lt;class &#39;datetime.date&#39;&gt;
 ## datetime.datetime(2000, 1, 1, 23, 15, 55)
 ## datetime.datetime(2000, 1, 1, 23, 15, 55)
 ## &lt;class &#39;datetime.datetime&#39;&gt;</code></pre>
+<div id="timezone-integration" class="section level4 unnumbered hasAnchor">
+<h4>Timezone Integration<a href="date-time-and-timezone.html#timezone-integration" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Datetime supports <strong>timezone</strong> through built-in library (refer <a href="date-time-and-timezone.html#zoneinfo">ZoneInfo</a> chapter). Initialize datetime with <strong><code>tzinfo</code> </strong> parameter to have a timezone aware datetime.</p>
+<div class="sourceCode" id="cb323"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb323-1"><a href="date-time-and-timezone.html#cb323-1" aria-hidden="true" tabindex="-1"></a>MY <span class="op">=</span> ZoneInfo(<span class="st">&#39;Asia/Kuala_Lumpur&#39;</span>)</span>
+<span id="cb323-2"><a href="date-time-and-timezone.html#cb323-2" aria-hidden="true" tabindex="-1"></a>NY <span class="op">=</span> ZoneInfo(<span class="st">&#39;America/New_York&#39;</span>)</span>
+<span id="cb323-3"><a href="date-time-and-timezone.html#cb323-3" aria-hidden="true" tabindex="-1"></a>UTC<span class="op">=</span> ZoneInfo(<span class="st">&#39;UTC&#39;</span>)</span>
+<span id="cb323-4"><a href="date-time-and-timezone.html#cb323-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb323-5"><a href="date-time-and-timezone.html#cb323-5" aria-hidden="true" tabindex="-1"></a><span class="co">## Timezone Aware</span></span>
+<span id="cb323-6"><a href="date-time-and-timezone.html#cb323-6" aria-hidden="true" tabindex="-1"></a>datetime  (<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">23</span>,<span class="dv">15</span>,<span class="dv">55</span>, tzinfo<span class="op">=</span>NY)</span></code></pre></div>
+<pre><code>## datetime.datetime(2000, 1, 1, 23, 15, 55, tzinfo=zoneinfo.ZoneInfo(key=&#39;America/New_York&#39;))</code></pre>
+</div>
 </div>
 <div id="class-methods" class="section level3 hasAnchor" number="10.3.3">
 <h3><span class="header-section-number">10.3.3</span> Class Methods<a href="date-time-and-timezone.html#class-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="now-and-today" class="section level4 unnumbered hasAnchor">
 <h4>Now and Today<a href="date-time-and-timezone.html#now-and-today" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Both <code>now()</code> and <code>today()</code> return current <strong>system local</strong> datetime, no timezone
-<code>utcnow()</code> returns UTC datetime.</p>
+<ul>
+<li>Both <strong><code>now()</code></strong> and <strong><code>today()</code></strong> return current <strong>system local</strong> datetime, which is <strong>timezone naive</strong>.</li>
+<li><strong><code>utcnow()</code></strong> returns UTC datetime, which is also <strong>timezone naive</strong>.</li>
+<li>Only <strong><code>now()</code></strong> supports <strong><code>tz</code></strong> parameter to convert the time to desired timezone.</li>
+<li><strong><code>today() / utcnow()** does not supports **</code>tz```</strong> parameter.</li>
+</ul>
 <div class="sourceCode" id="cb325"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb325-1"><a href="date-time-and-timezone.html#cb325-1" aria-hidden="true" tabindex="-1"></a>datetime.now()         <span class="co">## local datetime</span></span>
 <span id="cb325-2"><a href="date-time-and-timezone.html#cb325-2" aria-hidden="true" tabindex="-1"></a>datetime.today()       <span class="co">## local datetime, same as above</span></span>
-<span id="cb325-3"><a href="date-time-and-timezone.html#cb325-3" aria-hidden="true" tabindex="-1"></a>datetime.utcnow()      <span class="co">## UTC datetime</span></span></code></pre></div>
-<pre><code>## datetime.datetime(2022, 12, 30, 21, 40, 20, 815957)
-## datetime.datetime(2022, 12, 30, 21, 40, 20, 820957)
-## datetime.datetime(2022, 12, 30, 13, 40, 20, 825957)</code></pre>
+<span id="cb325-3"><a href="date-time-and-timezone.html#cb325-3" aria-hidden="true" tabindex="-1"></a>datetime.utcnow()      <span class="co">## UTC datetime</span></span>
+<span id="cb325-4"><a href="date-time-and-timezone.html#cb325-4" aria-hidden="true" tabindex="-1"></a>datetime.now(tz<span class="op">=</span>NY)    <span class="co">## convert to New York timezone</span></span>
+<span id="cb325-5"><a href="date-time-and-timezone.html#cb325-5" aria-hidden="true" tabindex="-1"></a>datetime.today(tz<span class="op">=</span>NY)  <span class="co">## Error</span></span>
+<span id="cb325-6"><a href="date-time-and-timezone.html#cb325-6" aria-hidden="true" tabindex="-1"></a>datetime.utcnow(tz<span class="op">=</span>NY) <span class="co">## Error</span></span></code></pre></div>
+<pre><code>## datetime.datetime(2022, 12, 31, 12, 0, 9, 625769)
+## datetime.datetime(2022, 12, 31, 12, 0, 9, 636771)
+## datetime.datetime(2022, 12, 31, 4, 0, 9, 645774)
+## datetime.datetime(2022, 12, 30, 23, 0, 9, 652001, tzinfo=zoneinfo.ZoneInfo(key=&#39;America/New_York&#39;))</code></pre>
+<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: datetime.today() takes no keyword arguments</code></pre>
+<pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): TypeError: datetime.utcnow() takes no keyword arguments</code></pre>
 </div>
 <div id="combine-data-and-time-combine" class="section level4 unnumbered hasAnchor">
 <h4>Combine Data and Time (combine)<a href="date-time-and-timezone.html#combine-data-and-time-combine" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Apply <code>datetime.combine()</code> class method on both <strong>date and time</strong> objects to get <strong>datetime</strong></p>
-<div class="sourceCode" id="cb327"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb327-1"><a href="date-time-and-timezone.html#cb327-1" aria-hidden="true" tabindex="-1"></a>now <span class="op">=</span> datetime.now()</span>
-<span id="cb327-2"><a href="date-time-and-timezone.html#cb327-2" aria-hidden="true" tabindex="-1"></a>datetime.combine(now.date(), now.time())</span></code></pre></div>
-<pre><code>## datetime.datetime(2022, 12, 30, 21, 40, 21, 45500)</code></pre>
+<div class="sourceCode" id="cb329"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb329-1"><a href="date-time-and-timezone.html#cb329-1" aria-hidden="true" tabindex="-1"></a>now <span class="op">=</span> datetime.now()</span>
+<span id="cb329-2"><a href="date-time-and-timezone.html#cb329-2" aria-hidden="true" tabindex="-1"></a>datetime.combine(now.date(), now.time())</span></code></pre></div>
+<pre><code>## datetime.datetime(2022, 12, 31, 12, 0, 9, 875439)</code></pre>
 </div>
 <div id="convert-from-string-strptime" class="section level4 unnumbered hasAnchor">
 <h4>Convert from String (strptime)<a href="date-time-and-timezone.html#convert-from-string-strptime" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -963,10 +876,10 @@ GMT+8:  &quot;2007-04-05T12:30+08     #notice +08```
 %b : Mar
 %m : month (1 to 12)
 %d : day</code></pre>
-<div class="sourceCode" id="cb330"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb330-1"><a href="date-time-and-timezone.html#cb330-1" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;2011-02-25&#39;</span>, <span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st">&#39;</span>)</span>
-<span id="cb330-2"><a href="date-time-and-timezone.html#cb330-2" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;9-01-18&#39;</span>,    <span class="st">&#39;</span><span class="sc">%d</span><span class="st">-%m-%y&#39;</span>)</span>
-<span id="cb330-3"><a href="date-time-and-timezone.html#cb330-3" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;09-Mar-2018&#39;</span>,<span class="st">&#39;</span><span class="sc">%d</span><span class="st">-%b-%Y&#39;</span>)</span>
-<span id="cb330-4"><a href="date-time-and-timezone.html#cb330-4" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;2/5/2018 4:49 PM&#39;</span>, <span class="st">&#39;%m/</span><span class="sc">%d</span><span class="st">/%Y %I:%M %p&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb332"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb332-1"><a href="date-time-and-timezone.html#cb332-1" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;2011-02-25&#39;</span>, <span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st">&#39;</span>)</span>
+<span id="cb332-2"><a href="date-time-and-timezone.html#cb332-2" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;9-01-18&#39;</span>,    <span class="st">&#39;</span><span class="sc">%d</span><span class="st">-%m-%y&#39;</span>)</span>
+<span id="cb332-3"><a href="date-time-and-timezone.html#cb332-3" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;09-Mar-2018&#39;</span>,<span class="st">&#39;</span><span class="sc">%d</span><span class="st">-%b-%Y&#39;</span>)</span>
+<span id="cb332-4"><a href="date-time-and-timezone.html#cb332-4" aria-hidden="true" tabindex="-1"></a>datetime.strptime(<span class="st">&#39;2/5/2018 4:49 PM&#39;</span>, <span class="st">&#39;%m/</span><span class="sc">%d</span><span class="st">/%Y %I:%M %p&#39;</span>)</span></code></pre></div>
 <pre><code>## datetime.datetime(2011, 2, 25, 0, 0)
 ## datetime.datetime(2018, 1, 9, 0, 0)
 ## datetime.datetime(2018, 3, 9, 0, 0)
@@ -975,89 +888,163 @@ GMT+8:  &quot;2007-04-05T12:30+08     #notice +08```
 <div id="convert-from-iso-fromisoformat" class="section level4 unnumbered hasAnchor">
 <h4>Convert from ISO (fromisoformat)<a href="date-time-and-timezone.html#convert-from-iso-fromisoformat" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
-<li><code>fromisoformat()</code> is the reverse of <code>isoformat()</code><br />
+<li><strong><code>fromisoformat()</code></strong> is the reverse of <strong><code>isoformat()</code></strong>.<br />
 </li>
-<li>It actually <strong>not ISO compliance</strong>: when Z or +8 is included at the end of the string, error occur</li>
+<li>It actually <strong>not ISO compliance</strong>: when Z or +8 is included at the end of the string, Error is triggered.</li>
 </ul>
-<div class="sourceCode" id="cb332"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb332-1"><a href="date-time-and-timezone.html#cb332-1" aria-hidden="true" tabindex="-1"></a>datetime.now().isoformat()                         <span class="co">## checkout the iso format</span></span>
-<span id="cb332-2"><a href="date-time-and-timezone.html#cb332-2" aria-hidden="true" tabindex="-1"></a>datetime.fromisoformat(<span class="st">&quot;2019-02-05T10:22:33&quot;</span>)      <span class="co">## Good</span></span>
-<span id="cb332-3"><a href="date-time-and-timezone.html#cb332-3" aria-hidden="true" tabindex="-1"></a>datetime.fromisoformat(<span class="st">&quot;2019-02-05T10:22:33Z&quot;</span>)     <span class="co">## Error due to &#39;Z&#39;</span></span>
-<span id="cb332-4"><a href="date-time-and-timezone.html#cb332-4" aria-hidden="true" tabindex="-1"></a>datetime.fromisoformat(<span class="st">&quot;2019-02-05T10:22:33+0800&quot;</span>) <span class="co">## Errordue to &#39;+0800&#39;</span></span></code></pre></div>
-<pre><code>## &#39;2022-12-30T21:40:21.523569&#39;
+<div class="sourceCode" id="cb334"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb334-1"><a href="date-time-and-timezone.html#cb334-1" aria-hidden="true" tabindex="-1"></a>datetime.now().isoformat()                         <span class="co">## checkout the iso format</span></span>
+<span id="cb334-2"><a href="date-time-and-timezone.html#cb334-2" aria-hidden="true" tabindex="-1"></a>datetime.fromisoformat(<span class="st">&quot;2019-02-05T10:22:33&quot;</span>)      <span class="co">## Good</span></span>
+<span id="cb334-3"><a href="date-time-and-timezone.html#cb334-3" aria-hidden="true" tabindex="-1"></a>datetime.fromisoformat(<span class="st">&quot;2019-02-05T10:22:33Z&quot;</span>)     <span class="co">## Error due to trailing &#39;Z&#39;</span></span>
+<span id="cb334-4"><a href="date-time-and-timezone.html#cb334-4" aria-hidden="true" tabindex="-1"></a>datetime.fromisoformat(<span class="st">&quot;2019-02-05T10:22:33+0800&quot;</span>) <span class="co">## Errordue to trailing &#39;+0800&#39;</span></span></code></pre></div>
+<pre><code>## &#39;2022-12-31T12:00:10.354497&#39;
 ## datetime.datetime(2019, 2, 5, 10, 22, 33)</code></pre>
 <pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: Invalid isoformat string: &#39;2019-02-05T10:22:33Z&#39;</code></pre>
 <pre><code>## Error in py_call_impl(callable, dots$args, dots$keywords): ValueError: Invalid isoformat string: &#39;2019-02-05T10:22:33+0800&#39;</code></pre>
 </div>
 </div>
-<div id="instance-methods-1" class="section level3 hasAnchor" number="10.3.4">
-<h3><span class="header-section-number">10.3.4</span> Instance Methods<a href="date-time-and-timezone.html#instance-methods-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="weekday" class="section level4 unnumbered hasAnchor">
-<h4>weekday<a href="date-time-and-timezone.html#weekday" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb336"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb336-1"><a href="date-time-and-timezone.html#cb336-1" aria-hidden="true" tabindex="-1"></a>datetime.now().weekday()</span></code></pre></div>
-<pre><code>## 4</code></pre>
+<div id="instance-attributes-1" class="section level3 hasAnchor" number="10.3.4">
+<h3><span class="header-section-number">10.3.4</span> Instance Attributes<a href="date-time-and-timezone.html#instance-attributes-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb338"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb338-1"><a href="date-time-and-timezone.html#cb338-1" aria-hidden="true" tabindex="-1"></a>now <span class="op">=</span> datetime.now(tz<span class="op">=</span>MY)  <span class="co">## initialize the instance</span></span>
+<span id="cb338-2"><a href="date-time-and-timezone.html#cb338-2" aria-hidden="true" tabindex="-1"></a>now.month</span>
+<span id="cb338-3"><a href="date-time-and-timezone.html#cb338-3" aria-hidden="true" tabindex="-1"></a>now.day</span>
+<span id="cb338-4"><a href="date-time-and-timezone.html#cb338-4" aria-hidden="true" tabindex="-1"></a>now.hour</span>
+<span id="cb338-5"><a href="date-time-and-timezone.html#cb338-5" aria-hidden="true" tabindex="-1"></a>now.minute</span>
+<span id="cb338-6"><a href="date-time-and-timezone.html#cb338-6" aria-hidden="true" tabindex="-1"></a>now.tzinfo                   <span class="co">## this would be null if TZ parameter not specified</span></span></code></pre></div>
+<pre><code>## 12
+## 31
+## 12
+## 0
+## zoneinfo.ZoneInfo(key=&#39;Asia/Kuala_Lumpur&#39;)</code></pre>
 </div>
-<div id="update-.replace" class="section level4 hasAnchor" number="10.3.4.1">
-<h4><span class="header-section-number">10.3.4.1</span> Update (.replace)<a href="date-time-and-timezone.html#update-.replace" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb338"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb338-1"><a href="date-time-and-timezone.html#cb338-1" aria-hidden="true" tabindex="-1"></a>datetime.now().replace(year<span class="op">=</span><span class="dv">1999</span>)</span></code></pre></div>
-<pre><code>## datetime.datetime(1999, 12, 30, 21, 40, 22, 102195)</code></pre>
+<div id="instance-methods-1" class="section level3 hasAnchor" number="10.3.5">
+<h3><span class="header-section-number">10.3.5</span> Instance Methods<a href="date-time-and-timezone.html#instance-methods-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="update-data.replace" class="section level4 unnumbered hasAnchor">
+<h4>Update Data(.replace)<a href="date-time-and-timezone.html#update-data.replace" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Use <strong><code>replace()</code></strong> to change any parameters of the date/datetime during initialization.</p>
+<div class="sourceCode" id="cb340"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb340-1"><a href="date-time-and-timezone.html#cb340-1" aria-hidden="true" tabindex="-1"></a>birthday <span class="op">=</span> datetime(<span class="dv">1997</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">35</span>,<span class="dv">21</span>)   <span class="co">## replace for datetime</span></span>
+<span id="cb340-2"><a href="date-time-and-timezone.html#cb340-2" aria-hidden="true" tabindex="-1"></a>birthday</span>
+<span id="cb340-3"><a href="date-time-and-timezone.html#cb340-3" aria-hidden="true" tabindex="-1"></a>birthday.replace(tzinfo<span class="op">=</span>NY, year<span class="op">=</span><span class="dv">1998</span>, month<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb340-4"><a href="date-time-and-timezone.html#cb340-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb340-5"><a href="date-time-and-timezone.html#cb340-5" aria-hidden="true" tabindex="-1"></a>holiday <span class="op">=</span> date(<span class="dv">1999</span>,<span class="dv">8</span>,<span class="dv">31</span>)                <span class="co">## replace for date</span></span>
+<span id="cb340-6"><a href="date-time-and-timezone.html#cb340-6" aria-hidden="true" tabindex="-1"></a>holiday</span>
+<span id="cb340-7"><a href="date-time-and-timezone.html#cb340-7" aria-hidden="true" tabindex="-1"></a>holiday.replace(year<span class="op">=</span><span class="dv">2000</span>)</span></code></pre></div>
+<pre><code>## datetime.datetime(1997, 3, 1, 10, 35, 21)
+## datetime.datetime(1998, 5, 1, 10, 35, 21, tzinfo=zoneinfo.ZoneInfo(key=&#39;America/New_York&#39;))
+## datetime.date(1999, 8, 31)
+## datetime.date(2000, 8, 31)</code></pre>
+</div>
+<div id="timezone-conversion-astimezone" class="section level4 unnumbered hasAnchor">
+<h4>Timezone Conversion (astimezone)<a href="date-time-and-timezone.html#timezone-conversion-astimezone" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Use <strong><code>astimezone(&lt;zoneinfo_timezone&gt;)</code></strong> to convert a datetime to the desired timezone</li>
+<li>When applying this to a <strong>timezone naive</strong> datetime, the datetime is assumed to be local timezone for conversion. Observe the example below.</li>
+</ul>
+<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="date-time-and-timezone.html#cb342-1" aria-hidden="true" tabindex="-1"></a>birthday <span class="op">=</span> datetime(<span class="dv">1997</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">35</span>,<span class="dv">21</span>)  <span class="co">## timezone naive, assumed to be local timezone for conversion</span></span>
+<span id="cb342-2"><a href="date-time-and-timezone.html#cb342-2" aria-hidden="true" tabindex="-1"></a>birthday.astimezone(NY)                 <span class="co">## convert to NY time</span></span>
+<span id="cb342-3"><a href="date-time-and-timezone.html#cb342-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb342-4"><a href="date-time-and-timezone.html#cb342-4" aria-hidden="true" tabindex="-1"></a>birthday <span class="op">=</span> datetime(<span class="dv">1997</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">35</span>,<span class="dv">21</span>, tzinfo<span class="op">=</span>UTC)  <span class="co">## timezone aware</span></span>
+<span id="cb342-5"><a href="date-time-and-timezone.html#cb342-5" aria-hidden="true" tabindex="-1"></a>birthday.astimezone(NY)                  <span class="co">## convert to NY time</span></span></code></pre></div>
+<pre><code>## datetime.datetime(1997, 2, 28, 21, 35, 21, tzinfo=zoneinfo.ZoneInfo(key=&#39;America/New_York&#39;))
+## datetime.datetime(1997, 3, 1, 5, 35, 21, tzinfo=zoneinfo.ZoneInfo(key=&#39;America/New_York&#39;))</code></pre>
 </div>
 <div id="convert-to-time-.time" class="section level4 unnumbered hasAnchor">
 <h4>Convert to Time (.time)<a href="date-time-and-timezone.html#convert-to-time-.time" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb340"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb340-1"><a href="date-time-and-timezone.html#cb340-1" aria-hidden="true" tabindex="-1"></a>datetime.now().time()</span></code></pre></div>
-<pre><code>## datetime.time(21, 40, 22, 298069)</code></pre>
+<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="date-time-and-timezone.html#cb344-1" aria-hidden="true" tabindex="-1"></a>datetime.now().time()</span></code></pre></div>
+<pre><code>## datetime.time(12, 0, 11, 364837)</code></pre>
 </div>
 <div id="convert-to-date-.date" class="section level4 unnumbered hasAnchor">
 <h4>Convert to Date (.date)<a href="date-time-and-timezone.html#convert-to-date-.date" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="date-time-and-timezone.html#cb342-1" aria-hidden="true" tabindex="-1"></a>datetime.now().date()</span></code></pre></div>
-<pre><code>## datetime.date(2022, 12, 30)</code></pre>
+<div class="sourceCode" id="cb346"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb346-1"><a href="date-time-and-timezone.html#cb346-1" aria-hidden="true" tabindex="-1"></a>datetime.now().date()</span></code></pre></div>
+<pre><code>## datetime.date(2022, 12, 31)</code></pre>
 </div>
 <div id="convert-to-string-strftime-isoformat" class="section level4 unnumbered hasAnchor">
 <h4>Convert to String (strftime, isoformat)<a href="date-time-and-timezone.html#convert-to-string-strftime-isoformat" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Refer <a href="https://strftime.org/">this cheatsheet</a> for complete directives.</p>
-<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="date-time-and-timezone.html#cb344-1" aria-hidden="true" tabindex="-1"></a><span class="bu">str</span>( datetime.now() )</span>
-<span id="cb344-2"><a href="date-time-and-timezone.html#cb344-2" aria-hidden="true" tabindex="-1"></a>datetime.now().strftime(<span class="st">&#39;</span><span class="sc">%d</span><span class="st">-%b-%Y&#39;</span>)</span>
-<span id="cb344-3"><a href="date-time-and-timezone.html#cb344-3" aria-hidden="true" tabindex="-1"></a>datetime.utcnow().strftime(<span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st">T%H:%M:%S.</span><span class="sc">%f</span><span class="st">Z&#39;</span>)  <span class="co">## ISO 8601 UTC</span></span>
-<span id="cb344-4"><a href="date-time-and-timezone.html#cb344-4" aria-hidden="true" tabindex="-1"></a>datetime.utcnow().isoformat()</span></code></pre></div>
-<pre><code>## &#39;2022-12-30 21:40:22.649073&#39;
-## &#39;30-Dec-2022&#39;
-## &#39;2022-12-30T13:40:22.658928Z&#39;
-## &#39;2022-12-30T13:40:22.662960&#39;</code></pre>
+<div class="sourceCode" id="cb348"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb348-1"><a href="date-time-and-timezone.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="bu">str</span>( datetime.now() )</span>
+<span id="cb348-2"><a href="date-time-and-timezone.html#cb348-2" aria-hidden="true" tabindex="-1"></a>datetime.now().strftime(<span class="st">&#39;</span><span class="sc">%d</span><span class="st">-%b-%Y&#39;</span>)</span>
+<span id="cb348-3"><a href="date-time-and-timezone.html#cb348-3" aria-hidden="true" tabindex="-1"></a>datetime.utcnow().strftime(<span class="st">&#39;%Y-%m-</span><span class="sc">%d</span><span class="st">T%H:%M:%S.</span><span class="sc">%f</span><span class="st">Z&#39;</span>)  <span class="co">## ISO 8601 UTC</span></span>
+<span id="cb348-4"><a href="date-time-and-timezone.html#cb348-4" aria-hidden="true" tabindex="-1"></a>datetime.utcnow().isoformat()</span></code></pre></div>
+<pre><code>## &#39;2022-12-31 12:00:11.743655&#39;
+## &#39;31-Dec-2022&#39;
+## &#39;2022-12-31T04:00:11.759281Z&#39;
+## &#39;2022-12-31T04:00:11.759281&#39;</code></pre>
+</div>
+<div id="weekday" class="section level4 unnumbered hasAnchor">
+<h4>Weekday<a href="date-time-and-timezone.html#weekday" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb350"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb350-1"><a href="date-time-and-timezone.html#cb350-1" aria-hidden="true" tabindex="-1"></a>now <span class="op">=</span> datetime.now()</span>
+<span id="cb350-2"><a href="date-time-and-timezone.html#cb350-2" aria-hidden="true" tabindex="-1"></a>now.weekday()</span></code></pre></div>
+<pre><code>## 5</code></pre>
 </div>
 </div>
-<div id="instance-attributes" class="section level3 hasAnchor" number="10.3.5">
-<h3><span class="header-section-number">10.3.5</span> Instance Attributes<a href="date-time-and-timezone.html#instance-attributes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb346"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb346-1"><a href="date-time-and-timezone.html#cb346-1" aria-hidden="true" tabindex="-1"></a>datetime.now().year</span>
-<span id="cb346-2"><a href="date-time-and-timezone.html#cb346-2" aria-hidden="true" tabindex="-1"></a>datetime.now().month</span>
-<span id="cb346-3"><a href="date-time-and-timezone.html#cb346-3" aria-hidden="true" tabindex="-1"></a>datetime.now().day</span>
-<span id="cb346-4"><a href="date-time-and-timezone.html#cb346-4" aria-hidden="true" tabindex="-1"></a>datetime.now().hour</span>
-<span id="cb346-5"><a href="date-time-and-timezone.html#cb346-5" aria-hidden="true" tabindex="-1"></a>datetime.now().minute</span></code></pre></div>
+<div id="instance-attributes-2" class="section level3 hasAnchor" number="10.3.6">
+<h3><span class="header-section-number">10.3.6</span> Instance Attributes<a href="date-time-and-timezone.html#instance-attributes-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb352"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb352-1"><a href="date-time-and-timezone.html#cb352-1" aria-hidden="true" tabindex="-1"></a>datetime.now().year</span>
+<span id="cb352-2"><a href="date-time-and-timezone.html#cb352-2" aria-hidden="true" tabindex="-1"></a>datetime.now().month</span>
+<span id="cb352-3"><a href="date-time-and-timezone.html#cb352-3" aria-hidden="true" tabindex="-1"></a>datetime.now().day</span>
+<span id="cb352-4"><a href="date-time-and-timezone.html#cb352-4" aria-hidden="true" tabindex="-1"></a>datetime.now().hour</span>
+<span id="cb352-5"><a href="date-time-and-timezone.html#cb352-5" aria-hidden="true" tabindex="-1"></a>datetime.now().minute</span></code></pre></div>
 <pre><code>## 2022
 ## 12
-## 30
-## 21
-## 40</code></pre>
+## 31
+## 12
+## 0</code></pre>
+</div>
+<div id="operators-5" class="section level3 hasAnchor" number="10.3.7">
+<h3><span class="header-section-number">10.3.7</span> Operators<a href="date-time-and-timezone.html#operators-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="difference--" class="section level4 unnumbered hasAnchor">
+<h4>Difference (-)<a href="date-time-and-timezone.html#difference--" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Use <strong><code>-</code></strong> to get the difference between two dates as <strong><code>timedelta</code></strong> object.</p>
+<div class="sourceCode" id="cb354"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb354-1"><a href="date-time-and-timezone.html#cb354-1" aria-hidden="true" tabindex="-1"></a>dt1 <span class="op">=</span> datetime(<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">25</span>,<span class="dv">35</span>)</span>
+<span id="cb354-2"><a href="date-time-and-timezone.html#cb354-2" aria-hidden="true" tabindex="-1"></a>dt2 <span class="op">=</span> datetime(<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">14</span>,<span class="dv">30</span>,<span class="dv">55</span>)</span>
+<span id="cb354-3"><a href="date-time-and-timezone.html#cb354-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb354-4"><a href="date-time-and-timezone.html#cb354-4" aria-hidden="true" tabindex="-1"></a>dt2 <span class="op">-</span> dt1</span>
+<span id="cb354-5"><a href="date-time-and-timezone.html#cb354-5" aria-hidden="true" tabindex="-1"></a>dt1 <span class="op">-</span> dt2</span></code></pre></div>
+<pre><code>## datetime.timedelta(days=1, seconds=14720)
+## datetime.timedelta(days=-2, seconds=71680)</code></pre>
+</div>
+<div id="addition" class="section level4 unnumbered hasAnchor">
+<h4>Addition (+)<a href="date-time-and-timezone.html#addition" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Adding <strong><code>timedelta</code></strong> to a datetime to get an adjusted datetime. Note that there can be negative adjustment to any parameters of <strong>timedelta</strong>.</p>
+<div class="sourceCode" id="cb356"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb356-1"><a href="date-time-and-timezone.html#cb356-1" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> timedelta(days<span class="op">=</span><span class="dv">5</span>, hours<span class="op">=-</span><span class="dv">5</span>, minutes<span class="op">=</span><span class="dv">30</span>, seconds<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb356-2"><a href="date-time-and-timezone.html#cb356-2" aria-hidden="true" tabindex="-1"></a>dt1   <span class="op">=</span> datetime(<span class="dv">2000</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">25</span>,<span class="dv">35</span>)</span>
+<span id="cb356-3"><a href="date-time-and-timezone.html#cb356-3" aria-hidden="true" tabindex="-1"></a>delta  <span class="co">## check the delta object</span></span>
+<span id="cb356-4"><a href="date-time-and-timezone.html#cb356-4" aria-hidden="true" tabindex="-1"></a>dt1    <span class="co">## original datetime</span></span>
+<span id="cb356-5"><a href="date-time-and-timezone.html#cb356-5" aria-hidden="true" tabindex="-1"></a>dt1 <span class="op">+</span> timedelta(days<span class="op">=</span><span class="dv">5</span>, hours<span class="op">=-</span><span class="dv">5</span>, minutes<span class="op">=</span><span class="dv">30</span>, seconds<span class="op">=</span><span class="dv">10</span>)  <span class="co">## adjusted datetime</span></span></code></pre></div>
+<pre><code>## datetime.timedelta(days=4, seconds=70210)
+## datetime.datetime(2000, 1, 1, 10, 25, 35)
+## datetime.datetime(2000, 1, 6, 5, 55, 45)</code></pre>
+</div>
 </div>
 </div>
 <div id="time" class="section level2 hasAnchor" number="10.4">
 <h2><span class="header-section-number">10.4</span> Time<a href="date-time-and-timezone.html#time" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="constructor-4" class="section level3 hasAnchor" number="10.4.1">
 <h3><span class="header-section-number">10.4.1</span> Constructor<a href="date-time-and-timezone.html#constructor-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb348"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb348-1"><a href="date-time-and-timezone.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( time(<span class="dv">2</span>) )    <span class="co">#default single arugement, hour</span></span>
-<span id="cb348-2"><a href="date-time-and-timezone.html#cb348-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( time(<span class="dv">2</span>,<span class="dv">15</span>) ) <span class="co">#default two arguments, hour, minute</span></span>
-<span id="cb348-3"><a href="date-time-and-timezone.html#cb348-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( time(hour<span class="op">=</span><span class="dv">2</span>,minute<span class="op">=</span><span class="dv">15</span>,second<span class="op">=</span><span class="dv">30</span>) )</span></code></pre></div>
+<div class="sourceCode" id="cb358"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb358-1"><a href="date-time-and-timezone.html#cb358-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( time(<span class="dv">2</span>) )    <span class="co">## specify hour only, minutes and seconds default to 0</span></span>
+<span id="cb358-2"><a href="date-time-and-timezone.html#cb358-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( time(<span class="dv">2</span>,<span class="dv">15</span>) ) <span class="co">## seconds default to 0</span></span>
+<span id="cb358-3"><a href="date-time-and-timezone.html#cb358-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( time(hour<span class="op">=</span><span class="dv">2</span>,minute<span class="op">=</span><span class="dv">15</span>,second<span class="op">=</span><span class="dv">30</span>) )</span></code></pre></div>
 <pre><code>## 02:00:00
 ## 02:15:00
 ## 02:15:30</code></pre>
 </div>
-<div id="instance-attributes-1" class="section level3 hasAnchor" number="10.4.2">
-<h3><span class="header-section-number">10.4.2</span> Instance Attributes<a href="date-time-and-timezone.html#instance-attributes-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb350"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb350-1"><a href="date-time-and-timezone.html#cb350-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> datetime.now().time()</span>
-<span id="cb350-2"><a href="date-time-and-timezone.html#cb350-2" aria-hidden="true" tabindex="-1"></a>t.hour</span>
-<span id="cb350-3"><a href="date-time-and-timezone.html#cb350-3" aria-hidden="true" tabindex="-1"></a>t.minute</span>
-<span id="cb350-4"><a href="date-time-and-timezone.html#cb350-4" aria-hidden="true" tabindex="-1"></a>t.second</span></code></pre></div>
-<pre><code>## 21
-## 40
-## 23</code></pre>
+<div id="instance-methods-2" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Instance Methods<a href="date-time-and-timezone.html#instance-methods-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb360"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb360-1"><a href="date-time-and-timezone.html#cb360-1" aria-hidden="true" tabindex="-1"></a>t1 <span class="op">=</span> time(<span class="dv">2</span>,<span class="dv">15</span>,<span class="dv">30</span>)</span>
+<span id="cb360-2"><a href="date-time-and-timezone.html#cb360-2" aria-hidden="true" tabindex="-1"></a>t2 <span class="op">=</span> t1.replace(hour<span class="op">=</span><span class="dv">5</span>, minute<span class="op">=</span><span class="dv">30</span>, second<span class="op">=</span><span class="dv">55</span>)</span>
+<span id="cb360-3"><a href="date-time-and-timezone.html#cb360-3" aria-hidden="true" tabindex="-1"></a>t1.isoformat()</span>
+<span id="cb360-4"><a href="date-time-and-timezone.html#cb360-4" aria-hidden="true" tabindex="-1"></a>t2.isoformat()</span></code></pre></div>
+<pre><code>## &#39;02:15:30&#39;
+## &#39;05:30:55&#39;</code></pre>
+</div>
+<div id="instance-attributes-3" class="section level3 hasAnchor" number="10.4.3">
+<h3><span class="header-section-number">10.4.3</span> Instance Attributes<a href="date-time-and-timezone.html#instance-attributes-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb362"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb362-1"><a href="date-time-and-timezone.html#cb362-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> time(<span class="dv">2</span>,<span class="dv">15</span>,<span class="dv">30</span>)</span>
+<span id="cb362-2"><a href="date-time-and-timezone.html#cb362-2" aria-hidden="true" tabindex="-1"></a>t.hour</span>
+<span id="cb362-3"><a href="date-time-and-timezone.html#cb362-3" aria-hidden="true" tabindex="-1"></a>t.minute</span>
+<span id="cb362-4"><a href="date-time-and-timezone.html#cb362-4" aria-hidden="true" tabindex="-1"></a>t.second</span></code></pre></div>
+<pre><code>## 2
+## 15
+## 30</code></pre>
 </div>
 </div>
 <div id="timedelta" class="section level2 hasAnchor" number="10.5">
@@ -1067,22 +1054,23 @@ GMT+8:  &quot;2007-04-05T12:30+08     #notice +08```
 <ul>
 <li>Constructor does not support <strong>years</strong> argument.</li>
 </ul>
-<div class="sourceCode" id="cb352"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb352-1"><a href="date-time-and-timezone.html#cb352-1" aria-hidden="true" tabindex="-1"></a>delt <span class="op">=</span> timedelta(days<span class="op">=</span><span class="dv">365</span>,minutes<span class="op">=</span><span class="dv">33</span>,seconds<span class="op">=</span><span class="dv">15</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb364"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb364-1"><a href="date-time-and-timezone.html#cb364-1" aria-hidden="true" tabindex="-1"></a>delt <span class="op">=</span> timedelta(days<span class="op">=</span><span class="dv">365</span>,minutes<span class="op">=</span><span class="dv">33</span>,seconds<span class="op">=</span><span class="dv">15</span>)</span></code></pre></div>
 </div>
 <div id="using-with-datetime" class="section level3 hasAnchor" number="10.5.2">
 <h3><span class="header-section-number">10.5.2</span> Using With Datetime<a href="date-time-and-timezone.html#using-with-datetime" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li>Apply timedelta on <strong>datetime</strong> object<br />
-</li>
-<li>Timedelta <strong>Cannot</strong> be applied on <strong>time object</strong> , because it potentially go beyond single day (24H)</li>
+<li><strong><code>timedelta</code></strong> can be applied on on <strong>datetime</strong> object.</li>
+<li>Timedelta <strong>Cannot</strong> be applied on <strong>time object</strong> , because it potentially go beyond single day (24H).</li>
 </ul>
-<div class="sourceCode" id="cb353"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb353-1"><a href="date-time-and-timezone.html#cb353-1" aria-hidden="true" tabindex="-1"></a>now <span class="op">=</span> datetime.now()</span>
-<span id="cb353-2"><a href="date-time-and-timezone.html#cb353-2" aria-hidden="true" tabindex="-1"></a>now</span>
-<span id="cb353-3"><a href="date-time-and-timezone.html#cb353-3" aria-hidden="true" tabindex="-1"></a>delt</span>
-<span id="cb353-4"><a href="date-time-and-timezone.html#cb353-4" aria-hidden="true" tabindex="-1"></a>now<span class="op">+</span>delt</span></code></pre></div>
-<pre><code>## datetime.datetime(2022, 12, 30, 21, 40, 23, 596120)
-## datetime.timedelta(days=365, seconds=1995)
-## datetime.datetime(2023, 12, 30, 22, 13, 38, 596120)</code></pre>
+<div class="sourceCode" id="cb365"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb365-1"><a href="date-time-and-timezone.html#cb365-1" aria-hidden="true" tabindex="-1"></a>dt1  <span class="op">=</span> datetime.now()</span>
+<span id="cb365-2"><a href="date-time-and-timezone.html#cb365-2" aria-hidden="true" tabindex="-1"></a>delt <span class="op">=</span> timedelta(days<span class="op">=</span><span class="dv">365</span>,minutes<span class="op">=</span><span class="dv">33</span>,seconds<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb365-3"><a href="date-time-and-timezone.html#cb365-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb365-4"><a href="date-time-and-timezone.html#cb365-4" aria-hidden="true" tabindex="-1"></a>delt</span>
+<span id="cb365-5"><a href="date-time-and-timezone.html#cb365-5" aria-hidden="true" tabindex="-1"></a>dt1</span>
+<span id="cb365-6"><a href="date-time-and-timezone.html#cb365-6" aria-hidden="true" tabindex="-1"></a>now <span class="op">+</span> delt</span></code></pre></div>
+<pre><code>## datetime.timedelta(days=365, seconds=1995)
+## datetime.datetime(2022, 12, 31, 12, 0, 14, 748657)
+## datetime.datetime(2023, 12, 31, 12, 33, 27, 30434)</code></pre>
 
 </div>
 </div>

@@ -1,59 +1,38 @@
-
-
-
 # Date, Time and Timezone
 
 ## Library Import
 
+All below are built-in libraries. There is a popular library named **pytz** not covered in this chapter as it is being deprecated. The replacement of pytz is **ZoneInfo**.
+
 ```{python, results='hold'}
-import pytz
-from pytz import timezone
-from datetime import date, datetime, time, timedelta
+from datetime import date, datetime, timedelta, time
+from zoneinfo import ZoneInfo
 ```
 
-## Timezone (pytz)
 
-**```pytz```** is **NOT** a built-in library.
+## ZoneInfo {#zoneinfo}
+
+**ZoneInfo** is the recommended built-in library to deal with timezone for **datetime** object. 
 
 ### Constructor
 
-**```pytz.timezone```** is the object class within **```pytz```**. 
+Initialize with zone name as key: **```ZoneInfo(key='<zone_name'>)```**.
 
 ```{python, results='hold'}
-MYTZ = timezone('Asia/Singapore')
-UTC  = pytz.utc
-UTC2 = timezone('UTC')
+MY = ZoneInfo('Asia/Kuala_Lumpur')
+NY = ZoneInfo('America/New_York')
+UTC= ZoneInfo('UTC')
 
-MYTZ
+MY
+NY
 UTC
-UTC2
 ```
 
-### Class Method
-
-#### Making Timezone Aware (.localize) {-}
-
-Use **```timezone.localize()```** to make a datetime/date object timezone aware.
+### Instance Attributes
 
 ```{python, results='hold'}
-naive =  datetime(2019, 8, 19, 12, 0)
-naive2 = datetime(2019, 8, 19)  ## will be assumed with time 00:00
-
-UTC. localize(naive)  ## make datetime TZ aware
-MYTZ.localize(naive2)  ## make date TZ aware
+MY.key
 ```
-
-### Attributes
-
-**```pytz.all_timezones```** is a list of time zone names in string. Example below shows timezone name for all cities in Asia.
-
-```{python, results='hold'}
-
-for x in pytz.all_timezones:
-  if x.startswith('Asia'):
-    print(x)
-```
-
 
 ## Date and Datetime
 
@@ -61,7 +40,7 @@ This is a built-in library by Python. There is no need to install this library.
 
 **`date`** and **`datetime`** are both standard built-in python library.
 
-**`datetime`** library contain four classes of objects:
+**`datetime`** library contain four object classes:
 
 - **date**: (year,month,day)
 - **time**: (hour,minute,second)
@@ -84,32 +63,49 @@ GMT+8:  "2007-04-05T12:30+08     #notice +08```
 
 ### Constructor
 
-Use constructor to create datetime / date object.
+Use constructor to create datetime / date object. You can make it timezone aware with ```tzinfo``` parameter, which is an **ZoneInfo** object.
 
 ```{python, results='hold'}
 ## Date Only
 date      (2000,1,1)
 type(date (2000,1,1))
 
-## Datetime
+## Datetime - TImezone Naive
 datetime  (2000,1,1,23,15,55)
 datetime  (year=2000,month=1,day=1,hour=23,minute=15,second=55)
 type(datetime(2000,1,1,0,0,0))
 ```
+#### Timezone Integration {-}
+
+Datetime supports **timezone** through built-in library (refer [ZoneInfo](#zoneinfo) chapter). Initialize datetime with **```tzinfo``` ** parameter to have a timezone aware datetime.
+
+```{python, results='hold'}
+MY = ZoneInfo('Asia/Kuala_Lumpur')
+NY = ZoneInfo('America/New_York')
+UTC= ZoneInfo('UTC')
+
+## Timezone Aware
+datetime  (2000,1,1,23,15,55, tzinfo=NY)
+```
+
 
 ### Class Methods
 
 #### Now and Today  {-}
 
-Both ```now()``` and ```today()``` return current **system local**  datetime, no timezone
-```utcnow()``` returns UTC datetime.
+- Both **```now()```** and **```today()```** return current **system local**  datetime, which is **timezone naive**.
+- **```utcnow()```** returns UTC datetime, which is also **timezone naive**.
+- Only **```now()```** supports **```tz```** parameter to convert the time to desired timezone.
+- **```today() / utcnow()** does not supports **```tz```** parameter.
 
-```{python, results='hold'}
+```{python, results='hold', error=TRUE}
 datetime.now()         ## local datetime
 datetime.today()       ## local datetime, same as above
 datetime.utcnow()      ## UTC datetime
+datetime.now(tz=NY)    ## convert to New York timezone
+datetime.today(tz=NY)  ## Error
+datetime.utcnow(tz=NY) ## Error
 ```
-
 #### Combine Data and Time (combine) {-}
 
 Apply ```datetime.combine()``` class method on both **date and time**  objects to get **datetime**
@@ -143,28 +139,54 @@ datetime.strptime('2/5/2018 4:49 PM', '%m/%d/%Y %I:%M %p')
 
 #### Convert from ISO (fromisoformat) {-}
 
-- ```fromisoformat()``` is the reverse of ```isoformat()```  
--  It actually **not ISO compliance**: when Z or +8 is included at the end of the string, error occur
+- **```fromisoformat()```** is the reverse of **```isoformat()```**.    
+-  It actually **not ISO compliance**: when Z or +8 is included at the end of the string, Error is triggered.
 
 ```{python, results='hold', error=TRUE}
 datetime.now().isoformat()                         ## checkout the iso format
 datetime.fromisoformat("2019-02-05T10:22:33")      ## Good
-datetime.fromisoformat("2019-02-05T10:22:33Z")     ## Error due to 'Z'
-datetime.fromisoformat("2019-02-05T10:22:33+0800") ## Errordue to '+0800'
+datetime.fromisoformat("2019-02-05T10:22:33Z")     ## Error due to trailing 'Z'
+datetime.fromisoformat("2019-02-05T10:22:33+0800") ## Errordue to trailing '+0800'
+```
+### Instance Attributes
+
+
+```{python, results='hold'}
+now = datetime.now(tz=MY)  ## initialize the instance
+now.month
+now.day
+now.hour
+now.minute
+now.tzinfo                   ## this would be null if TZ parameter not specified
 ```
 
 ### Instance Methods
 
-#### weekday  {-}
+#### Update Data(.replace) {-}
 
-```{python}
-datetime.now().weekday()
+Use **```replace()```** to change any parameters of the date/datetime during initialization.
+
+```{python, results='hold'}
+birthday = datetime(1997,3,1,10,35,21)   ## replace for datetime
+birthday
+birthday.replace(tzinfo=NY, year=1998, month=5)
+
+holiday = date(1999,8,31)                ## replace for date
+holiday
+holiday.replace(year=2000)
 ```
 
-#### Update (.replace)
+#### Timezone Conversion (astimezone) {-}
 
-```{python}
-datetime.now().replace(year=1999)
+- Use **```astimezone(<zoneinfo_timezone>)```** to convert a datetime to the desired timezone
+- When applying this to  a **timezone naive** datetime, the datetime is assumed to be local timezone for conversion. Observe the example below.
+
+```{python, results='hold'}
+birthday = datetime(1997,3,1,10,35,21)  ## timezone naive, assumed to be local timezone for conversion
+birthday.astimezone(NY)                 ## convert to NY time
+
+birthday = datetime(1997,3,1,10,35,21, tzinfo=UTC)  ## timezone aware
+birthday.astimezone(NY)                  ## convert to NY time
 ```
 
 #### Convert to Time (.time)  {-}
@@ -172,13 +194,11 @@ datetime.now().replace(year=1999)
 ```{python, jupyter_meta = list(scrolled = TRUE)}
 datetime.now().time()
 ```
-
 #### Convert to Date (.date)  {-}
 
 ```{python}
 datetime.now().date()
 ```
-
 #### Convert to String (strftime, isoformat)  {-}
 
 Refer [this cheatsheet](https://strftime.org/) for complete directives.
@@ -190,6 +210,14 @@ datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%fZ')  ## ISO 8601 UTC
 datetime.utcnow().isoformat()
 ```
 
+#### Weekday  {-}
+
+```{python, results='hold'}
+now = datetime.now()
+now.weekday()
+```
+
+
 ### Instance Attributes
 
 ```{python, results='hold'}
@@ -200,20 +228,55 @@ datetime.now().hour
 datetime.now().minute
 ```
 
+### Operators
+
+#### Difference (-) {-}
+
+Use **```-```** to get the difference between two dates as **```timedelta```** object.
+
+```{python, results='hold'}
+dt1 = datetime(2000,1,1,10,25,35)
+dt2 = datetime(2000,1,2,14,30,55)
+
+dt2 - dt1
+dt1 - dt2
+```
+
+#### Addition (+) {-}
+
+Adding **```timedelta```** to a datetime to get an adjusted datetime. Note that there can be negative adjustment to any parameters of **timedelta**.
+
+```{python, results='hold'}
+delta = timedelta(days=5, hours=-5, minutes=30, seconds=10)
+dt1   = datetime(2000,1,1,10,25,35)
+delta  ## check the delta object
+dt1    ## original datetime
+dt1 + timedelta(days=5, hours=-5, minutes=30, seconds=10)  ## adjusted datetime
+```
+
 ## Time
 
 ### Constructor
 
 ```{python, results='hold'}
-print( time(2) )    #default single arugement, hour
-print( time(2,15) ) #default two arguments, hour, minute
+print( time(2) )    ## specify hour only, minutes and seconds default to 0
+print( time(2,15) ) ## seconds default to 0
 print( time(hour=2,minute=15,second=30) )
+```
+
+### Instance Methods
+
+```{python, results='hold'}
+t1 = time(2,15,30)
+t2 = t1.replace(hour=5, minute=30, second=55)
+t1.isoformat()
+t2.isoformat()
 ```
 
 ### Instance Attributes
 
 ```{python, results='hold'}
-t = datetime.now().time()
+t = time(2,15,30)
 t.hour
 t.minute
 t.second
@@ -231,13 +294,14 @@ delt = timedelta(days=365,minutes=33,seconds=15)
 
 ### Using With Datetime
 
-- Apply timedelta on **datetime** object  
-- Timedelta **Cannot** be applied on **time object**  , because it potentially go beyond single day (24H)
-
+- **```timedelta```** can be applied on  on **datetime** object.
+- Timedelta **Cannot** be applied on **time object**  , because it potentially go beyond single day (24H).
 
 ```{python, results='hold'}
-now = datetime.now()
-now
+dt1  = datetime.now()
+delt = timedelta(days=365,minutes=33,seconds=15)
+
 delt
-now+delt
+dt1
+now + delt
 ```

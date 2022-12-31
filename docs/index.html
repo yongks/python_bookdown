@@ -23,7 +23,7 @@
 <meta name="author" content="Yong Keh Soon" />
 
 
-<meta name="date" content="2022-12-30" />
+<meta name="date" content="2022-12-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -341,19 +341,18 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html"><i class="fa fa-check"></i><b>10</b> Date, Time and Timezone</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#library-import"><i class="fa fa-check"></i><b>10.1</b> Library Import</a></li>
-<li class="chapter" data-level="10.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-pytz"><i class="fa fa-check"></i><b>10.2</b> Timezone (pytz)</a>
+<li class="chapter" data-level="10.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#zoneinfo"><i class="fa fa-check"></i><b>10.2</b> ZoneInfo</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-2"><i class="fa fa-check"></i><b>10.2.1</b> Constructor</a></li>
-<li class="chapter" data-level="10.2.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#class-method"><i class="fa fa-check"></i><b>10.2.2</b> Class Method</a>
-<ul>
-<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#making-timezone-aware-.localize"><i class="fa fa-check"></i>Making Timezone Aware (.localize)</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#attributes-1"><i class="fa fa-check"></i><b>10.2.3</b> Attributes</a></li>
+<li class="chapter" data-level="10.2.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes"><i class="fa fa-check"></i><b>10.2.2</b> Instance Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#date-and-datetime"><i class="fa fa-check"></i><b>10.3</b> Date and Datetime</a>
 <ul>
 <li class="chapter" data-level="10.3.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#iso8601"><i class="fa fa-check"></i><b>10.3.1</b> ISO8601</a></li>
-<li class="chapter" data-level="10.3.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-3"><i class="fa fa-check"></i><b>10.3.2</b> Constructor</a></li>
+<li class="chapter" data-level="10.3.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-3"><i class="fa fa-check"></i><b>10.3.2</b> Constructor</a>
+<ul>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-integration"><i class="fa fa-check"></i>Timezone Integration</a></li>
+</ul></li>
 <li class="chapter" data-level="10.3.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#class-methods"><i class="fa fa-check"></i><b>10.3.3</b> Class Methods</a>
 <ul>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#now-and-today"><i class="fa fa-check"></i>Now and Today</a></li>
@@ -361,20 +360,28 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-from-string-strptime"><i class="fa fa-check"></i>Convert from String (strptime)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-from-iso-fromisoformat"><i class="fa fa-check"></i>Convert from ISO (fromisoformat)</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-1"><i class="fa fa-check"></i><b>10.3.4</b> Instance Methods</a>
+<li class="chapter" data-level="10.3.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-1"><i class="fa fa-check"></i><b>10.3.4</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-1"><i class="fa fa-check"></i><b>10.3.5</b> Instance Methods</a>
 <ul>
-<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#weekday"><i class="fa fa-check"></i>weekday</a></li>
-<li class="chapter" data-level="10.3.4.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#update-.replace"><i class="fa fa-check"></i><b>10.3.4.1</b> Update (.replace)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#update-data.replace"><i class="fa fa-check"></i>Update Data(.replace)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-conversion-astimezone"><i class="fa fa-check"></i>Timezone Conversion (astimezone)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-time-.time"><i class="fa fa-check"></i>Convert to Time (.time)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-date-.date"><i class="fa fa-check"></i>Convert to Date (.date)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-string-strftime-isoformat"><i class="fa fa-check"></i>Convert to String (strftime, isoformat)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#weekday"><i class="fa fa-check"></i>Weekday</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes"><i class="fa fa-check"></i><b>10.3.5</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.6" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-2"><i class="fa fa-check"></i><b>10.3.6</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.7" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#operators-5"><i class="fa fa-check"></i><b>10.3.7</b> Operators</a>
+<ul>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#difference--"><i class="fa fa-check"></i>Difference (-)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#addition"><i class="fa fa-check"></i>Addition (+)</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#time"><i class="fa fa-check"></i><b>10.4</b> Time</a>
 <ul>
 <li class="chapter" data-level="10.4.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-4"><i class="fa fa-check"></i><b>10.4.1</b> Constructor</a></li>
-<li class="chapter" data-level="10.4.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-1"><i class="fa fa-check"></i><b>10.4.2</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.4.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-2"><i class="fa fa-check"></i><b>10.4.2</b> Instance Methods</a></li>
+<li class="chapter" data-level="10.4.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-3"><i class="fa fa-check"></i><b>10.4.3</b> Instance Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="10.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timedelta"><i class="fa fa-check"></i><b>10.5</b> Timedelta</a>
 <ul>
@@ -390,7 +397,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2.1" data-path="pandas.html"><a href="pandas.html#types-of-objects"><i class="fa fa-check"></i><b>11.2.1</b> Types of Objects</a></li>
 <li class="chapter" data-level="11.2.2" data-path="pandas.html"><a href="pandas.html#series-and-dataframe"><i class="fa fa-check"></i><b>11.2.2</b> Series and DataFrame</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="pandas.html"><a href="pandas.html#class-method-1"><i class="fa fa-check"></i><b>11.3</b> Class Method</a>
+<li class="chapter" data-level="11.3" data-path="pandas.html"><a href="pandas.html#class-method"><i class="fa fa-check"></i><b>11.3</b> Class Method</a>
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="pandas.html"><a href="pandas.html#convertion"><i class="fa fa-check"></i><b>11.3.1</b> Convertion</a>
 <ul>
@@ -439,7 +446,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-string"><i class="fa fa-check"></i>From String</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-datetime-date"><i class="fa fa-check"></i>From <code>datetime / date</code></a></li>
 </ul></li>
-<li class="chapter" data-level="11.4.2" data-path="pandas.html"><a href="pandas.html#attributes-2"><i class="fa fa-check"></i><b>11.4.2</b> Attributes</a></li>
+<li class="chapter" data-level="11.4.2" data-path="pandas.html"><a href="pandas.html#attributes-1"><i class="fa fa-check"></i><b>11.4.2</b> Attributes</a></li>
 <li class="chapter" data-level="11.4.3" data-path="pandas.html"><a href="pandas.html#timezones"><i class="fa fa-check"></i><b>11.4.3</b> Timezones</a></li>
 <li class="chapter" data-level="11.4.4" data-path="pandas.html"><a href="pandas.html#formatting"><i class="fa fa-check"></i><b>11.4.4</b> Formatting</a></li>
 <li class="chapter" data-level="11.4.5" data-path="pandas.html"><a href="pandas.html#conversion"><i class="fa fa-check"></i><b>11.4.5</b> Conversion</a>
@@ -459,7 +466,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.5.1" data-path="pandas.html"><a href="pandas.html#creating"><i class="fa fa-check"></i><b>11.5.1</b> Creating</a></li>
 <li class="chapter" data-level="11.5.2" data-path="pandas.html"><a href="pandas.html#co-conversion"><i class="fa fa-check"></i><b>11.5.2</b> Co Conversion</a></li>
 <li class="chapter" data-level="11.5.3" data-path="pandas.html"><a href="pandas.html#structure-conversion"><i class="fa fa-check"></i><b>11.5.3</b> Structure Conversion</a></li>
-<li class="chapter" data-level="11.5.4" data-path="pandas.html"><a href="pandas.html#attributes-3"><i class="fa fa-check"></i><b>11.5.4</b> Attributes</a></li>
+<li class="chapter" data-level="11.5.4" data-path="pandas.html"><a href="pandas.html#attributes-2"><i class="fa fa-check"></i><b>11.5.4</b> Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="pandas.html"><a href="pandas.html#class-series"><i class="fa fa-check"></i><b>11.6</b> Class: Series</a>
 <ul>
@@ -490,13 +497,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#the-data"><i class="fa fa-check"></i>The Data</a></li>
 <li class="chapter" data-level="11.6.4.1" data-path="pandas.html"><a href="pandas.html#the-attributes"><i class="fa fa-check"></i><b>11.6.4.1</b> The Attributes</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6.5" data-path="pandas.html"><a href="pandas.html#instance-methods-2"><i class="fa fa-check"></i><b>11.6.5</b> Instance Methods</a>
+<li class="chapter" data-level="11.6.5" data-path="pandas.html"><a href="pandas.html#instance-methods-3"><i class="fa fa-check"></i><b>11.6.5</b> Instance Methods</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#index-manipulation"><i class="fa fa-check"></i>Index Manipulation</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#structure-conversion-1"><i class="fa fa-check"></i>Structure Conversion</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#datatype-conversion"><i class="fa fa-check"></i>DataType Conversion</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6.6" data-path="pandas.html"><a href="pandas.html#operators-5"><i class="fa fa-check"></i><b>11.6.6</b> Operators</a>
+<li class="chapter" data-level="11.6.6" data-path="pandas.html"><a href="pandas.html#operators-6"><i class="fa fa-check"></i><b>11.6.6</b> Operators</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#arithmetic-operator"><i class="fa fa-check"></i>Arithmetic Operator</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#logic-operator"><i class="fa fa-check"></i>Logic Operator</a></li>
@@ -527,14 +534,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-record-oriented-data"><i class="fa fa-check"></i>From Record Oriented Data</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-column-oriented-data"><i class="fa fa-check"></i>From Column Oriented Data</a></li>
 </ul></li>
-<li class="chapter" data-level="11.7.2" data-path="pandas.html"><a href="pandas.html#operators-6"><i class="fa fa-check"></i><b>11.7.2</b> Operators</a>
+<li class="chapter" data-level="11.7.2" data-path="pandas.html"><a href="pandas.html#operators-7"><i class="fa fa-check"></i><b>11.7.2</b> Operators</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#sample-data-4"><i class="fa fa-check"></i>Sample Data</a></li>
-<li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#addition"><i class="fa fa-check"></i>Addition</a></li>
+<li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#addition-1"><i class="fa fa-check"></i>Addition</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#substraction"><i class="fa fa-check"></i>Substraction</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#operator"><i class="fa fa-check"></i>Operator <code>&amp;</code></a></li>
 </ul></li>
-<li class="chapter" data-level="11.7.3" data-path="pandas.html"><a href="pandas.html#attributes-4"><i class="fa fa-check"></i><b>11.7.3</b> Attributes</a></li>
+<li class="chapter" data-level="11.7.3" data-path="pandas.html"><a href="pandas.html#attributes-3"><i class="fa fa-check"></i><b>11.7.3</b> Attributes</a></li>
 <li class="chapter" data-level="11.7.4" data-path="pandas.html"><a href="pandas.html#index-manipulation-1"><i class="fa fa-check"></i><b>11.7.4</b> Index Manipulation</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#sample-data-5"><i class="fa fa-check"></i>Sample Data</a></li>
@@ -749,7 +756,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Python Bookdown</h1>
 <p class="author"><em>Yong Keh Soon</em></p>
-<p class="date"><em>2022-12-30</em></p>
+<p class="date"><em>2022-12-31</em></p>
 </div>
 <div id="about-this-book" class="section level1 unnumbered hasAnchor">
 <h1>About This Book<a href="index.html#about-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h1>

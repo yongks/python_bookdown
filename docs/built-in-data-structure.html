@@ -23,7 +23,7 @@
 <meta name="author" content="Yong Keh Soon" />
 
 
-<meta name="date" content="2022-12-30" />
+<meta name="date" content="2022-12-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -341,19 +341,18 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html"><i class="fa fa-check"></i><b>10</b> Date, Time and Timezone</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#library-import"><i class="fa fa-check"></i><b>10.1</b> Library Import</a></li>
-<li class="chapter" data-level="10.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-pytz"><i class="fa fa-check"></i><b>10.2</b> Timezone (pytz)</a>
+<li class="chapter" data-level="10.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#zoneinfo"><i class="fa fa-check"></i><b>10.2</b> ZoneInfo</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-2"><i class="fa fa-check"></i><b>10.2.1</b> Constructor</a></li>
-<li class="chapter" data-level="10.2.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#class-method"><i class="fa fa-check"></i><b>10.2.2</b> Class Method</a>
-<ul>
-<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#making-timezone-aware-.localize"><i class="fa fa-check"></i>Making Timezone Aware (.localize)</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#attributes-1"><i class="fa fa-check"></i><b>10.2.3</b> Attributes</a></li>
+<li class="chapter" data-level="10.2.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes"><i class="fa fa-check"></i><b>10.2.2</b> Instance Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#date-and-datetime"><i class="fa fa-check"></i><b>10.3</b> Date and Datetime</a>
 <ul>
 <li class="chapter" data-level="10.3.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#iso8601"><i class="fa fa-check"></i><b>10.3.1</b> ISO8601</a></li>
-<li class="chapter" data-level="10.3.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-3"><i class="fa fa-check"></i><b>10.3.2</b> Constructor</a></li>
+<li class="chapter" data-level="10.3.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-3"><i class="fa fa-check"></i><b>10.3.2</b> Constructor</a>
+<ul>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-integration"><i class="fa fa-check"></i>Timezone Integration</a></li>
+</ul></li>
 <li class="chapter" data-level="10.3.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#class-methods"><i class="fa fa-check"></i><b>10.3.3</b> Class Methods</a>
 <ul>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#now-and-today"><i class="fa fa-check"></i>Now and Today</a></li>
@@ -361,20 +360,28 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-from-string-strptime"><i class="fa fa-check"></i>Convert from String (strptime)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-from-iso-fromisoformat"><i class="fa fa-check"></i>Convert from ISO (fromisoformat)</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-1"><i class="fa fa-check"></i><b>10.3.4</b> Instance Methods</a>
+<li class="chapter" data-level="10.3.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-1"><i class="fa fa-check"></i><b>10.3.4</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-1"><i class="fa fa-check"></i><b>10.3.5</b> Instance Methods</a>
 <ul>
-<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#weekday"><i class="fa fa-check"></i>weekday</a></li>
-<li class="chapter" data-level="10.3.4.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#update-.replace"><i class="fa fa-check"></i><b>10.3.4.1</b> Update (.replace)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#update-data.replace"><i class="fa fa-check"></i>Update Data(.replace)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timezone-conversion-astimezone"><i class="fa fa-check"></i>Timezone Conversion (astimezone)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-time-.time"><i class="fa fa-check"></i>Convert to Time (.time)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-date-.date"><i class="fa fa-check"></i>Convert to Date (.date)</a></li>
 <li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#convert-to-string-strftime-isoformat"><i class="fa fa-check"></i>Convert to String (strftime, isoformat)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#weekday"><i class="fa fa-check"></i>Weekday</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes"><i class="fa fa-check"></i><b>10.3.5</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.6" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-2"><i class="fa fa-check"></i><b>10.3.6</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.3.7" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#operators-5"><i class="fa fa-check"></i><b>10.3.7</b> Operators</a>
+<ul>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#difference--"><i class="fa fa-check"></i>Difference (-)</a></li>
+<li class="chapter" data-level="" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#addition"><i class="fa fa-check"></i>Addition (+)</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#time"><i class="fa fa-check"></i><b>10.4</b> Time</a>
 <ul>
 <li class="chapter" data-level="10.4.1" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#constructor-4"><i class="fa fa-check"></i><b>10.4.1</b> Constructor</a></li>
-<li class="chapter" data-level="10.4.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-1"><i class="fa fa-check"></i><b>10.4.2</b> Instance Attributes</a></li>
+<li class="chapter" data-level="10.4.2" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-methods-2"><i class="fa fa-check"></i><b>10.4.2</b> Instance Methods</a></li>
+<li class="chapter" data-level="10.4.3" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#instance-attributes-3"><i class="fa fa-check"></i><b>10.4.3</b> Instance Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="10.5" data-path="date-time-and-timezone.html"><a href="date-time-and-timezone.html#timedelta"><i class="fa fa-check"></i><b>10.5</b> Timedelta</a>
 <ul>
@@ -390,7 +397,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2.1" data-path="pandas.html"><a href="pandas.html#types-of-objects"><i class="fa fa-check"></i><b>11.2.1</b> Types of Objects</a></li>
 <li class="chapter" data-level="11.2.2" data-path="pandas.html"><a href="pandas.html#series-and-dataframe"><i class="fa fa-check"></i><b>11.2.2</b> Series and DataFrame</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="pandas.html"><a href="pandas.html#class-method-1"><i class="fa fa-check"></i><b>11.3</b> Class Method</a>
+<li class="chapter" data-level="11.3" data-path="pandas.html"><a href="pandas.html#class-method"><i class="fa fa-check"></i><b>11.3</b> Class Method</a>
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="pandas.html"><a href="pandas.html#convertion"><i class="fa fa-check"></i><b>11.3.1</b> Convertion</a>
 <ul>
@@ -439,7 +446,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-string"><i class="fa fa-check"></i>From String</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-datetime-date"><i class="fa fa-check"></i>From <code>datetime / date</code></a></li>
 </ul></li>
-<li class="chapter" data-level="11.4.2" data-path="pandas.html"><a href="pandas.html#attributes-2"><i class="fa fa-check"></i><b>11.4.2</b> Attributes</a></li>
+<li class="chapter" data-level="11.4.2" data-path="pandas.html"><a href="pandas.html#attributes-1"><i class="fa fa-check"></i><b>11.4.2</b> Attributes</a></li>
 <li class="chapter" data-level="11.4.3" data-path="pandas.html"><a href="pandas.html#timezones"><i class="fa fa-check"></i><b>11.4.3</b> Timezones</a></li>
 <li class="chapter" data-level="11.4.4" data-path="pandas.html"><a href="pandas.html#formatting"><i class="fa fa-check"></i><b>11.4.4</b> Formatting</a></li>
 <li class="chapter" data-level="11.4.5" data-path="pandas.html"><a href="pandas.html#conversion"><i class="fa fa-check"></i><b>11.4.5</b> Conversion</a>
@@ -459,7 +466,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.5.1" data-path="pandas.html"><a href="pandas.html#creating"><i class="fa fa-check"></i><b>11.5.1</b> Creating</a></li>
 <li class="chapter" data-level="11.5.2" data-path="pandas.html"><a href="pandas.html#co-conversion"><i class="fa fa-check"></i><b>11.5.2</b> Co Conversion</a></li>
 <li class="chapter" data-level="11.5.3" data-path="pandas.html"><a href="pandas.html#structure-conversion"><i class="fa fa-check"></i><b>11.5.3</b> Structure Conversion</a></li>
-<li class="chapter" data-level="11.5.4" data-path="pandas.html"><a href="pandas.html#attributes-3"><i class="fa fa-check"></i><b>11.5.4</b> Attributes</a></li>
+<li class="chapter" data-level="11.5.4" data-path="pandas.html"><a href="pandas.html#attributes-2"><i class="fa fa-check"></i><b>11.5.4</b> Attributes</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="pandas.html"><a href="pandas.html#class-series"><i class="fa fa-check"></i><b>11.6</b> Class: Series</a>
 <ul>
@@ -490,13 +497,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#the-data"><i class="fa fa-check"></i>The Data</a></li>
 <li class="chapter" data-level="11.6.4.1" data-path="pandas.html"><a href="pandas.html#the-attributes"><i class="fa fa-check"></i><b>11.6.4.1</b> The Attributes</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6.5" data-path="pandas.html"><a href="pandas.html#instance-methods-2"><i class="fa fa-check"></i><b>11.6.5</b> Instance Methods</a>
+<li class="chapter" data-level="11.6.5" data-path="pandas.html"><a href="pandas.html#instance-methods-3"><i class="fa fa-check"></i><b>11.6.5</b> Instance Methods</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#index-manipulation"><i class="fa fa-check"></i>Index Manipulation</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#structure-conversion-1"><i class="fa fa-check"></i>Structure Conversion</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#datatype-conversion"><i class="fa fa-check"></i>DataType Conversion</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6.6" data-path="pandas.html"><a href="pandas.html#operators-5"><i class="fa fa-check"></i><b>11.6.6</b> Operators</a>
+<li class="chapter" data-level="11.6.6" data-path="pandas.html"><a href="pandas.html#operators-6"><i class="fa fa-check"></i><b>11.6.6</b> Operators</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#arithmetic-operator"><i class="fa fa-check"></i>Arithmetic Operator</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#logic-operator"><i class="fa fa-check"></i>Logic Operator</a></li>
@@ -527,14 +534,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-record-oriented-data"><i class="fa fa-check"></i>From Record Oriented Data</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#from-column-oriented-data"><i class="fa fa-check"></i>From Column Oriented Data</a></li>
 </ul></li>
-<li class="chapter" data-level="11.7.2" data-path="pandas.html"><a href="pandas.html#operators-6"><i class="fa fa-check"></i><b>11.7.2</b> Operators</a>
+<li class="chapter" data-level="11.7.2" data-path="pandas.html"><a href="pandas.html#operators-7"><i class="fa fa-check"></i><b>11.7.2</b> Operators</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#sample-data-4"><i class="fa fa-check"></i>Sample Data</a></li>
-<li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#addition"><i class="fa fa-check"></i>Addition</a></li>
+<li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#addition-1"><i class="fa fa-check"></i>Addition</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#substraction"><i class="fa fa-check"></i>Substraction</a></li>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#operator"><i class="fa fa-check"></i>Operator <code>&amp;</code></a></li>
 </ul></li>
-<li class="chapter" data-level="11.7.3" data-path="pandas.html"><a href="pandas.html#attributes-4"><i class="fa fa-check"></i><b>11.7.3</b> Attributes</a></li>
+<li class="chapter" data-level="11.7.3" data-path="pandas.html"><a href="pandas.html#attributes-3"><i class="fa fa-check"></i><b>11.7.3</b> Attributes</a></li>
 <li class="chapter" data-level="11.7.4" data-path="pandas.html"><a href="pandas.html#index-manipulation-1"><i class="fa fa-check"></i><b>11.7.4</b> Index Manipulation</a>
 <ul>
 <li class="chapter" data-level="" data-path="pandas.html"><a href="pandas.html#sample-data-5"><i class="fa fa-check"></i>Sample Data</a></li>
@@ -791,11 +798,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb121-3"><a href="built-in-data-structure.html#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy and original has the same memory location.</span></span></code></pre></div>
 <pre><code>## (1, 2, 3, 4, 5)</code></pre>
 <div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="built-in-data-structure.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Original ID: &#39;</span>, <span class="bu">id</span>(original))</span></code></pre></div>
-<pre><code>## Original ID:  1883925889568</code></pre>
+<pre><code>## Original ID:  2145172309232</code></pre>
 <div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="built-in-data-structure.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Copy ID:     &#39;</span>, <span class="bu">id</span>(copy_test))</span></code></pre></div>
-<pre><code>## Copy ID:      1883925889568</code></pre>
+<pre><code>## Copy ID:      2145172309232</code></pre>
 <div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="built-in-data-structure.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Clone ID:    &#39;</span>, <span class="bu">id</span>(clone_test))  <span class="co">## clone has different ID</span></span></code></pre></div>
-<pre><code>## Clone ID:     1883926146400</code></pre>
+<pre><code>## Clone ID:     2145172570256</code></pre>
 </div>
 </div>
 <div id="list" class="section level2 hasAnchor" number="3.2">
@@ -887,16 +894,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb140-2"><a href="built-in-data-structure.html#cb140-2" aria-hidden="true" tabindex="-1"></a>animals <span class="op">+=</span> [<span class="st">&#39;chicken&#39;</span>]</span>
 <span id="cb140-3"><a href="built-in-data-structure.html#cb140-3" aria-hidden="true" tabindex="-1"></a>animals.pop()</span>
 <span id="cb140-4"><a href="built-in-data-structure.html#cb140-4" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(animals)  <span class="co">## ID had not changed</span></span></code></pre></div>
-<pre><code>## 1883926163072
+<pre><code>## 2145172581760
 ## &#39;chicken&#39;
-## 1883926163072</code></pre>
+## 2145172581760</code></pre>
 <p><strong>Copy and Clone</strong></p>
 <p>Assignment to another variable always refers to the same data.Use <strong>copy()</strong> method if you wish to clone the data, with different ID.</p>
 <div class="sourceCode" id="cb142"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb142-1"><a href="built-in-data-structure.html#cb142-1" aria-hidden="true" tabindex="-1"></a>original   <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]      <span class="co">## original data</span></span>
 <span id="cb142-2"><a href="built-in-data-structure.html#cb142-2" aria-hidden="true" tabindex="-1"></a>copy_test  <span class="op">=</span> original         <span class="co">## same ID as Original</span></span>
 <span id="cb142-3"><a href="built-in-data-structure.html#cb142-3" aria-hidden="true" tabindex="-1"></a>clone_test <span class="op">=</span> original.copy()  <span class="co">## different ID</span></span>
 <span id="cb142-4"><a href="built-in-data-structure.html#cb142-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="bu">id</span>(original), <span class="bu">id</span>(copy_test), <span class="bu">id</span>(clone_test))</span></code></pre></div>
-<pre><code>## 1883926193408 1883926193408 1883926198720</code></pre>
+<pre><code>## 2145172612096 2145172612096 2145172617408</code></pre>
 <p><strong>Passing To Function As Reference</strong></p>
 <p>When passing list to functions, only the reference passed. Meaning all changes to the list within the function will be reflected outside the function.</p>
 <div class="sourceCode" id="cb144"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb144-1"><a href="built-in-data-structure.html#cb144-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
@@ -914,11 +921,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb144-13"><a href="built-in-data-structure.html#cb144-13" aria-hidden="true" tabindex="-1"></a>my_list        <span class="co">## content was altered</span></span>
 <span id="cb144-14"><a href="built-in-data-structure.html#cb144-14" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span>(my_list)</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4, 5]
-## 1883926198784
+## 2145172617472
 ## [1, 2, 3, 4, 5]
-## ID in Function:       1883926198784
+## ID in Function:       2145172617472
 ## [1, 2, 3, 4, 5, 6]
-## 1883926198784</code></pre>
+## 2145172617472</code></pre>
 </div>
 <div id="iteration" class="section level3 hasAnchor" number="3.2.5">
 <h3><span class="header-section-number">3.2.5</span> Iteration<a href="built-in-data-structure.html#iteration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1051,7 +1058,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Set can be declared with <strong><code>{}</code></strong>, just like list creation uses <strong>‘[]’</strong>.</p>
 <div class="sourceCode" id="cb174"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb174-1"><a href="built-in-data-structure.html#cb174-1" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> {<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;e&#39;</span>,<span class="st">&#39;f&#39;</span>,<span class="st">&#39;g&#39;</span>}</span>
 <span id="cb174-2"><a href="built-in-data-structure.html#cb174-2" aria-hidden="true" tabindex="-1"></a>myset <span class="co"># notice no repetition values</span></span></code></pre></div>
-<pre><code>## {&#39;g&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;}</code></pre>
+<pre><code>## {&#39;a&#39;, &#39;b&#39;, &#39;g&#39;, &#39;f&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;}</code></pre>
 <p>Set can be created from list, and then converted back to list. This is the perfect way to make a list unique.</p>
 <div class="sourceCode" id="cb176"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb176-1"><a href="built-in-data-structure.html#cb176-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;e&#39;</span>,<span class="st">&#39;f&#39;</span>,<span class="st">&#39;g&#39;</span>]</span>
 <span id="cb176-2"><a href="built-in-data-structure.html#cb176-2" aria-hidden="true" tabindex="-1"></a>myset <span class="op">=</span> <span class="bu">set</span>(mylist)</span>
@@ -1061,8 +1068,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb176-6"><a href="built-in-data-structure.html#cb176-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;</span><span class="ch">\n</span><span class="st">Convert to set      : &#39;</span>, myset,</span>
 <span id="cb176-7"><a href="built-in-data-structure.html#cb176-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;</span><span class="ch">\n</span><span class="st">Convert back to list: &#39;</span>, my_unique_list) <span class="co"># notice no repetition values</span></span></code></pre></div>
 <pre><code>## Original List       :  [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;] 
-## Convert to set      :  {&#39;g&#39;, &#39;d&#39;, &#39;f&#39;, &#39;e&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;} 
-## Convert back to list:  [&#39;g&#39;, &#39;d&#39;, &#39;f&#39;, &#39;e&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;]</code></pre>
+## Convert to set      :  {&#39;g&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39;, &#39;b&#39;, &#39;f&#39;, &#39;e&#39;} 
+## Convert back to list:  [&#39;g&#39;, &#39;c&#39;, &#39;d&#39;, &#39;a&#39;, &#39;b&#39;, &#39;f&#39;, &#39;e&#39;]</code></pre>
 </div>
 <div id="operators-4" class="section level3 hasAnchor" number="3.4.2">
 <h3><span class="header-section-number">3.4.2</span> Operators<a href="built-in-data-structure.html#operators-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1085,11 +1092,11 @@ Proper Subset Test : <strong><code>&lt;</code></strong></p>
 ## Is Proper Subet :  False</code></pre>
 <p><strong>Union using <code>|</code></strong></p>
 <div class="sourceCode" id="cb184"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb184-1"><a href="built-in-data-structure.html#cb184-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>} <span class="op">|</span> {<span class="st">&#39;a&#39;</span>,<span class="st">&#39;e&#39;</span>,<span class="st">&#39;f&#39;</span>}</span></code></pre></div>
-<pre><code>## {&#39;e&#39;, &#39;f&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;}</code></pre>
+<pre><code>## {&#39;a&#39;, &#39;b&#39;, &#39;f&#39;, &#39;c&#39;, &#39;e&#39;}</code></pre>
 <p><strong>Intersection using <code>&amp;</code></strong></p>
 <p>Any elments that exist in both left and right set</p>
 <div class="sourceCode" id="cb186"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb186-1"><a href="built-in-data-structure.html#cb186-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>} <span class="op">&amp;</span> {<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>,<span class="st">&#39;f&#39;</span>}</span></code></pre></div>
-<pre><code>## {&#39;d&#39;, &#39;c&#39;}</code></pre>
+<pre><code>## {&#39;c&#39;, &#39;d&#39;}</code></pre>
 <p><strong>Difference using <code>-</code></strong></p>
 <p>Remove <strong>right</strong> from <strong>left</strong></p>
 <div class="sourceCode" id="cb188"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb188-1"><a href="built-in-data-structure.html#cb188-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>} <span class="op">-</span> {<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>,<span class="st">&#39;f&#39;</span>}</span></code></pre></div>

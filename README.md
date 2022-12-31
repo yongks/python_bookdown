@@ -1,5 +1,7 @@
-This is my python programming cookbook, made using RMarkdown and bookdown (https://github.com/rstudio/bookdown).
+This is my python programming cookbook. 
 
-RMarkdown is to run code chunks. Bookdown is to render the markdown files and arrange them into HTML output such such as gitbook, html, pdf, etc.
+HTML sources of this book is located in ```docs/``` folder of this repository. The content is hosted through Github pages.
 
-You may refer to the page "Get Started" at https://bookdown.org/yihui/bookdown/ for using bookdown.
+To read this book, click [here](https://yongks.github.io/python_bookdown).
+
+This book is developed using [Rstudio](https://posit.co), [RMarkdown](https://rmarkdown.rstudio.com/lesson-1.html) and [Bookdown](https://github.com/rstudio/bookdown).
